@@ -4,4 +4,4 @@ MCMM Platform is a project developed to University of Aveiro by Daniela Bessa an
 
 License
 
-MIT Licensed. Copyright (c) danizep 2016.
+MIT Licensed. Copyright (c) jcunhafonte 2016.
