@@ -1,10 +1,6 @@
 # MCMM Platform
 
-A simple react timeline component for filtering data...
-
-Installation
-
-React-Timeless is still a work in progress component, but basically it creates a simple timeline with a rage based on the provided dates.
+MCMM Platform is a project developed to University of Aveiro by Daniela Bessa and José Fonte in collaboration with Maria João Antunes, Pedro Amado, Hélder Caixinha and Telmo Silva.
 
 License
 
