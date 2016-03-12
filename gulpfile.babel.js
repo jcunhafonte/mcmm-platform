@@ -1,4 +1,4 @@
-// generated on 2016-03-11 using generator-webapp 2.0.0
+// generated on 2016-03-12 using generator-webapp 2.0.0
 import gulp from 'gulp';
 import gulpLoadPlugins from 'gulp-load-plugins';
 import browserSync from 'browser-sync';
@@ -9,8 +9,14 @@ const $ = gulpLoadPlugins();
 const reload = browserSync.reload;
 
 gulp.task('styles', () => {
-  return gulp.src('app/styles/*.css')
+  return gulp.src('app/styles/*.scss')
+    .pipe($.plumber())
     .pipe($.sourcemaps.init())
+    .pipe($.sass.sync({
+      outputStyle: 'expanded',
+      precision: 10,
+      includePaths: ['.']
+    }).on('error', $.sass.logError))
     .pipe($.autoprefixer({browsers: ['> 1%', 'last 2 versions', 'Firefox ESR']}))
     .pipe($.sourcemaps.write())
     .pipe(gulp.dest('.tmp/styles'))
@@ -86,7 +92,7 @@ gulp.task('clean', del.bind(null, ['.tmp', 'dist']));
 
 gulp.task('serve', ['styles', 'scripts', 'fonts'], () => {
   browserSync({
-    notify: false,
+    notify: true,
     port: 9000,
     server: {
       baseDir: ['.tmp', 'app'],
@@ -102,7 +108,7 @@ gulp.task('serve', ['styles', 'scripts', 'fonts'], () => {
     '.tmp/fonts/**/*'
   ]).on('change', reload);
 
-  gulp.watch('app/styles/**/*.css', ['styles']);
+  gulp.watch('app/styles/**/*.scss', ['styles']);
   gulp.watch('app/scripts/**/*.js', ['scripts']);
   gulp.watch('app/fonts/**/*', ['fonts']);
   gulp.watch('bower.json', ['wiredep', 'fonts']);
@@ -110,7 +116,7 @@ gulp.task('serve', ['styles', 'scripts', 'fonts'], () => {
 
 gulp.task('serve:dist', () => {
   browserSync({
-    notify: false,
+    notify: true,
     port: 9000,
     server: {
       baseDir: ['dist']
@@ -120,7 +126,7 @@ gulp.task('serve:dist', () => {
 
 gulp.task('serve:test', ['scripts'], () => {
   browserSync({
-    notify: false,
+    notify: true,
     port: 9000,
     ui: false,
     server: {
@@ -139,9 +145,15 @@ gulp.task('serve:test', ['scripts'], () => {
 
 // inject bower components
 gulp.task('wiredep', () => {
+  gulp.src('app/styles/*.scss')
+    .pipe(wiredep({
+      ignorePath: /^(\.\.\/)+/
+    }))
+    .pipe(gulp.dest('app/styles'));
+
   gulp.src('app/*.html')
     .pipe(wiredep({
-      exclude: ['bootstrap.js'],
+      exclude: ['bootstrap-sass'],
       ignorePath: /^(\.\.\/)*\.\./
     }))
     .pipe(gulp.dest('app'));
