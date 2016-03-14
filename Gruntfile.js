@@ -76,6 +76,7 @@ module.exports = function (grunt) {
                 },
                 files: [
                     '<%= yeoman.app %>/*.html',
+                    '<%= yeoman.app %>/*.php',
                     '.tmp/styles/{,*/}*.css',
                     '<%= yeoman.app %>/images/{,*/}*.{gif,jpeg,jpg,png,svg,webp}'
                 ]
@@ -85,7 +86,7 @@ module.exports = function (grunt) {
         // The actual grunt server settings
         connect: {
             options: {
-                port: 9000,
+                port: 8000,
                 livereload: 35729,
                 // Change this to '0.0.0.0' to access the server from outside
                 hostname: 'localhost'
@@ -94,7 +95,7 @@ module.exports = function (grunt) {
                 {
                     context: '/api',
                     host: 'localhost',
-                    port: 8000
+                    port: 9000
                 }
             ],
             livereload: {
@@ -130,7 +131,7 @@ module.exports = function (grunt) {
         // Grunt php server
         php: {
             options: {
-                port: 8000,
+                port: 9000,
                 // Change this to '0.0.0.0' to access the server from outside.
                 hostname: '127.0.0.1'
             },
@@ -349,9 +350,10 @@ module.exports = function (grunt) {
                     cwd: '<%= yeoman.app %>',
                     dest: '<%= yeoman.dist %>',
                     src: [
-                        'api/{,*/}*.*',
+                        'api/{,*/}*{,*/}*.*',
                         '*.{ico,png,txt}',
                         '.htaccess',
+                        '*.php',
                         'images/{,*/}*.webp',
                         'styles/fonts/{,*/}*.*',
                         'bower_components/sass-bootstrap/fonts/*.*'
