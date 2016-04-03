@@ -25,7 +25,7 @@ module.exports = function (grunt) {
         // Setup the proxy
         middlewares.push(require('grunt-connect-proxy/lib/utils').proxyRequest);
 
-        options.base.forEach(function(base) {
+        options.base.forEach(function (base) {
             // Serve static files.
             middlewares.push(connect.static(base));
         });
@@ -50,14 +50,10 @@ module.exports = function (grunt) {
         watch: {
             js: {
                 files: ['<%= yeoman.app %>/scripts/{,*/}*.js'],
-                tasks: ['jshint'],
+                //tasks: ['jshint'],
                 options: {
                     livereload: true
                 }
-            },
-            jstest: {
-                files: ['test/spec/{,*/}*.js'],
-                tasks: ['test:watch']
             },
             gruntfile: {
                 files: ['Gruntfile.js']
@@ -162,19 +158,19 @@ module.exports = function (grunt) {
             server: '.tmp'
         },
 
-        // Make sure code styles are up to par and there are no obvious mistakes
-        jshint: {
-            options: {
-                jshintrc: '.jshintrc',
-                reporter: require('jshint-stylish')
-            },
-            all: [
-                'Gruntfile.js',
-                '<%= yeoman.app %>/scripts/{,*/}*.js',
-                '!<%= yeoman.app %>/scripts/vendor/*',
-                'test/spec/{,*/}*.js'
-            ]
-        },
+        //// Make sure code styles are up to par and there are no obvious mistakes
+        //jshint: {
+        //    options: {
+        //        jshintrc: '.jshintrc',
+        //        reporter: require('jshint-stylish')
+        //    },
+        //    all: [
+        //        'Gruntfile.js',
+        //        '<%= yeoman.app %>/scripts/{,*/}*.js',
+        //        '!<%= yeoman.app %>/scripts/vendor/*',
+        //        'test/spec/{,*/}*.js'
+        //    ]
+        //},
 
 
         // Mocha testing framework configuration options
@@ -186,7 +182,6 @@ module.exports = function (grunt) {
                 }
             }
         },
-
 
 
         // Compiles Sass to CSS and generates necessary files if requested
@@ -297,14 +292,14 @@ module.exports = function (grunt) {
         htmlmin: {
             dist: {
                 options: {
-                    // removeCommentsFromCDATA: true,
-                    // collapseWhitespace: true,
-                    // collapseBooleanAttributes: true,
-                    // removeAttributeQuotes: true,
-                    // removeRedundantAttributes: true,
-                    // useShortDoctype: true,
-                    // removeEmptyAttributes: true,
-                    // removeOptionalTags: true
+                    removeCommentsFromCDATA: false,
+                    collapseWhitespace: false,
+                    collapseBooleanAttributes: false,
+                    removeAttributeQuotes: false,
+                    removeRedundantAttributes: false,
+                    useShortDoctype: false,
+                    removeEmptyAttributes: false,
+                    removeOptionalTags: false
                 },
                 files: [{
                     expand: true,
@@ -318,28 +313,31 @@ module.exports = function (grunt) {
         // By default, your `index.html`'s <!-- Usemin block --> will take care of
         // minification. These next options are pre-configured if you do not wish
         // to use the Usemin blocks.
-        // cssmin: {
-        //     dist: {
-        //         files: {
-        //             '<%= yeoman.dist %>/styles/main.css': [
-        //                 '.tmp/styles/{,*/}*.css',
-        //                 '<%= yeoman.app %>/styles/{,*/}*.css'
-        //             ]
-        //         }
-        //     }
-        // },
-        // uglify: {
-        //     dist: {
-        //         files: {
-        //             '<%= yeoman.dist %>/scripts/scripts.js': [
-        //                 '<%= yeoman.dist %>/scripts/scripts.js'
-        //             ]
-        //         }
-        //     }
-        // },
-        // concat: {
-        //     dist: {}
-        // },
+        cssmin: {
+            options: {
+                processImport: false
+            },
+            dist: {
+                files: {
+                    '<%= yeoman.dist %>/styles/main.css': [
+                        '.tmp/styles/{,*/}*.css',
+                        '<%= yeoman.app %>/styles/{,*/}*.css'
+                    ]
+                }
+            }
+        },
+        uglify: {
+            dist: {
+                files: {
+                    '<%= yeoman.dist %>/scripts/scripts.js': [
+                        '<%= yeoman.dist %>/scripts/scripts.js'
+                    ]
+                }
+            }
+        },
+        concat: {
+            dist: {}
+        },
 
         // Copies remaining files to places other tasks can use
         copy: {
@@ -349,15 +347,7 @@ module.exports = function (grunt) {
                     dot: true,
                     cwd: '<%= yeoman.app %>',
                     dest: '<%= yeoman.dist %>',
-                    src: [
-                        'api/{,*/}*{,*/}*.*',
-                        '*.{ico,png,txt}',
-                        '.htaccess',
-                        '*.php',
-                        'images/{,*/}*.webp',
-                        'styles/fonts/{,*/}*.*',
-                        'bower_components/sass-bootstrap/fonts/*.*'
-                    ]
+                    src: ['**/*', '!**/styles/*.scss']
                 }]
             },
             styles: {
@@ -406,10 +396,10 @@ module.exports = function (grunt) {
     grunt.registerTask('serve', function (target) {
         if (target === 'dist') {
             return grunt.task.run([
-              'build',
-              'configureProxies',
-              'php:dist',
-              'connect:dist:keepalive'
+                'build',
+                'configureProxies',
+                'php:dist',
+                'connect:dist:keepalive'
             ]);
         }
 
@@ -429,7 +419,7 @@ module.exports = function (grunt) {
         grunt.task.run(['serve']);
     });
 
-    grunt.registerTask('test', function(target) {
+    grunt.registerTask('test', function (target) {
         if (target !== 'watch') {
             grunt.task.run([
                 'clean:server',

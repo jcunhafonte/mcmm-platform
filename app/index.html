@@ -1,77 +1,1539 @@
-<!doctype html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>YeomanPHP</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width">
-        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-        <!-- build:css(.tmp) styles/main.css -->
-        <link rel="stylesheet" href="styles/main.css">
-        <!-- endbuild -->
-        <script src="bower_components/modernizr/modernizr.js"></script>
+<!DOCTYPE html>
+<html lang="pt">
 
-    </head>
-    <body>
-        <!--[if lt IE 10]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7">
+<![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8">
+<![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9">
+<![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
 
+<head>
+    <!--METAS-->
+    <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-        <div class="container">
-            <div class="header">
-                <ul class="nav nav-pills pull-right">
-                    <li class="active"><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-                <h3 class="text-muted">YeomanPHP</h3>
-            </div>
+    <meta name="author" content="MCMM">
+    <meta name="description" content="Plataforma MCMM">
+    <meta name="keywords" content="UA, DECA, MCMM, AV, ...">
+    <meta name="title" content="MCMM">
+    <meta name="referrer" content="always">
 
-            <div class="jumbotron">
-                <h1>'Allo, 'Allo!</h1>
-                <p class="lead">Always a pleasure scaffolding your apps.</p>
-                <p><a class="btn btn-lg btn-success" href="#">Splendid!</a></p>
-            </div>
+    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="content-language" content="pt">
 
-            <div class="row marketing">
-                <div class="col-lg-6" data-resource-container=""></div>
-            </div>
+    <meta property="og:title" content="MCMM - Mestrado em Comunicação Multimédia">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://mcmm.ua.pt">
+    <meta property="og:image" content="http://gps.pt/img/share.jpg">
+    <meta property="og:site_name" content="MCMM é ...">
+    <meta property="og:description" content="MCMM é ...">
+    <meta property="al:android:app_name" content="MCMM">
+    <meta property="al:android:url" content="mcmm://">
+    <meta property="al:web:url" content="index.php">
+    <meta property="al:android:package" content="com.mcmm.reader">
 
-            <div class="footer">
-                <p>♥ from the Yeoman team</p>
-            </div>
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://mcmm.ua.pt">
+    <meta name="twitter:title" content="MCMM - Mestrado em Comunicação Multimédia">
+    <meta name="twitter:description" content="MCMM é ...">
+    <meta name="twitter:image" content="http://mcmm.ua.pt/img/share.jpg">
 
+    <!--FAVICON-->
+    <link rel="apple-touch-icon" sizes="57x57" href="">
+    <link rel="apple-touch-icon" sizes="60x60" href="">
+    <link rel="apple-touch-icon" sizes="72x72" href="">
+    <link rel="apple-touch-icon" sizes="76x76" href="">
+    <link rel="apple-touch-icon" sizes="114x114" href="">
+    <link rel="apple-touch-icon" sizes="120x120" href="">
+    <link rel="apple-touch-icon" sizes="144x144" href="">
+    <link rel="apple-touch-icon" sizes="152x152" href="">
+    <link rel="apple-touch-icon" sizes="180x180" href="">
+    <link rel="icon" type="image/png" sizes="192x192" href="">
+    <link rel="icon" type="image/png" sizes="32x32" href="">
+    <link rel="icon" type="image/png" sizes="96x96" href="">
+    <link rel="icon" type="image/png" sizes="16x16" href="">
+
+    <!--CSS-->
+    <link rel="stylesheet" href="styles/main.css">
+
+    <script src="bower_components/modernizr/modernizr.js"></script>
+
+</head>
+
+<body data-offset="80" data-target=".navbar" data-spy="scroll" id="splash">
+
+<!-- Navigation -->
+<!-- ++++++++++++++++++++++++++++++++++++++++ -->
+<header class="header">
+    <nav id="nav" class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="relative-nav-container">
+            <a class="toggle-button visible-xs-block" data-toggle="collapse" data-target="#navbar-collapse">
+                <i class="fa fa-navicon"></i>
+            </a>
+            <a class="navbar-brand scroll" href="index.html">
+                <img class="normal-logo hidden-xs" src="assets/images/logo.png" alt="logo"/>
+                <img class="inverse-logo hidden-xs" src="assets/images/logo-w.png" alt="logo"/>
+                <img class="visible-xs-block" src="assets/images/logo-sign2.png" width="40" height="44" alt="logo"/>
+            </a>
+        </div>
+    </nav>
+</header><!--/.header -->
+
+<menu>
+    <nav id="primary">
+        <ul>
+            <li>
+                <h1>First manned flights</h1>
+                <a class="manned-flight" href=#section-steps">View</a>
+            </li>
+            <li>
+                <h1>The frameless parachute</h1>
+                <a class="frameless-parachute" href="#frameless-parachute">View</a>
+            </li>
+            <li>
+                <h1>Over the English Channel</h1>
+                <a class="english-channel" href="#english-channel">View</a>
+            </li>
+            <li>
+                <h1>About</h1>
+                <a class="about" href="#about">View</a>
+            </li>
+        </ul>
+    </nav>
+</menu>
+
+<!-- Home - Header -->
+<!-- ++++++++++++++++++++++++++++++++++++++++ -->
+<section class="home-header dark" id="manned-flight">
+    <div class="js-height-full container">
+
+        <div class="bg-video-wrapper">
+            <div class="bg-video-overlay bg-dark-alfa-50"></div>
         </div>
 
+        <div class="row home-content">
+            <div class=" text-center home-text">
+                <p class="large wow fadeInUp" data-wow-delay="1s" data-wow-duration="1.5s">
+                    Sed condimentum ante ac quam varius pretium.
+                </p>
+                <h2 class="wow fadeInUp" data-wow-delay="1.8s" data-wow-duration="1.5s">
+                    Sed all new viverra enim in velit lorem
+                </h2>
+                <div class="row wow fadeInUp" data-wow-delay="2.6s" data-wow-duration="1.5s">
+                    <div class="col-md-12">
+                        <a class="btn btn-primary btn-short">Get strarted now</a>
+                    </div>
+                </div>
+            </div>
+        </div><!--row-->
+    </div><!--container-->
+</section>
 
-        <!-- build:js scripts/vendor.js -->
-        <!-- bower:js -->
-        <script src="bower_components/jquery/jquery.js"></script>
-        <!-- endbower -->
-        <!-- endbuild -->
+<!-- Home - About -->
+<!-- ++++++++++++++++++++++++++++++++++++++++ -->
+<section class="about-product" id="frameless-parachute">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <header class="section-header">
+                    <p class="subhead">About Product</p>
+                    <h2>Interface Benefits</h2>
+                </header>
+            </div>
+        </div><!--row-->
+        <div class="row">
+            <div class="col-md-3 col-sm-offset-1 wow fadeInUp" data-wow-duration="2s">
+                <article>
+                    <h5>Mobile version</h5>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+                </article>
+            </div>
+            <div class="col-md-3 col-sm-offset-1 wow fadeInUp" data-wow-duration="2s">
+                <article>
+                    <div class="tline"></div>
+                    <h5>Affordable price</h5>
+                    <p>Odio, enim, ducimus provident quae non quo possimus harum autem esse maiores iste
+                        necessitatibus</p>
+                </article>
+            </div>
+            <div class="col-md-3 col-sm-offset-1 wow fadeInUp" data-wow-duration="2s">
+                <article>
+                    <h5>Targeting Setting</h5>
+                    <p>Aperiam debitis exercitationem ullam pariatur distinctio id saepe voluptate fuga alias quia
+                        dolore minus</p>
+                </article>
+            </div>
+        </div><!--row-->
+        <div class="row">
+            <div class="col-md-12">
+                <img class="img-responsive" src="assets/images/placehold/1140x400.gif" alt="pic"/>
+            </div>
+        </div><!--row-->
+    </div><!--container-->
+</section>
 
-        <!-- build:js scripts/main.js -->
-        <script src="scripts/main.js"></script>
-        <!-- endbuild -->
+<!-- Home - Features -->
+<!-- ++++++++++++++++++++++++++++++++++++++++ -->
+<section class="features dark  parallax-section-2" id="english-channel">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s" data-wow-duration="2s">
+                <article>
+                    <span aria-hidden="true" class="icon-trophy"></span>
+                    <h5>Duis gravida</h5>
+                    <p>Donec congue ut est at lacinia. In volutpat consequat urna id pulvinar</p>
+                </article>
+            </div>
+            <div class="col-md-3 col-sm-6 wow fadeInUp" data-wow-duration="2s">
+                <article>
+                    <span aria-hidden="true" class="icon-users"></span>
+                    <h5>Sed eget quam </h5>
+                    <p>Maecenas at commodo dui. Mauris pharetra mi erat, a gravida magna</p>
+                </article>
+            </div>
+            <div class="col-md-3 col-sm-6 wow fadeInUp" data-wow-duration="2s">
+                <article>
+                    <span aria-hidden="true" class="icon-speedometer"></span>
+                    <h5>In maximus id diam</h5>
+                    <p>Cras eu enim placerat, pellentesque ipsum vitae, porttitor lorem</p>
+                </article>
+            </div>
+            <div class="col-md-3 col-sm-6 wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.3s">
+                <article>
+                    <span aria-hidden="true" class="icon-shield"></span>
+                    <h5>Etiam congue</h5>
+                    <p>Nulla eget turpis non massa volutpat condimentum vitae vel sem</p>
+                </article>
+            </div>
+            <div class="col-md-3 col-sm-6 wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.3s">
+                <article>
+                    <span aria-hidden="true" class="icon-graduation"></span>
+                    <h5>Quisque dapibus</h5>
+                    <p>Proin libero magna, viverra eu egestas volutpat, porta mattis nibh</p>
+                </article>
+            </div>
+            <div class="col-md-3 col-sm-6 wow fadeInUp" data-wow-duration="2s">
+                <article>
+                    <span aria-hidden="true" class="icon-game-controller"></span>
+                    <h5>Duis at convallis</h5>
+                    <p>Etiam accumsan velit risus, sed iaculis magna rhoncus at</p>
+                </article>
+            </div>
+            <div class="col-md-3 col-sm-6 wow fadeInUp" data-wow-duration="2s">
+                <article>
+                    <span aria-hidden="true" class="icon-layers"></span>
+                    <h5>Integer non commodo</h5>
+                    <p>Sed lobortis, elit vel accumsan finibus, ligula urna ultrices tortor, in vestibulum</p>
+                </article>
+            </div>
+            <div class="col-md-3 col-sm-6 wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.3s">
+                <article>
+                    <span aria-hidden="true" class="icon-support"></span>
+                    <h5>Vestibulum luctus</h5>
+                    <p>Enim non tellus placerat pulvinar. Nulla faucibus leo eget fermentum volutpat</p>
+                </article>
+            </div>
+        </div><!--row-->
+    </div><!--container-->
+</section>
 
-        <!-- build:js scripts/plugins.js -->
-        <script src="bower_components/sass-bootstrap/js/affix.js"></script>
-        <script src="bower_components/sass-bootstrap/js/alert.js"></script>
-        <script src="bower_components/sass-bootstrap/js/dropdown.js"></script>
-        <script src="bower_components/sass-bootstrap/js/tooltip.js"></script>
-        <script src="bower_components/sass-bootstrap/js/modal.js"></script>
-        <script src="bower_components/sass-bootstrap/js/transition.js"></script>
-        <script src="bower_components/sass-bootstrap/js/button.js"></script>
-        <script src="bower_components/sass-bootstrap/js/popover.js"></script>
-        <script src="bower_components/sass-bootstrap/js/carousel.js"></script>
-        <script src="bower_components/sass-bootstrap/js/scrollspy.js"></script>
-        <script src="bower_components/sass-bootstrap/js/collapse.js"></script>
-        <script src="bower_components/sass-bootstrap/js/tab.js"></script>
-        <!-- endbuild -->
+<!-- Home - Steps -->
+<!-- ++++++++++++++++++++++++++++++++++++++++ -->
+<section class="steps" id="about">
+    <a class="striped-icon divider scroll" href="#about">
+        <i class="fa fa-chevron-down"></i>
+    </a>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <header class="section-header wow fadeInUp" data-wow-duration="2">
+                    <p class="subhead">Quick results</p>
+                    <h2>Three Simple Steps</h2>
+                    <p class="large">Sed condimentum ante ac quam varius pretium. Nunc ornare laoreet augue et
+                        elementum. Phasellus enim libero, blandit sapien vitae, condimentum ultricies magna et.</p>
+                </header>
+            </div>
+        </div><!--row-->
+        <div class="row">
+            <div class="col-md-4 wow fadeInUp " data-wow-duration="2s">
+                <article>
+                    <div class="striped-icon-small">1</div>
+                    <img src="assets/images/icons/icon-1.svg" alt="icon"/>
+                    <h5>Integer Venenatis Sed</h5>
+                    <p>In suscipit, sem at vehicula commodo, elit mi aliquam turpis, et vehicula quam diam in orci </p>
+                </article>
+            </div>
+            <div class="col-md-4 wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.3s">
+                <article>
+                    <div class="striped-icon-small">2</div>
+                    <img src="assets/images/icons/icon-2.svg" alt="icon"/>
+                    <h5>Ut Interdum Vehicula</h5>
+                    <p>Maecenas commodo viverra urna, gravida mattis nibh dapibus sit amet. Nunc ornare laoreet</p>
+                </article>
+            </div>
+            <div class="col-md-4 wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.6s">
+                <article>
+                    <div class="striped-icon-small">3</div>
+                    <img src="assets/images/icons/icon-3.svg" alt="icon"/>
+                    <h5>Pellentesque Habitant</h5>
+                    <p>Mauris nunc enim, efficitur eget sollicitudin ut, fermentum non elit justo dapibus id</p>
+                </article>
+            </div>
+        </div><!--row-->
+    </div><!--container-->
+</section>
+
+<!-- Home - Analytics-->
+<!-- ++++++++++++++++++++++++++++++++++++++++ -->
+<section class="analytics" id="services">
+    <a class="striped-icon divider scroll" href="#services">
+        <i class="fa fa-chevron-down"></i>
+    </a>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <header class="section-header wow fadeInUp" data-wow-duration="2s">
+                    <p class="subhead">Search engine</p>
+                    <h2>Detailed Analytics</h2>
+                    <p class="large">Sed condimentum ante ac quam varius pretium. Nunc laoreet augue et elementum.
+                        Phasellus enim libero, blandit vel sapien vitae, condimentum ultricies magna et.</p>
+                </header>
+            </div>
+        </div><!--row-->
+
+        <div class="row">
+            <div class="col-md-6   wow fadeInUp" data-wow-duration="2s">
+                <div id="accordion-one" role="tablist" aria-multiselectable="true">
+                    <div class="panel panel-default panel-alt-two">
+
+                        <div class="panel-heading active" role="tab" id="headingOne">
+                            <h5 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion-one" href="#collapseOne"
+                                   aria-expanded="true" aria-controls="collapseOne">
+                                            <span class="accordion-icon">
+                                                <span class="stacked-icon">
+                                                    <i class="fa fa-rocket"></i>
+                                                </span>
+                                            </span>
+                                    By organising team buildings and impromptu
+                                </a>
+                            </h5>
+                        </div>
+                        <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel"
+                             aria-labelledby="headingOne">
+                            <div class="panel-body">
+                                We do play a lot, but we also work hard and like to challenge ourselves with proposing
+                                new projects that will further better our skills and connect us as a team. We value
+                                continuous education and professional growth, encourage attending conferences as well as
+                                hold internal lectures.
+                            </div>
+                        </div>
+
+                        <div class="panel-heading" role="tab" id="headingTwo">
+                            <h5 class="panel-title">
+                                <a class="collapsed" data-toggle="collapse" data-parent="#accordion-one"
+                                   href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                            <span class="accordion-icon">
+                                                <span class="stacked-icon">
+                                                    <i class="fa fa-quote-left"></i>
+                                                </span>
+                                            </span>
+                                    We are also each others extended family
+                                </a>
+                            </h5>
+                        </div>
+                        <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel"
+                             aria-labelledby="headingTwo">
+                            <div class="panel-body">
+                                We do play a lot, but we also work hard and like to challenge ourselves with proposing
+                                new projects that will further better our skills and connect us as a team. We value
+                                continuous education and professional growth, encourage attending conferences as well as
+                                hold internal lectures.
+                            </div>
+                        </div>
+
+                        <div class="panel-heading" role="tab" id="headingThree">
+                            <h5 class="panel-title">
+                                <a class="collapsed" data-toggle="collapse" data-parent="#accordion-one"
+                                   href="#collapseThree" aria-expanded="false" aria-controls="collapseTwo">
+                                    Explore further even when you believe
+                                            <span class="accordion-icon">
+                                                <span class="stacked-icon">
+                                                    <i class="fa fa-flag"></i>
+                                                </span>
+                                            </span>
+                                </a>
+                            </h5>
+                        </div>
+                        <div id="collapseThree" class="panel-collapse collapse" role="tabpanel"
+                             aria-labelledby="headingThree">
+                            <div class="panel-body">
+                                We do play a lot, but we also work hard and like to challenge ourselves with proposing
+                                new projects that will further better our skills and connect us as a team. We value
+                                continuous education and professional growth, encourage attending conferences as well as
+                                hold internal lectures.
+                            </div>
+                        </div>
+                    </div><!--panel-->
+                </div><!--accordion-->
+            </div>
+            <div class="col-md-6">
+                <div id="graph-line"></div>
+            </div>
+        </div><!--row-->
+    </div><!--container-->
+</section>
+
+<!-- Home - Video-->
+<!-- ++++++++++++++++++++++++++++++++++++++++ -->
+<section class="video dark parallax-section-1">
+    <div class="video-bg"></div>
+    <article>
+        <div class="container">
+            <div class="row">
+                <div id="custom">
+                    <a id="bgndVideo" class="player"
+                       data-property="{videoURL:'https://www.youtube.com/watch?v=IvPT2QuCIOA',containment:'#custom',autoPlay:true, mute:true, startAt:0, opacity:1}"></a>
+
+                </div>
+
+                <div class="col-md-5">
+                    <h2 class="text-right">Youtube Video</h2>
+                </div>
+                <div class="col-md-2">
+                    <div class="striped-icon-xlarge">
+                        <i class="fa fa-play"></i>
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <h2 class="text-left">Background</h2>
+                </div>
+            </div>
+        </div>
+    </article>
+</section>
+
+<!-- Home - Team-->
+<!-- ++++++++++++++++++++++++++++++++++++++++ -->
+<section class="team home-team">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <header class="section-header wow fadeInUp" data-wow-duration="2s">
+                    <p class="subhead">Dream team</p>
+                    <h2>Professional work</h2>
+                    <p class="large">Sed condimentum ante ac quam varius pretium. Nunc ornare laoreet augue et
+                        elementum. Phasellus enim, blandit vel sapien vitae, condimentum ultricies magna et.</p>
+                </header>
+            </div>
+        </div><!--row-->
+    </div><!--container-->
+
+    <!-- Content for Popover  -->
+    <div class="hidden" id="member-1">
+        <div class="popover-body">
+            <div class="member-info">
+                <h5>Wilbert Hilchey </h5>
+                <p class="large">Manager</p>
+            </div>
+            <a href="#fakelink" class="member-contact"><span aria-hidden="true" class="icon-envelope"></span></a>
+        </div>
+    </div>
+    <div class="hidden" id="member-2">
+        <div class="popover-body">
+            <div class="member-info">
+                <h5> Marquetta Dennis </h5>
+                <p class="large">Illustrator</p>
+            </div>
+            <a href="#fakelink" class="member-contact"><span aria-hidden="true" class="icon-envelope"></span></a>
+        </div>
+    </div>
+    <div class="hidden" id="member-3">
+        <div class="popover-body">
+            <div class="member-info">
+                <h5> Rikki Hovis </h5>
+                <p class="large">Founder</p>
+            </div>
+            <a href="#fakelink" class="member-contact"><span aria-hidden="true" class="icon-envelope"></span></a>
+        </div>
+    </div>
+    <div class="hidden" id="member-4">
+        <div class="popover-body">
+            <div class="member-info">
+                <h5> Dana Hise </h5>
+                <p class="large">Designer</p>
+            </div>
+            <a href="#fakelink" class="member-contact"><span aria-hidden="true" class="icon-envelope"></span></a>
+        </div>
+    </div>
+    <div class="hidden" id="member-5">
+        <div class="popover-body">
+            <div class="member-info">
+                <h5> Issac Rinaldi </h5>
+                <p class="large">PHP Coder</p>
+            </div>
+            <a href="#fakelink" class="member-contact"><span aria-hidden="true" class="icon-envelope"></span></a>
+        </div>
+    </div>
+    <div class="hidden" id="member-6">
+        <div class="popover-body">
+            <div class="member-info">
+                <h5> Tisa Hamner </h5>
+                <p class="large">SEO</p>
+            </div>
+            <a href="#fakelink" class="member-contact"><span aria-hidden="true" class="icon-envelope"></span></a>
+        </div>
+    </div>
+    <div class="hidden" id="member-7">
+        <div class="popover-body">
+            <div class="member-info">
+                <h5> Salvador Chan </h5>
+                <p class="large">Web-developer</p>
+            </div>
+            <a href="#fakelink" class="member-contact"><span aria-hidden="true" class="icon-envelope"></span></a>
+        </div>
+    </div>
+
+    <div class="scroll-container">
+        <div class="scroll-content">
+            <div class="scroll-wrapper">
+                <div class="team-member">
+                    <img src="assets/images/team/member-1.png" alt="member" data-popover-content="#member-1"
+                         data-toggle="popover"/>
+                </div>
+                <div class="team-member">
+                    <img src="assets/images/team/member-2.png" alt="member" data-popover-content="#member-2"
+                         data-toggle="popover"/>
+                </div>
+                <div class="team-member">
+                    <img src="assets/images/team/member-3.png" alt="member" data-popover-content="#member-3"
+                         data-toggle="popover"/>
+                </div>
+                <div class="team-member">
+                    <img src="assets/images/team/member-4.png" alt="member" data-popover-content="#member-4"
+                         data-toggle="popover"/>
+                </div>
+                <div class="team-member">
+                    <img src="assets/images/team/member-5.png" alt="member" data-popover-content="#member-5"
+                         data-toggle="popover"/>
+                </div>
+                <div class="team-member">
+                    <img src="assets/images/team/member-6.png" alt="member" data-popover-content="#member-6"
+                         data-toggle="popover"/>
+                </div>
+                <div class="team-member">
+                    <img src="assets/images/team/member-7.png" alt="member" data-popover-content="#member-7"
+                         data-toggle="popover"/>
+                </div>
+                <div class="team-member">
+                    <img src="assets/images/team/member-8.png" alt="member" data-popover-content="#member-3"
+                         data-toggle="popover"/>
+                </div>
+                <div class="team-member">
+                    <img src="assets/images/team/member-9.png" alt="member" data-popover-content="#member-1"
+                         data-toggle="popover"/>
+                </div>
+                <div class="team-member">
+                    <img src="assets/images/team/member-10.png" alt="member" data-popover-content="#member-4"
+                         data-toggle="popover"/>
+                </div>
+            </div><!--scroll-wrapper-->
+        </div>
+        <div class="scroll-slider-wrap">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-md-8 col-md-offset-2">
+                        <div class="scroll-slider"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container team-description-container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="team-description   wow fadeInUp no-padding" data-wow-duration="2s">
+                    <h3>What We Do</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, vel, corporis, laudantium
+                        asperiores consectetur enim sequi sapiente rem velit incidunt assumenda animi totam veritatis
+                        qui est impedit quam. Deleniti, laudantium.</p>
+                    <p>Non inventore fugiat expedita ut quia blanditiis voluptatum consectetur quibusdam facere
+                        necessitatibus. Similique, et harum cupiditate delectus neque nisi labore! Cupiditate, obcaecati
+                        aperiam nemo vel esse in asperiores laudantium voluptate.</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <!-- Progress -->
+                <ul class="skills">
+                    <li data-percent="80" class="skills-animated">
+                        <span>WebDesign</span>
+                        <div class="progress">
+                            <div class="progress-percent">
+                                <span class="progress-bar-tooltip">80</span>%
+                            </div>
+                        </div>
+                    </li>
+                    <li data-percent="60" class="skills-animated">
+                        <span>Graphic Design</span>
+                        <div class="progress">
+                            <div class="progress-percent">
+                                <span class="progress-bar-tooltip">90</span>%
+                            </div>
+                        </div>
+                    </li>
+                    <li data-percent="90" class="skills-animated">
+                        <span>Wordpress</span>
+                        <div class="progress">
+                            <div class="progress-percent">
+                                <span class="progress-bar-tooltip">60</span>%
+                            </div>
+                        </div>
+                    </li>
+                    <li data-percent="70" class="skills-animated">
+                        <span>Marketing</span>
+                        <div class="progress">
+                            <div class="progress-percent">
+                                <span class="progress-bar-tooltip">70</span>%
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div><!--row-->
+    </div><!--container-->
+
+</section>
+
+<!-- Home - Gallery -->
+<!-- ++++++++++++++++++++++++++++++++++++++++ -->
+<section class="gallery" id="gallery">
+    <a class="striped-icon divider scroll" href="#gallery">
+        <i class="fa fa-chevron-down"></i>
+    </a>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <header class="section-header   wow fadeInUp" data-wow-duration="2s">
+                    <p class="subhead">gallery</p>
+                    <h2>Our Photo Gallery</h2>
+                    <p class="large">Sed condimentum ante ac quam varius pretium. Nunc laoreet augue et elementum.
+                        Phasellus enim libero, blandit vel sapien vitae, condimentum ultricies magna et.</p>
+                </header>
+            </div>
+        </div><!--row-->
+    </div><!--container-->
+
+    <div class="gallery-controls wow fadeInUp" data-wow-duration="2s">
+        <div id="filters" class="btn-group">
+            <button type="button" class="btn btn-info active" data-filter="*">All</button>
+            <button type="button" class="btn btn-info" data-filter=".office">Office</button>
+            <button type="button" class="btn btn-info" data-filter=".workplace">Workplace</button>
+            <button type="button" class="btn btn-info" data-filter=".team">Team</button>
+        </div>
+    </div>
+
+    <div id="gallery-items" class="gallery-items wow fadeInUp" data-wow-duration="2s">
+        <figure class="gallery-item office">
+            <img src="assets/images/placehold/192x192.gif" alt="gallery"/>
+            <figcaption>
+                <a class="fancybox" rel="gallery1" href="assets/images/placehold/192x192.gif">
+                    <span aria-hidden="true" class="icon-plus"></span>
+                </a>
+                <a href="#fakelink"><span aria-hidden="true" class="icon-info"></span></a>
+            </figcaption>
+        </figure>
+        <figure class="gallery-item workplace">
+            <img src="assets/images/placehold/192x192.gif" alt="gallery"/>
+            <figcaption>
+                <a class="fancybox" rel="gallery1" href="assets/images/placehold/192x192.gif">
+                    <span aria-hidden="true" class="icon-plus"></span>
+                </a>
+                <a href="#fakelink"><span aria-hidden="true" class="icon-info"></span></a>
+            </figcaption>
+        </figure>
+        <figure class="gallery-item team">
+            <img src="assets/images/placehold/192x192.gif" alt="gallery"/>
+            <figcaption>
+                <a class="fancybox" rel="gallery1" href="assets/images/placehold/192x192.gif">
+                    <span aria-hidden="true" class="icon-plus"></span>
+                </a>
+                <a href="#fakelink"><span aria-hidden="true" class="icon-info"></span></a>
+            </figcaption>
+        </figure>
+        <figure class="gallery-item workplace">
+            <img src="assets/images/placehold/192x192.gif" alt="gallery"/>
+            <figcaption>
+                <a class="fancybox" href="assets/images/placehold/192x192.gif"><span aria-hidden="true"
+                                                                                     class="icon-plus"></span></a>
+                <a href="#fakelink"><span aria-hidden="true" class="icon-info"></span></a>
+            </figcaption>
+        </figure>
+        <figure class="gallery-item wide office double">
+            <img src="assets/images/placehold/384x192.gif" alt="gallery"/>
+            <figcaption>
+                <a class="fancybox" href="assets/images/placehold/384x192.gif"><span aria-hidden="true"
+                                                                                     class="icon-plus"></span></a>
+                <a href="#fakelink"><span aria-hidden="true" class="icon-info"></span></a>
+            </figcaption>
+        </figure>
+        <figure class="gallery-item wide team  double">
+            <img src="assets/images/placehold/384x384.gif" alt="gallery"/>
+            <figcaption>
+                <a class="fancybox" href="assets/images/placehold/384x384.gif"><span aria-hidden="true"
+                                                                                     class="icon-plus"></span></a>
+                <a href="#fakelink"><span aria-hidden="true" class="icon-info"></span></a>
+            </figcaption>
+        </figure>
+        <figure class="gallery-item workplace office">
+            <img src="assets/images/placehold/192x192.gif" alt="gallery"/>
+            <figcaption>
+                <a class="fancybox" href="assets/images/placehold/192x192.gif"><span aria-hidden="true"
+                                                                                     class="icon-plus"></span></a>
+                <a href="#fakelink"><span aria-hidden="true" class="icon-info"></span></a>
+            </figcaption>
+        </figure>
+        <figure class="gallery-item workplace">
+            <img src="assets/images/placehold/192x192.gif" alt="gallery"/>
+            <figcaption>
+                <a class="fancybox" href="assets/images/placehold/192x192.gif"><span aria-hidden="true"
+                                                                                     class="icon-plus"></span></a>
+                <a href="#fakelink"><span aria-hidden="true" class="icon-info"></span></a>
+            </figcaption>
+        </figure>
+        <figure class="gallery-item wide workplace office double">
+            <img src="assets/images/placehold/384x384.gif" alt="gallery"/>
+            <figcaption>
+                <a class="fancybox" href="assets/images/placehold/384x384.gif"><span aria-hidden="true"
+                                                                                     class="icon-plus"></span></a>
+                <a href="#fakelink"><span aria-hidden="true" class="icon-info"></span></a>
+            </figcaption>
+        </figure>
+        <figure class="gallery-item workplace">
+            <img src="assets/images/placehold/192x192.gif" alt="gallery"/>
+            <figcaption>
+                <a class="fancybox" href="assets/images/placehold/192x192.gif"><span aria-hidden="true"
+                                                                                     class="icon-plus"></span></a>
+                <a href="#fakelink"><span aria-hidden="true" class="icon-info"></span></a>
+            </figcaption>
+        </figure>
+        <figure class="gallery-item workplace office">
+            <img src="assets/images/placehold/192x192.gif" alt="gallery"/>
+            <figcaption>
+                <a class="fancybox" href="assets/images/placehold/192x192.gif"><span aria-hidden="true"
+                                                                                     class="icon-plus"></span></a>
+                <a href="#fakelink"><span aria-hidden="true" class="icon-info"></span></a>
+            </figcaption>
+        </figure>
+        <figure class="gallery-item workplace  office">
+            <img src="assets/images/placehold/192x192.gif" alt="gallery"/>
+            <figcaption>
+                <a class="fancybox" href="assets/images/placehold/192x192.gif"><span aria-hidden="true"
+                                                                                     class="icon-plus"></span></a>
+                <a href="#fakelink"><span aria-hidden="true" class="icon-info"></span></a>
+            </figcaption>
+        </figure>
+        <figure class="gallery-item workplace team">
+            <img src="assets/images/placehold/192x192.gif" alt="gallery"/>
+            <figcaption>
+                <a class="fancybox" href="assets/images/placehold/192x192.gif"><span aria-hidden="true"
+                                                                                     class="icon-plus"></span></a>
+                <a href="#fakelink"><span aria-hidden="true" class="icon-info"></span></a>
+            </figcaption>
+        </figure>
+        <figure class="gallery-item workplace">
+            <img src="assets/images/placehold/192x192.gif" alt="gallery"/>
+            <figcaption>
+                <a class="fancybox" href="assets/images/placehold/192x192.gif"><span aria-hidden="true"
+                                                                                     class="icon-plus"></span></a>
+                <a href="#fakelink"><span aria-hidden="true" class="icon-info"></span></a>
+            </figcaption>
+        </figure>
+        <figure class="gallery-item office">
+            <img src="assets/images/placehold/192x384.gif" alt="gallery"/>
+            <figcaption>
+                <a class="fancybox" href="assets/images/placehold/192x384.gif"><span aria-hidden="true"
+                                                                                     class="icon-plus"></span></a>
+                <a href="#fakelink"><span aria-hidden="true" class="icon-info"></span></a>
+            </figcaption>
+        </figure>
+        <figure class="gallery-item office">
+            <img src="assets/images/placehold/192x192.gif" alt="gallery"/>
+            <figcaption>
+                <a class="fancybox" href="assets/images/placehold/192x192.gif"><span aria-hidden="true"
+                                                                                     class="icon-plus"></span></a>
+                <a href="#fakelink"><span aria-hidden="true" class="icon-info"></span></a>
+            </figcaption>
+        </figure>
+        <figure class="gallery-item wide workplace double">
+            <img src="assets/images/placehold/384x192.gif" alt="gallery"/>
+            <figcaption>
+                <a class="fancybox" href="assets/images/placehold/384x192.gif"><span aria-hidden="true"
+                                                                                     class="icon-plus"></span></a>
+                <a href="#fakelink"><span aria-hidden="true" class="icon-info"></span></a>
+            </figcaption>
+        </figure>
+        <figure class="gallery-item workplace">
+            <img src="assets/images/placehold/192x192.gif" alt="gallery"/>
+            <figcaption>
+                <a class="fancybox" href="assets/images/placehold/192x192.gif"><span aria-hidden="true"
+                                                                                     class="icon-plus"></span></a>
+                <a href="#fakelink"><span aria-hidden="true" class="icon-info"></span></a>
+            </figcaption>
+        </figure>
+        <figure class="gallery-item workplace team">
+            <img src="assets/images/placehold/192x192.gif" alt="gallery"/>
+            <figcaption>
+                <a class="fancybox" href="assets/images/placehold/192x192.gif"><span aria-hidden="true"
+                                                                                     class="icon-plus"></span></a>
+                <a href="#fakelink"><span aria-hidden="true" class="icon-info"></span></a>
+            </figcaption>
+        </figure>
+        <figure class="gallery-item team office">
+            <img src="assets/images/placehold/192x192.gif" alt="gallery"/>
+            <figcaption>
+                <a class="fancybox" href="assets/images/placehold/192x192.gif"><span aria-hidden="true"
+                                                                                     class="icon-plus"></span></a>
+                <a href="#fakelink"><span aria-hidden="true" class="icon-info"></span></a>
+            </figcaption>
+        </figure>
+        <figure class="gallery-item workplace">
+            <img src="assets/images/placehold/192x192.gif" alt="gallery"/>
+            <figcaption>
+                <a class="fancybox" href="assets/images/placehold/192x192.gif"><span aria-hidden="true"
+                                                                                     class="icon-plus"></span></a>
+                <a href="#fakelink"><span aria-hidden="true" class="icon-info"></span></a>
+            </figcaption>
+        </figure>
+    </div>
+    <div class="gallery-load">
+        <button type="button" class="btn btn-info">Load more</button>
+    </div>
+
+</section>
+
+<!-- Home - Price -->
+<!-- ++++++++++++++++++++++++++++++++++++++++ -->
+<section class="price" id="pricing">
+    <a class="striped-icon divider scroll" href="#pricing">
+        <i class="fa fa-chevron-down"></i>
+    </a>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <header class="section-header   wow fadeInUp" data-wow-duration="2s">
+                    <p class="subhead">Affordable prices</p>
+                    <h2>Select Something That Suits You</h2>
+                    <p class="large">Sed condimentum ante ac quam varius pretium. Nunc ornare laoreet augue et
+                        elementum. Phasellus libero, blandit vel sapien vitae, condimentum ultricies magna et.</p>
+                </header>
+            </div>
+        </div><!--row-->
+
+        <div class="cd-pricing-container   wow fadeInUp" data-wow-duration="2s">
+
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <div class="pricing-switcher">
+
+                        <div class="btn-group" data-toggle="buttons">
+                            <label class="btn btn-info active">
+                                <input type="radio" name="duration-1" value="monthly" id="monthly-1" checked> Monthly
+                            </label>
+                            <label class="btn btn-info">
+                                <input type="radio" name="duration-1" value="yearly" id="yearly-1"> Yearly
+                            </label>
+                        </div>
+
+                    </div> <!-- .-pricing-switcher -->
+                </div><!--col-->
+            </div><!--row-->
+
+            <!-- Tab panes -->
+            <div class="cd-pricing-list cd-bounce-invert">
+                <div class="row no-gutter">
+                    <div class="col-md-3">
+                        <ul class="cd-pricing-wrapper">
+
+                            <!-- Price Item -->
+                            <li class="panel panel-price panel-default is-visible" data-type="monthly">
+                                <div class="panel-heading  text-center">
+                                    <p class="subhead">Free</p>
+                                    <h2><span class="currency">$ </span>0,00<span class="period"> /mo</span></h2>
+                                </div>
+                                <div class="panel-body text-center">
+                                    <ul class="list-styled list-style-ok">
+                                        <li>We value continuous</li>
+                                        <li>Education and professional</li>
+                                        <li class="disabled">Growth, encourage</li>
+                                        <li class="disabled">Lassumenda modi omnis tenetur</li>
+                                        <li class="disabled">Mollitia numquam eum est</li>
+                                    </ul>
+                                </div>
+                                <div class="panel-footer text-center">
+                                    <a class="btn btn-info" href="#fakelink">Select</a>
+                                </div>
+                            </li><!--panel-->
+
+                            <!-- Price Item -->
+                            <li class="panel panel-price panel-default is-hidden" data-type="yearly">
+                                <div class="panel-heading  text-center">
+                                    <p class="subhead">Free</p>
+                                    <h2><span class="currency">$ </span>0,00<span class="period"> /yr</span></h2>
+                                </div>
+                                <div class="panel-body text-center">
+                                    <ul class="list-styled list-style-ok">
+                                        <li>We value continuous</li>
+                                        <li>Education and professional</li>
+                                        <li class="disabled">Growth, encourage</li>
+                                        <li class="disabled">Lassumenda modi omnis tenetur</li>
+                                        <li class="disabled">Mollitia numquam eum est</li>
+                                    </ul>
+                                </div>
+                                <div class="panel-footer text-center">
+                                    <a class="btn btn-info" href="#fakelink">Select</a>
+                                </div>
+                            </li><!--panel-->
+
+                        </ul><!--pricing-wrapper-->
+
+                    </div><!--col-->
+
+                    <div class="col-md-3">
+                        <ul class="cd-pricing-wrapper">
+
+                            <!-- Price Item -->
+                            <li class="panel panel-price panel-default is-visible" data-type="monthly">
+                                <div class="panel-heading  text-center">
+                                    <p class="subhead">Basic</p>
+                                    <h2><span class="currency">$ </span>3,99<span class="period"> /mo</span></h2>
+                                </div>
+                                <div class="panel-body text-center">
+                                    <ul class="list-styled list-style-ok">
+                                        <li>We value continuous</li>
+                                        <li>Education and professional</li>
+                                        <li>Growth, encourage</li>
+                                        <li class="disabled">Lassumenda modi omnis tenetur</li>
+                                        <li class="disabled">Mollitia numquam eum est</li>
+                                    </ul>
+                                </div>
+                                <div class="panel-footer text-center">
+                                    <a class="btn btn-info" href="#fakelink">Select</a>
+                                </div>
+                            </li><!--panel-->
+
+                            <!-- Price Item -->
+                            <li class="panel panel-price panel-default is-hidden" data-type="yearly">
+                                <div class="panel-heading  text-center">
+                                    <p class="subhead">Basic</p>
+                                    <h2><span class="currency">$ </span>13,99<span class="period"> /yr</span></h2>
+                                </div>
+                                <div class="panel-body text-center">
+                                    <ul class="list-styled list-style-ok">
+                                        <li>We value continuous</li>
+                                        <li>Education and professional</li>
+                                        <li>Growth, encourage</li>
+                                        <li class="disabled">Lassumenda modi omnis tenetur</li>
+                                        <li class="disabled">Mollitia numquam eum est</li>
+                                    </ul>
+                                </div>
+                                <div class="panel-footer text-center">
+                                    <a class="btn btn-info" href="#fakelink">Select</a>
+                                </div>
+                            </li><!--panel-->
+
+                        </ul><!--pricing-wrapper-->
+
+                    </div><!--col-->
+
+                    <div class="col-md-3">
+                        <ul class="cd-pricing-wrapper panel-highlited">
+
+                            <!-- Price Item -->
+                            <li class="panel panel-price panel-default is-visible" data-type="monthly">
+                                <p class="gap"></p>
+                                <div class="panel-heading  text-center">
+                                    <p class="subhead">Popular</p>
+                                    <h2><span class="currency">$ </span>9,99<span class="period"> /mo</span></h2>
+                                </div>
+                                <div class="panel-body text-center">
+                                    <ul class="list-styled list-style-ok">
+                                        <li>We value continuous</li>
+                                        <li>Education and professional</li>
+                                        <li>Growth, encourage</li>
+                                        <li>Lassumenda modi omnis tenetur</li>
+                                        <li class="disabled">Mollitia numquam eum est</li>
+                                    </ul>
+                                </div>
+                                <div class="panel-footer text-center">
+                                    <a class="btn btn-primary" href="#fakelink">Select</a>
+                                </div>
+                            </li><!--panel-->
+
+                            <!-- Price Item -->
+                            <li class="panel panel-price panel-default is-hidden" data-type="yearly">
+                                <p class="gap"></p>
+                                <div class="panel-heading  text-center">
+                                    <p class="subhead">Popular</p>
+                                    <h2><span class="currency">$ </span>59,99<span class="period"> /yr</span></h2>
+                                </div>
+                                <div class="panel-body text-center">
+                                    <ul class="list-styled list-style-ok">
+                                        <li>We value continuous</li>
+                                        <li>Education and professional</li>
+                                        <li>Growth, encourage</li>
+                                        <li>Lassumenda modi omnis tenetur</li>
+                                        <li class="disabled">Mollitia numquam eum est</li>
+                                    </ul>
+                                </div>
+                                <div class="panel-footer text-center">
+                                    <a class="btn btn-primary" href="#fakelink">Select</a>
+                                </div>
+                            </li><!--panel-->
+
+                        </ul><!--pricing-wrapper-->
+
+                    </div><!--col-->
+
+                    <div class="col-md-3 under">
+                        <ul class="cd-pricing-wrapper">
+
+                            <!-- Price Item -->
+                            <li class="panel panel-price panel-default is-visible" data-type="monthly">
+                                <div class="panel-heading  text-center">
+                                    <p class="subhead">Premier</p>
+                                    <h2><span class="currency">$ </span>15,99<span class="period"> /mo</span></h2>
+                                </div>
+                                <div class="panel-body text-center">
+                                    <ul class="list-styled list-style-ok">
+                                        <li>We value continuous</li>
+                                        <li>Education and professional</li>
+                                        <li>Growth, encourage</li>
+                                        <li>Lassumenda modi omnis tenetur</li>
+                                        <li>Mollitia numquam eum est</li>
+                                    </ul>
+                                </div>
+                                <div class="panel-footer text-center">
+                                    <a class="btn btn-info" href="#fakelink">Select</a>
+                                </div>
+                            </li><!--panel-->
+
+                            <!-- Price Item -->
+                            <li class="panel panel-price panel-default is-hidden" data-type="yearly">
+                                <div class="panel-heading  text-center">
+                                    <p class="subhead">Premier</p>
+                                    <h2><span class="currency">$ </span>99,99<span class="period"> /yr</span></h2>
+                                </div>
+                                <div class="panel-body text-center">
+                                    <ul class="list-styled list-style-ok">
+                                        <li>We value continuous</li>
+                                        <li>Education and professional</li>
+                                        <li>Growth, encourage</li>
+                                        <li>Lassumenda modi omnis tenetur</li>
+                                        <li>Mollitia numquam eum est</li>
+                                    </ul>
+                                </div>
+                                <div class="panel-footer text-center">
+                                    <a class="btn btn-info" href="#fakelink">Select</a>
+                                </div>
+                            </li><!--panel-->
+
+                        </ul><!--pricing-wrapper-->
+
+                    </div><!--col-->
+
+                </div><!--row-->
+            </div><!--tab-content-->
+
+        </div> <!-- .cd-pricing-container -->
+
+    </div><!--container-->
+</section>
+
+<!-- Home - Testimonials -->
+<!-- ++++++++++++++++++++++++++++++++++++++++ -->
+<section class="testimonials" id="testimonials">
+    <a class="striped-icon divider scroll" href="#testimonials">
+        <i class="fa fa-chevron-down"></i>
+    </a>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <header class="section-header wow fadeInUp" data-wow-duration="2s">
+                    <p class="subhead">about reviews</p>
+                    <h2>What Clients Say?</h2>
+                    <p class="large">Sed condimentum ante ac quam varius pretium. Nunc ornare laoreet augue et
+                        elementum. Phasellus libero, blandit vel sapien vitae, condimentum ultricies magna et.</p>
+                </header>
+            </div>
+        </div><!--row-->
+
+        <style>
+            .owl-carousel .item {
+                height: 10rem;
+                background: #4DC7A0;
+                padding: 1rem;
+            }
+        </style>
+        <div class="row">
+            <div class="large-12 columns">
+                <div class="owl-carousel owl-theme">
+                    <div class="item"><h1>a</h1></div>
+                    <div class="item"><h1>a</h1></div>
+                    <div class="item"><h1>a</h1></div>
+                    <div class="item"><h1>a</h1></div>
+                    <div class="item"><h1>a</h1></div>
+                    <div class="item"><h1>a</h1></div>
+                    <div class="item"><h1>a</h1></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="brands">
+            <div class="row no-gutter">
+                <div class="col-xs-6 col-sm-3  wow fadeInUp" data-wow-duration="2s">
+                    <div class="brand-logo">
+                        <a class="brand-logo-wrap" href="#fakelink">
+                            <img src="assets/images/placehold/130x80.gif" alt="brand"/>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-xs-6 col-sm-3  wow fadeInUp" data-wow-duration="2s">
+                    <div class="brand-logo">
+                        <a class="brand-logo-wrap" href="#fakelink">
+                            <img src="assets/images/placehold/130x80.gif" alt="brand"/>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-xs-6 col-sm-3  wow fadeInUp" data-wow-duration="2s">
+                    <div class="brand-logo">
+                        <a class="brand-logo-wrap" href="#fakelink">
+                            <img src="assets/images/placehold/130x80.gif" alt="brand"/>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-xs-6 col-sm-3  wow fadeInUp" data-wow-duration="2s">
+                    <div class="brand-logo">
+                        <a class="brand-logo-wrap" href="#fakelink">
+                            <img src="assets/images/placehold/130x80.gif" alt="brand"/>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-xs-6 col-sm-3  wow fadeInUp" data-wow-duration="2s">
+                    <div class="brand-logo">
+                        <a class="brand-logo-wrap" href="#fakelink">
+                            <img src="assets/images/placehold/130x80.gif" alt="brand"/>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-xs-6 col-sm-3  wow fadeInUp" data-wow-duration="2s">
+                    <div class="brand-logo">
+                        <a class="brand-logo-wrap" href="#fakelink">
+                            <img src="assets/images/placehold/130x80.gif" alt="brand"/>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-xs-6 col-sm-3  wow fadeInUp" data-wow-duration="2s">
+                    <div class="brand-logo">
+                        <a class="brand-logo-wrap" href="#fakelink">
+                            <img src="assets/images/placehold/130x80.gif" alt="brand"/>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-xs-6 col-sm-3  wow fadeInUp" data-wow-duration="2s">
+                    <div class="brand-logo">
+                        <a class="brand-logo-wrap" href="#fakelink">
+                            <img src="assets/images/placehold/130x80.gif" alt="brand"/>
+                        </a>
+                    </div>
+                </div>
+            </div><!--row-->
+        </div><!--brands-->
+    </div><!--container-->
+</section>
+
+
+<!-- Home - Twitter -->
+<!-- ++++++++++++++++++++++++++++++++++++++++ -->
+<section class="twitter dark parallax-section-3">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <article>
+                    <i class="fa fa-twitter"></i>
+                    <div id="twitter-carousel">
+                        <div class="twitter-feed">
+                            <p>Nullam non aliquet neque, eu mollis ex. Nam ut aliquet erat.<br> <a
+                                    href="http://themeforest.net/user/Svetlov/portfolio">http://themeforest.net/user/Svetlov/portfolio</a>
+                                Quisque velit purus, sollicitudin id condimentum et, egestas ac ex.</p>
+                            <footer>@Sandy_mustache <cite> 2 days ago</cite></footer>
+                        </div>
+                        <div class="twitter-feed">
+                            <p>Nullam non aliquet neque, eu mollis ex. Nam ut aliquet erat. <a
+                                    href="http://themeforest.net/user/Svetlov/portfolio">http://themeforest.net/user/Svetlov/portfolio</a>
+                                Quisque velit purus, sollicitudin id condimentum et, egestas ac ex.</p>
+                            <footer>@Sandy_mustache <cite> 1 days ago</cite></footer>
+                        </div>
+                        <div class="twitter-feed">
+                            <p>Nullam non aliquet neque, eu mollis ex. Nam ut aliquet erat. <a
+                                    href="http://themeforest.net/user/Svetlov/portfolio">http://themeforest.net/user/Svetlov/portfolio</a>
+                                Quisque velit purus, sollicitudin id condimentum et, egestas ac ex.</p>
+                            <footer>@Sandy_mustache <cite> 1 days ago</cite></footer>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div><!--row-->
+    </div><!--container-->
+</section>
+
+<!-- Home - Blog -->
+<!-- ++++++++++++++++++++++++++++++++++++++++ -->
+<section class="blog" id="blog">
+    <a class="striped-icon divider scroll" href="#blog">
+        <i class="fa fa-chevron-down"></i>
+    </a>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <header class="section-header  wow fadeInUp" data-wow-duration="2s">
+                    <p class="subhead">Our blog</p>
+                    <h2>Be Aware of News</h2>
+                    <p class="large">Sed condimentum ante ac quam varius pretium. Nunc ornare laoreet augue et
+                        elementum. Phasellus libero, blandit vel sapien vitae, condimentum ultricies magna et.</p>
+                </header>
+            </div>
+        </div><!--row-->
+        <div class="row">
+            <div class="col-md-4  wow fadeInUp" data-wow-duration="2s">
+                <div class="post">
+                    <div class="post-heading">
+                        <a class="post-image" href="#fakelink">
+                            <img src="assets/images/placehold/360x230.gif" alt="post"/>
+                        </a>
+                        <a class="post-avatar" href="#fakelink">
+                            <img class="" src="assets/images/placehold/80x80.gif" alt="avatar"/>
+                        </a>
+                    </div>
+                    <div class="post-body">
+                        <ul class="list-inline">
+                            <li><i class="fa fa-user"></i>Hemingway</li>
+                            <li><i class="fa fa-calendar"></i>12 Sep 20</li>
+                        </ul>
+                        <a href="#"><h5>Consectetur adipisicing elit</h5></a>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate, vel.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4  wow fadeInUp" data-wow-duration="2s">
+                <div class="post">
+                    <div class="post-heading">
+                        <a class="post-image" href="#fakelink">
+                            <img src="assets/images/placehold/360x230.gif" alt="post"/>
+                        </a>
+                        <a class="post-avatar" href="#fakelink">
+                            <img class="" src="assets/images/placehold/80x80.gif" alt="avatar"/>
+                        </a>
+                    </div>
+                    <div class="post-body">
+                        <ul class="list-inline">
+                            <li><i class="fa fa-user"></i>Hemingway</li>
+                            <li><i class="fa fa-calendar"></i>12 Sep 20</li>
+                        </ul>
+                        <a href="#"><h5>Harum odio veniam hic ipsa</h5></a>
+                        <p>Ipsa facere dignissimos sint ducimus fugiat ex magni id corporis placeat nostrum officia</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4  wow fadeInUp" data-wow-duration="2s">
+                <div class="post">
+                    <div class="post-heading">
+                        <a class="post-image" href="#fakelink">
+                            <img src="assets/images/placehold/360x230.gif" alt="post"/>
+                        </a>
+                        <a class="post-avatar" href="#fakelink">
+                            <img class="" src="assets/images/placehold/80x80.gif" alt="avatar"/>
+                        </a>
+                    </div>
+                    <div class="post-body">
+                        <ul class="list-inline">
+                            <li><i class="fa fa-user"></i>Hemingway</li>
+                            <li><i class="fa fa-calendar"></i>12 Sep 20</li>
+                        </ul>
+                        <a href="#"><h5>Maiores saepe amet asperiores</h5></a>
+                        <p> Sint, hic, et qui inventore ex perferendis sunt aliquam commodi nihil vitae.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div><!--row-->
+
+        <div class="row  wow fadeInUp" data-wow-duration="2s">
+            <div class="col-md-6 col-md-offset-3">
+                <div class="subscribe">
+                    <form class="form-inline clearfix">
+                        <input type="email" class="form-control pull-left" placeholder="Enter email">
+                        <button type="submit" class="btn btn-primary btn-round pull-right hidden-xs">Subscribe</button>
+                        <button type="submit" class="btn btn-primary btn-round-small pull-right visible-xs-block">
+                            <i class="fa fa-pencil fa-lg"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div><!--row-->
+    </div><!--container-->
+</section>
+
+<!-- Home - Application -->
+<!-- ++++++++++++++++++++++++++++++++++++++++ -->
+<section class="application" id="application">
+    <a class="striped-icon divider scroll" href="#application">
+        <i class="fa fa-chevron-down"></i>
+    </a>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <header class="section-header  wow fadeInUp" data-wow-duration="2s">
+                    <p class="subhead">always at hand</p>
+                    <h2>Mobile App Download</h2>
+                    <ul class="list-inline text-center">
+                        <li>
+                            <a href="#fakelink"><img src="assets/images/googleplay-logo.png" alt="button"/></a>
+                        </li>
+                        <li>
+                            <a href="#fakelink"><img src="assets/images/appstore-logo.png" alt="button"/></a>
+
+                        </li>
+                    </ul>
+                </header>
+            </div>
+        </div><!--row-->
+        <div class="row">
+            <div class="col-md-4 col-sm-6">
+                <div class="app-features left-features  wow fadeInUp" data-wow-duration="2s">
+                    <h5>Proin ultrices ex vitae</h5>
+                    <p>Duis sodales accumsan mollis. In fringilla ex nibh, at ex convallis nec</p>
+                    <div class="striped-icon-large">
+                        <span aria-hidden="true" class="icon-cloud-download"></span>
+                    </div>
+                </div>
+                <div class="app-features left-features  wow fadeInUp" data-wow-duration="2s">
+                    <h5>Nam velit risus eleifend</h5>
+                    <p>Mauris dapibus nunc convallis, ullamcorper orci ut, semper risus</p>
+                    <div class="striped-icon-large">
+                        <span aria-hidden="true" class="icon-check"></span>
+                    </div>
+                </div>
+                <div class="app-features left-features  wow fadeInUp" data-wow-duration="2s">
+                    <h5>Sed arcu orci dictum</h5>
+                    <p>Sed sit amet facilisis tellus. Sed ultrices nibh eget molestie blandit</p>
+                    <div class="striped-icon-large">
+                        <span aria-hidden="true" class="icon-eye"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 hidden-sm hidden-xs  wow fadeInUp" data-wow-duration="2s">
+                <img class="app-demo" src="assets/images/placehold/350x620.gif" alt="hand"/>
+            </div>
+            <div class="col-md-4 col-sm-6 ">
+                <div class="app-features right-features  wow fadeInUp" data-wow-duration="2s">
+                    <h5>Nam vel hendrerit dolor</h5>
+                    <p>Duis sodales accumsan mollis. In fringilla ex nibh, at ex convallis nec</p>
+                    <div class="striped-icon-large">
+                        <span aria-hidden="true" class="icon-camera"></span>
+                    </div>
+                </div>
+                <div class="app-features right-features  wow fadeInUp" data-wow-duration="2s">
+                    <div class="striped-icon-large">
+                        <span aria-hidden="true" class="icon-link"></span>
+                    </div>
+                    <h5>Ut pellentesque ex</h5>
+                    <p>Mauris dapibus nunc convallis, ullamcorper orci ut, semper risus</p>
+                </div>
+                <div class="app-features right-features  wow fadeInUp" data-wow-duration="2s">
+                    <h5> Interdum et malesuada</h5>
+                    <p>Sed sit amet facilisis tellus. Sed ultrices nibh eget molestie blandit</p>
+                    <div class="striped-icon-large">
+                        <span aria-hidden="true" class="icon-settings"></span>
+                    </div>
+                </div>
+            </div>
+
+        </div><!--row-->
+
+    </div><!--container-->
+</section>
+
+<!-- Footer - Tabs -->
+<!-- ++++++++++++++++++++++++++++++++++++++++ -->
+<footer class="home-footer dark-map" id="contact">
+    <div class="container">
+        <!-- Nav tabs -->
+        <ul class="nav  nav-tabs-alt nav-tabs-two nav-tab-inverse" role="tablist">
+            <li role="presentation" class="active"><a href="#contact-info" aria-controls="contact-info" role="tab"
+                                                      data-toggle="tab">Contact info</a></li>
+            <li role="presentation"><a href="#service-inquiry" aria-controls="service-inquiry" role="tab"
+                                       data-toggle="tab">Service Inquiry</a></li>
+            <li role="presentation"><a href="#on-map" aria-controls="on-map" role="tab" data-toggle="tab">View on
+                Map</a></li>
+        </ul>
+
+        <!-- Tab panes -->
+        <div class="tab-content">
+
+            <!-- Contact Info -->
+            <!-- ++++++++++++++++++++++++++++++++++++++++ -->
+            <div role="tabpanel" class="tab-pane active" id="contact-info">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <div class="footer-header">
+                            <h2>Contact info</h2>
+                            <p class="large">Sed condimentum ante ac quam varius pretium. Nunc ornare augue et
+                                elementum. Phasellus enim libero, blandit vel sapien vitae, condimentum ultricies magna
+                                et.</p>
+                        </div>
+                    </div>
+                </div><!--row-->
+                <div class="row">
+                    <div class="col-md-4">
+                        <article class="contact-item">
+                            <div class="dotted-line hidden-sm hidden-xs"></div>
+                            <div class="striped-icon-xlarge">
+                                <span aria-hidden="true" class="icon-pointer"></span>
+                            </div>
+                            <h5>Address</h5>
+                            <p>25, Lomonosova St. Moscow, Russia, 665087</p>
+                        </article>
+                    </div>
+                    <div class="col-md-4">
+                        <article class="contact-item">
+                            <div class="dotted-line hidden-sm hidden-xs"></div>
+                            <div class="striped-icon-xlarge">
+                                <span aria-hidden="true" class="icon-call-end"></span>
+                            </div>
+                            <h5>Phones</h5>
+                            <p>+7 234 949-58-83, +7 239 585-58-61</p>
+                        </article>
+                    </div>
+                    <div class="col-md-4">
+                        <article class="contact-item">
+                            <div class="striped-icon-xlarge">
+                                <span aria-hidden="true" class="icon-envelope"></span>
+                            </div>
+                            <h5>E-mail</h5>
+                            <p>info@rosetta.com, support@rosetta.com</p>
+                        </article>
+                    </div>
+                </div>
+            </div><!--tabpanel-->
+
+            <!-- Service Inquiry -->
+            <!-- ++++++++++++++++++++++++++++++++++++++++ -->
+            <div role="tabpanel" class="tab-pane" id="service-inquiry">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <div class="footer-header">
+                            <h2>Service Inquiry</h2>
+                        </div>
+                    </div>
+                </div><!--row-->
+                <div class="row">
+                    <div class="col-sm-6 col-sm-offset-3 contact-form">
+                        <div id="response"></div>
+                        <form method="post" action="sendEmail.php" name="contact-form" id="contact-form">
+                            <div><input type="text" placeholder="Subject" value="" name="subject" id="subject"
+                                        class="form-control"></div>
+                            <div><input type="text" placeholder="Your name" value="" name="name" id="name"
+                                        class="form-control"></div>
+                            <div><input type="email" placeholder="Your email" value="" name="email" id="email"
+                                        class="form-control"></div>
+                            <div><textarea id="message" class="form-control" rows="3" name="message"
+                                           placeholder="Your message"></textarea></div>
+                            <div><input class="contact_button button btn btn-primary btn-block" type="submit"
+                                        name="submit" id="submit" value="Send Message"/></div>
+                        </form>
+                    </div>
+                </div>
+            </div><!--tabpanel-->
+
+            <!-- Map -->
+            <!-- ++++++++++++++++++++++++++++++++++++++++ -->
+            <div role="tabpanel" class="tab-pane" id="on-map">
+                <div id="mapCanvas"></div>
+            </div><!--tabpanel-->
+
+        </div><!--tab-content-->
+
+        <!-- Copyright -->
+        <!-- ++++++++++++++++++++++++++++++++++++++++ -->
+        <div class="copyright-alt">
+            <ul class="copyright-links list-inline">
+                <li><a href="#fakelink"><i class="fa fa-facebook fa-lg"></i></a></li>
+                <li><a href="#fakelink"><i class="fa fa-twitter fa-lg"></i></a></li>
+                <li><a href="#fakelink"><i class="fa fa-youtube-play fa-lg"></i></a></li>
+                <li><a href="#fakelink"><i class="fa fa-google-plus fa-lg"></i></a></li>
+                <li><a href="#fakelink"><i class="fa fa-instagram fa-lg"></i></a></li>
+            </ul>
+            <p>&copy; 2011-2014 – Trademarks and brands are the property of their respective owners</p>
+        </div>
+    </div><!--container-->
+</footer>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++ -->
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="https://code.jquery.com/ui/1.11.3/jquery-ui.js"></script>
+<script src="bower_components/jquery-ui/jquery-ui.min.js"></script>
+<!-- Include BOOTSTRAP plugins  -->
+<script src="bower_components/sass-bootstrap/dist/js/bootstrap.min.js"></script>
+<!-- Include plugins -->
+<script src="bower_components/jquery.mb.ytplayer/dist/jquery.mb.YTPlayer.min.js"></script>
+<script src="bower_components/isotope/dist/isotope.pkgd.min.js"></script>
+<script src="bower_components/owl.carousel/dist/owl.carousel.min.js"></script>
+<script src="bower_components/jquery.scrollTo/jquery.scrollTo.min.js"></script>
+<script src="bower_components/jquery-ui/jquery-ui.min.js"></script>
+<script src="scripts/contact.js"></script>
+<script src="bower_components/waypoints/lib/jquery.waypoints.min.js"></script>
+<script src="bower_components/fancybox/source/jquery.fancybox.js"></script>
+<script src="bower_components/wow/dist/wow.min.js"></script>
+<script>
+    new WOW().init();
+    (function ($) {
+        $(document).ready(function () {
+            if (!Modernizr.touch) {
+                $(".player").mb_YTPlayer();
+            } else {
+                $('.video-bg ').css('display', 'block');
+            }
+        });
+    })(jQuery);
+</script>
+<script>
+    new WOW().init();
+</script>
+<!-- Google maps -->
+<script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+<script src="scripts/map.js"></script>
+<!-- Include local script calls -->
+<script src="bower_components/jquery.easy-pie-chart/dist/jquery.easypiechart.min.js"></script>
+<script src="bower_components/gsap/src/minified/TweenMax.min.js"></script>
+<script src="bower_components/highcharts/highcharts.js"></script>
+<script src="bower_components/Chart.js/Chart.min.js"></script>
+<script src="scripts/jquery.backgroundvideo.min.js"></script>
+<script src="scripts/main.js"></script>
+<script src="scripts/parallax.js"></script>
 </body>
 </html>
