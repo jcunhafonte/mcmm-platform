@@ -4,6 +4,8 @@ $(document).ready(function () {
 
     $('body').addClass(navigator.appVersion + ' is-js');
 
+    js_height_init();
+
     // Preloader
     $(window).on('load', function () {
         var $preloader = $('#page-preloader'),
@@ -16,6 +18,19 @@ $(document).ready(function () {
         js_height_init();
     });
 
+    //TYPED
+    $("#typed").typed({
+        strings: ["Typed", "sentences.", "them.", "it out!"],
+        typeSpeed: 100,
+        backDelay: 4000,
+        loop: true,
+        contentType: 'html',
+        loopCount: false
+    });
+
+    //TOPBAR
+    $('#nav').scrollupbar();
+
     /* ---------------------------------------------
      Height 100%
      --------------------------------------------- */
@@ -27,8 +42,6 @@ $(document).ready(function () {
             });
         })(jQuery);
     }
-
-    js_height_init();
 
     // Hovers in dream team for touch screen
     if (Modernizr.touch) {
@@ -156,9 +169,6 @@ $(document).ready(function () {
         });
         e.preventDefault();
         //   ---- dissapearing menu on click
-        if ($('.navbar-collapse').hasClass('in')) {
-            $('.navbar-collapse').removeClass('in').addClass('collapse');
-        }
     });
 
     /* <!-- =============================================== --> */
@@ -171,7 +181,7 @@ $(document).ready(function () {
         // Enable scrollSpy with correct offset based on height of navbar
         $body.scrollspy({
             target: '#nav',
-            offset: offset
+            offset: offset + 50
         });
         // function to do the tweaking
         function fixSpy() {
@@ -257,7 +267,7 @@ $(document).ready(function () {
     /* <!-- ============ Herader Animation =========== --> */
     /* <!-- =============================================== -->  */
     $(window).scroll(function () {
-        if ($(this).scrollTop() > 15) {
+        if ($(this).scrollTop() > 80) {
             $('nav').addClass("navbar-alt")
         } else {
             $('nav').removeClass("navbar-alt")

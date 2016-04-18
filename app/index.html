@@ -78,18 +78,83 @@
 <!-- Navigation -->
 <!-- ++++++++++++++++++++++++++++++++++++++++ -->
 <header class="header">
+
+
+    <!-- Fixed navbar -->
     <nav id="nav" class="navbar navbar-default navbar-fixed-top" role="navigation">
         <div class="relative-nav-container">
-            <a class="toggle-button visible-xs-block" data-toggle="collapse" data-target="#navbar-collapse">
-                <i class="fa fa-navicon"></i>
-            </a>
-            <a class="navbar-brand scroll" href="index.html">
-                <img class="normal-logo hidden-xs" src="assets/images/logo.png" alt="logo"/>
-                <img class="inverse-logo hidden-xs" src="assets/images/logo-w.png" alt="logo"/>
-                <img class="visible-xs-block" src="assets/images/logo-sign2.png" width="40" height="44" alt="logo"/>
-            </a>
+            <div class="navbar-header">
+                <a class="navbar-brand scroll" href="index.html">
+                    <img class="normal-logo hidden-xs" src="assets/images/logo.png" alt="logo"/>
+                    <img class="inverse-logo hidden-xs" src="assets/images/logo-w.png" alt="logo"/>
+                    <img class="visible-xs-block" src="assets/images/logo-sign2.png" width="40" height="44" alt="logo"/>
+                </a>
+            </div>
+
+            <ul class="nav navbar-nav clearfix navbar-right">
+                <li>
+                    <a class="btn btn-primary btn-short">Entrar/Registar</a>
+                </li>
+                <li>
+                    <a class="btn btn-primary btn-short">Entrar/Registar</a>
+                </li>
+                <li>
+                    <a class="btn btn-primary btn-short">Entrar/Registar</a>
+                </li>
+            </ul>
+        </div>
+        <div class="container">
+            <div id="navigation">
+                <ul class="nav navbar-nav navbar-left with-border">
+                    <li>
+                        <a href="/news">Notícias</a>
+                    </li>
+                    <li>
+                        <a href="/projects">Projetos</a>
+                    </li>
+                    <li>
+                        <a href="/videos">Vídeos</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="relative-nav-container">
+
         </div>
     </nav>
+    <!-- end #navigation-->
+
+    <!-- Used new id and class to avoid hamburger menu -->
+    <nav id="mobile-nav" class="navbar navbar-default navbar-fixed-top">
+        <div class="relative-nav-container nav-mobile">
+            <div class="navbar-header">
+                <a class="navbar-brand scroll" href="index.html">
+                    <img class="normal-logo hidden-xs" src="assets/images/logo.png" alt="logo"/>
+                    <img class="inverse-logo hidden-xs" src="assets/images/logo-w.png" alt="logo"/>
+                    <img class="visible-xs-block" src="assets/images/logo-sign2.png" width="40" height="44" alt="logo"/>
+                </a>
+            </div>
+            <div>
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="#heading"><i class="fa fa-home"></i></a>
+                    </li>
+                    <li>
+                        <a href="#portfolio"><i class="fa fa-file-photo-o"></i></a>
+                    </li>
+                    <li>
+                        <a href="#about-me"><i class="fa fa-book"></i></a>
+                    </li>
+                    <li>
+                        <a href="#contact"><i class="fa fa-envelope"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- #mobile-nav -->
+
+
 </header><!--/.header -->
 
 <menu>
@@ -117,20 +182,18 @@
 
 <!-- Home - Header -->
 <!-- ++++++++++++++++++++++++++++++++++++++++ -->
-<section class="home-header dark" id="manned-flight">
+<section class="home-header dark" id="manned-flight" data-background="video/video.jpg">
     <div class="js-height-full container">
-
         <div class="bg-video-wrapper">
             <div class="bg-video-overlay bg-dark-alfa-50"></div>
         </div>
-
         <div class="row home-content">
             <div class=" text-center home-text">
                 <p class="large wow fadeInUp" data-wow-delay="1s" data-wow-duration="1.5s">
                     Sed condimentum ante ac quam varius pretium.
                 </p>
                 <h2 class="wow fadeInUp" data-wow-delay="1.8s" data-wow-duration="1.5s">
-                    Sed all new viverra enim in velit lorem
+                    <span>O MCMM é </span><span id="typed" style="white-space:pre;"></span>
                 </h2>
                 <div class="row wow fadeInUp" data-wow-delay="2.6s" data-wow-duration="1.5s">
                     <div class="col-md-12">
@@ -1532,6 +1595,8 @@
 <script src="bower_components/gsap/src/minified/TweenMax.min.js"></script>
 <script src="bower_components/highcharts/highcharts.js"></script>
 <script src="bower_components/Chart.js/Chart.min.js"></script>
+<script src="bower_components/typed.js/js/typed.js"></script>
+<script src="bower_components/scroll-up-bar/dist/scroll-up-bar.min.js"></script>
 <script src="scripts/jquery.backgroundvideo.min.js"></script>
 <script src="scripts/main.js"></script>
 <script src="scripts/parallax.js"></script>

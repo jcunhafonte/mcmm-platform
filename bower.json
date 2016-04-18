@@ -24,7 +24,8 @@
     "animate.css": "^3.5.1",
     "sass-bootstrap": "^3.0.2",
     "bootstrap": "^3.3.6",
-    "flickity": "^1.2.1"
+    "flickity": "^1.2.1",
+    "scroll-up-bar": "^0.3.0"
   },
   "devDependencies": {
     "chai": "^3.5.0",

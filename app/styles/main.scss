@@ -1,10 +1,17 @@
 //THIS IS THE MAIN SASS FILE
 /*ALL THE IMPORTS AND MAIN CONTENT SHOULD BE HERE*/
+
+/*****************VARIABLES*****************************/
+@import '../bower_components/sass-bootstrap/lib/variables';
+@import 'skeleton/variables';
+
 /*****************LIBS*****************************/
 //BOOTSTRAP
 @import 'vendor/bootstrap';
+
 //JQUERY-UI
 @import '../bower_components/jquery-ui/themes/base/jquery-ui.min.css';
+
 //ANIMATE
 @import '../bower_components/animate.css/animate.min.css';
 @import '../bower_components/flickity/dist/flickity.min.css';
@@ -17,6 +24,7 @@
 @import 'vendor/owl.transitions';
 @import '../bower_components/owl.carousel/dist/assets/owl.theme.default.min.css';
 @import '../bower_components/owl.carousel/dist/assets/owl.carousel.min.css';
+//@import 'vendor/typed';
 
 //ICONS
 @import 'fonts/pe-icon-7-stroke';
@@ -28,6 +36,8 @@
 @import url(https://fonts.googleapis.com/css?family=Varela:400,300,200,100,500,600,700,800,900);
 @import url(https://fonts.googleapis.com/css?family=Hind:400,300,500,600,700);
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+@import url(https://fonts.googleapis.com/css?family=Ubuntu:400,300,300italic,400italic,500,500italic,700,700italic);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic);
 
 //PLUGINS
 @import 'plugins/styles';
@@ -38,7 +48,6 @@
 /*****************MCMM*****************************/
 //GERAL
 @import 'normalize/reset';
-@import 'skeleton/variables';
 @import 'topbar/navbar';
 
 //SPLASH
