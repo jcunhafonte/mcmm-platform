@@ -2,7 +2,7 @@
   "name": "mcmm-platform",
   "version": "1.0.0",
   "dependencies": {
-    "modernizr": "^3.3.1",
+    "modernizr": "^2.6.7",
     "jquery": "^2.2.2",
     "components-font-awesome": "^4.5.0",
     "vivus": "^0.3.0",
@@ -25,7 +25,8 @@
     "sass-bootstrap": "^3.0.2",
     "bootstrap": "^3.3.6",
     "flickity": "^1.2.1",
-    "scroll-up-bar": "^0.3.0"
+    "scroll-up-bar": "^0.3.0",
+    "hover": "^2.0.2"
   },
   "devDependencies": {
     "chai": "^3.5.0",

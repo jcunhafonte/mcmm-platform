@@ -865,7 +865,6 @@ label {
   color: white;
 }
 
-
 @media (min-width: 769px) and (max-width: 991px) {
   .navbar-nav > li {
     padding: 0 13px;
@@ -1210,7 +1209,8 @@ section.divider.striped-icon {
   position: absolute;
   top: 0;
   left: 0;
-  background: rgba(34, 34, 34, .5);
+  background: linear-gradient(135deg, #585b64 0%, #2c2f38 100%);
+  opacity: 0.90;
 }
 
 .home-content {
@@ -5886,8 +5886,6 @@ body {
   opacity: 0;
 }
 
-
-
 .wrap-inside-nav {
   position: absolute;
   display: none;
@@ -6689,4 +6687,8 @@ a.next {
   width: 15px;
   height: 11px;
   text-indent: -9999px;
+}
+
+.control-cand{
+  margin-top: 30px !important;
 }

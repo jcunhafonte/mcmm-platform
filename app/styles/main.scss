@@ -1,9 +1,8 @@
 //THIS IS THE MAIN SASS FILE
 /*ALL THE IMPORTS AND MAIN CONTENT SHOULD BE HERE*/
-
 /*****************VARIABLES*****************************/
 @import '../bower_components/sass-bootstrap/lib/variables';
-@import 'skeleton/variables';
+@import 'platform/skeleton/variables';
 
 /*****************LIBS*****************************/
 //BOOTSTRAP
@@ -16,10 +15,14 @@
 @import '../bower_components/animate.css/animate.min.css';
 @import '../bower_components/flickity/dist/flickity.min.css';
 
+//HOVER
+@import "../bower_components/hover/scss/hover";
+
 //VENDORS
 #platform {
   @import 'vendor/default';
 }
+
 @import 'vendor/jquery.fancybox';
 @import 'vendor/owl.transitions';
 @import '../bower_components/owl.carousel/dist/assets/owl.theme.default.min.css';
@@ -47,8 +50,9 @@
 
 /*****************MCMM*****************************/
 //GERAL
-@import 'normalize/reset';
-@import 'topbar/navbar';
+@import 'platform/normalize/reset';
+@import 'platform/topbar/navbar';
+@import 'platform/awesome';
 
 //SPLASH
-@import 'splash/master';
+@import 'platform/splash/master';

@@ -5,6 +5,8 @@ $(document).ready(function () {
     $('body').addClass(navigator.appVersion + ' is-js');
 
     js_height_init();
+    controlNavbar();
+    checkTransparent();
 
     // Preloader
     $(window).on('load', function () {
@@ -16,6 +18,8 @@ $(document).ready(function () {
 
     $(window).resize(function () {
         js_height_init();
+        controlNavbar();
+        checkTransparent();
     });
 
     //TYPED
@@ -29,7 +33,9 @@ $(document).ready(function () {
     });
 
     //TOPBAR
-    $('#nav').scrollupbar();
+    if ($(window).width() > 992) {
+        $('#topbar').scrollupbar();
+    }
 
     /* ---------------------------------------------
      Height 100%
@@ -218,10 +224,8 @@ $(document).ready(function () {
             } else {
                 waitForVisibleMapElement();
             }
-            ;
         }, 10);
-    }
-    ;
+    };
     waitForVisibleMapElement();
 
     /* <!-- =============================================== --> */
@@ -255,28 +259,27 @@ $(document).ready(function () {
     });
 
     /* <!-- =============================================== --> */
-    /* <!-- ============ Search Animation =========== --> */
-    /* <!-- =============================================== -->  */
-    $('#search-open, #search-close').on('click', function (e) {
-        e.preventDefault();
-        $('.relative-nav-container').toggleClass('open-search');
-        $('.navbar-search').toggleClass('open');
-    });
-
-    /* <!-- =============================================== --> */
     /* <!-- ============ Herader Animation =========== --> */
     /* <!-- =============================================== -->  */
-    $(window).scroll(function () {
-        if ($(this).scrollTop() > 80) {
-            $('nav').addClass("navbar-alt")
+    // $(window).scroll(function () {
+    //     if ($(this).scrollTop() > 80) {
+    //         $('nav').addClass("navbar-alt")
+    //     } else {
+    //         $('nav').removeClass("navbar-alt")
+    //     }
+    // });
+    function controlNavbar() {
+        if ($(window).width() < 992) {
+            $('#topbar').addClass('navbar-white');
+            $('#topbar').removeClass('navbar-transparent');
+            $(".brand-img").attr("src", "assets/images/logo.svg")
         } else {
-            $('nav').removeClass("navbar-alt")
+            $('#topbar').removeClass('navbar-white');
+            $('#topbar').addClass('navbar-transparent');
+            $(".brand-img").attr("src", "assets/images/logo-w.svg")
         }
-    });
-    if ($(window).width() < 769) {
-        $('#nav').removeClass('navbar-default').addClass('navbar-inverse');
-        $('.floated .with-border').removeClass('with-border');
     }
+
     /* <!-- =============================================== --> */
     /* <!-- ============ Tooltip  =========== --> */
     /* <!-- =============================================== -->  */
@@ -405,328 +408,91 @@ $(document).ready(function () {
             return $(content).children(".popover-body").html();
         }
     });
+}); // Document ready
 
+function checkTransparent() {
 
-    /* <!-- =============================================== --> */
-    /* <!-- ===                 Graphs                ===== --> */
-    /* <!-- =============================================== --> */
+    var transparent = true;
+    var hasTransparent = false;
 
-    // Graph
-    var waypointGraph = new Waypoint({
-        element: document.getElementById('graph-line'),
-        handler: function (direction) {
-            $('#graph-line').highcharts({
-                chart: {
-                    type: 'area'
-                },
-                title: {
-                    text: ''
-                },
-                subtitle: {
-                    text: ''
-                },
-                xAxis: {
-                    gridLineDashStyle: 'Dash',
-                    gridLineWidth: 1,
-                    categories: [' ', ' ', ' ', ' ', ' ', ' ', ' '],
-                    title: {
-                        enabled: false
-                    }
-                },
-                yAxis: {
-                    gridLineDashStyle: 'Dash',
-                    title: {
-                        text: ' '
-                    },
-                    labels: {
-                        style: {"color": "#ccced6"}
-                    }
-                },
-                tooltip: {
-                    shared: false,
-                    useHTML: true,
-                    backgroundColor: '#333333',
-                    borderColor: '#333',
-                    borderRadius: '5',
-                    borderWidth: '0',
-                    headerFormat: '<table>',
-                    pointFormat: '<tr>' +
-                    '<td style="color: #fff; font-family: Raleway; ">{point.y}K</td></tr>',
-                    footerFormat: '</table>',
-                    valueDecimals: 2
-                },
-                plotOptions: {
-                    area: {
-                        stacking: 'normal',
-                        lineColor: '#cacddc',
-                        lineWidth: 2,
-                        marker: {
-                            lineWidth: 2,
-                            lineColor: '#cacddc'
-                        }
-                    }
-                },
-                credits: {
-                    enabled: false
-                },
-                series: [{
-                    name: 'FIRST',
-                    showInLegend: false,
-                    data: [11, 26, 15, 43, 38, 55, 79],
-                    color: '#fff',
-                    fillColor: {
-                        linearGradient: {x1: 0, x2: 0, y1: 0, y2: 1},
-                        stops: [
-                            [0, '#e7e8ef'],
-                            [1, '#ffffff']
-                        ]
-                    },
-                    marker: {
-                        radius: 6
-                    }
-                }, {
-                    name: 'SECOND',
-                    showInLegend: false,
-                    data: [16, 22, 57, 36, 58, 76, 184],
-                    color: '#fff',
-                    lineColor: '#27ad60',
-                    fillColor: {
-                        linearGradient: {x1: 1, x2: 1, y1: 0, y2: 1},
-                        stops: [
-                            [0, '#98d2b4'],
-                            [1, '#fff']
-                        ]
-                    },
-                    marker: {
-                        lineWidth: 2,
-                        lineColor: '#27ad60',
-                        radius: 6,
-                        symbol: 'circle'
-                    }
-
-                }]
-            });
-            this.destroy();
-        },
-        offset: "100%"
+    $(document).ready(function () {
+        if ($('nav[role="navigation"]').hasClass('navbar-transparent')) {
+            hasTransparent = true;
+        }
     });
 
-    //var waypointGoogle = new Waypoint({
-    //    element: document.getElementById('google-graph'),
-    //    handler: function (direction) {
-    //        // Google-graph
-    //        $('#google-graph').highcharts({
-    //            chart: {
-    //                zoomType: 'xy'
-    //            },
-    //            title: {
-    //                text: ' '
-    //            },
-    //            subtitle: {
-    //                text: ' '
-    //            },
-    //            xAxis: [{
-    //                gridLineDashStyle: 'Dash',
-    //                gridLineWidth: 1,
-    //                categories: [' ', ' ', ' ', ' ', ' ', ' ',
-    //                    ' ', ' ', ' ', ' ', ' ', ' ']
-    //            }],
-    //            credits: {
-    //                enabled: false
-    //            },
-    //            yAxis: [{// Primary yAxis
-    //                gridLineDashStyle: 'Dash',
-    //                gridLineWidth: 1,
-    //                labels: {
-    //                    style: {"color": "#ccced6", "font-family": "Raleway", "font-size": 13},
-    //                    format: '{value} '
-    //                },
-    //                title: {
-    //                    text: ' '
-    //                }
-    //            }, {// Secondary yAxis
-    //                gridLineDashStyle: 'Dash',
-    //                gridLineWidth: 1,
-    //                title: {
-    //                    text: ' '
-    //                },
-    //                labels: {
-    //                    style: {"color": "#ccced6", "font-family": "Raleway", "font-size": 13},
-    //                    format: ' '
-    //                }
-    //            }],
-    //            tooltip: {
-    //                enabled: true,
-    //                shared: false,
-    //                useHTML: true,
-    //                backgroundColor: '#333333',
-    //                borderColor: '#333',
-    //                borderRadius: '5',
-    //                borderWidth: '0',
-    //                headerFormat: '<table>',
-    //                pointFormat: '<tr>' +
-    //                '<td style="color: #fff; font-family: Raleway; ">{point.y}K</td></tr>',
-    //                footerFormat: '</table>',
-    //                valueDecimals: 2
-    //            },
-    //            plotOptions: {
-    //                column: {
-    //                    stacking: 'normal'
-    //                }
-    //            },
-    //            series: [{
-    //                name: '1',
-    //                showInLegend: false,
-    //                type: 'column',
-    //                yAxis: 1,
-    //                data: [144, 61, 96, 119, 134, 80, 269, 115, 206, 184, 85, 44],
-    //                stack: 'one',
-    //                color: 'rgba(202,205,202,.4)'
-    //
-    //            }, {
-    //                name: '2',
-    //                showInLegend: false,
-    //                type: 'area',
-    //                data: [99, 61, 96, 119, 134, 120, 200, 96, 206, 184, 85, 44],
-    //                color: '#cdd0de',
-    //                fillColor: 'none',
-    //                marker: {
-    //                    lineWidth: 2,
-    //                    lineColor: '#27ae60',
-    //                    fillColor: '#FFFFFF',
-    //                    radius: 5
-    //                },
-    //            }, {
-    //                name: '3',
-    //                showInLegend: false,
-    //                type: 'column',
-    //                yAxis: 1,
-    //                data: [49, 71, 106, 129, 144, 176, 135, 76, 216, 194, 95, 54],
-    //                stack: 'one',
-    //                color: '#27ae60'
-    //
-    //
-    //            }]
-    //        });
-    //        this.destroy();
-    //    },
-    //    offset: "100%"
-    //});
+    $(document).scroll(function () {
+        if (hasTransparent) {
+            if ($(window).width() > 992) {
+                if ($(this).scrollTop() > 280) {
+                    if (transparent) {
+                        transparent = false;
+                        $('nav[role="navigation"]').removeClass('navbar-transparent');
+                        $('nav[role="navigation"]').addClass('navbar-white');
+                        $(".brand-img").attr("src", "assets/images/logo.svg")
+                    }
+                } else {
+                    if (!transparent) {
+                        transparent = true;
+                        $('nav[role="navigation"]').removeClass('navbar-white');
+                        $('nav[role="navigation"]').addClass('navbar-transparent');
+                        $(".brand-img").attr("src", "assets/images/logo-w.svg")
+                    }
+                }
+            }
+        }
+    });
+}
 
+$(document).ready(function () {
 
-    // RADAR CHART
-    //var waypointRadar = new Waypoint({
-    //    element: document.getElementById('radar'),
-    //    handler: function (direction) {
-    //        var radar = document.getElementById("radar");
-    //        var parent = document.getElementById("wrapper-radar");
-    //        radar.width = parent.offsetWidth - 40;
-    //        radar.height = parent.offsetHeight - 40;
-    //        var data1 = {
-    //            labels: ['Mail', 'Feeds', 'IM', 'Twitter', 'F2F', 'Text', 'IRC', 'Blogs'],
-    //            datasets: [
-    //                {
-    //                    fillColor: "rgba(255,198,0,.4)",
-    //                    strokeColor: "#ffc600",
-    //                    pointColor: "#fff",
-    //                    pointStrokeColor: "#ffc600",
-    //                    data: [8, 21, 12, 12, 12, 0, 6, 2]
-    //                },
-    //                {
-    //                    fillColor: "rgba(39,174,96,.4)",
-    //                    strokeColor: "#27ae60",
-    //                    pointColor: "#fff",
-    //                    pointStrokeColor: "#27ae60",
-    //                    data: [30, 13, 6, 5, 20, 3, 20, 26]
-    //                }
-    //            ]
-    //        };
-    //
-    //        radarDefaults = {
-    //            //Boolean - If we show the scale above the chart data
-    //            scaleOverlay: false,
-    //            //Boolean - If we want to override with a hard coded scale
-    //            scaleOverride: false,
-    //            //** Required if scaleOverride is true **
-    //            //Number - The number of steps in a hard coded scale
-    //            scaleSteps: null,
-    //            //Number - The value jump in the hard coded scale
-    //            scaleStepWidth: null,
-    //            //Number - The centre starting value
-    //            scaleStartValue: null,
-    //            //Boolean - Whether to show lines for each scale point
-    //            scaleShowLine: true,
-    //            //String - Colour of the scale line
-    //            scaleLineColor: "rgba(0,0,0,.1)",
-    //            //Number - Pixel width of the scale line
-    //            scaleLineWidth: 1,
-    //            //Boolean - Whether to show labels on the scale
-    //            scaleShowLabels: false,
-    //            //Interpolated JS string - can access value
-    //            scaleLabel: "<%=value%>",
-    //            //String - Scale label font declaration for the scale label
-    //            scaleFontFamily: "'Raleway'",
-    //            //Number - Scale label font size in pixels
-    //            scaleFontSize: 12,
-    //            //String - Scale label font weight style
-    //            scaleFontStyle: "bold",
-    //            //String - Scale label font colour
-    //            scaleFontColor: "#7e848e",
-    //            //Boolean - Show a backdrop to the scale label
-    //            scaleShowLabelBackdrop: true,
-    //            //String - The colour of the label backdrop
-    //            scaleBackdropColor: "rgba(255,255,255,0.75)",
-    //            //Number - The backdrop padding above & below the label in pixels
-    //            scaleBackdropPaddingY: 2,
-    //            //Number - The backdrop padding to the side of the label in pixels
-    //            scaleBackdropPaddingX: 2,
-    //            //Boolean - Whether we show the angle lines out of the radar
-    //            angleShowLineOut: true,
-    //            //String - Colour of the angle line
-    //            angleLineColor: "rgba(0,0,0,.1)",
-    //            //Number - Pixel width of the angle line
-    //            angleLineWidth: 1,
-    //            //String - Point label font declaration
-    //            pointLabelFontFamily: "'Raleway'",
-    //            //String - Point label font weight
-    //            pointLabelFontStyle: "bold",
-    //            //Number - Point label font size in pixels
-    //            pointLabelFontSize: 12,
-    //            //String - Point label font colour
-    //            pointLabelFontColor: "#7e848e",
-    //            //Boolean - Whether to show a dot for each point
-    //            pointDot: true,
-    //            //Number - Radius of each point dot in pixels
-    //            pointDotRadius: 5,
-    //            //Number - Pixel width of point dot stroke
-    //            pointDotStrokeWidth: 1,
-    //            //Boolean - Whether to show a stroke for datasets
-    //            datasetStroke: false,
-    //            //Number - Pixel width of dataset stroke
-    //            datasetStrokeWidth: 2,
-    //            //Boolean - Whether to fill the dataset with a colour
-    //            datasetFill: false,
-    //            //Boolean - Whether to animate the chart
-    //            animation: true,
-    //            //Number - Number of animation steps
-    //            animationSteps: 30,
-    //            //String - Animation easing effect
-    //            animationEasing: "easeOutQuart",
-    //            //Function - Fires when the animation is complete
-    //            onAnimationComplete: null,
-    //        };
-    //
-    //        var radarOptions = jQuery.extend({}, radarDefaults);
-    //        radarOptions.scaleOverride = true;
-    //        radarOptions.scaleStepWidth = 4;
-    //        radarOptions.scaleSteps = 8;
-    //        radarOptions.scaleStartValue = 0;
-    //        new Chart(radar.getContext("2d")).Radar(data1, radarOptions);
-    //
-    //        this.destroy();
-    //    },
-    //    offset: "100%"
-    //});
+    redrawDotNav();
 
+    /* Scroll event handler */
+    $(window).bind('scroll', function (e) {
+        parallaxScroll();
+        redrawDotNav();
+    });
 
-}); // Document ready
+    /* Next/prev and primary nav btn click handlers */
+    $('a.manned-flight').click(function () {
+        $('html, body').animate({
+            scrollTop: 0
+        }, 1000, function () {
+        });
+        return false;
+    });
+    $('a.frameless-parachute').click(function () {
+        $('html, body').animate({
+            scrollTop: $('#frameless-parachute').offset().top
+        }, 500, function () {
+        });
+        return false;
+    });
+    $('a.english-channel').click(function () {
+        $('html, body').animate({
+            scrollTop: $('#english-channel').offset().top
+        }, 500, function () {
+        });
+        return false;
+    });
+    $('a.about').click(function () {
+        $('html, body').animate({
+            scrollTop: $('#about').offset().top
+        }, 500, function () {
+
+        });
+        return false;
+    });
+
+    /* Show/hide dot lav labels on hover */
+    $('nav#primary a').hover(
+        function () {
+            $(this).prev('h1').show();
+        },
+        function () {
+            $(this).prev('h1').hide();
+        }
+    );
+
+});
