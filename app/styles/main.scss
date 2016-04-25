@@ -2,7 +2,16 @@
 /*ALL THE IMPORTS AND MAIN CONTENT SHOULD BE HERE*/
 /*****************VARIABLES*****************************/
 @import '../bower_components/sass-bootstrap/lib/variables';
-@import 'platform/skeleton/variables';
+@import 'skeleton/variables';
+
+/*****************MCMM*****************************/
+//GERAL
+@import 'normalize/reset';
+@import 'topbar/navbar';
+@import 'platform/main';
+
+//SPLASH
+@import 'splash/master';
 
 /*****************LIBS*****************************/
 //BOOTSTRAP
@@ -47,12 +56,3 @@
 
 //TOOLTIPS
 @import 'tooltips/styles';
-
-/*****************MCMM*****************************/
-//GERAL
-@import 'platform/normalize/reset';
-@import 'platform/topbar/navbar';
-@import 'platform/awesome';
-
-//SPLASH
-@import 'platform/splash/master';
