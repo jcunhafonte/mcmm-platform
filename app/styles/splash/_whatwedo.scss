@@ -1,0 +1,158 @@
+
+section.whatwedo .ui-slider-horizontal .ui-slider-handle {
+  top: -10px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.37), 0 7px 2px rgba(0, 0, 0, 0.05);
+  outline: none;
+}
+
+section.whatwedo .ui-widget-content {
+  background-color: #fff;
+  background: rgba(0, 0, 0, 0.1);
+  height: 5px;
+}
+
+section.whatwedo .ui-slider-horizontal .ui-slider-handle {
+  top: -10px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.37), 0 7px 2px rgba(0, 0, 0, 0.05);
+  outline: none;
+}
+
+section.whatwedo .whatwedo-description h3 {
+  font-family: Hind;
+  font-size: 42px !important;
+  line-height: 48px;
+  font-weight: 300;
+  text-transform: none !important;
+}
+
+section.whatwedo .whatwedo-description p {
+  font-size: 14px;
+}
+
+section.whatwedo .whatwedo-description {
+  margin-bottom: 40px;
+  padding-top: 70px;
+}
+
+section.whatwedo .whatwedo-description.no-padding {
+  padding-top: 0;
+}
+
+section.whatwedo .section-header {
+  margin-bottom: 30px;
+}
+
+section.whatwedo .ui-widget-content {
+  background-color: #fff;
+  background: rgba(0, 0, 0, 0.1);
+  height: 5px;
+}
+
+section.whatwedo .whatwedo-description h3 {
+  font-size: 30px;
+}
+
+section.whatwedo .whatwedo-description p {
+  font-size: 14px;
+}
+
+
+.whatwedo .skills {
+  margin: 0;
+  padding: 34px 0 130px;
+}
+
+@media (max-width: 991px) {
+  .whatwedo .skills {
+    margin-top: 60px;
+  }
+}
+
+.whatwedo .skills li {
+  background-color: #e8e9ed;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 1px #e0e1e6 inset;
+  box-shadow: 0 1px #e0e1e6 inset;
+  height: 10px;
+  margin-top: 70px;
+  position: relative;
+}
+
+.whatwedo .skills li:first-child {
+  margin-top: 0;
+}
+
+.whatwedo .skills li .progress {
+  background-color: $blue;
+  border-radius: 3px;
+  height: 100%;
+  left: 0;
+  overflow: visible !important;
+  position: absolute;
+  top: 0;
+  -webkit-transition: width 1.2s ease-in-out 0s;
+  -o-transition: width 1.2s ease-in-out 0s;
+  transition: width 1.2s ease-in-out 0s;
+  width: 0;
+}
+
+.whatwedo .skills li .progress-percent {
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 2px;
+  color: white;
+  font-size: 11px;
+  height: 20px;
+  line-height: 20px;
+  padding: 0 9px;
+  position: absolute;
+  right: 0;
+  top: -28px;
+}
+
+.whatwedo .skills li .progress-percent:after,
+.whatwedo .skills li .progress-percent:before {
+  border: medium solid transparent;
+  content: " ";
+  height: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 100%;
+  width: 0;
+}
+
+.whatwedo .skills li .progress-percent:after {
+  border-top-color: rgba(0, 0, 0, 0.8);
+  border-width: 4px;
+  left: 50%;
+  margin-left: -4px;
+}
+
+.whatwedo .skills li .progress-percent:before {
+  border-top-color: rgba(0, 0, 0, 0.8);
+  border-width: 5px;
+  left: 50%;
+  margin-left: -5px;
+}
+
+.whatwedo .skills li .progress-percent .counter {
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.whatwedo .skills li > span {
+  color: #2b2e33;
+  font-weight: 700;
+  left: 0;
+  position: absolute;
+  text-transform: capitalize;
+  top: -36px;
+  z-index: 1;
+}
+
+.whatwedo-description-container {
+  padding-top: 65px;
+}
+
+.whatwedo .whatwedo-description p:last-of-type {
+  margin: 0;
+}

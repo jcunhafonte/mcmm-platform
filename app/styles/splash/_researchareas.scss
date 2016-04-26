@@ -1,0 +1,36 @@
+
+.researchareas {
+  padding: 40px 0 120px;
+  position: relative;
+  z-index: 1;
+  oveflow: hidden;
+  background: url(../assets/img/examples/about_4.jpg) center no-repeat;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.researchareas::before {
+  background: rgba(98, 98, 98, 0.70);
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+}
+
+.researchareas article {
+  margin-top: 90px;
+}
+
+.researchareas article span {
+  font-size: 80px;
+  margin-bottom: .6em;
+  display: block;
+  color: #dddddd;
+}
+
+.researchareas article h5{
+  text-transform: normal;
+}

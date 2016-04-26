@@ -36,7 +36,7 @@ function initialize() {
   var styledMap = new google.maps.StyledMapType(styles,
     {name: "Styled Map"});
     
-  var myLatLng = new google.maps.LatLng(55.743635, 37.624201);
+  var myLatLng = new google.maps.LatLng(45.743635, 38.624201);
 
   // Create a map object, and include the MapTypeId to add
   // to the map type control.
@@ -51,13 +51,11 @@ function initialize() {
   };
   var map = new google.maps.Map(document.getElementById('mapCanvas'),
     mapOptions);
-    
-  var image = 'assets/images/marker.png';
+
 
   var myMarker = new google.maps.Marker({
       position: myLatLng,
-      map: map,
-      icon: image
+      map: map
   });
 
   //Associate the styled map with the MapTypeId and set it to display.
