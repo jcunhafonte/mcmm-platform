@@ -1,0 +1,64 @@
+.candidaturas {
+  margin-bottom: 60px
+}
+
+.candidaturas article {
+  text-align: center;
+  position: relative;
+}
+
+.candidaturas article:after {
+  content: "";
+  position: absolute;
+  top: -50px;
+  right: -180px;
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 1199px) {
+  .candidaturas article:after {
+    right: -150px;
+  }
+}
+
+@media (max-width: 991px) {
+  .candidaturas article:after {
+    display: none;
+  }
+}
+
+.candidaturas article img {
+  margin-bottom: 30px;
+}
+
+.candidaturas article .striped-icon-small {
+  position: absolute;
+  top: 0;
+  left: 20%;
+  z-index: 1;
+  background: none !important;
+}
+
+.candidaturas article span {
+  font-size: 100px;
+  height: 160px;
+  margin-top: 20px;
+  color: $blue
+}
+
+.candidaturas article h5{
+  text-transform: none;
+}
+
+.candidaturas h2{
+  font-family: Hind;
+  font-size: 42px !important;
+  line-height: 48px;
+  font-weight: 300;
+  text-transform: none !important;
+}
+
+.candidaturas [class^="col-"]:last-child article:after {
+  display: none;
+}

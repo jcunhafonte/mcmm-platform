@@ -160,7 +160,7 @@ $(document).ready(function () {
     /* <!-- ========== Menu Links Scroll ===+============== --> */
     /* <!-- =============================================== -->  */
     $('.scroll').click(function (e) {
-        var off = -79;
+        var off = 0;
         var target = this.hash;
         if ($(target).offset().top == 0) {
             off = 0;
@@ -292,22 +292,22 @@ $(document).ready(function () {
     });
 
     /* <!-- =============================================== --> */
-    /* <!-- === Switch monthly/annual pricing tables  ===== --> */
+    /* <!-- === Switch monthly/annual programa tables  ===== --> */
     /* <!-- =============================================== -->  */
-    //switch from monthly to annual pricing tables
-    bouncy_filter($('.cd-pricing-container'));
+    //switch from monthly to annual programa tables
+    bouncy_filter($('.cd-programa-container'));
 
     function bouncy_filter(container) {
         container.each(function () {
-            var pricing_table = $(this);
-            var filter_list_container = pricing_table.find('.pricing-switcher'),
+            var programa_table = $(this);
+            var filter_list_container = programa_table.find('.programa-switcher'),
                 filter_radios = filter_list_container.find('input[type="radio"]'),
-                pricing_table_wrapper = pricing_table.find('.cd-pricing-wrapper');
-            //store pricing table items
+                programa_table_wrapper = programa_table.find('.cd-programa-wrapper');
+            //store programa table items
             var table_elements = {};
             filter_radios.each(function () {
                 var filter_type = $(this).val();
-                table_elements[filter_type] = pricing_table_wrapper.find('li[data-type="' + filter_type +
+                table_elements[filter_type] = programa_table_wrapper.find('li[data-type="' + filter_type +
                     '"]');
             });
             //detect input change event
@@ -315,21 +315,21 @@ $(document).ready(function () {
                 event.preventDefault();
                 //detect which radio input item was checked
                 var selected_filter = $(event.target).val();
-                //give higher z-index to the pricing table items selected by the radio input
+                //give higher z-index to the programa table items selected by the radio input
                 show_selected_items(table_elements[selected_filter]);
-                //rotate each cd-pricing-wrapper
-                //at the end of the animation hide the not-selected pricing tables and rotate back the .cd-pricing-wrapper
+                //rotate each cd-programa-wrapper
+                //at the end of the animation hide the not-selected programa tables and rotate back the .cd-programa-wrapper
                 if (!Modernizr.cssanimations) {
                     hide_not_selected_items(table_elements, selected_filter);
-                    pricing_table_wrapper.removeClass('is-switched');
+                    programa_table_wrapper.removeClass('is-switched');
                 } else {
-                    pricing_table_wrapper.addClass('is-switched').eq(0).one(
+                    programa_table_wrapper.addClass('is-switched').eq(0).one(
                         'webkitAnimationEnd oanimationend msAnimationEnd animationend', function () {
                             hide_not_selected_items(table_elements, selected_filter);
-                            pricing_table_wrapper.removeClass('is-switched');
-                            //change rotation direction if .cd-pricing-list has the .cd-bounce-invert class
-                            if (pricing_table.find('.cd-pricing-list').hasClass('cd-bounce-invert'))
-                                pricing_table_wrapper.toggleClass('reverse-animation');
+                            programa_table_wrapper.removeClass('is-switched');
+                            //change rotation direction if .cd-programa-list has the .cd-bounce-invert class
+                            if (programa_table.find('.cd-programa-list').hasClass('cd-bounce-invert'))
+                                programa_table_wrapper.toggleClass('reverse-animation');
                         });
                 }
             });
@@ -351,7 +351,7 @@ $(document).ready(function () {
     }
 
     /* <!-- =============================================== --> */
-    /* <!-- === Switch monthly/annual pricing tables  ===== --> */
+    /* <!-- === Switch monthly/annual programa tables  ===== --> */
     /* <!-- =============================================== --> */
     // Variable to hold scroll type
     var slideDrag,
@@ -441,12 +441,12 @@ function checkTransparent() {
 
 $(document).ready(function () {
 
-    redrawDotNav();
+    //redrawDotNav();
 
     /* Scroll event handler */
     $(window).bind('scroll', function (e) {
-        parallaxScroll();
-        redrawDotNav();
+      //  parallaxScroll();
+      //  redrawDotNav();
     });
 
     /* Next/prev and primary nav btn click handlers */
@@ -489,5 +489,9 @@ $(document).ready(function () {
             $(this).prev('h1').hide();
         }
     );
+
+    $(".cd-programa-wrapper").hover(function(){
+            $(this).toggleClass('panel-highlited').siblings().removeClass('panel-highlited');
+    })
 
 });
