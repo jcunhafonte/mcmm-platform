@@ -13,7 +13,7 @@
   transition: .5s background-color, .5s color, .5s transform
 }
 
-.navigation-areas{
+.navigation-areas {
   transition: .5s background-color, .5s color, .5s transform !important;
 }
 
@@ -748,11 +748,12 @@ h3.mcmmnav-logo--noControls {
     padding-top: 10px;
     padding-bottom: 10px;
     transition: .5s background-color, .5s color, .5s transform !important;
+    text-decoration: none !important;
   }
-  .mcmmnav--top{
+  .mcmmnav--top {
     height: 143px !important;
     position: fixed;
-    top:0;
+    top: 0;
   }
   .navigation-areas--mcmmnav {
     background-color: transparent !important;
@@ -801,6 +802,7 @@ h3.mcmmnav-logo--noControls {
   letter-spacing: 0.5px !important;
   &:hover {
     opacity: 1 !important;
+    text-decoration: none !important;
   }
 }
 
@@ -820,9 +822,6 @@ h3.mcmmnav-logo--noControls {
   background: #ffffff !important;
   bottom: 12px !important;
   height: 2px !important;
-}
-
-.navigation-areas--mcmmnav .navigation-areas-anchor:hover {
 }
 
 .navigation-areas--mcmmnav .u-showOnNetbook .navigation-areas-anchor {
@@ -1077,7 +1076,7 @@ h3.mcmmnav-logo--noControls {
   .brand {
     padding-top: 5px;
   }
-  .mcmmnav .buttons-area{
+  .mcmmnav .buttons-area {
     margin-top: 10px !important;
   }
 }

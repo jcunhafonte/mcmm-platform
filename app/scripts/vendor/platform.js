@@ -8,6 +8,8 @@ var navbar_initialized = false;
 
 $(document).ready(function () {
 
+    $('.ui-loader').html(' ');
+
     window_width = $(window).width();
 
     burger_menu = $('nav[role="navigation"]').hasClass('navbar-burger') ? true : false;
@@ -63,24 +65,6 @@ $(document).ready(function () {
 
     $('.btn-tooltip').tooltip();
     $('.label-tooltip').tooltip();
-
-    // Carousel
-    $('.owl-carousel').owlCarousel({
-        items: 1,
-        loop: true,
-        nav: false,
-        dots:true,
-        responsive: {
-            0: {
-                items: 1
-            },
-            600: {
-                items: 1
-            }
-        }
-    });
-
-    $('.owl-dots, #carousel h2').addClass('container');
 
     // $(".carousel").swiperight(function () {
     //     $(this).carousel('prev');
