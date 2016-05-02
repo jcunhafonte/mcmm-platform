@@ -407,6 +407,7 @@
 
 .curricular .panel-curricular .panel-body {
   padding: 20px 20px;
+  height: 324px;
 }
 
 .curricular .panel-curricular .panel-body .list-style-ok li::before {
@@ -418,21 +419,41 @@
   padding: 0 0 40px;
 }
 
-.cd-programa-wrapper{
+.cd-programa-wrapper {
   transition: .4s;
 }
 
-.curricular{
-  .button-curricular{
+.curricular {
+  .button-curricular {
     background: $white;
     font-weight: 500;
   }
 }
 
-.curricular h2{
+.curricular h2 {
   font-family: Hind;
   font-size: 42px !important;
   line-height: 48px;
   font-weight: 300;
   text-transform: none !important;
+}
+
+ul.list-styled li {
+  line-height: 1.8;
+}
+
+/* Small devices (tablets, 768px and up) */
+@media screen and (max-width: $screen-sm-min) {
+  .curricular .panel-curricular .panel-body {
+    height: 360px;
+  }
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: $screen-md-min) {
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: $screen-lg-min) {
+
 }
