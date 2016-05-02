@@ -1,110 +1,111 @@
 .noticias {
   margin-bottom: 130px;
-}
 
-.noticias .post {
-  padding-bottom: 70px;
-  max-width: 370px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
+  .post {
+    padding-bottom: 70px;
+    max-width: 370px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 
-.noticias .post .post-heading {
-  position: relative;
-}
+    .post-heading {
+      position: relative;
 
-.noticias .post .post-heading .post-image {
-  display: block;
-  overflow: hidden;
-  height: 230px;
-  border-top-left-radius: 3px;
-  border-top-right-radius: 3px;
-}
+      .post-image {
+        display: block;
+        overflow: hidden;
+        height: 230px;
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
 
-.noticias .post .post-heading .post-image:hover {
-  background: #27ae60;
-}
+        img{
+          -webkit-transition: all 1s ease; /* Safari and Chrome */
+          -moz-transition: all 1s ease; /* Firefox */
+          -o-transition: all 1s ease; /* IE 9 */
+          -ms-transition: all 1s ease; /* Opera */
+          transition: all 1s ease;
+        }
 
-.noticias .post .post-heading .post-image:hover img {
-  opacity: 0.7;
-}
+        &:hover {
+          img {
+            -webkit-transform:scale(1.20); /* Safari and Chrome */
+            -moz-transform:scale(1.20); /* Firefox */
+            -ms-transform:scale(1.20); /* IE 9 */
+            -o-transform:scale(1.20); /* Opera */
+            transform:scale(1.20);
+          }
+        }
+      }
 
-.noticias .post .post-heading .post-avatar {
-  position: absolute;
-  right: 25px;
-  bottom: -35px;
-}
+      .post-avatar {
+        position: absolute;
+        right: 25px;
+        bottom: -35px;
+      }
 
-.noticias .post .post-heading .post-avatar > img {
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
-  border: 5px solid white;
-}
+      .post-avatar > img {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        border: 5px solid white;
+      }
+    }
+    .post-body {
+      padding: 10px 30px 20px;
+      border: 1px solid #e8e9ed;
+      border-top: 0;
+      border-bottom-left-radius: 3px;
+      border-bottom-right-radius: 3px;
 
-.noticias .post .post-body {
-  padding: 10px 30px 20px;
-  border: 1px solid #e8e9ed;
-  border-top: 0;
-  border-bottom-left-radius: 3px;
-  border-bottom-right-radius: 3px;
-}
+      p {
+        margin-bottom: 0;
+      }
 
-a h5:hover {
-  color: #27ae60;
-}
+      ul li {
+        font-size: 0.928em;
+        color: #c8c9cc;
+        margin-right: .5em;
 
-.noticias .post .post-body p {
-  margin-bottom: 0;
-}
+        &:first-of-type {
+          margin-right: 20px;
+        }
+      }
+    }
+  }
 
-.noticias .post .post-body ul li {
-  font-size: 0.928em;
-  color: #c8c9cc;
-}
+  .subscribe {
+    border: 1px solid #e8e9ed;
+    padding: 4px;
+    border-radius: 28px;
 
-.noticias .post .post-body ul li:first-of-type {
-  margin-right: 20px;
-}
+    input {
+      background-color: transparent;
+      width: 55%;
+      padding-right: 10px;
+      box-shadow: none;
+      border: 0;
+      &:focus{
+        box-shadow: none;
+        border: 0;
+      }
+    }
+  }
 
-.noticias .post .post-body ul i {
-  margin-right: .5em;
-}
+  .btn-round {
+    border-radius: 28px;
+  }
 
-.noticias .subscribe {
-  border: 1px solid #e8e9ed;
-  padding: 4px;
-  border-radius: 28px;
-}
+  .btn-round-small {
+    border-radius: 50%;
+    padding: 9px;
+    width: 49px;
+  }
 
-.noticias .subscribe input {
-  background-color: transparent;
-  width: 55%;
-  padding-right: 10px;
+  h2 {
+    font-family: Hind;
+    font-size: 42px !important;
+    line-height: 48px;
+    font-weight: 300;
+    text-transform: none !important;
+  }
 }
-
-.noticias .subscribe input,
-.noticias .subscribe input:focus {
-  box-shadow: none;
-  border: 0;
-}
-
-.noticias .btn-round {
-  border-radius: 28px;
-}
-
-.noticias .btn-round-small {
-  border-radius: 50%;
-  padding: 9px;
-  width: 49px;
-}
-
-.noticias h2{
-  font-family: Hind;
-  font-size: 42px !important;
-  line-height: 48px;
-  font-weight: 300;
-  text-transform: none !important;
-}
-
