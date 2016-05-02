@@ -19,6 +19,9 @@
 <![endif]-->
 
 <head>
+
+    <title>MCMM</title>
+
     <!--METAS-->
     <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
     <meta charset="utf-8">
@@ -66,10 +69,20 @@
     <link rel="icon" type="image/png" sizes="96x96" href="">
     <link rel="icon" type="image/png" sizes="16x16" href="">
 
-    <!--CSS-->
-    <link rel="stylesheet" href="styles/main.css">
+    <!-- build:css styles/vendor.css -->
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild -->
 
-    <script src="bower_components/modernizr/modernizr.js"></script>
+    <!-- build:css styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+
+    <!-- build:js scripts/vendor/modernizr.js -->
+    <script src="/bower_components/modernizr/modernizr.js"></script>
+    <!-- endbuild -->
+
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
 
 </head>
 
@@ -81,23 +94,21 @@
         <div class="mcmmnav-inner">
             <div class="mcmmnav-block mcmmnav-block--left float-left">
                 <a href="/" class="brand">
-                    <img class="brand-img" src="assets/images/logo-w.svg"/>
+                    <img class="brand-img" src="images/logo-w.svg"/>
                 </a>
             </div>
             <div class="mcmmnav-block mcmmnav-block--center">
                 <nav class="navigation-areas navigation-areas--mcmmnav navigation-areas--narrow">
                     <ul class="navigation-areas-list layoutSingleColumn">
-
-                        <li class="navigation-areas-item">
-                            <a class="navigation-areas-anchor hvr-underline-from-center"
-                               href="/news">Notícias</a>
+                        <li class="navigation-areas-item is-active">
+                            <a class="navigation-areas-anchor" href="/news">Notícias</a>
                         </li>
                         <li class="navigation-areas-item">
                             <a class="navigation-areas-anchor hvr-underline-from-center"
                                href="/projects">Projetos</a>
                         </li>
-                        <li class="navigation-areas-item is-active">
-                            <a class="navigation-areas-anchor" href="/videos">Vídeos</a>
+                        <li class="navigation-areas-item">
+                            <a class="navigation-areas-anchor hvr-underline-from-center" href="/videos">Vídeos</a>
                         </li>
                     </ul>
                 </nav>
@@ -113,6 +124,7 @@
 <!-- ++++++++++++++++++++++++++++++++++++++++ -->
 
 <div id="platform">
+
     <div id="header-video">
         <h2 class="text-center">Let’s Make Things Happen</h2>
     </div> <!-- end carousel -->
@@ -306,7 +318,7 @@
         </div>
     </div>
 
-    <footer class="footer footer-big footer-transparent" style="background-image: url('assets/img/examples/blog_page8_black.jpg');">
+    <footer class="footer footer-big footer-transparent" style="background-image: url('assets/images/examples/blog_page8_black.jpg');">
         <div class="container">
             <div class="row">
                 <div class="col-xs-6 col-sm-6 col-md-3">
@@ -441,23 +453,41 @@
             </div>
         </div>
     </footer>
+
 </div>
 
-<!-- ++++++++++++++++++++++++++++++++++++++++ -->
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
-<script type="text/javascript" src="bower_components/jquery-ui/jquery-ui.min.js"></script>
-<!-- Include BOOTSTRAP plugins  -->
-<script type="text/javascript" src="bower_components/sass-bootstrap/dist/js/bootstrap.min.js"></script>
+<!-- build:js scripts/vendor.js -->
+<!-- bower:js -->
+<script type="text/javascript" src="/bower_components/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="/bower_components/jquery-ui/jquery-ui.min.js"></script>
+<script type="text/javascript" src="/bower_components/sass-bootstrap/dist/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/bower_components/scroll-up-bar/dist/scroll-up-bar.min.js"></script>
+<script type="text/javascript" src="/bower_components/owl.carousel/dist/owl.carousel.min.js"></script>
+<script type="text/javascript" src="/bower_components/masonry/dist/masonry.pkgd.min.js"></script>
+<script type="text/javascript" src="/bower_components/imagesloaded/imagesloaded.pkgd.min.js"></script>
+<!-- endbower -->
+<!-- endbuild -->
 
-<!--  Plugins -->
-<script type="text/javascript" src="bower_components/scroll-up-bar/dist/scroll-up-bar.min.js"></script>
-<script type="text/javascript" src="scripts/jquery.backgroundvideo2.min.js"></script>
+<!-- build:js scripts/plugins.js -->
 
-<!-- GSDK  functions -->
+<!-- endbuild -->
+
+<!-- build:js scripts/main.js -->
 <script src="scripts/vendor/platform.js"></script>
+<script src="scripts/vendor/carousel.js"></script>
 <script src="scripts/vendor/demo.js"></script>
 <script src="scripts/navbar.js"></script>
+<!-- endbuild -->
+
+<script>
+    var $container = $('.masonry-container');
+    $container.imagesLoaded( function () {
+        $container.masonry({
+            columnWidth: '.item',
+            itemSelector: '.item'
+        });
+    });
+</script>
 
 </body>
 </html>

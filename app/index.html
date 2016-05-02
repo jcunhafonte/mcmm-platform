@@ -19,6 +19,9 @@
 <![endif]-->
 
 <head>
+
+    <title>MCMM</title>
+
     <!--METAS-->
     <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
     <meta charset="utf-8">
@@ -66,10 +69,20 @@
     <link rel="icon" type="image/png" sizes="96x96" href="">
     <link rel="icon" type="image/png" sizes="16x16" href="">
 
-    <!--CSS-->
-    <link rel="stylesheet" href="styles/main.css">
+    <!-- build:css styles/vendor.css -->
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild -->
 
-    <script src="bower_components/modernizr/modernizr.js"></script>
+    <!-- build:css styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+
+    <!-- build:js scripts/vendor/modernizr.js -->
+    <script src="/bower_components/modernizr/modernizr.js"></script>
+    <!-- endbuild -->
+
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
 
 </head>
 
@@ -81,7 +94,7 @@
         <div class="mcmmnav-inner">
             <div class="mcmmnav-block mcmmnav-block--left float-left">
                 <a href="/" class="brand">
-                    <img class="brand-img" src="assets/images/logo-w.svg"/>
+                    <img class="brand-img" src="images/logo-w.svg"/>
                 </a>
             </div>
             <div class="mcmmnav-block mcmmnav-block--center">
@@ -156,13 +169,13 @@
                     <span>O MCMM é </span><span id="typed" style="white-space:pre;"></span>
                 </h2>
                 <div class="row wow fadeInUp" data-wow-delay="2.6s" data-wow-duration="1.5s">
-                <div class="col-md-12 control-cand">
-                    <a class="mcmm-button large see-through-2 has-icon" target="_blank">
-                        <span>Candidaturas</span>
-                        <i class="pe-7s-angle-right"></i>
-                    </a>
+                    <div class="col-md-12 control-cand">
+                        <a class="mcmm-button large see-through-2 has-icon" target="_blank">
+                            <span>Candidaturas</span>
+                            <i class="pe-7s-angle-right"></i>
+                        </a>
+                    </div>
                 </div>
-            </div>
             </div>
         </div><!--row-->
     </div><!--container-->
@@ -179,8 +192,10 @@
             <div class="col-md-6 wow fadeInUp animated" data-wow-duration="2s">
                 <div class="whatwedo-description no-padding">
                     <h3>Sobre o Mestrado</h3>
-                    <p>O Mestrado em Comunicação Multimédia tem como objetivo fundamental o reforço da formação de profissionais na área da  comunicação multimédia, nomeadamente na produção de artefactos comunicacionais multimédia e/ou na criação de
-                        conteúdos  audiovisuais digitais. </p>
+                    <p>O Mestrado em Comunicação Multimédia tem como objetivo fundamental o reforço da formação de
+                        profissionais na área da comunicação multimédia, nomeadamente na produção de artefactos
+                        comunicacionais multimédia e/ou na criação de
+                        conteúdos audiovisuais digitais. </p>
                     <p>O MCMM organiza-se em dois percursos de
                         formação: o percurso de Multimédia Interativo e o percurso de Audiovisual Digital.</p>
                 </div>
@@ -212,10 +227,6 @@
         </div>
     </div>
 </section>
-
-<!-- Home - About -->
-<!-- ++++++++++++++++++++++++++++++++++++++++ -->
-
 
 <!-- Home - Features -->
 <!-- ++++++++++++++++++++++++++++++++++++++++ -->
@@ -308,10 +319,12 @@
 
                         <div class="btn-group" data-toggle="buttons">
                             <label class="btn btn-info active button-curricular">
-                                <input type="radio" name="duration-1" value="monthly" id="monthly-1" checked> Audiovisual Digital
+                                <input type="radio" name="duration-1" value="monthly" id="monthly-1" checked>
+                                Audiovisual Digital
                             </label>
                             <label class="btn btn-info button-curricular">
-                                <input type="radio" name="duration-1" value="yearly" id="yearly-1"> Multimédia Interativo
+                                <input type="radio" name="duration-1" value="yearly" id="yearly-1"> Multimédia
+                                Interativo
                             </label>
                         </div>
 
@@ -333,14 +346,18 @@
                                 <div class="panel-body text-center">
                                     <ul class="list-styled">
                                         <li>Met. de Projecto
-                                            e Investigação</li>
+                                            e Investigação
+                                        </li>
                                         <li>Teoria dos Media</li>
                                         <li>Design de Comunicação
-                                            MM</li>
+                                            MM
+                                        </li>
                                         <li>Conteúdos AV para
-                                            Novos Media</li>
+                                            Novos Media
+                                        </li>
                                         <li>Produção e Realização
-                                            AV</li>
+                                            AV
+                                        </li>
                                     </ul>
                                 </div>
                             </li><!--panel-->
@@ -353,14 +370,18 @@
                                 <div class="panel-body text-center">
                                     <ul class="list-styled">
                                         <li>Met. de Projecto
-                                            e Investigação</li>
+                                            e Investigação
+                                        </li>
                                         <li>Teoria dos Media</li>
                                         <li>Design de Comunicação
-                                            MM</li>
+                                            MM
+                                        </li>
                                         <li>Conteúdos AV para
-                                            Novos Media</li>
+                                            Novos Media
+                                        </li>
                                         <li>Produção e Realização
-                                            AV</li>
+                                            AV
+                                        </li>
                                     </ul>
                                 </div>
                             </li><!--panel-->
@@ -383,9 +404,11 @@
                                         <li>Criatividade na Comunicação MM</li>
                                         <li>Produção e Realização AV 2</li>
                                         <li>Publicação em
-                                            Plataformas Digitais</li>
+                                            Plataformas Digitais
+                                        </li>
                                         <li>Pós-Produção e Efeitos
-                                            Especiais</li>
+                                            Especiais
+                                        </li>
                                     </ul>
                                 </div>
                             </li><!--panel-->
@@ -401,9 +424,11 @@
                                         <li>Criatividade na Comunicação MM</li>
                                         <li>Produção e Realização AV 2</li>
                                         <li>Publicação em
-                                            Plataformas Digitais</li>
+                                            Plataformas Digitais
+                                        </li>
                                         <li>Pós-Produção e Efeitos
-                                            Especiais</li>
+                                            Especiais
+                                        </li>
                                     </ul>
                                 </div>
                             </li><!--panel-->
@@ -426,9 +451,11 @@
                                         <li>Criatividade na Comunicação MM</li>
                                         <li>Produção e Realização AV 2</li>
                                         <li>Publicação em
-                                            Plataformas Digitais</li>
+                                            Plataformas Digitais
+                                        </li>
                                         <li>Pós-Produção e Efeitos
-                                            Especiais</li>
+                                            Especiais
+                                        </li>
                                     </ul>
                                 </div>
                             </li><!--panel-->
@@ -444,9 +471,11 @@
                                         <li>Criatividade na Comunicação MM</li>
                                         <li>Produção e Realização AV 2</li>
                                         <li>Publicação em
-                                            Plataformas Digitais</li>
+                                            Plataformas Digitais
+                                        </li>
                                         <li>Pós-Produção e Efeitos
-                                            Especiais</li>
+                                            Especiais
+                                        </li>
                                     </ul>
                                 </div>
                             </li><!--panel-->
@@ -469,9 +498,11 @@
                                         <li>Criatividade na Comunicação MM</li>
                                         <li>Produção e Realização AV 2</li>
                                         <li>Publicação em
-                                            Plataformas Digitais</li>
+                                            Plataformas Digitais
+                                        </li>
                                         <li>Pós-Produção e Efeitos
-                                            Especiais</li>
+                                            Especiais
+                                        </li>
                                     </ul>
                                 </div>
                             </li><!--panel-->
@@ -487,9 +518,11 @@
                                         <li>Criatividade na Comunicação MM</li>
                                         <li>Produção e Realização AV 2</li>
                                         <li>Publicação em
-                                            Plataformas Digitais</li>
+                                            Plataformas Digitais
+                                        </li>
                                         <li>Pós-Produção e Efeitos
-                                            Especiais</li>
+                                            Especiais
+                                        </li>
                                     </ul>
                                 </div>
                             </li><!--panel-->
@@ -543,7 +576,8 @@
             <div class="col-md-8 col-md-offset-2">
                 <header class="section-header  wow fadeInUp" data-wow-duration="2s">
                     <h2>Notícias</h2>
-                    <p class="large">Consulta algumas notícias interessantes acerca do Mestrado em Comunicação Multimédia,
+                    <p class="large">Consulta algumas notícias interessantes acerca do Mestrado em Comunicação
+                        Multimédia,
                         para que possas manter-te atualizado acerca dos mais recentes acontecimentos.</p>
                 </header>
             </div>
@@ -553,10 +587,10 @@
                 <div class="post">
                     <div class="post-heading">
                         <a class="post-image" href="#fakelink">
-                            <img src="assets/img/blog_1.png" alt="post"/>
+                            <img src="images/blog_1.png" alt="post"/>
                         </a>
                         <a class="post-avatar" href="#fakelink">
-                            <img class="" src="assets/img/faces/face-6.jpg" alt="avatar"/>
+                            <img class="" src="images/faces/face-6.jpg" alt="avatar"/>
                         </a>
                     </div>
                     <div class="post-body">
@@ -573,10 +607,10 @@
                 <div class="post">
                     <div class="post-heading">
                         <a class="post-image" href="#fakelink">
-                            <img src="assets/img/blog_2.png" alt="post"/>
+                            <img src="images/blog_2.png" alt="post"/>
                         </a>
                         <a class="post-avatar" href="#fakelink">
-                            <img class="" src="assets/img/faces/face-7.jpg" alt="avatar"/>
+                            <img class="" src="images/faces/face-7.jpg" alt="avatar"/>
                         </a>
                     </div>
                     <div class="post-body">
@@ -593,10 +627,10 @@
                 <div class="post">
                     <div class="post-heading">
                         <a class="post-image" href="#fakelink">
-                            <img src="assets/img/blog_3.png" alt="post"/>
+                            <img src="images/blog_3.png" alt="post"/>
                         </a>
                         <a class="post-avatar" href="#fakelink">
-                            <img class="" src="assets/img/faces/face-3.jpg" alt="avatar"/>
+                            <img class="" src="images/faces/face-3.jpg" alt="avatar"/>
                         </a>
                     </div>
                     <div class="post-body">
@@ -633,10 +667,10 @@
                 <div class="post">
                     <div class="post-heading">
                         <div class="post-image">
-                            <img src="assets/img/examples/about_1.jpg" alt="post"/>
+                            <img src="images/examples/about_1.jpg" alt="post"/>
                             <div class="mask">
                                 <div class="icons">
-                                    <a class="fancybox" href="assets/images/placehold/360x230.gif"><i
+                                    <a class="fancybox" href="images/placehold/360x230.gif"><i
                                             class="icon-plus"></i></a>
                                     <a href="#"><i class="icon-info"></i></a>
                                 </div>
@@ -654,10 +688,10 @@
                 <div class="post">
                     <div class="post-heading">
                         <div class="post-image">
-                            <img src="assets/img/examples/blog_post.jpg" alt="post"/>
+                            <img src="images/examples/blog_post.jpg" alt="post"/>
                             <div class="mask">
                                 <div class="icons">
-                                    <a class="fancybox" href="assets/images/placehold/360x230.gif"><i
+                                    <a class="fancybox" href="images/placehold/360x230.gif"><i
                                             class="icon-plus"></i></a>
                                     <a href="#"><i class="icon-info"></i></a>
                                 </div>
@@ -675,10 +709,10 @@
                 <div class="post">
                     <div class="post-heading">
                         <div class="post-image">
-                            <img src="assets/img/examples/about_5.jpg" alt="post"/>
+                            <img src="images/examples/about_5.jpg" alt="post"/>
                             <div class="mask">
                                 <div class="icons">
-                                    <a class="fancybox" href="assets/images/placehold/360x230.gif"><i
+                                    <a class="fancybox" href="images/placehold/360x230.gif"><i
                                             class="icon-plus"></i></a>
                                     <a href="#"><i class="icon-info"></i></a>
                                 </div>
@@ -704,7 +738,8 @@
             <div class="col-md-8 col-md-offset-2">
                 <header class="section-header wow fadeInUp" data-wow-duration="2s">
                     <h2>Alunos MCMM</h2>
-                    <p class="large">Consulta a atividade atual de alguns alunos que frequentaram o Mestrado em Comunicação
+                    <p class="large">Consulta a atividade atual de alguns alunos que frequentaram o Mestrado em
+                        Comunicação
                         Multimédia, para teres uma ideia das saídas profissionais que este proporciona.</p>
                 </header>
             </div>
@@ -736,56 +771,56 @@
                 <div class="col-xs-6 col-sm-3  wow fadeInUp" data-wow-duration="2s">
                     <div class="brand-logo">
                         <a class="brand-logo-wrap" href="#fakelink">
-                            <img src="assets/images/placehold/130x80.gif" alt="brand"/>
+                            <img src="images/placehold/130x80.gif" alt="brand"/>
                         </a>
                     </div>
                 </div>
                 <div class="col-xs-6 col-sm-3  wow fadeInUp" data-wow-duration="2s">
                     <div class="brand-logo">
                         <a class="brand-logo-wrap" href="#fakelink">
-                            <img src="assets/images/placehold/130x80.gif" alt="brand"/>
+                            <img src="images/placehold/130x80.gif" alt="brand"/>
                         </a>
                     </div>
                 </div>
                 <div class="col-xs-6 col-sm-3  wow fadeInUp" data-wow-duration="2s">
                     <div class="brand-logo">
                         <a class="brand-logo-wrap" href="#fakelink">
-                            <img src="assets/images/placehold/130x80.gif" alt="brand"/>
+                            <img src="images/placehold/130x80.gif" alt="brand"/>
                         </a>
                     </div>
                 </div>
                 <div class="col-xs-6 col-sm-3  wow fadeInUp" data-wow-duration="2s">
                     <div class="brand-logo">
                         <a class="brand-logo-wrap" href="#fakelink">
-                            <img src="assets/images/placehold/130x80.gif" alt="brand"/>
+                            <img src="images/placehold/130x80.gif" alt="brand"/>
                         </a>
                     </div>
                 </div>
                 <div class="col-xs-6 col-sm-3  wow fadeInUp" data-wow-duration="2s">
                     <div class="brand-logo">
                         <a class="brand-logo-wrap" href="#fakelink">
-                            <img src="assets/images/placehold/130x80.gif" alt="brand"/>
+                            <img src="images/placehold/130x80.gif" alt="brand"/>
                         </a>
                     </div>
                 </div>
                 <div class="col-xs-6 col-sm-3  wow fadeInUp" data-wow-duration="2s">
                     <div class="brand-logo">
                         <a class="brand-logo-wrap" href="#fakelink">
-                            <img src="assets/images/placehold/130x80.gif" alt="brand"/>
+                            <img src="images/placehold/130x80.gif" alt="brand"/>
                         </a>
                     </div>
                 </div>
                 <div class="col-xs-6 col-sm-3  wow fadeInUp" data-wow-duration="2s">
                     <div class="brand-logo">
                         <a class="brand-logo-wrap" href="#fakelink">
-                            <img src="assets/images/placehold/130x80.gif" alt="brand"/>
+                            <img src="images/placehold/130x80.gif" alt="brand"/>
                         </a>
                     </div>
                 </div>
                 <div class="col-xs-6 col-sm-3  wow fadeInUp" data-wow-duration="2s">
                     <div class="brand-logo">
                         <a class="brand-logo-wrap" href="#fakelink">
-                            <img src="assets/images/placehold/130x80.gif" alt="brand"/>
+                            <img src="images/placehold/130x80.gif" alt="brand"/>
                         </a>
                     </div>
                 </div>
@@ -810,7 +845,7 @@
             <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 wow fadeInUp" data-wow-duration="2s">
                 <div class="team-item">
                     <div class="image">
-                        <img src="assets/images/team/equipa_1.jpeg" alt="" class="img-responsive"/>
+                        <img src="images/team/equipa_1.jpeg" alt="" class="img-responsive"/>
                         <div class="mask">
                             <p>Etiam ligula elit, pulvinar non accumsan pulvinar, luctus et ipsum. Aenean tempor turpis
                                 quis eleifend fringilla. Mauris ac libero posuere.</p>
@@ -834,7 +869,7 @@
             <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 wow fadeInUp" data-wow-duration="2s">
                 <div class="team-item">
                     <div class="image">
-                        <img src="assets/images/team/equipa_2.jpeg" alt="" class="img-responsive"/>
+                        <img src="images/team/equipa_2.jpeg" alt="" class="img-responsive"/>
                         <div class="mask">
                             <p>Etiam ligula elit, pulvinar non accumsan pulvinar, luctus et ipsum. Aenean tempor turpis
                                 quis eleifend fringilla. Mauris ac libero posuere.</p>
@@ -858,7 +893,7 @@
             <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 wow fadeInUp" data-wow-duration="2s">
                 <div class="team-item">
                     <div class="image">
-                        <img src="assets/images/team/equipa_3.jpeg" alt="" class="img-responsive"/>
+                        <img src="images/team/equipa_3.jpeg" alt="" class="img-responsive"/>
                         <div class="mask">
                             <p>Etiam ligula elit, pulvinar non accumsan pulvinar, luctus et ipsum. Aenean tempor turpis
                                 quis eleifend fringilla. Mauris ac libero posuere.</p>
@@ -882,7 +917,7 @@
             <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 wow fadeInUp" data-wow-duration="2s">
                 <div class="team-item">
                     <div class="image">
-                        <img src="assets/images/team/equipa_4.jpeg" alt="" class="img-responsive"/>
+                        <img src="images/team/equipa_4.jpeg" alt="" class="img-responsive"/>
                         <div class="mask">
                             <p>Etiam ligula elit, pulvinar non accumsan pulvinar, luctus et ipsum. Aenean tempor turpis
                                 quis eleifend fringilla. Mauris ac libero posuere.</p>
@@ -918,7 +953,7 @@
                     <h2>Aplicação MCMM</h2>
                     <ul class="list-inline text-center">
                         <li>
-                            <a href="#fakelink"><img src="assets/images/googleplay-logo.png" alt="button"/></a>
+                            <a href="#fakelink"><img src="images/googleplay-logo.png" alt="button"/></a>
                         </li>
                     </ul>
                 </header>
@@ -927,7 +962,7 @@
         <div class="row">
             <div class="col-md-4 col-sm-6">
                 <div class="app-features left-features  wow fadeInUp" data-wow-duration="2s">
-                        <h5>Transmissões em direto</h5>
+                    <h5>Transmissões em direto</h5>
                     <div class="striped-icon-large">
                         <span aria-hidden="true" class="icon-cloud-download"></span>
                     </div>
@@ -940,7 +975,7 @@
                 </div>
             </div>
             <div class="col-md-4 hidden-sm hidden-xs  wow fadeInUp text-center" data-wow-duration="2s">
-                <img class="app-demo" src="assets/img/presentation/iPhone.png" alt="hand"/>
+                <img class="app-demo" src="images/presentation/iPhone.png" alt="hand"/>
             </div>
             <div class="col-md-4 col-sm-6 ">
                 <div class="app-features right-features  wow fadeInUp" data-wow-duration="2s">
@@ -972,7 +1007,8 @@
                                                       data-toggle="tab">Contactos</a></li>
             <li role="presentation"><a href="#service-inquiry" aria-controls="service-inquiry" role="tab"
                                        data-toggle="tab">Mensagem</a></li>
-            <li role="presentation"><a href="#on-map" aria-controls="on-map" role="tab" data-toggle="tab">Localização</a></li>
+            <li role="presentation"><a href="#on-map" aria-controls="on-map" role="tab"
+                                       data-toggle="tab">Localização</a></li>
         </ul>
 
         <!-- Tab panes -->
@@ -1081,48 +1117,37 @@
     </div><!--container-->
 </footer>
 
+<!-- build:js scripts/vendor.js -->
+<!-- bower:js -->
+<script type="text/javascript" src="/bower_components/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="/bower_components/jquery-ui/jquery-ui.min.js"></script>
+<script type="text/javascript" src="/bower_components/sass-bootstrap/dist/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/bower_components/jquery.mb.ytplayer/dist/jquery.mb.YTPlayer.min.js"></script>
+<script type="text/javascript" src="/bower_components/isotope/dist/isotope.pkgd.min.js"></script>
+<script type="text/javascript" src="/bower_components/owl.carousel/dist/owl.carousel.min.js"></script>
+<script type="text/javascript" src="/bower_components/jquery.scrollTo/jquery.scrollTo.min.js"></script>
+<script type="text/javascript" src="/bower_components/waypoints/lib/jquery.waypoints.min.js"></script>
+<script type="text/javascript" src="/bower_components/fancybox/source/jquery.fancybox.js"></script>
+<script type="text/javascript" src="/bower_components/wow/dist/wow.min.js"></script>
+<script type="text/javascript" src="/bower_components/jquery.easy-pie-chart/dist/jquery.easypiechart.min.js"></script>
+<script type="text/javascript" src="/bower_components/gsap/src/minified/TweenMax.min.js"></script>
+<script type="text/javascript" src="/bower_components/highcharts/highcharts.js"></script>
+<script type="text/javascript" src="/bower_components/Chart.js/Chart.js"></script>
+<script type="text/javascript" src="/bower_components/typed.js/js/typed.js"></script>
+<script type="text/javascript" src="/bower_components/scroll-up-bar/dist/scroll-up-bar.min.js"></script>
+<script type="text/javascript" src="/bower_components/jquery-parallax/scripts/jquery.parallax-1.1.3.js"></script>
+<!-- endbower -->
+<!-- endbuild -->
+<!-- build:js scripts/plugins.js -->
 
-<!-- ++++++++++++++++++++++++++++++++++++++++ -->
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
-<script type="text/javascript" src="bower_components/jquery-ui/jquery-ui.min.js"></script>
-<!-- Include BOOTSTRAP plugins  -->
-<script type="text/javascript" src="bower_components/sass-bootstrap/dist/js/bootstrap.min.js"></script>
-<!-- Include plugins -->
-<script src="bower_components/jquery.mb.ytplayer/dist/jquery.mb.YTPlayer.min.js"></script>
-<script src="bower_components/isotope/dist/isotope.pkgd.min.js"></script>
-<script type="text/javascript" src="bower_components/owl.carousel/dist/owl.carousel.min.js"></script>
-<script type="text/javascript" src="bower_components/jquery.scrollTo/jquery.scrollTo.min.js"></script>
+<!-- endbuild -->
+
+<!-- build:js scripts/main.js -->
 <script type="text/javascript" src="scripts/contact.js"></script>
-<script type="text/javascript" src="bower_components/waypoints/lib/jquery.waypoints.min.js"></script>
-<script type="text/javascript" src="bower_components/fancybox/source/jquery.fancybox.js"></script>
-<script type="text/javascript" src="bower_components/wow/dist/wow.min.js"></script>
-<script>
-    new WOW().init();
-    (function ($) {
-        $(document).ready(function () {
-            if (!Modernizr.touch) {
-                $(".player").mb_YTPlayer();
-            } else {
-                $('.video-bg ').css('display', 'block');
-            }
-        });
-    })(jQuery);
-</script>
-<!-- Google maps -->
-<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
 <script type="text/javascript" src="scripts/map.js"></script>
-<!-- Include local script calls -->
-<script type="text/javascript" src="bower_components/jquery.easy-pie-chart/dist/jquery.easypiechart.min.js"></script>
-<script type="text/javascript" src="bower_components/gsap/src/minified/TweenMax.min.js"></script>
-<script type="text/javascript" src="bower_components/highcharts/highcharts.js"></script>
-<script type="text/javascript" src="bower_components/Chart.js/Chart.js"></script>
-<script type="text/javascript" src="bower_components/typed.js/js/typed.js"></script>
-<script type="text/javascript" src="bower_components/scroll-up-bar/dist/scroll-up-bar.min.js"></script>
-<script type="text/javascript" src="bower_components/jquery-parallax/scripts/jquery.parallax-1.1.3.js"></script>
-
 <script type="text/javascript" src="scripts/jquery.backgroundvideo.min.js"></script>
 <script type="text/javascript" src="scripts/splash.js"></script>
-<!--<script type="text/javascript" src="scripts/parallax.js"></script>-->
+<!-- endbuild -->
+
 </body>
 </html>

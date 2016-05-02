@@ -19,6 +19,9 @@
 <![endif]-->
 
 <head>
+
+    <title>MCMM</title>
+
     <!--METAS-->
     <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
     <meta charset="utf-8">
@@ -66,10 +69,20 @@
     <link rel="icon" type="image/png" sizes="96x96" href="">
     <link rel="icon" type="image/png" sizes="16x16" href="">
 
-    <!--CSS-->
-    <link rel="stylesheet" href="styles/main.css">
+    <!-- build:css styles/vendor.css -->
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild -->
 
-    <script src="bower_components/modernizr/modernizr.js"></script>
+    <!-- build:css styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+
+    <!-- build:js scripts/vendor/modernizr.js -->
+    <script src="/bower_components/modernizr/modernizr.js"></script>
+    <!-- endbuild -->
+
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
 
 </head>
 
@@ -81,18 +94,17 @@
         <div class="mcmmnav-inner">
             <div class="mcmmnav-block mcmmnav-block--left float-left">
                 <a href="/" class="brand">
-                    <img class="brand-img" src="assets/images/logo-w.svg"/>
+                    <img class="brand-img" src="images/logo-w.svg"/>
                 </a>
             </div>
             <div class="mcmmnav-block mcmmnav-block--center">
                 <nav class="navigation-areas navigation-areas--mcmmnav navigation-areas--narrow">
                     <ul class="navigation-areas-list layoutSingleColumn">
+                        <li class="navigation-areas-item is-active">
+                            <a class="navigation-areas-anchor" href="/news">Notícias</a>
+                        </li>
                         <li class="navigation-areas-item">
                             <a class="navigation-areas-anchor hvr-underline-from-center"
-                               href="/news">Notícias</a>
-                        </li>
-                        <li class="navigation-areas-item is-active">
-                            <a class="navigation-areas-anchor"
                                href="/projects">Projetos</a>
                         </li>
                         <li class="navigation-areas-item">
@@ -136,7 +148,7 @@
                 <div class="col-md-4">
                     <div class="card card-background">
                         <div class="image">
-                            <img src="assets/img/card-full-2.jpg" alt="..."/>
+                            <img src="assets/images/card-full-2.jpg" alt="..."/>
                             <div class="filter"></div>
                         </div>
                         <div class="content">
@@ -148,7 +160,7 @@
                         <div class="footer">
                             <div class="author">
                                 <a href="#">
-                                    <img src="assets/img/faces/face-6.jpg" alt="..." class="avatar">
+                                    <img src="assets/images/faces/face-6.jpg" alt="..." class="avatar">
                                     <span> Conacel Elena </span>
                                 </a>
                             </div>
@@ -162,7 +174,7 @@
                 <div class="col-md-4">
                     <div class="card card-background">
                         <div class="image">
-                            <img src="assets/img/card-full-3.jpg" alt="..."/>
+                            <img src="assets/images/card-full-3.jpg" alt="..."/>
                             <div class="filter"></div>
                         </div>
                         <div class="content">
@@ -191,7 +203,7 @@
                 <div class="col-md-4">
                     <div class="card card-background">
                         <div class="image">
-                            <img src="assets/img/card-full-4.jpg" alt="..."/>
+                            <img src="assets/images/card-full-4.jpg" alt="..."/>
                             <div class="filter filter-azure"></div>
                         </div>
                         <div class="content">
@@ -206,7 +218,7 @@
                         <div class="footer">
                             <div class="author">
                                 <a href="#">
-                                    <img src="assets/img/faces/face-5.jpg" alt="..." class="avatar">
+                                    <img src="assets/images/faces/face-5.jpg" alt="..." class="avatar">
                                 </a>
                             </div>
                             <div class="stats pull-right">
@@ -226,7 +238,7 @@
                 <div class="col-md-3">
                     <div class="card card-background">
                         <div class="image">
-                            <img src="assets/img/card-full-6.jpg" alt="..."/>
+                            <img src="assets/images/card-full-6.jpg" alt="..."/>
                             <div class="filter filter-orange"></div>
                         </div>
                         <div class="content text-center">
@@ -245,7 +257,7 @@
                 <div class="col-md-4">
                     <div class="card card-background">
                         <div class="image">
-                            <img src="assets/img/card-full-7.jpg" alt="..."/>
+                            <img src="assets/images/card-full-7.jpg" alt="..."/>
                             <div class="filter"></div>
                         </div>
                         <div class="content">
@@ -262,7 +274,7 @@
                         <div class="footer">
                             <div class="author">
                                 <a href="#">
-                                    <img src="assets/img/faces/face-5.jpg" alt="..." class="avatar">
+                                    <img src="assets/images/faces/face-5.jpg" alt="..." class="avatar">
                                     <span>Alex</span>
                                 </a>
                             </div>
@@ -275,7 +287,7 @@
                 <div class="col-md-5">
                     <div class="card card-background">
                         <div class="image">
-                            <img src="assets/img/card-full-5.jpg" alt="..."/>
+                            <img src="assets/images/card-full-5.jpg" alt="..."/>
                             <div class="filter"></div>
                         </div>
                         <div class="content">
@@ -302,7 +314,7 @@
 
                             <div class="author pull-right">
                                 <a href="#" rel="tooltip" title="Radu Tintescu" data-placement="left">
-                                    <img src="assets/img/faces/face-7.jpg" alt="..." class="avatar">
+                                    <img src="assets/images/faces/face-7.jpg" alt="..." class="avatar">
 
                                 </a>
                             </div>
@@ -320,7 +332,7 @@
                 <div class="col-md-8">
                     <div class="card card-background">
                         <div class="image">
-                            <img src="assets/img/card-full-2.jpg" alt="..."/>
+                            <img src="assets/images/card-full-2.jpg" alt="..."/>
                             <div class="filter"></div>
                         </div>
                         <div class="content">
@@ -332,7 +344,7 @@
                         <div class="footer">
                             <div class="author">
                                 <a href="#">
-                                    <img src="assets/img/faces/face-6.jpg" alt="..." class="avatar">
+                                    <img src="assets/images/faces/face-6.jpg" alt="..." class="avatar">
                                     <span> Conacel Elena </span>
                                 </a>
                             </div>
@@ -346,7 +358,7 @@
                 <div class="col-md-4">
                     <div class="card card-background">
                         <div class="image">
-                            <img src="assets/img/card-full-3.jpg" alt="..."/>
+                            <img src="assets/images/card-full-3.jpg" alt="..."/>
                             <div class="filter"></div>
                         </div>
                         <div class="content">
@@ -375,7 +387,7 @@
                 <div class="col-md-3">
                     <div class="card card-background">
                         <div class="image">
-                            <img src="assets/img/card-full-4.jpg" alt="..."/>
+                            <img src="assets/images/card-full-4.jpg" alt="..."/>
                             <div class="filter filter-azure"></div>
                         </div>
                         <div class="content">
@@ -390,7 +402,7 @@
                         <div class="footer">
                             <div class="author">
                                 <a href="#">
-                                    <img src="assets/img/faces/face-5.jpg" alt="..." class="avatar">
+                                    <img src="assets/images/faces/face-5.jpg" alt="..." class="avatar">
                                 </a>
                             </div>
                             <div class="stats pull-right">
@@ -406,7 +418,7 @@
                 <div class="col-md-9">
                     <div class="card card-background">
                         <div class="image">
-                            <img src="assets/img/card-full-4.jpg" alt="..."/>
+                            <img src="assets/images/card-full-4.jpg" alt="..."/>
                             <div class="filter filter-azure"></div>
                         </div>
                         <div class="content">
@@ -421,7 +433,7 @@
                         <div class="footer">
                             <div class="author">
                                 <a href="#">
-                                    <img src="assets/img/faces/face-5.jpg" alt="..." class="avatar">
+                                    <img src="assets/images/faces/face-5.jpg" alt="..." class="avatar">
                                 </a>
                             </div>
                             <div class="stats pull-right">
@@ -438,7 +450,7 @@
     </div><!-- section -->
 
     <footer class="footer footer-big footer-transparent"
-            style="background-image: url('assets/img/examples/blog_page8_black.jpg');">
+            style="background-image: url('assets/images/examples/blog_page8_black.jpg');">
         <div class="container">
             <div class="row">
                 <div class="col-xs-6 col-sm-6 col-md-3">
@@ -575,22 +587,38 @@
     </footer>
 </div>
 
-<!-- ++++++++++++++++++++++++++++++++++++++++ -->
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
-<script type="text/javascript" src="bower_components/jquery-ui/jquery-ui.min.js"></script>
-<!-- Include BOOTSTRAP plugins  -->
-<script type="text/javascript" src="bower_components/sass-bootstrap/dist/js/bootstrap.min.js"></script>
+<!-- build:js scripts/vendor.js -->
+<!-- bower:js -->
+<script type="text/javascript" src="/bower_components/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="/bower_components/jquery-ui/jquery-ui.min.js"></script>
+<script type="text/javascript" src="/bower_components/sass-bootstrap/dist/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/bower_components/scroll-up-bar/dist/scroll-up-bar.min.js"></script>
+<script type="text/javascript" src="/bower_components/owl.carousel/dist/owl.carousel.min.js"></script>
+<script type="text/javascript" src="/bower_components/masonry/dist/masonry.pkgd.min.js"></script>
+<script type="text/javascript" src="/bower_components/imagesloaded/imagesloaded.pkgd.min.js"></script>
+<!-- endbower -->
+<!-- endbuild -->
 
-<!--  Plugins -->
-<script type="text/javascript" src="bower_components/scroll-up-bar/dist/scroll-up-bar.min.js"></script>
-<script type="text/javascript" src="bower_components/owl.carousel/dist/owl.carousel.min.js"></script>
+<!-- build:js scripts/plugins.js -->
 
-<!-- GSDK Pro functions -->
+<!-- endbuild -->
+
+<!-- build:js scripts/main.js -->
 <script src="scripts/vendor/platform.js"></script>
 <script src="scripts/vendor/carousel.js"></script>
 <script src="scripts/vendor/demo.js"></script>
 <script src="scripts/navbar.js"></script>
+<!-- endbuild -->
+
+<script>
+    var $container = $('.masonry-container');
+    $container.imagesLoaded( function () {
+        $container.masonry({
+            columnWidth: '.item',
+            itemSelector: '.item'
+        });
+    });
+</script>
 
 </body>
 </html>

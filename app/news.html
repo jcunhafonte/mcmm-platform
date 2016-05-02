@@ -19,6 +19,9 @@
 <![endif]-->
 
 <head>
+
+    <title>MCMM</title>
+
     <!--METAS-->
     <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
     <meta charset="utf-8">
@@ -66,10 +69,20 @@
     <link rel="icon" type="image/png" sizes="96x96" href="">
     <link rel="icon" type="image/png" sizes="16x16" href="">
 
-    <!--CSS-->
-    <link rel="stylesheet" href="styles/main.css">
+    <!-- build:css styles/vendor.css -->
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild -->
 
-    <script src="bower_components/modernizr/modernizr.js"></script>
+    <!-- build:css styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+
+    <!-- build:js scripts/vendor/modernizr.js -->
+    <script src="/bower_components/modernizr/modernizr.js"></script>
+    <!-- endbuild -->
+
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
 
 </head>
 
@@ -81,7 +94,7 @@
         <div class="mcmmnav-inner">
             <div class="mcmmnav-block mcmmnav-block--left float-left">
                 <a href="/" class="brand">
-                    <img class="brand-img" src="assets/images/logo-w.svg"/>
+                    <img class="brand-img" src="images/logo-w.svg"/>
                 </a>
             </div>
             <div class="mcmmnav-block mcmmnav-block--center">
@@ -131,11 +144,11 @@
 
     <div class="section section-gray">
         <div class="container">
-            <div class="row" id="blog-cards">
-                <div class="col-md-4">
+            <div class="row masonry-container" id="blog-cards">
+                <div class="col-md-4 item">
                     <div class="card">
                         <div class="image">
-                            <img src="assets/img/blog_2.png" alt="..."/>
+                            <img src="images/blog_2.png" alt="..."/>
                             <div class="filter">
                                 <button type="button" class="btn btn-neutral btn-simple">
                                     <i class="fa fa-bookmark-o"></i> Bookmark
@@ -163,8 +176,7 @@
                         </div>
                     </div> <!-- end card -->
                 </div>
-
-                <div class="col-md-4">
+                <div class="col-md-4 item">
                     <div class="card">
                         <div class="content">
                             <p class="category">Featured</p>
@@ -176,7 +188,7 @@
                             <div class="footer">
                                 <div class="author">
                                     <a class="card-link" href="#">
-                                        <img src="assets/img/faces/face-5.jpg" alt="..." class="avatar">
+                                        <img src="images/faces/face-5.jpg" alt="..." class="avatar">
                                         <span> Alex Paduraru </span>
                                     </a>
                                 </div>
@@ -187,7 +199,7 @@
                         </div>
                     </div> <!-- end card -->
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 item">
                     <div class="card">
                         <div class="content">
                             <p class="category text-danger">
@@ -219,13 +231,12 @@
                         </div>
                     </div> <!-- end card -->
                 </div>
-
-                <div class="col-md-8">
+                <div class="col-md-8 item">
                     <div class="card card-horizontal">
                         <div class="row">
                             <div class="col-md-5">
                                 <div class="image">
-                                    <img src="assets/img/blog_1.png" alt="..."/>
+                                    <img src="images/blog_1.png" alt="..."/>
                                     <div class="filter filter-azure">
                                         <button type="button" class="btn btn-neutral btn-round">
                                             <i class="fa fa-heart"></i> Recommend
@@ -270,12 +281,10 @@
                         </div>
                     </div> <!-- end card -->
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-md-7">
+                <div class="col-md-8 item">
                     <div class="card">
                         <div class="image">
-                            <img src="assets/img/blog_3.png" alt="..."/>
+                            <img src="images/blog_3.png" alt="..."/>
                             <div class="filter filter-white">
                                 <button type="button" class="btn btn-default btn-simple">
                                     <i class="fa fa-image"></i> Preview
@@ -301,7 +310,7 @@
                             <div class="footer">
                                 <div class="author">
                                     <a class="card-link" href="#">
-                                        <img src="assets/img/faces/face-5.jpg" alt="..." class="avatar">
+                                        <img src="images/faces/face-5.jpg" alt="..." class="avatar">
                                         <span> Alex Paduraru</span>
                                     </a>
                                 </div>
@@ -319,7 +328,7 @@
                         </div>
                     </div> <!-- end card -->
                 </div>
-                <div class="col-md-5">
+                <div class="col-md-4 item">
                     <div class="card">
                         <div class="content">
                             <!--                             <p class="category">Featured</p> -->
@@ -334,7 +343,7 @@
                             <div class="footer">
                                 <div class="author">
                                     <a class="card-link" href="#">
-                                        <img src="assets/img/faces/face-1.jpg" alt="..." class="avatar">
+                                        <img src="images/faces/face-1.jpg" alt="..." class="avatar">
                                         <span> Creative Tim</span>
                                     </a>
                                 </div>
@@ -352,7 +361,136 @@
                         </div>
                     </div> <!-- end card -->
                 </div>
-                <div class="col-md-5">
+                <div class="col-md-4 item">
+                    <div class="card">
+                        <div class="content">
+                            <p class="category text-danger">
+                                <i class="fa fa-fire" rel="tooltip" title="Hot!"></i>
+                            </p>
+                            <a class="card-link" href="#">
+                                <h4 class="title">MCMM , a plataforma do momento </h4>
+                            </a>
+                            <a href="#">
+                            </a>
+                            <div class="footer">
+                                <div class="author">
+                                    <a class="card-link" href="#">
+                                        <i class="fa fa-male"></i>
+                                        Rick Ross
+                                    </a>
+                                </div>
+                                <div class="stats pull-right">
+                                    <a class="card-link" href="#">
+                                        <i class="fa fa-star"></i> 89
+                                    </a>
+                                </div>
+                                <div class="stats pull-right">
+                                    <a class="card-link" href="#">
+                                        <i class="fa fa-comment"></i> 41
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- end card -->
+                </div>
+                <div class="col-md-8 item">
+                    <div class="card card-horizontal">
+                        <div class="row">
+                            <div class="col-md-5">
+                                <div class="image">
+                                    <img src="images/blog_1.png" alt="..."/>
+                                    <div class="filter filter-azure">
+                                        <button type="button" class="btn btn-neutral btn-round">
+                                            <i class="fa fa-heart"></i> Recommend
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-7">
+                                <div class="content">
+                                    <p class="category text-info">
+                                        <i class="fa fa-trophy"></i> Best of
+                                    </p>
+
+                                    <a class="card-link" href="#">
+                                        <h4 class="title">MCMM , the most wanted bootstrap kit is
+                                            here </h4>
+                                    </a>
+                                    <a class="card-link" href="#">
+                                        <p class="description">Edgerank completely fails to have the effect it was
+                                            originally designed for nice product. This will be a really interesting
+                                            post about Facebook's biggest mistake yet...</p>
+                                    </a>
+                                    <div class="footer">
+                                        <div class="stats">
+                                            <a class="card-link" href="#">
+                                                <i class="fa fa-male"></i> Radu Tintescu
+                                            </a>
+                                        </div>
+                                        <div class="stats">
+                                            <a class="card-link" href="#">
+                                                <i class="fa fa-comments"></i> 23 Comments
+                                            </a>
+                                        </div>
+                                        <div class="stats">
+                                            <a class="card-link" href="#">
+                                                <i class="fa fa-heart"></i> 231 Likes
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- end card -->
+                </div>
+                <div class="col-md-4 item">
+                    <div class="card">
+                        <div class="image">
+                            <img src="images/blog_3.png" alt="..."/>
+                            <div class="filter filter-white">
+                                <button type="button" class="btn btn-default btn-simple">
+                                    <i class="fa fa-image"></i> Preview
+                                </button>
+                                <button type="button" class="btn btn-success btn-simple">
+                                    <i class="fa fa-check"></i> Publish
+                                </button>
+                                <button type="button" class="btn btn-danger btn-simple">
+                                    <i class="fa fa-times"></i> Delete
+                                </button>
+                            </div>
+                        </div>
+                        <div class="content">
+                            <p class="category">Latest from <a class="card-link" href="#">Best Stories</a></p>
+                            <a class="card-link" href="#">
+                                <h4 class="title">MCMM , a plataforma do momento </h4>
+                            </a>
+                            <a class="card-link" href="#">
+                                <p class="description">Edgerank completely fails to have the effect it was
+                                    originally designed for nice product. This will be a really interesting post
+                                    about Facebook's biggest mistake yet...</p>
+                            </a>
+                            <div class="footer">
+                                <div class="author">
+                                    <a class="card-link" href="#">
+                                        <img src="images/faces/face-5.jpg" alt="..." class="avatar">
+                                        <span> Alex Paduraru</span>
+                                    </a>
+                                </div>
+                                <div class="stats pull-right">
+                                    <a class="card-link" href="#">
+                                        <i class="fa fa-comments"></i> 89
+                                    </a>
+                                </div>
+                                <div class="stats pull-right">
+                                    <a class="card-link" href="#">
+                                        <i class="fa fa-heart"></i> 341
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- end card -->
+                </div>
+                <div class="col-md-6 item">
                     <div class="card">
                         <div class="content">
                             <!--                             <p class="category">Featured</p> -->
@@ -367,7 +505,7 @@
                             <div class="footer">
                                 <div class="author">
                                     <a class="card-link" href="#">
-                                        <img src="assets/img/faces/face-1.jpg" alt="..." class="avatar">
+                                        <img src="images/faces/face-1.jpg" alt="..." class="avatar">
                                         <span> Creative Tim</span>
                                     </a>
                                 </div>
@@ -395,7 +533,7 @@
                 <div class="col-md-4">
                     <div class="card card-plain">
                         <div class="image">
-                            <img src="assets/img/examples/ecommerce.jpg" alt="..."/>
+                            <img src="images/examples/ecommerce.jpg" alt="..."/>
                             <div class="filter">
                                 <button type="button" class="btn btn-neutral btn-simple">
                                     <i class="fa fa-bookmark-o"></i> Bookmark
@@ -416,7 +554,7 @@
                             <div class="footer">
                                 <div class="author">
                                     <a class="card-link" href="#">
-                                        <img src="assets/img/faces/face-5.jpg" alt="..." class="avatar">
+                                        <img src="images/faces/face-5.jpg" alt="..." class="avatar">
                                         <span> Alex </span>
                                     </a>
                                 </div>
@@ -438,7 +576,7 @@
                 <div class="col-md-8">
                     <div class="card card-plain">
                         <div class="image">
-                            <img src="assets/img/examples/blog_page.jpg" alt="..."/>
+                            <img src="images/examples/blog_page.jpg" alt="..."/>
                             <div class="filter">
                                 <button type="button" class="btn btn-neutral btn-simple">
                                     <i class="fa fa-bookmark-o"></i> Bookmark
@@ -461,7 +599,7 @@
                             <div class="footer">
                                 <div class="author">
                                     <a class="card-link" href="#">
-                                        <img src="assets/img/faces/face-7.jpg" alt="..." class="avatar">
+                                        <img src="images/faces/face-7.jpg" alt="..." class="avatar">
                                         <span> Radu </span>
                                     </a>
                                 </div>
@@ -483,7 +621,7 @@
                 <div class="col-md-8">
                     <div class="card card-plain">
                         <div class="image">
-                            <img src="assets/img/examples/about_5.jpg" alt="..."/>
+                            <img src="images/examples/about_5.jpg" alt="..."/>
                             <div class="filter">
                                 <button type="button" class="btn btn-neutral btn-simple">
                                     <i class="fa fa-bookmark-o"></i> Bookmark
@@ -503,7 +641,7 @@
                             <div class="footer">
                                 <div class="author">
                                     <a class="card-link" href="#">
-                                        <img src="assets/img/faces/face-6.jpg" alt="..." class="avatar">
+                                        <img src="images/faces/face-6.jpg" alt="..." class="avatar">
                                         <span> Elena </span>
                                     </a>
                                 </div>
@@ -518,7 +656,7 @@
                 <div class="col-md-4">
                     <div class="card card-plain">
                         <div class="image">
-                            <img src="assets/img/examples/about_1.jpg" alt="..."/>
+                            <img src="images/examples/about_1.jpg" alt="..."/>
                             <div class="filter">
                                 <button type="button" class="btn btn-neutral btn-simple">
                                     <i class="fa fa-bookmark-o"></i> Bookmark
@@ -537,7 +675,7 @@
                             <div class="footer">
                                 <div class="author">
                                     <a class="card-link" href="#">
-                                        <img src="assets/img/faces/face-5.jpg" alt="..." class="avatar">
+                                        <img src="images/faces/face-5.jpg" alt="..." class="avatar">
                                         <span> Alex </span>
                                     </a>
                                 </div>
@@ -558,7 +696,7 @@
                 <div class="col-md-4">
                     <div class="card card-plain">
                         <div class="image">
-                            <img src="assets/img/examples/ecommerce.jpg" alt="..."/>
+                            <img src="images/examples/ecommerce.jpg" alt="..."/>
                             <div class="filter filter-white">
                                 <button type="button" class="btn btn-info btn-round btn-fill">
                                     <i class="fa fa-heart"></i> Bookmarked
@@ -574,7 +712,7 @@
                             <div class="footer">
                                 <div class="author">
                                     <a class="card-link" href="#">
-                                        <img src="assets/img/faces/face-5.jpg" alt="..." class="avatar">
+                                        <img src="images/faces/face-5.jpg" alt="..." class="avatar">
                                         <span> Alex </span>
                                     </a>
                                 </div>
@@ -589,7 +727,7 @@
                 <div class="col-md-4">
                     <div class="card card-plain">
                         <div class="image">
-                            <img src="assets/img/examples/blog_page2.jpg" alt="..."/>
+                            <img src="images/examples/blog_page2.jpg" alt="..."/>
                             <div class="filter filter-azure">
                                 <button type="button" class="btn btn-neutral btn-round">
                                     <i class="fa fa-heart-o"></i> Bookmark
@@ -605,7 +743,7 @@
                             <div class="footer">
                                 <div class="author">
                                     <a class="card-link" href="#">
-                                        <img src="assets/img/faces/face-7.jpg" alt="..." class="avatar">
+                                        <img src="images/faces/face-7.jpg" alt="..." class="avatar">
                                         <span> Radu </span>
                                     </a>
                                 </div>
@@ -620,7 +758,7 @@
                 <div class="col-md-4">
                     <div class="card card-plain">
                         <div class="image">
-                            <img src="assets/img/examples/about_5.jpg" alt="..."/>
+                            <img src="images/examples/about_5.jpg" alt="..."/>
                             <div class="filter filter-white">
                                 <button type="button" class="btn btn-info btn-round btn-fill">
                                     <i class="fa fa-heart"></i> Bookmarked
@@ -636,7 +774,7 @@
                             <div class="footer">
                                 <div class="author">
                                     <a class="card-link" href="#">
-                                        <img src="assets/img/faces/face-6.jpg" alt="..." class="avatar">
+                                        <img src="images/faces/face-6.jpg" alt="..." class="avatar">
                                         <span> Elena </span>
                                     </a>
                                 </div>
@@ -657,7 +795,7 @@
                 <div class="col-md-4">
                     <div class="card">
                         <div class="image">
-                            <img src="assets/img/examples/about_2.jpg" alt="..."/>
+                            <img src="images/examples/about_2.jpg" alt="..."/>
                             <div class="filter filter-white">
                                 <button type="button" class="btn btn-info btn-round btn-fill">
                                     <i class="fa fa-heart"></i> Bookmarked
@@ -673,7 +811,7 @@
                             <div class="footer">
                                 <div class="author">
                                     <a class="card-link" href="#">
-                                        <img src="assets/img/faces/face-5.jpg" alt="..." class="avatar">
+                                        <img src="images/faces/face-5.jpg" alt="..." class="avatar">
                                         <span> Alex Paduraru</span>
                                     </a>
                                 </div>
@@ -688,7 +826,7 @@
                 <div class="col-md-8">
                     <div class="card">
                         <div class="image">
-                            <img src="assets/img/examples/blog_page2.jpg" alt="..."/>
+                            <img src="images/examples/blog_page2.jpg" alt="..."/>
                             <div class="filter filter-azure">
                                 <button type="button" class="btn btn-neutral btn-round">
                                     <i class="fa fa-heart-o"></i> Bookmark
@@ -705,7 +843,7 @@
                             <div class="footer">
                                 <div class="author">
                                     <a class="card-link" href="#">
-                                        <img src="assets/img/faces/face-6.jpg" alt="..." class="avatar">
+                                        <img src="images/faces/face-6.jpg" alt="..." class="avatar">
                                         <span> Conacel Elena </span>
                                     </a>
                                 </div>
@@ -720,7 +858,7 @@
                 <div class="col-md-4">
                     <div class="card">
                         <div class="image">
-                            <img src="assets/img/examples/blog_page8.jpg" alt="..."/>
+                            <img src="images/examples/blog_page8.jpg" alt="..."/>
                             <div class="filter filter-white">
                                 <button type="button" class="btn btn-info btn-round btn-fill">
                                     <i class="fa fa-heart"></i> Bookmarked
@@ -736,7 +874,7 @@
                             <div class="footer">
                                 <div class="author">
                                     <a class="card-link" href="#">
-                                        <img src="assets/img/faces/face-4.jpg" alt="..." class="avatar">
+                                        <img src="images/faces/face-4.jpg" alt="..." class="avatar">
                                         <span> Jayz </span>
                                     </a>
                                 </div>
@@ -758,7 +896,7 @@
                 <div class="col-md-4">
                     <div class="card">
                         <div class="image">
-                            <img src="assets/img/card-full-4.jpg" alt="..."/>
+                            <img src="images/card-full-4.jpg" alt="..."/>
                             <div class="filter filter-azure">
                                 <button type="button" class="btn btn-neutral btn-round">
                                     <i class="fa fa-heart-o"></i> Bookmark
@@ -774,7 +912,7 @@
                             <div class="footer">
                                 <div class="author">
                                     <a class="card-link" href="#">
-                                        <img src="assets/img/faces/face-7.jpg" alt="..." class="avatar">
+                                        <img src="images/faces/face-7.jpg" alt="..." class="avatar">
                                         <span> Radu </span>
                                     </a>
                                 </div>
@@ -789,7 +927,7 @@
                 <div class="col-md-4">
                     <div class="card">
                         <div class="image">
-                            <img src="assets/img/examples/about_5.jpg" alt="..."/>
+                            <img src="images/examples/about_5.jpg" alt="..."/>
                             <div class="filter filter-white">
                                 <button type="button" class="btn btn-info btn-round btn-fill">
                                     <i class="fa fa-heart"></i> Bookmarked
@@ -805,7 +943,7 @@
                             <div class="footer">
                                 <div class="author">
                                     <a class="card-link" href="#">
-                                        <img src="assets/img/faces/face-6.jpg" alt="..." class="avatar">
+                                        <img src="images/faces/face-6.jpg" alt="..." class="avatar">
                                         <span> Elena </span>
                                     </a>
                                 </div>
@@ -823,7 +961,7 @@
     </div><!-- section -->
 
     <footer class="footer footer-big footer-transparent"
-            style="background-image: url('assets/img/examples/blog_page8_black.jpg');">
+            style="background-image: url('images/examples/blog_page8_black.jpg');">
         <div class="container">
             <div class="row">
                 <div class="col-xs-6 col-sm-6 col-md-3">
@@ -960,21 +1098,38 @@
     </footer>
 </div>
 
-<!-- ++++++++++++++++++++++++++++++++++++++++ -->
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
-<script type="text/javascript" src="bower_components/jquery-ui/jquery-ui.min.js"></script>
-<!-- Include BOOTSTRAP plugins  -->
-<script type="text/javascript" src="bower_components/sass-bootstrap/dist/js/bootstrap.min.js"></script>
-<!--  Plugins -->
-<script type="text/javascript" src="bower_components/scroll-up-bar/dist/scroll-up-bar.min.js"></script>
-<script type="text/javascript" src="bower_components/owl.carousel/dist/owl.carousel.min.js"></script>
+<!-- build:js scripts/vendor.js -->
+<!-- bower:js -->
+<script type="text/javascript" src="/bower_components/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="/bower_components/jquery-ui/jquery-ui.min.js"></script>
+<script type="text/javascript" src="/bower_components/sass-bootstrap/dist/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/bower_components/scroll-up-bar/dist/scroll-up-bar.min.js"></script>
+<script type="text/javascript" src="/bower_components/owl.carousel/dist/owl.carousel.min.js"></script>
+<script type="text/javascript" src="/bower_components/masonry/dist/masonry.pkgd.min.js"></script>
+<script type="text/javascript" src="/bower_components/imagesloaded/imagesloaded.pkgd.min.js"></script>
+<!-- endbower -->
+<!-- endbuild -->
 
-<!-- GSDK Pro functions -->
+<!-- build:js scripts/plugins.js -->
+
+<!-- endbuild -->
+
+<!-- build:js scripts/main.js -->
 <script src="scripts/vendor/platform.js"></script>
 <script src="scripts/vendor/carousel.js"></script>
 <script src="scripts/vendor/demo.js"></script>
 <script src="scripts/navbar.js"></script>
+<!-- endbuild -->
+
+<script>
+    var $container = $('.masonry-container');
+    $container.imagesLoaded( function () {
+        $container.masonry({
+            columnWidth: '.item',
+            itemSelector: '.item'
+        });
+    });
+</script>
 
 </body>
 </html>

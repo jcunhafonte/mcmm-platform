@@ -58,8 +58,6 @@
   -moz-transition: all 0.2s linear !important;
   -webkit-transition: all 0.2s linear !important;
   -o-transition: all 0.2s linear !important;
-  -webkit-border-radius: 2px !important;
-  -o-border-radius: 2px !important;
   border: 2px solid rgba(255, 255, 255, 0.75);
   &:hover {
     border-color: $blue !important;

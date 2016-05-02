@@ -1,7 +1,7 @@
 //THIS IS THE MAIN SASS FILE
 /*ALL THE IMPORTS AND MAIN CONTENT SHOULD BE HERE*/
 /*****************VARIABLES*****************************/
-@import '../bower_components/sass-bootstrap/lib/variables';
+@import '../../bower_components/sass-bootstrap/lib/variables';
 @import 'skeleton/variables';
 
 /*****************MCMM*****************************/
@@ -18,14 +18,14 @@
 @import 'vendor/bootstrap';
 
 //JQUERY-UI
-@import '../bower_components/jquery-ui/themes/base/jquery-ui.min.css';
+@import '../../bower_components/jquery-ui/themes/base/jquery-ui.min.css';
 
 //ANIMATE
-@import '../bower_components/animate.css/animate.min.css';
-@import '../bower_components/flickity/dist/flickity.min.css';
+@import '../../bower_components/animate.css/animate.min.css';
+@import '../../bower_components/flickity/dist/flickity.min.css';
 
 //HOVER
-@import "../bower_components/hover/scss/hover";
+@import "../../bower_components/hover/scss/hover";
 
 //VENDORS
 #platform {
@@ -34,14 +34,24 @@
 
 @import 'vendor/jquery.fancybox';
 @import 'vendor/owl.transitions';
-@import '../bower_components/owl.carousel/dist/assets/owl.theme.default.min.css';
-@import '../bower_components/owl.carousel/dist/assets/owl.carousel.min.css';
+@import '../../bower_components/owl.carousel/dist/assets/owl.theme.default.min.css';
+@import '../../bower_components/owl.carousel/dist/assets/owl.carousel.min.css';
 //@import 'vendor/typed';
 
 //ICONS
 @import 'fonts/pe-icon-7-stroke';
-@import '../bower_components/components-font-awesome/scss/font-awesome';
-@import '../bower_components/simple-line-icons/scss/simple-line-icons';
+@import '../../bower_components/components-font-awesome/scss/font-awesome';
+@import '../../bower_components/simple-line-icons/scss/simple-line-icons';
+@font-face {
+  font-family: 'Pe-icon-7-stroke';
+  src:url('../fonts/Pe-icon-7-stroke.eot');
+  src:url('../fonts/Pe-icon-7-stroke.eot') format('embedded-opentype'),
+  url('../fonts/Pe-icon-7-stroke.woff') format('woff'),
+  url('../fonts/Pe-icon-7-stroke.ttf') format('truetype'),
+  url('../fonts/Pe-icon-7-stroke.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
 
 //FONTS
 @import url(https://fonts.googleapis.com/css?family=Varela+Round);

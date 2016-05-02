@@ -19,11 +19,11 @@ $(document).ready(function () {
         if ($(window).width() < 992) {
             $('#topbar').addClass('navbar-white');
             $('#topbar').removeClass('navbar-transparent');
-            $(".brand-img").attr("src", "assets/images/logo.svg");
+            $(".brand-img").attr("src", "images/logo.svg");
         } else {
             $('#topbar').removeClass('navbar-white');
             $('#topbar').addClass('navbar-transparent');
-            $(".brand-img").attr("src", "assets/images/logo-w.svg");
+            $(".brand-img").attr("src", "images/logo-w.svg");
         }
     }
 }); // Document ready
@@ -47,14 +47,14 @@ function checkTransparent() {
                         transparent = false;
                         $('nav[role="navigation"]').removeClass('navbar-transparent');
                         $('nav[role="navigation"]').addClass('navbar-white');
-                        $(".brand-img").attr("src", "assets/images/logo.svg")
+                        $(".brand-img").attr("src", "images/logo.svg")
                     }
                 } else {
                     if (!transparent) {
                         transparent = true;
                         $('nav[role="navigation"]').removeClass('navbar-white');
                         $('nav[role="navigation"]').addClass('navbar-transparent');
-                        $(".brand-img").attr("src", "assets/images/logo-w.svg")
+                        $(".brand-img").attr("src", "images/logo-w.svg")
                     }
                 }
             }
