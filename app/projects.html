@@ -123,6 +123,141 @@
 </nav>
 <!-- ++++++++++++++++++++++++++++++++++++++++ -->
 
+<style>
+
+    .project {
+        width: 90%;
+        float: left;
+    }
+
+    .project:not(:last-child) {
+        margin-right: 4%;
+    }
+
+    .project-list:after {
+        content: " ";
+        display: block;
+        clear: both;
+    }
+
+    .project__image {
+        display: block;
+        position: relative;
+    }
+
+    .project__image img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    .project__image:after {
+        content: " ";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.4));
+        transition: opacity .3s ease;
+        opacity: 0;
+    }
+
+    .project__card {
+        position: relative;
+        will-change: transform;
+        transition: box-shadow .3s ease;
+        box-shadow: 0 10px 30px transparent;
+    }
+
+    .project__card.hover-in {
+        transition: -webkit-transform .2s ease-out;
+        transition: transform .2s ease-out;
+        transition: transform .2s ease-out, -webkit-transform .2s ease-out;
+    }
+
+    .project__card.hover-out {
+        transition: -webkit-transform .2s ease-in;
+        transition: transform .2s ease-in;
+        transition: transform .2s ease-in, -webkit-transform .2s ease-in;
+    }
+
+    .project:hover .project__card {
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    }
+
+    .project:hover .project__image:after {
+        opacity: 1;
+    }
+
+    .project:hover .project__detail {
+        border-width: 10px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    }
+
+    .project:hover .project__title, .project:hover .project__category {
+        -webkit-transform: translateY(0) scale(1);
+        -ms-transform: translateY(0) scale(1);
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+
+    .project__detail {
+        position: absolute;
+        left: 30px;
+        right: 30px;
+        top: 30px;
+        bottom: 30px;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        text-align: center;
+        pointer-events: none;
+        -webkit-transform: translateZ(30px);
+        transform: translateZ(30px);
+        border: 0 solid #00BCD4;
+        transition: border .4s ease;
+    }
+
+    .project__title {
+        margin: 0 0 10px;
+        font-size: 36px;
+        font-weight: 700;
+        transition: .4s ease;
+        opacity: 0;
+        -webkit-transform: translateY(40px) scale(0);
+        -ms-transform: translateY(40px) scale(0);
+        transform: translateY(40px) scale(0);
+        will-change: transform;
+    }
+
+    .project__title a {
+        color: white;
+    }
+
+    .project__category {
+        opacity: 0;
+        transition: .4s ease;
+        transition-delay: .1s;
+        -webkit-transform: translateY(40px) scale(0);
+        -ms-transform: translateY(40px) scale(0);
+        transform: translateY(40px) scale(0);
+        will-change: transform;
+    }
+
+    .project__category a {
+        color: rgba(255, 255, 255, 0.8);
+        font-size: 1.3em;
+    }
+</style>
+
 <div id="platform">
     <div id="carousel" class="carousel">
         <div class="owl-carousel">
@@ -144,8 +279,8 @@
 
     <div class="section section-white">
         <div class="container">
-            <div class="row">
-                <div class="col-md-4">
+            <div class="row project">
+                <div class="project__card col-md-4">
                     <div class="card card-background">
                         <div class="image">
                             <img src="assets/images/card-full-2.jpg" alt="..."/>
@@ -608,6 +743,7 @@
 <script src="scripts/vendor/carousel.js"></script>
 <script src="scripts/vendor/demo.js"></script>
 <script src="scripts/navbar.js"></script>
+<script src="scripts/vendor/jquery.hover3d.js"></script>
 <!-- endbuild -->
 
 <script>
@@ -617,6 +753,10 @@
             columnWidth: '.item',
             itemSelector: '.item'
         });
+    });
+
+    $(".project").hover3d({
+        selector: ".project__card"
     });
 </script>
 

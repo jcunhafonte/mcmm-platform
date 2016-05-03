@@ -5787,51 +5787,6 @@ text[text-anchor="end"] {
   color: $blue;
 }
 
-/* Nav
-*****************************************************************/
-
-nav#primary {
-  z-index: 5;
-  position: fixed;
-  top: 50%;
-  right: 16px;
-  margin-top: -40px;
-}
-
-nav#primary li {
-  position: relative;
-  height: 20px;
-}
-
-nav#primary a {
-  display: block;
-  width: 20px;
-  height: 20px;
-  text-indent: -9999px;
-}
-
-nav#primary h1 {
-  position: absolute;
-  right: 22px;
-  top: -7px;
-  display: none;
-  padding: 4px 20px 4px 7px;;
-  color: #fff;
-  white-space: nowrap;
-}
-
-nav.next-prev {
-  margin: 20px 0 0 0;
-}
-
-a.prev,
-a.next {
-  display: block;
-  width: 15px;
-  height: 11px;
-  text-indent: -9999px;
-}
-
 .control-cand{
   margin-top: 30px !important;
 }
