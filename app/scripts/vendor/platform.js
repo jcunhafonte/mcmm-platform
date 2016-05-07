@@ -398,7 +398,7 @@ function debounce(func, wait, immediate) {
         }, wait);
         if (immediate && !timeout) func.apply(context, args);
     };
-};
+}
 
 NProgress.configure({ showSpinner: false });
 $(window).load(function () {
