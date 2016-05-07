@@ -495,3 +495,11 @@ $(document).ready(function () {
     })
 
 });
+
+NProgress.configure({ showSpinner: false });
+$(window).load(function () {
+    NProgress.done();
+});
+$(document).ready(function () {
+    NProgress.start();
+});
