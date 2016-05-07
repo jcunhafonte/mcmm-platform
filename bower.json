@@ -32,7 +32,8 @@
     "jquery-mobile-bower": "^1.4.5",
     "ustream-embedapi": "^0.0.1",
     "masonry": "^4.1.0",
-    "imagesloaded": "^4.1.0"
+    "imagesloaded": "^4.1.0",
+    "nprogress": "^0.2.0"
   },
   "overrides": {
     "bootstrap-sass": {

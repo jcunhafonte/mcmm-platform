@@ -1,39 +1,17 @@
 #menu-dots {
 
-  h1 {
-    color: #21a97e;
-  }
-  a, a:link,
-  a:active,
-  a:visited {
-    -webkit-transition: color 0.25s ease-out;
-    -moz-transition: color 0.25s ease-out;
-    -o-transition: color 0.25s ease-out;
-    transition: color 0.25s ease-out;
-    color: #21a97e;
-    outline: none;
-    text-decoration: none;
-  }
-  a:hover {
-    color: #000;
-  }
-  img {
-    display: block;
-  }
-  p {
-    margin: 1em 0;
-  }
-
   nav#primary {
     z-index: 5;
     position: fixed;
     top: 50%;
-    right: 16px;
-    margin-top: -104px;
+    right: 19px;
+    margin-top: -124px;
+    display: none;
   }
   nav#primary li {
     position: relative;
-    height: 14px;
+    height: 16px;
+    width: 16px;
   }
   nav#primary a {
     display: block;
@@ -43,10 +21,11 @@
     background: $blue;
     border-radius: 50%;
     margin: 10px 0;
+    text-align: right;
   }
   nav#primary a:hover, nav#primary a.active {
-    background: $white;
-    border: 2px solid $blue;
+    background-color: rgba(0, 0, 0, 0.25);
+    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.16) !important;
   }
   nav#primary h1 {
     position: absolute;
@@ -58,16 +37,14 @@
     white-space: nowrap;
     font-size: 20px;
     font-weight: bold;
-    animation: shake 0.40s cubic-bezier(.36,.07,.19,.97) both;
+    animation: dots_shake 0.40s cubic-bezier(.36, .07, .19, .97) both;
     transform: translate3d(0, 0, 0);
-    background: #BBBBBB;
+    background-color: rgba(0, 0, 0, 0.25);
     border-radius: 5px;
-    -webkit-box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.15);
-    -moz-box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.15);
     box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.15);
   }
 
-  @keyframes shake {
+  @keyframes dots_shake {
     10% {
       transform: translate3d(-4px, 0, 0);
     }
@@ -83,30 +60,5 @@
     100% {
       transform: translate3d(0, 0, 0);
     }
-  }
-
-  nav.next-prev {
-    margin: 20px 0 0 0;
-  }
-  a.prev,
-  a.next {
-    display: block;
-    width: 15px;
-    height: 11px;
-    text-indent: -9999px;
-  }
-  a.prev {
-    margin: 0 auto 5px auto;
-    background: transparent 0 0 no-repeat;
-  }
-  a.prev:hover {
-    background: transparent 0 -11px no-repeat;
-  }
-  a.next {
-    margin: 5px auto 0 auto;
-    background: transparent -1px 0 no-repeat;
-  }
-  a.next:hover {
-    background: transparent -1px -11px no-repeat;
   }
 }

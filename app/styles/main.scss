@@ -18,14 +18,17 @@
 @import 'vendor/bootstrap';
 
 //JQUERY-UI
-@import '../../bower_components/jquery-ui/themes/base/jquery-ui.min.css';
+@import '../../bower_components/jquery-ui/themes/base/jquery-ui.min';
 
 //ANIMATE
-@import '../../bower_components/animate.css/animate.min.css';
-@import '../../bower_components/flickity/dist/flickity.min.css';
+@import '../../bower_components/animate.css/animate.min';
+@import '../../bower_components/flickity/dist/flickity.min';
 
 //HOVER
 @import "../../bower_components/hover/scss/hover";
+
+//NPROGRES
+//@import "../../bower_components/nprogress/nprogress";
 
 //VENDORS
 #platform {
@@ -34,8 +37,8 @@
 
 @import 'vendor/jquery.fancybox';
 @import 'vendor/owl.transitions';
-@import '../../bower_components/owl.carousel/dist/assets/owl.theme.default.min.css';
-@import '../../bower_components/owl.carousel/dist/assets/owl.carousel.min.css';
+@import '../../bower_components/owl.carousel/dist/assets/owl.theme.default.min';
+@import '../../bower_components/owl.carousel/dist/assets/owl.carousel.min';
 //@import 'vendor/typed';
 
 //ICONS

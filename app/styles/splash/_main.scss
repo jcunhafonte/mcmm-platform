@@ -1234,25 +1234,6 @@ section.divider.striped-icon {
   vertical-align: middle;
 }
 
-.home-header {
-  min-height: 100%;
-  width: 100%;
-  display: block;
-  position: relative;
-  overflow: hidden;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-
-.home-header a.btn-primary {
-  margin-bottom: 40px;
-}
-
 .about-product {
   margin-top: 100px;
   /*background: #fff;*/
@@ -5599,13 +5580,6 @@ text[text-anchor="end"] {
 }
 
 /* End Tooltips styles */
-
-@media (min-width: 2100px) {
-  .home-header {
-    background-position: center bottom, center top;
-  }
-}
-
 .is-divider {
   position: relative;
 }

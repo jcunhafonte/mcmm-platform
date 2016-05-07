@@ -72,6 +72,13 @@ $(document).ready(function () {
         });
         return false;
     });
+    $('#to-top').click(function () {
+        $('html, body').animate({
+            scrollTop: $('#video').offset().top
+        }, 1000, function () {
+        });
+        return false;
+    });
 
     /* Show/hide dot lav labels on hover */
     $('nav#primary a').hover(
@@ -87,6 +94,15 @@ $(document).ready(function () {
 
 /* Set navigation dots to an active state as the user scrolls */
 function redrawDotNav() {
+
+    if ($(document).scrollTop() >= ($('#sobre').offset().top / 1.5)) {
+        $('nav#primary').fadeIn();
+        $('#to-top').fadeIn();
+    } else {
+        $('nav#primary').fadeOut();
+        $('#to-top').fadeOut();
+    }
+
     var section1Top = $('#sobre').offset().top - (($('#video').offset().top));
     var section2Top = $('#candidaturas').offset().top - (($('#programa-curricular').offset().top - $('#candidaturas').offset().top) / 2);
     var section3Top = $('#programa-curricular').offset().top - (($('#canal').offset().top - $('#programa-curricular').offset().top) / 2);
@@ -112,12 +128,9 @@ function redrawDotNav() {
         $('nav#primary a.projetos').addClass('active');
     } else if ($(document).scrollTop() >= section7Top && $(document).scrollTop() < section8Top) {
         $('nav#primary a.alunos').addClass('active');
-        console.log('C')
     } else if ($(document).scrollTop() >= section8Top && $(document).scrollTop() < section9Top) {
-        console.log('b')
         $('nav#primary a.aplicacao').addClass('active');
     } else if ($(document).scrollTop() >= section9Top) {
-        console.log('a')
         $('nav#primary a.informacoes').addClass('active');
     }
 

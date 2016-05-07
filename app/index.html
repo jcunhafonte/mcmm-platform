@@ -101,7 +101,7 @@
                 <nav class="navigation-areas navigation-areas--mcmmnav navigation-areas--narrow">
                     <ul class="navigation-areas-list layoutSingleColumn">
                         <li class="navigation-areas-item">
-                            <a class="navigation-areas-anchor hvr-underline-from-center" href="/news">
+                            <a class="navigation-areas-anchor hvr-underline-from-center" href="/news.html">
                                 Notícias
                             </a>
                         </li>
@@ -1063,6 +1063,10 @@
     </div><!--container-->
 </footer>
 
+<a id="to-top">
+    <i class="fa fa-angle-up top-icon"></i>
+</a>
+
 <!-- build:js scripts/vendor.js -->
 <!-- bower:js -->
 <script type="text/javascript" src="/bower_components/jquery/dist/jquery.min.js"></script>
@@ -1082,6 +1086,7 @@
 <script type="text/javascript" src="/bower_components/typed.js/js/typed.js"></script>
 <script type="text/javascript" src="/bower_components/scroll-up-bar/dist/scroll-up-bar.min.js"></script>
 <script type="text/javascript" src="/bower_components/jquery-parallax/scripts/jquery.parallax-1.1.3.js"></script>
+<script type="text/javascript" src="/bower_components/nprogress/nprogress.js"></script>
 <!-- endbower -->
 <!-- endbuild -->
 <!-- build:js scripts/plugins.js -->
@@ -1089,7 +1094,6 @@
 <!-- endbuild -->
 
 <!-- build:js scripts/main.js -->
-<script>new WOW().init();</script>
 <script type="text/javascript" src="scripts/contact.js"></script>
 <script type="text/javascript" src="scripts/map.js"></script>
 <script type="text/javascript" src="scripts/jquery.backgroundvideo.min.js"></script>
@@ -1097,5 +1101,15 @@
 <script type="text/javascript" src="scripts/parallax.js"></script>
 <!-- endbuild -->
 
+<script>
+    new WOW().init();
+    NProgress.configure({ showSpinner: false });
+    $(window).load(function () {
+        NProgress.done();
+    });
+    $(document).ready(function () {
+        NProgress.start();
+    });
+</script>
 </body>
 </html>
