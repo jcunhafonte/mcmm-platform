@@ -2,7 +2,7 @@
 
 $(document).ready(function () {
     
-    js_height_init();
+    // js_height_init();
     controlNavbar();
     checkTransparent();
 
@@ -15,7 +15,7 @@ $(document).ready(function () {
     });
 
     $(window).resize(function () {
-        js_height_init();
+        // js_height_init();
         controlNavbar();
         checkTransparent();
     });
