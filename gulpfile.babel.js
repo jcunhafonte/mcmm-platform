@@ -5,6 +5,8 @@ import gulpLoadPlugins from 'gulp-load-plugins';
 import browserSync from 'browser-sync';
 import del from 'del';
 import {stream as wiredep} from 'wiredep';
+import concat from 'gulp-concat';
+import revdel from 'gulp-rev-delete-original';
 
 const $ = gulpLoadPlugins();
 const reload = browserSync.reload;
@@ -30,7 +32,6 @@ function lint(files, options) {
   return () => {
     return gulp.src(files)
       .pipe(reload({stream: true, once: true}))
-      // .pipe($.eslint(options))
       .pipe($.eslint.format())
       .pipe($.if(!browserSync.active, $.eslint.failAfterError()))
       .pipe($.notify({ message: 'Scripts - OK'}));
@@ -49,24 +50,22 @@ gulp.task('html', ['styles'], () => {
   return gulp.src('app/*.html')
     .pipe($.useref({searchPath: ['.tmp', 'app', '.']}))
     .pipe($.if('*.js', $.uglify()))
-      .pipe($.if('*.css', $.cssnano()))
-      // .pipe($.if('*.js', $.rev()))
-    // .pipe($.if('*.css', $.rev()))
-    // .pipe($.if('*.html', $.htmlmin({collapseWhitespace: true})))
+    .pipe($.if('*.css', $.cssnano()))
     .pipe(gulp.dest('dist'));
 });
+
+var manifest = gulp.src("./dist/rev-manifest.json");
 
 gulp.task("revision", ['html'], function(){
   return gulp.src(["dist/**/*.css", "dist/**/*.js"])
       .pipe($.rev())
+      .pipe(revdel())
       .pipe(gulp.dest('dist'))
       .pipe($.rev.manifest())
       .pipe(gulp.dest('dist'))
 });
 
-gulp.task("revreplace", ["revision"], function(){
-  var manifest = gulp.src("./dist/rev-manifest.json");
-
+gulp.task("revreplace", function(){
   return gulp.src("dist/*.html")
       .pipe($.revReplace({manifest: manifest}))
       .pipe(gulp.dest('dist'));
@@ -151,7 +150,6 @@ gulp.task('serve:test', () => {
       }
     }
   });
-
   gulp.watch('test/spec/**/*.js').on('change', reload);
   gulp.watch('test/spec/**/*.js', ['lint:test']);
 });
@@ -177,7 +175,17 @@ gulp.task('build', ['lint', 'images', 'video', 'fonts', 'extras'], () => {
       .pipe($.size({title: 'build', gzip: true}));
 });
 
+gulp.task('jsconcat', function () {
+    return gulp.src('app/scripts/**/*.js')
+        .pipe($.sourcemaps.init())
+        .pipe(concat('all.js'))
+        .pipe($.sourcemaps.write())
+        .pipe($.if('*.js', $.uglify()))
+        .pipe(gulp.dest('dist'));
+});
+
 gulp.task('default', ['clean'], () => {
   gulp.start('build');
-  gulp.start('revreplace');
+  // gulp.start('jsconcat');
+  gulp.start('revision');
 });
