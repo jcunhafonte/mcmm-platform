@@ -72,7 +72,7 @@ class HtmlFormatter extends NormalizerFormatter
     {
         $title = htmlspecialchars($title, ENT_NOQUOTES, 'UTF-8');
 
-        return '<h1 style="background: '.$this->logLevels[$level].';color: #ffffff;padding: 5px;" class="monolog-output">'.$title.'</h1>';
+        return '<h1 style="background: '.$this->logLevels[$level].';color: #$black;padding: 5px;" class="monolog-output">'.$title.'</h1>';
     }
     /**
      * Formats a log record.

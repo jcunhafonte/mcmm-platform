@@ -173,35 +173,42 @@
     </nav>
 </menu>
 
-<section class="home-header dark" id="video" data-background="video/video.jpg">
-    <div class="js-height-full container">
-        <div class="bg-video-wrapper">
-            <div class="bg-video-overlay bg-dark-alfa-50"></div>
-        </div>
-        <div class="row home-content">
-            <div class="text-center home-text">
-                <h1 class="video-title large wow fadeInUp" data-wow-delay="1s" data-wow-duration="1.5s">
-                    Play is the highest form of research
-                </h1>
-                <h2 class="video-description wow fadeInUp" data-wow-delay="1.8s" data-wow-duration="1.5s">
-                    <span>O MCMM é </span><span id="typed" style="white-space:pre;"></span>
-                </h2>
-                <div class="row wow fadeInUp" data-wow-delay="2.6s" data-wow-duration="1.5s">
-                    <div class="col-md-12 control-cand">
-                        <a class="mcmm-button large see-through-2 has-icon" target="_blank">
-                            <span>Candidaturas</span>
-                            <i class="pe-7s-angle-right"></i>
-                        </a>
+<section class="home-header dark" id="video">
+
+    <div class="homepage-welcome">
+        <div class="video-container">
+            <div class="title-container">
+                <div class="headline">
+                    <h1 class="video-title large wow fadeInUp" data-wow-delay="1s" data-wow-duration="1.5s">
+                        Play is the highest form of research
+                    </h1>
+                    <h2 class="video-description wow fadeInUp" data-wow-delay="1.8s" data-wow-duration="1.5s">
+                        <span>O MCMM é </span><span id="typed" style="white-space:pre;"></span>
+                    </h2>
+
+                    <div class="row wow fadeInUp" data-wow-delay="2.6s" data-wow-duration="1.5s">
+                        <div class="col-md-12 control-cand">
+                            <a class="mcmm-button large see-through-2 has-icon" target="_blank">
+                                <span>Candidaturas</span>
+                                <i class="pe-7s-angle-right"></i>
+                            </a>
+                        </div>
                     </div>
+
                 </div>
             </div>
-        </div><!--row-->
-    </div><!--container-->
+            <div class="filter"></div>
+            <video autoplay loop muted class="fillWidth" poster="video/video.jpg">
+                <source src="video/video.mp4" type="video/mp4"/>
+                <source src="video/video.ogg" type="video/ogg"/>
+                <source src="video/video.webm" type="video/webm"/>
+            </video>
+        </div>
 
-    <section id="arrow-header" class="demo wow fadeInUp" data-wow-delay="3s" data-wow-duration="1s">
-        <a href="" class="sobre"><span></span></a>
-    </section>
-
+        <section id="arrow-header" class="demo wow fadeInUp" data-wow-delay="3s" data-wow-duration="1s">
+            <a href="" class="sobre"><span></span></a>
+        </section>
+    </div>
 </section>
 
 <section class="section-info whatwedo" id="sobre">
@@ -1097,8 +1104,9 @@
 <script type="text/javascript" src="scripts/index.js"></script>
 <script type="text/javascript" src="scripts/contact.js"></script>
 <script type="text/javascript" src="scripts/map.js"></script>
-<script type="text/javascript" src="scripts/jquery.backgroundvideo.min.js"></script>
+<!--<script type="text/javascript" src="scripts/jquery.backgroundvideo.min.js"></script>-->
 <script type="text/javascript" src="scripts/splash.js"></script>
+<script type="text/javascript" src="scripts/video_background.js"></script>
 <script type="text/javascript" src="scripts/parallax.js"></script>
 <!-- endbuild -->
 

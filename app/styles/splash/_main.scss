@@ -273,7 +273,7 @@ p.subhead {
   left: 4px;
   right: 4px;
   bottom: 4px;
-  background: content-box #ffffff;
+  background: content-box #FFFFFF;
   z-index: -1;
 }
 
@@ -367,7 +367,7 @@ p.subhead {
   left: 5px;
   right: 5px;
   bottom: 5px;
-  background: content-box #ffffff;
+  background: content-box #FFFFFF;
   z-index: -1;
 }
 
@@ -1198,29 +1198,6 @@ section.divider.striped-icon {
   z-index: 1;
 }
 
-.bg-video-overlay {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0px;
-  left: 0px;
-}
-
-.bg-dark-alfa-50:before, .bg-dark-alfa-50 .YTPOverlay:before {
-  content: " ";
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: linear-gradient(135deg, #585b64 0%, #2c2f38 100%);
-  opacity: 0.90;
-}
-
-.home-content {
-  position: relative;
-}
-
 .home-content {
   display: table;
   width: 100%;
@@ -1334,11 +1311,11 @@ section.divider.striped-icon {
 
 .team .team-img::after {
   content: "";
-  background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.7) 0%, #ffffff 100%);
-  background-image: -o-linear-gradient(top, rgba(255, 255, 255, 0.7) 0%, #ffffff 100%);
-  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.7) 0%, #ffffff 100%);
+  background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.7) 0%, #FFFFFF 100%);
+  background-image: -o-linear-gradient(top, rgba(255, 255, 255, 0.7) 0%, #FFFFFF 100%);
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.7) 0%, #FFFFFF 100%);
   background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#b3ffffff', endColorstr='#ffffffff', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#b3$black', endColorstr='#FFFFFFff', GradientType=0);
   left: 0;
   bottom: 0;
   right: 0;
@@ -1359,11 +1336,11 @@ section.divider.striped-icon {
 
 .team-carousel::after {
   content: "";
-  background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.7) 0%, #ffffff 100%);
-  background-image: -o-linear-gradient(top, rgba(255, 255, 255, 0.7) 0%, #ffffff 100%);
-  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.7) 0%, #ffffff 100%);
+  background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.7) 0%, #FFFFFF 100%);
+  background-image: -o-linear-gradient(top, rgba(255, 255, 255, 0.7) 0%, #FFFFFF 100%);
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.7) 0%, #FFFFFF 100%);
   background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#b3ffffff', endColorstr='#ffffffff', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#b3$black', endColorstr='#FFFFFFff', GradientType=0);
   left: 0;
   bottom: 0;
   right: 0;
@@ -1480,11 +1457,11 @@ section.divider.striped-icon {
 }
 
 .scroll-slider-wrap {
-  background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.7) 0%, #ffffff 100%);
-  background-image: -o-linear-gradient(top, rgba(255, 255, 255, 0.7) 0%, #ffffff 100%);
-  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.7) 0%, #ffffff 100%);
+  background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.7) 0%, #FFFFFF 100%);
+  background-image: -o-linear-gradient(top, rgba(255, 255, 255, 0.7) 0%, #FFFFFF 100%);
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.7) 0%, #FFFFFF 100%);
   background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#b3ffffff', endColorstr='#ffffffff', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#b3$black', endColorstr='#FFFFFFff', GradientType=0);
   left: 0;
   bottom: 0;
   right: 0;
@@ -2570,7 +2547,7 @@ section.team {
 
 .about-me-header h1 {
   padding-top: 300px;
-  color: #ffffff;
+  color: #FFFFFF;
   font-size: 60px;
   font-weight: 300;
   margin-bottom: 25px;
@@ -2579,7 +2556,7 @@ section.team {
 }
 
 .about-me-header .path {
-  color: #ffffff;
+  color: #FFFFFF;
   font-weight: 300;
   font-size: 12px;
   text-transform: uppercase;
@@ -2810,7 +2787,7 @@ body {
 }
 
 .price-header h1 {
-  color: #ffffff;
+  color: #FFFFFF;
   padding-top: 300px;
   font-size: 60px;
   font-weight: 300;
@@ -2820,7 +2797,7 @@ body {
 }
 
 .price-header .path {
-  color: #ffffff;
+  color: #FFFFFF;
   font-weight: 300;
   font-size: 12px;
   text-transform: uppercase;
@@ -3003,7 +2980,7 @@ body {
 }
 
 .gallery-header h1 {
-  color: #ffffff;
+  color: #FFFFFF;
   padding-top: 300px;
   font-size: 60px;
   font-weight: 300;
@@ -3013,7 +2990,7 @@ body {
 }
 
 .gallery-header .path {
-  color: #ffffff;
+  color: #FFFFFF;
   font-weight: 300;
   font-size: 12px;
   text-transform: uppercase;
@@ -3216,7 +3193,7 @@ body {
 }
 
 .about-header h1 {
-  color: #ffffff;
+  color: #FFFFFF;
   font-size: 60px;
   font-weight: 300;
   margin-bottom: 25px;
@@ -3225,7 +3202,7 @@ body {
 }
 
 .about-header .path {
-  color: #ffffff;
+  color: #FFFFFF;
   font-weight: 300;
   font-size: 12px;
   text-transform: uppercase;
@@ -3559,7 +3536,7 @@ body {
 }
 
 .blog-header h1 {
-  color: #ffffff;
+  color: #FFFFFF;
   text-transform: none;
   font-size: 60px;
   font-weight: 300;
@@ -3568,7 +3545,7 @@ body {
 }
 
 .blog-header .path {
-  color: #ffffff;
+  color: #FFFFFF;
   font-weight: 300;
   font-size: 12px;
   text-transform: uppercase;
@@ -4821,7 +4798,7 @@ body {
 }
 
 .service-header h1 {
-  color: #ffffff;
+  color: #FFFFFF;
   text-transform: none;
   font-size: 60px;
   font-weight: 300;
@@ -4830,7 +4807,7 @@ body {
 }
 
 .service-header .path {
-  color: #ffffff;
+  color: #FFFFFF;
   font-weight: 300;
   font-size: 12px;
   text-transform: uppercase;

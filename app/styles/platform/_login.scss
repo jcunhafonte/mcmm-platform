@@ -31,27 +31,51 @@
 }
 
 @-webkit-keyframes shake {
-  0%, 100% {-webkit-transform: translateX(0);}
-  10%, 30%, 50%, 70%, 90% {-webkit-transform: translateX(-10px);}
-  20%, 40%, 60%, 80% {-webkit-transform: translateX(10px);}
+  0%, 100% {
+    -webkit-transform: translateX(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    -webkit-transform: translateX(-10px);
+  }
+  20%, 40%, 60%, 80% {
+    -webkit-transform: translateX(10px);
+  }
 }
 
 @-moz-keyframes shake {
-  0%, 100% {-moz-transform: translateX(0);}
-  10%, 30%, 50%, 70%, 90% {-moz-transform: translateX(-10px);}
-  20%, 40%, 60%, 80% {-moz-transform: translateX(10px);}
+  0%, 100% {
+    -moz-transform: translateX(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    -moz-transform: translateX(-10px);
+  }
+  20%, 40%, 60%, 80% {
+    -moz-transform: translateX(10px);
+  }
 }
 
 @-o-keyframes shake {
-  0%, 100% {-o-transform: translateX(0);}
-  10%, 30%, 50%, 70%, 90% {-o-transform: translateX(-10px);}
-  20%, 40%, 60%, 80% {-o-transform: translateX(10px);}
+  0%, 100% {
+    -o-transform: translateX(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    -o-transform: translateX(-10px);
+  }
+  20%, 40%, 60%, 80% {
+    -o-transform: translateX(10px);
+  }
 }
 
 @keyframes shake {
-  0%, 100% {transform: translateX(0);}
-  10%, 30%, 50%, 70%, 90% {transform: translateX(-10px);}
-  20%, 40%, 60%, 80% {transform: translateX(10px);}
+  0%, 100% {
+    transform: translateX(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateX(-10px);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translateX(10px);
+  }
 }
 
 .shake {
@@ -61,22 +85,26 @@
   animation-name: shake;
 }
 
-.login .modal-dialog{
+.login .modal-dialog {
   width: 350px;
 }
-.login .modal-footer{
+
+.login .modal-footer {
   border-top: 0;
   margin-top: 0px;
   padding: 10px 20px 20px;
 }
+
 .login .modal-header {
   border: 0 none;
   padding: 15px 15px 15px;
   /*     padding: 11px 15px; */
 }
-.login .modal-body{
+
+.login .modal-body {
   /*     background-color: #eeeeee; */
 }
+
 .login .division {
   float: none;
   margin: 0 auto 18px;
@@ -85,22 +113,27 @@
   text-align: center;
   width: 100%;
 }
+
 .login .division .line {
   border-top: 1px solid #DFDFDF;
   position: absolute;
-  top: 10px;
+  top: 19px;
   width: 34%;
 }
+
 .login .division .line.l {
   left: 0;
 }
+
 .login .division .line.r {
   right: 0;
 }
+
 .login .division span {
   color: #424242;
   font-size: 17px;
 }
+
 .login .box .social {
   float: none;
   margin: 0 auto 30px;
@@ -108,7 +141,7 @@
   line-height: normal;
 }
 
-.login .social .circle{
+.login .social .circle {
   background-color: #EEEEEE;
   color: #FFFFFF;
   border-radius: 100px;
@@ -116,28 +149,39 @@
   margin: 0 17px;
   padding: 15px;
 }
-.login .social .circle .fa{
+
+.login .social .circle .fa {
   font-size: 16px;
 }
-.login .social .facebook{
+
+.login .social .facebook {
   background-color: #455CA8;
   color: #FFFFFF;
+  opacity: 0.9;
 }
-.login .social .google{
+
+.login .social .google {
   background-color: #F74933;
+  opacity: 0.9;
 }
-.login .social .twitter{
+
+.login .social .twitter {
   background-color: #55acee;
+  opacity: 0.9;
 }
-.login .facebook:hover{
-  background-color: #6E83CD;
+
+.login .facebook:hover {
+  opacity: 1;
 }
-.login .google:hover{
-  background-color: #FF7566;
+
+.login .google:hover {
+  opacity: 1;
 }
-.login .twitter:hover{
-  background-color: #4D4D4d;;
+
+.login .twitter:hover {
+  opacity: 1;
 }
+
 .login .forgot {
   color: #797979;
   margin-left: 0;
@@ -145,35 +189,44 @@
   text-align: center;
   width: 100%;
 }
-.login .btn-login, .registerBox .btn-register{
-  background-color: #00BBFF;
-  border-color: #00BBFF;
+
+.login .btn-login {
+  background-color: $blue;
+  border-color: $blue;
   border-width: 0;
   color: #FFFFFF;
   display: block;
-  margin: 0 auto;
+  margin: 0px 0 auto;
   padding: 15px 50px;
   text-transform: uppercase;
   width: 100%;
-}
-.login .btn-login:hover, .registerBox .btn-register:hover{
-  background-color: #00A4E4;
-  color: #FFFFFF;
-}
-.login .form-control{
   border-radius: 3px;
-  background-color: rgba(0, 0, 0, 0.09);
-  box-shadow: 0 1px 0px 0px rgba(0, 0, 0, 0.09) inset;
+}
+
+.login .btn-login:hover {
+  background-color: $blue_hover;
   color: #FFFFFF;
 }
-.login .form-control:hover{
-  background-color: rgba(0,0,0,.16);
+
+.login .form-control {
+  border-radius: 3px;
+  background-color: white;
+  box-shadow: none !important;
+  color: #FFFFFF;
+  border: 1px solid #DFDFDF !important;
+  transition: 300ms;
 }
-.login .form-control:focus{
+
+.login .form-control:hover {
+  border: 1px solid darken(#DFDFDF,10%) !important;
+}
+
+.login .form-control:focus {
   box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.04) inset;
-  background-color: rgba(0,0,0,0.23);
+  //background-color: rgba(0, 0, 0, 0.23);
   color: #FFFFFF;
 }
+
 .login .box .form input[type="text"], .login .box .form input[type="password"] {
   border-radius: 3px;
   border: none;
@@ -185,35 +238,15 @@
   width: 100%;
 }
 
-
-@media (max-width:400px){
-  .login .modal-dialog{
+@media (max-width: 400px) {
+  .login .modal-dialog {
     width: 100%;
   }
 }
 
-.big-login, .big-register{
-  background-color: #00bbff;
-  color: #FFFFFF;
-  border-radius: 7px;
-  border-width: 2px;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 200;
-  padding: 16px 60px;
-  text-transform: uppercase;
-  transition: all 0.3s ease 0s;
-}
-.big-login:hover{
-  background-color: #00A4E4;
-  color: #FFFFFF;
-}
-.big-register{
-  background-color: rgba(0,0,0,.0);
-  color: #00bbff;
-  border-color: #00bbff;
-}
-.big-register:hover{
-  border-color: #00A4E4;
-  color:  #00A4E4;
+.btn:focus, .btn:active:focus{
+  color: $white !important;
+  outline: none !important;
+  outline-offset: 0 !important;
+  box-shadow: none !important;
 }
