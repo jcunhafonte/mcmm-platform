@@ -35,7 +35,7 @@
 #platform {
   @import 'vendor/default';
 }
-
+@import "vendor/form_validator";
 @import 'vendor/jquery.fancybox';
 @import 'vendor/owl.transitions';
 @import '../../bower_components/owl.carousel/dist/assets/owl.theme.default.min';

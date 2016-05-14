@@ -43,6 +43,7 @@
     <meta property="og:image" content="http://gps.pt/img/share.jpg">
     <meta property="og:site_name" content="MCMM é ...">
     <meta property="og:description" content="MCMM é ...">
+
     <meta property="al:android:app_name" content="MCMM">
     <meta property="al:android:url" content="mcmm://">
     <meta property="al:web:url" content="index.php">
@@ -120,7 +121,15 @@
             </div>
             <div class="mcmm-nav-block mcmm-nav-block--right float-right">
                 <div class="buttons-area">
-                    <a class="btn btn-primary btn-short btn-sign">Entrar / Registar</a>
+                    <a class="btn btn-primary btn-short btn-sign" data-toggle="modal"
+                       href="javascript:void(0)" onclick="openLoginModal();">
+                        Entrar
+                    </a>
+                    <span class="divider-bar">/</span>
+                    <a class="btn btn-primary btn-short btn-sign" data-toggle="modal"
+                       href="javascript:void(0)" onclick="openRegisterModal();">
+                        Registar
+                    </a>
                 </div>
             </div>
         </div>
@@ -199,9 +208,9 @@
             </div>
             <div class="filter"></div>
             <video autoplay loop muted class="fillWidth" poster="video/video.jpg">
+                <source src="video/video.webm" type="video/webm"/>
                 <source src="video/video.mp4" type="video/mp4"/>
                 <source src="video/video.ogg" type="video/ogg"/>
-                <source src="video/video.webm" type="video/webm"/>
             </video>
         </div>
 
@@ -1070,9 +1079,124 @@
     </div><!--container-->
 </footer>
 
+<!--TO TOP-->
 <a id="to-top">
     <i class="fa fa-angle-up top-icon"></i>
 </a>
+
+<!--MODALS-->
+<div class="container">
+
+    <div class="modal fade login" id="loginModal">
+        <div class="modal-dialog login animated">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title text-center">Entrar</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="box">
+                        <div class="content">
+                            <div class="social">
+                                <a class="circle twitter" href="/auth/twitter">
+                                    <i class="fa fa-twitter fa-fw"></i>
+                                </a>
+                                <a id="google_login" class="circle google" href="/auth/google_oauth2">
+                                    <i class="fa fa-google-plus fa-fw"></i>
+                                </a>
+                                <a id="facebook_login" class="circle facebook" href="/auth/facebook">
+                                    <i class="fa fa-facebook fa-fw"></i>
+                                </a>
+                            </div>
+                            <div class="division">
+                                <div class="line l"></div>
+                                <span>ou</span>
+                                <div class="line r"></div>
+                            </div>
+                            <div class="error"></div>
+                            <div class="form loginBox">
+
+                                <form method="post" action="/login" accept-charset="UTF-8" id="loginForm">
+
+                                    <div class="form-group">
+                                        <div class="col-xs-12">
+                                            <input id="login_email" class="form-control" type="text"
+                                                   placeholder="Email" name="email_login">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <div class="col-xs-12">
+                                            <input id="login_password" class="form-control" type="password"
+                                                   placeholder="Palavra-passe" name="password_login">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6">
+                                        <label class="checkbox" for="keep_connected">
+                                            <input type="checkbox" value="" id="keep_connected"
+                                                   data-toggle="checkbox"> Ficar ligado
+                                        </label>
+                                    </div>
+
+                                    <div class="col-lg-6">
+                                        <a class="recover-password" href="/recover">
+                                            Recuperar palavra-passe
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <input class="btn btn-default btn-login" type="submit" value="Entrar">
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="content registerBox" style="display:none;">
+                            <div class="form">
+                                <form method="post" html="{:multipart=>true}" data-remote="true" action="/register"
+                                      accept-charset="UTF-8">
+                                    <input id="email" class="form-control" type="text"
+                                           placeholder="Email" name="email">
+                                    <input class="btn btn-default btn-register" type="submit"
+                                           value="Próximo" name="commit">
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="content registerBox-2" style="display:none;">
+                            <div class="form">
+                                <form method="post" html="{:multipart=>true}" data-remote="true" action="/register"
+                                      accept-charset="UTF-8">
+
+                                    <input id="password" class="form-control" type="password"
+                                           placeholder="Password" name="password">
+                                    <input id="password_confirmation" class="form-control" type="password"
+                                           placeholder="Repeat Password" name="password_confirmation">
+                                    <input class="btn btn-default btn-register" type="submit"
+                                           value="Próximo" name="commit">
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="col-lg-12 forgot login-footer">
+                        <span>Não tens conta?
+                            <a href="javascript: showRegisterForm();">Regista-te</a>
+                        </span>
+                    </div>
+                    <div class="col-lg-12 forgot register-footer" style="display:none">
+                        <span>Já tens conta?</span>
+                        <a href="javascript: showLoginForm();">Entra</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
 
 <!-- build:js scripts/vendor.js -->
 <!-- bower:js -->
@@ -1104,10 +1228,12 @@
 <script type="text/javascript" src="scripts/index.js"></script>
 <script type="text/javascript" src="scripts/contact.js"></script>
 <script type="text/javascript" src="scripts/map.js"></script>
-<!--<script type="text/javascript" src="scripts/jquery.backgroundvideo.min.js"></script>-->
 <script type="text/javascript" src="scripts/splash.js"></script>
 <script type="text/javascript" src="scripts/video_background.js"></script>
 <script type="text/javascript" src="scripts/parallax.js"></script>
+<script type="text/javascript" src="scripts/vendor/form_validator.js"></script>
+<script type="text/javascript" src="scripts/vendor/form_validator_bootstrap.js"></script>
+<script type="text/javascript" src="scripts/login.js"></script>
 <!-- endbuild -->
 
 <script>

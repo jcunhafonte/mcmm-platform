@@ -273,7 +273,7 @@ p.subhead {
   left: 4px;
   right: 4px;
   bottom: 4px;
-  background: content-box #FFFFFF;
+  background: content-box $white;
   z-index: -1;
 }
 
@@ -367,7 +367,7 @@ p.subhead {
   left: 5px;
   right: 5px;
   bottom: 5px;
-  background: content-box #FFFFFF;
+  background: content-box $white;
   z-index: -1;
 }
 
@@ -532,21 +532,21 @@ label {
 }
 
 .form-control {
-  padding-left: 22px;
+  //padding-left: 22px;
   -webkit-box-shadow: inset 0 1px #e8e9ed;
   box-shadow: inset 0 1px #e8e9ed;
   border: 0;
 }
 
 .form-control-feedback {
-  color: $blue;
-  top: 50%;
-  line-height: .75em;
-  -webkit-transform: translate(0, -50%);
-  -ms-transform: translate(0, -50%);
-  -o-transform: translate(0, -50%);
-  transform: translate(0, -50%);
-  height: 14px;
+  //color: $blue;
+  //top: 50%;
+  //line-height: .75em;
+  //-webkit-transform: translate(0, -50%);
+  //-ms-transform: translate(0, -50%);
+  //-o-transform: translate(0, -50%);
+  //transform: translate(0, -50%);
+  //height: 14px;
 }
 
 .panel {
@@ -1311,11 +1311,11 @@ section.divider.striped-icon {
 
 .team .team-img::after {
   content: "";
-  background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.7) 0%, #FFFFFF 100%);
-  background-image: -o-linear-gradient(top, rgba(255, 255, 255, 0.7) 0%, #FFFFFF 100%);
-  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.7) 0%, #FFFFFF 100%);
+  background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.7) 0%, $white 100%);
+  background-image: -o-linear-gradient(top, rgba(255, 255, 255, 0.7) 0%, $white 100%);
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.7) 0%, $white 100%);
   background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#b3$black', endColorstr='#FFFFFFff', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#b3$black', endColorstr='$whiteff', GradientType=0);
   left: 0;
   bottom: 0;
   right: 0;
@@ -1336,11 +1336,11 @@ section.divider.striped-icon {
 
 .team-carousel::after {
   content: "";
-  background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.7) 0%, #FFFFFF 100%);
-  background-image: -o-linear-gradient(top, rgba(255, 255, 255, 0.7) 0%, #FFFFFF 100%);
-  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.7) 0%, #FFFFFF 100%);
+  background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.7) 0%, $white 100%);
+  background-image: -o-linear-gradient(top, rgba(255, 255, 255, 0.7) 0%, $white 100%);
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.7) 0%, $white 100%);
   background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#b3$black', endColorstr='#FFFFFFff', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#b3$black', endColorstr='$whiteff', GradientType=0);
   left: 0;
   bottom: 0;
   right: 0;
@@ -1457,11 +1457,11 @@ section.divider.striped-icon {
 }
 
 .scroll-slider-wrap {
-  background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.7) 0%, #FFFFFF 100%);
-  background-image: -o-linear-gradient(top, rgba(255, 255, 255, 0.7) 0%, #FFFFFF 100%);
-  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.7) 0%, #FFFFFF 100%);
+  background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.7) 0%, $white 100%);
+  background-image: -o-linear-gradient(top, rgba(255, 255, 255, 0.7) 0%, $white 100%);
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.7) 0%, $white 100%);
   background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#b3$black', endColorstr='#FFFFFFff', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#b3$black', endColorstr='$whiteff', GradientType=0);
   left: 0;
   bottom: 0;
   right: 0;
@@ -1685,21 +1685,21 @@ section.divider.striped-icon {
 }
 
 .twitter {
-  background: url('../images/placehold/1920x1080.gif') no-repeat center center;
-  background-size: cover;
-  background-attachment: fixed;
-  position: relative;
-  z-index: 1;
+  //background: url('../images/placehold/1920x1080.gif') no-repeat center center;
+  //background-size: cover;
+  //background-attachment: fixed;
+  //position: relative;
+  //z-index: 1;
 }
 
 .twitter::before {
-  background: rgba(40, 173, 98, 0.8);
-  content: "";
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  z-index: -1;
+  //background: rgba(40, 173, 98, 0.8);
+  //content: "";
+  //width: 100%;
+  //height: 100%;
+  //position: absolute;
+  //top: 0;
+  //z-index: -1;
 }
 
 .twitter article {
@@ -2547,7 +2547,7 @@ section.team {
 
 .about-me-header h1 {
   padding-top: 300px;
-  color: #FFFFFF;
+  color: $white;
   font-size: 60px;
   font-weight: 300;
   margin-bottom: 25px;
@@ -2556,7 +2556,7 @@ section.team {
 }
 
 .about-me-header .path {
-  color: #FFFFFF;
+  color: $white;
   font-weight: 300;
   font-size: 12px;
   text-transform: uppercase;
@@ -2787,7 +2787,7 @@ body {
 }
 
 .price-header h1 {
-  color: #FFFFFF;
+  color: $white;
   padding-top: 300px;
   font-size: 60px;
   font-weight: 300;
@@ -2797,7 +2797,7 @@ body {
 }
 
 .price-header .path {
-  color: #FFFFFF;
+  color: $white;
   font-weight: 300;
   font-size: 12px;
   text-transform: uppercase;
@@ -2980,7 +2980,7 @@ body {
 }
 
 .gallery-header h1 {
-  color: #FFFFFF;
+  color: $white;
   padding-top: 300px;
   font-size: 60px;
   font-weight: 300;
@@ -2990,7 +2990,7 @@ body {
 }
 
 .gallery-header .path {
-  color: #FFFFFF;
+  color: $white;
   font-weight: 300;
   font-size: 12px;
   text-transform: uppercase;
@@ -3193,7 +3193,7 @@ body {
 }
 
 .about-header h1 {
-  color: #FFFFFF;
+  color: $white;
   font-size: 60px;
   font-weight: 300;
   margin-bottom: 25px;
@@ -3202,7 +3202,7 @@ body {
 }
 
 .about-header .path {
-  color: #FFFFFF;
+  color: $white;
   font-weight: 300;
   font-size: 12px;
   text-transform: uppercase;
@@ -3536,7 +3536,7 @@ body {
 }
 
 .blog-header h1 {
-  color: #FFFFFF;
+  color: $white;
   text-transform: none;
   font-size: 60px;
   font-weight: 300;
@@ -3545,7 +3545,7 @@ body {
 }
 
 .blog-header .path {
-  color: #FFFFFF;
+  color: $white;
   font-weight: 300;
   font-size: 12px;
   text-transform: uppercase;
@@ -4798,7 +4798,7 @@ body {
 }
 
 .service-header h1 {
-  color: #FFFFFF;
+  color: $white;
   text-transform: none;
   font-size: 60px;
   font-weight: 300;
@@ -4807,7 +4807,7 @@ body {
 }
 
 .service-header .path {
-  color: #FFFFFF;
+  color: $white;
   font-weight: 300;
   font-size: 12px;
   text-transform: uppercase;

@@ -1,6 +1,5 @@
 .mcmm-nav {
   display: block;
-  z-index: 500;
   width: 100%;
   font-size: 14px;
   background-color: rgba(255, 255, 255, 0.96) !important;
@@ -9,7 +8,8 @@
   font-weight: 400;
   font-style: normal;
   box-sizing: border-box;
-  transition: .5s background-color, .5s color, .5s transform
+  transition: .5s background-color, .5s color, .5s transform;
+  z-index: 500;
 }
 
 .platforms {
@@ -129,7 +129,7 @@
 }
 
 .mcmm-nav .buttons-area, .mcmm-nav .inputGroup, .mcmm-nav .mcmm-nav-text, .mcmm-nav-block > .button {
-  margin: 5px;
+  margin: 6px;
   margin-right: 0 !important;
   display: inline-block;
   white-space: nowrap;
@@ -753,6 +753,10 @@ h3.mcmm-nav-logo--noControls {
     height: 143px !important;
     position: fixed;
     top: 0;
+    background-color: rgba(255, 255, 255, 0.96) !important;
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.22);
+    -moz-box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.22);
+    -webkit-box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.22);
   }
   .platforms--mcmm-nav {
     background-color: transparent !important;
@@ -787,7 +791,7 @@ h3.mcmm-nav-logo--noControls {
 }
 
 .platforms--mcmm-nav .platforms-anchor {
-  color: #FFFFFF !important;
+  color: $white !important;
   opacity: 0.75 !important;
   -webkit-transition: opacity 0.2s linear, color 0.2s linear;
   transition: opacity 0.2s linear, color 0.2s linear;
@@ -806,19 +810,22 @@ h3.mcmm-nav-logo--noControls {
 }
 
 .btn-sign {
-  //font-family: "Varela Round" !important;
   font-size: 16px !important;
-  padding: 4px 20px !important;
-  border-color: $blue !important;
-  background: $blue !important;
+  padding: 4px 0 !important;
+  border: 0 !important;
+  background: none !important;
+  margin-top: 2px;
+  transition: opacity 0.2s linear, color 0.2s linear;
+  opacity: 0.7;
   &:hover {
-    border-color: $blue_hover !important;
-    background: $blue_hover !important;
+    opacity: 1;
+    border: 0 !important;
+    background: none !important;
   }
 }
 
 .hvr-underline-from-center:before {
-  background: #FFFFFF !important;
+  background: $white !important;
   bottom: 12px !important;
   height: 2px !important;
 }
@@ -869,7 +876,6 @@ h3.mcmm-nav-logo--noControls {
   list-style: none;
   padding-left: 0 !important;
 }
-
 
 .platforms-item {
   display: inline-block;
@@ -1033,16 +1039,45 @@ h3.mcmm-nav-logo--noControls {
   }
 }
 
+.divider-bar {
+  font-size: 18px;
+  color: $white;
+  font-weight: 400 !important;
+  letter-spacing: 0.5px !important;
+  display: inline-block;
+  vertical-align: middle;
+  opacity: 0.7;
+  margin: 0 2px;
+}
+
+.navbar-white {
+  .btn-sign {
+    color: $blue !important;
+    opacity: 1 !important;
+    &:hover {
+      color: $blue_hover !important;
+      opacity: 1 !important;
+    }
+    &:focus{
+      color: $blue !important;
+    }
+  }
+  .divider-bar {
+    color: $blue;
+    opacity: 1;
+  }
+}
+
 .btn-primary--transparent {
   background: transparent !important;
   border-color: #2979ff !important;
   opacity: 0.8;
-  color: #FFFFFF;
+  color: $white;
   font-weight: 400;
   &:hover {
     border-color: #266fe3 !important;
     opacity: 1 !important;
-    color: #FFFFFF !important;
+    color: $white !important;
   }
 }
 

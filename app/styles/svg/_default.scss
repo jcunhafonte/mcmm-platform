@@ -8,7 +8,7 @@ body {
   font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
   font-weight: 200;
   color: #666666;
-  background-color: #FFFFFF;
+  background-color: $white;
   word-break: break-word;
 }
 
@@ -45,7 +45,7 @@ button.active, .button.active {
 }
 
 button.active span, .button.active span {
-  color: #FFFFFF;
+  color: $white;
 }
 
 i {

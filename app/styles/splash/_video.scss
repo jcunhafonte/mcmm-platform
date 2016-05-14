@@ -58,6 +58,7 @@
   font-weight: 700 !important;
   font-size: 56px !important;
   line-height: 56px !important;
+  z-index: 400 !important;
 }
 
 .video-description {
@@ -66,6 +67,7 @@
   font-size: 42px;
   line-height: 48px;
   font-weight: 300;
+  z-index: 400 !important;
 }
 
 #arrow-header a {
@@ -73,7 +75,11 @@
   left: 0;
   right: 0;
   margin-top: -45px;
-  z-index: 99999999999999;
+  z-index: 400;
+}
+
+.headline{
+  z-index: 400 !important;
 }
 
 #arrow-header a span {
@@ -164,7 +170,7 @@
 }
 
 .video-container .title-container {
-  z-index: 1000;
+  z-index: 400;
   position: absolute;
   top: 35%;
   width: 100%;
