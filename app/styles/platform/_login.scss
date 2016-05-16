@@ -129,11 +129,28 @@
   width: 100%;
 }
 
+.login .divisionEnd {
+  float: none;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  width: 100%;
+  height: 20px;
+
+}
+
 .login .division .line {
   border-top: 1px solid #DFDFDF;
   position: absolute;
-  top: 19px;
+  top: 14px;
   width: 34%;
+}
+
+.login .divisionEnd .lineEnd {
+  border-top: 1px solid #DFDFDF;
+  position: absolute;
+  top: 15px;
+  width: 100%;
 }
 
 .login .division .line.l {
@@ -203,7 +220,7 @@
   overflow: hidden;
   text-align: center;
   width: 100%;
-  padding-top: 15px;
+  padding-top: 15px !important;
 }
 
 .register-footer{
@@ -211,7 +228,8 @@
 }
 
 .login .btn-login,
-.registerBox .btn-register {
+.registerBox .btn-register,
+.registerBox-2 .btn-register{
   background-color: $blue;
   border-color: $blue;
   border-width: 0;
@@ -225,7 +243,8 @@
 }
 
 .login .btn-login:hover,
-.registerBox .btn-register:hover {
+.registerBox .btn-register:hover,
+.registerBox-2 .btn-register:hover{
   background-color: $blue_hover;
   color: $white;
 }
@@ -389,7 +408,7 @@
   color: $dark_gray;
 }
 
-.col-lg-12, .col-lg-6, .col-xs-12 {
+.col-lg-12, .col-lg-6, .col-xs-12, .col-xs-6 {
   padding-left: 0 !important;
   padding-right: 0 !important;
 }
@@ -407,5 +426,23 @@ label {
 .btn-default {
   &:focus {
     background-color: $blue_hover !important;
+  }
+}
+
+.registerBox-2{
+  .progress{
+    margin-bottom: 5px !important;
+  }
+  .nome_signupEnd{
+    margin-top: 15px;
+  }
+  .input-group-addon{
+    padding: 13px 12px !important;
+  }
+  label{
+    margin-bottom: 0 !important;
+  }
+  #utilizador_signupEnd{
+    margin-bottom: 0 !important;
   }
 }

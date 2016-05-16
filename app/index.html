@@ -1098,25 +1098,28 @@
                     <div class="box">
                         <div class="content">
                             <div class="social">
-                                <a class="circle twitter" href="/auth/twitter">
+                                <a class="circle twitter" href="/facebook/fbconfig.php">
                                     <i class="fa fa-twitter fa-fw"></i>
                                 </a>
                                 <a id="google_login" class="circle google" href="/auth/google_oauth2">
                                     <i class="fa fa-google-plus fa-fw"></i>
                                 </a>
-                                <a id="facebook_login" class="circle facebook" href="/auth/facebook">
+                                <a id="facebook_login" class="circle facebook" href="">
                                     <i class="fa fa-facebook fa-fw"></i>
                                 </a>
                             </div>
+
                             <div class="division">
                                 <div class="line l"></div>
                                 <span>ou</span>
                                 <div class="line r"></div>
                             </div>
+
                             <div class="error"></div>
+
                             <div class="form loginBox">
 
-                                <form method="post" action="/login" accept-charset="UTF-8" id="loginForm">
+                                <form accept-charset="UTF-8" id="loginForm">
 
                                     <div class="form-group">
                                         <div class="col-xs-12">
@@ -1132,50 +1135,105 @@
                                         </div>
                                     </div>
 
-                                    <div class="col-lg-6">
-                                        <label class="checkbox" for="keep_connected">
-                                            <input type="checkbox" value="" id="keep_connected"
-                                                   data-toggle="checkbox"> Ficar ligado
-                                        </label>
-                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-xs-6">
+                                            <label class="checkbox" for="keep_connected">
+                                                <input type="checkbox" value="" id="keep_connected"
+                                                       data-toggle="checkbox"> Ficar ligado
+                                            </label>
+                                        </div>
 
-                                    <div class="col-lg-6">
-                                        <a class="recover-password" href="/recover">
-                                            Recuperar palavra-passe
-                                        </a>
+                                        <div class="col-xs-6">
+                                            <a class="recover-password" href="/recover">
+                                                Recuperar palavra-passe
+                                            </a>
+                                        </div>
                                     </div>
-                                    <div class="col-lg-12">
-                                        <input class="btn btn-default btn-login" type="submit" value="Entrar">
+                                    <div class="form-group">
+                                        <div class="col-xs-12">
+                                            <input class="btn btn-default btn-login"
+                                                   type="submit" value="Entrar">
+                                        </div>
                                     </div>
                                 </form>
                             </div>
                         </div>
                     </div>
+
                     <div class="box">
                         <div class="content registerBox" style="display:none;">
                             <div class="form">
-                                <form method="post" html="{:multipart=>true}" data-remote="true" action="/register"
-                                      accept-charset="UTF-8">
-                                    <input id="email" class="form-control" type="text"
-                                           placeholder="Email" name="email">
-                                    <input class="btn btn-default btn-register" type="submit"
-                                           value="Próximo" name="commit">
+                                <form accept-charset="UTF-8" id="signupForm">
+                                    <div class="form-group">
+                                        <div class="col-xs-12">
+                                            <input id="email_signup" class="form-control" type="text"
+                                                   placeholder="Email" name="email_signup">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-xs-12">
+                                            <input class="btn btn-default btn-register" type="submit"
+                                                   value="Próximo">
+                                        </div>
+                                    </div>
                                 </form>
                             </div>
                         </div>
                     </div>
+
                     <div class="box">
                         <div class="content registerBox-2" style="display:none;">
                             <div class="form">
-                                <form method="post" html="{:multipart=>true}" data-remote="true" action="/register"
-                                      accept-charset="UTF-8">
+                                <form method="post" accept-charset="UTF-8" id="signupFormEnd">
+                                    <div class="form-group">
+                                        <div class="col-xs-12">
+                                            <input disabled id="email_signupEnd" class="form-control"
+                                                   type="text" placeholder="Email" name="email">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-xs-12">
+                                            <input id="password" class="form-control" type="password"
+                                                   placeholder="Palavra-passe" name="password">
+                                            <div class="progress password-progress">
+                                                <div id="strengthBar" class="progress-bar" role="progressbar"
+                                                     style="width: 0;"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-xs-12">
+                                            <input id="confirmPassword" class="form-control" type="password"
+                                                   placeholder="Confirmar palavra-passe" name="confirmPassword">
+                                        </div>
+                                    </div>
 
-                                    <input id="password" class="form-control" type="password"
-                                           placeholder="Password" name="password">
-                                    <input id="password_confirmation" class="form-control" type="password"
-                                           placeholder="Repeat Password" name="password_confirmation">
-                                    <input class="btn btn-default btn-register" type="submit"
-                                           value="Próximo" name="commit">
+                                    <div class="divisionEnd">
+                                        <div class="lineEnd"></div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <div class="col-xs-12 nome_signupEnd">
+                                            <input id="nome_signupEnd" class="form-control"
+                                                   type="text" placeholder="Nome completo" name="nome_signupEnd">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label>Nome de utilizador</label>
+                                        <div class="col-xs-12 input-group">
+                                            <span class="input-group-addon" id="basic-addon3">http://mcmm.web.ua.pt/@</span>
+                                            <input id="utilizador_signupEnd" class="form-control"
+                                                   aria-describedby="basic-addon3" type="text" name="utilizador_signupEnd">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <div class="col-xs-12">
+                                            <input class="btn btn-default btn-register" type="submit"
+                                                   value="Registar" name="commit">
+                                        </div>
+                                    </div>
                                 </form>
                             </div>
                         </div>
@@ -1231,9 +1289,11 @@
 <script type="text/javascript" src="scripts/splash.js"></script>
 <script type="text/javascript" src="scripts/video_background.js"></script>
 <script type="text/javascript" src="scripts/parallax.js"></script>
+<script type="text/javascript" src="scripts/vendor/zxcvbn.js"></script>
 <script type="text/javascript" src="scripts/vendor/form_validator.js"></script>
 <script type="text/javascript" src="scripts/vendor/form_validator_bootstrap.js"></script>
-<script type="text/javascript" src="scripts/login.js"></script>
+<script type="text/javascript" src="scripts/login_regist.js"></script>
+<script type="text/javascript" src="scripts/constants.js"></script>
 <!-- endbuild -->
 
 <script>

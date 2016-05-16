@@ -1034,7 +1034,7 @@ h3.mcmm-nav-logo--noControls {
 
 .buttons-area {
   a {
-    font-weight: 600 !important;
+    font-weight: normal !important;
     letter-spacing: 0.5px !important;
   }
 }
@@ -1145,11 +1145,11 @@ h3.mcmm-nav-logo--noControls {
   .platforms--mcmm-nav {
     //background-color: rgba(255, 255, 255, 0.96) !important;
     width: 100%;
-    margin: 73px 0 0;
+    margin: 75px 0 0;
     padding-top: 2px;
     padding-bottom: 0;
     border-top: 1px solid #f0f0f0;
-    border-bottom: 1px solid #f0f0f0
+    //border-bottom: 1px solid #f0f0f0
   }
 
   .platforms--mcmm-nav .platforms-list {

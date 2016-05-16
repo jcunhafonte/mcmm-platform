@@ -68,10 +68,7 @@ ul.list-styled.list-style-standart ul li::before {
 }
 
 @media (max-width: 768px) {
-  .container {
-    padding-left: 40px;
-    padding-right: 40px;
-  }
+  .container { }
   .gallery .nav-tabs-one > li.active > a,
   .gallery .nav-tabs-one > li.active > a:hover,
   .gallery .nav-tabs-one > li.active > a:focus,
