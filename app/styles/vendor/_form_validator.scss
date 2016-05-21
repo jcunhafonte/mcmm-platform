@@ -156,3 +156,23 @@
 .has-success .form-control:focus {
   border-color: $green !important;
 }
+
+.glyphicon-refresh-animate {
+  -webkit-animation-name: rotateThis;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+}
+
+@-webkit-keyframes "rotateThis" {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+.has-feedback .form-control {
+  padding-right: 42.5px !important;
+}

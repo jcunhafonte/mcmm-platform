@@ -22,7 +22,7 @@ $(document).ready(function () {
 
     //TYPED
     $("#typed").typed({
-        strings: ["Typed", "sentences.", "them.", "it out!"],
+        strings: ["research", "develop", "learn", "improve", "living", "happiness"],
         typeSpeed: 100,
         backDelay: 4000,
         loop: true,

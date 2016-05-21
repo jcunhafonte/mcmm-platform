@@ -7,7 +7,6 @@ import del from 'del';
 import {stream as wiredep} from 'wiredep';
 import concat from 'gulp-concat';
 import revdel from 'gulp-rev-delete-original';
-import connect from 'gulp-connect-php';
 
 const $ = gulpLoadPlugins();
 const reload = browserSync.reload;
@@ -119,7 +118,6 @@ gulp.task('serve', ['styles', 'fonts'], () => {
   gulp.watch([
     'app/*.html',
     'app/scripts/**/*.js',
-    'app/**/*.php',
     'app/images/**/*',
     '.tmp/fonts/**/*'
   ]).on('change', reload);
@@ -127,8 +125,6 @@ gulp.task('serve', ['styles', 'fonts'], () => {
   gulp.watch('app/styles/**/*.scss', ['styles']);
   gulp.watch('app/fonts/**/*', ['fonts']);
   // gulp.watch('bower.json', ['wiredep', 'fonts']);
-
-  connect.server({port: 8000});
 });
 
 gulp.task('serve:dist', () => {

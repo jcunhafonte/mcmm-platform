@@ -229,7 +229,7 @@ $(document).ready(function () {
             icon: {
                 valid: 'glyphicon glyphicon-ok',
                 invalid: 'glyphicon glyphicon-remove',
-                validating: 'glyphicon glyphicon-refresh'
+                validating: 'glyphicon glyphicon-refresh glyphicon-refresh-animate'
             },
             fields: {
                 email_signup: {
@@ -240,6 +240,17 @@ $(document).ready(function () {
                         regexp: {
                             regexp: /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$/,
                             message: 'O email introduzido não é válido'
+                        },
+                        remote: {
+                            headers: {
+                                'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
+                            },
+                            url: mcmm_dns + "api/verificacoes/verificaRegistoEmail.php",
+                            data: {
+                                type: 'username'
+                            },
+                            message: 'O email introduzido já se encontra registado',
+                            type: 'POST'
                         }
                     }
                 }
@@ -265,8 +276,30 @@ $(document).ready(function () {
                             message: 'Necessitas de introduzir um nome'
                         },
                         regexp: {
-                            regexp: /^[a-zA-Z]{2,40} +[a-zA-Z]{2,40}/,
-                            message: 'Deves introduzir o nome próprio e apelido'
+                            regexp: /^[A-zÀ-ú]+[\s|,][A-zÀ-ú]{1,19}$/,
+                            message: 'Deves introduzir um nome próprio e apelido válidos'
+                        }
+                    }
+                },
+                utilizador_signupEnd: {
+                    validators: {
+                        notEmpty: {
+                            message: 'Necessitas de introduzir um nome de utilizador'
+                        },
+                        regexp: {
+                            regexp: /^[a-z]+$/,
+                            message: 'O nome de utilizador não deve conter letras maiúsculas, espaços e/ou números'
+                        },
+                        remote: {
+                            headers: {
+                                'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
+                            },
+                            url: mcmm_dns + "api/verificacoes/verificaUserID.php",
+                            data: {
+                                type: 'username'
+                            },
+                            message: 'O email introduzido já se encontra registado',
+                            type: 'POST'
                         }
                     }
                 },
@@ -335,8 +368,8 @@ $(document).ready(function () {
             }
         })
         .on('success.form.fv', function (e) {
-            e.preventDefault();
             submitSignup2();
+            e.preventDefault();
         });
 });
 
@@ -403,46 +436,13 @@ function submitLogin() {
 }
 
 function submitSignup() {
-
     var email = $("#email_signup").val();
-    var informacao = "emailUtilizador=" + email;
-
-    $.ajax({
-        type: "POST",
-        url: mcmm_dns + "api/verificacoes/verificaRegistoEmail.php",
-        data: informacao,
-
-        success: function (html) {
-
-            if (html == 'registo=0') {
-                shakeModal();
-                $('.error').addClass('alert alert-danger').html('O email introduzido já se encontra registado.');
-                return true;
-            }
-
-            console.log(html);
-            if (html == 'registo=1') {
-                $('#email_signupEnd').val(email);
-                var string = $('#email_signupEnd').val();
-                var user = string.slice(0, string.indexOf("@"));
-                $('#utilizador_signupEnd').val(user);
-                showRegisterForm2();
-                return true;
-            }
-
-            if (html == 'registo=2') {
-                shakeModal();
-                $('.error').addClass('alert alert-danger').html('Verifica se o email que introduziste é válido.');
-                return true;
-            }
-
-            if (html == 'registo=3') {
-                shakeModal();
-                $('.error').addClass('alert alert-info').html('Para acederes a esta página precisas de estar autenticado.');
-                return true;
-            }
-        }
-    });
+    $('#email_signupEnd').val(email);
+    var string = $('#email_signupEnd').val();
+    var user = string.slice(0, string.indexOf("@"));
+    $('#utilizador_signupEnd').val(user);
+    showRegisterForm2();
+    return true;
 }
 
 function submitSignup2() {

@@ -1,14 +1,12 @@
 <?php
 
-header('Access-Control-Allow-Origin: *');
-
 require("../connection/mysql.php");
 
-if (isset($_POST['emailUtilizador'])) {
+if (isset($_POST['email_signup'])) {
 
-    if (filter_var($_POST['emailUtilizador'], FILTER_VALIDATE_EMAIL)) {
+    if (filter_var($_POST['email_signup'], FILTER_VALIDATE_EMAIL)) {
 
-        $email = $_POST['emailUtilizador'];
+        $email = $_POST['email_signup'];
         $ativo = 1;
 
         $result = $conn->prepare("SELECT email FROM utilizadores WHERE email = ?");
@@ -19,19 +17,24 @@ if (isset($_POST['emailUtilizador'])) {
 
         if ($row_number == 0) {
             $result->close();
-            echo "registo=1";
+            $arr = array('valid' => true);
+            echo json_encode($arr);
             return true;
         } else {
             $result->close();
-            echo "registo=0";
+            $arr = array('valid' => false);
+            echo json_encode($arr);
             return true;
         }
-      
     } else {
-        echo "entrar=2";
+        $arr = array('valid' => true);
+        echo json_encode($arr);
+        return true;
     }
 } else {
-    echo "registo=3";
+    $arr = array('valid' => true);
+    echo json_encode($arr);
+    return true;
 }
 
 ?>
