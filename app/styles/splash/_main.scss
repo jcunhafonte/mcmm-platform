@@ -43,7 +43,7 @@ ul.list-styled li.disabled {
 
 ul.list-styled.list-style-ok li::before {
   content: "\f00c";
-  color: $blue;
+  color: $theme;
 }
 
 ul.list-styled.list-style-ok li.disabled::before {
@@ -180,7 +180,7 @@ p.subhead {
 .btn:active.btn-primary,
 .btn.active.btn-primary {
   border-color: transparent;
-  background: $blue_hover;
+  background: $theme_hover;
 }
 
 .btn:hover.btn-success,
@@ -216,7 +216,7 @@ p.subhead {
 
 .btn-group .btn.btn-info.active {
   color: white;
-  background: $blue;
+  background: $theme;
 }
 
 .btn-short {
@@ -245,7 +245,7 @@ p.subhead {
 
 .striped-icon {
   background: rgba(232, 233, 237, 0.5);
-  color: $blue;
+  color: $theme;
   font-size: 18px;
   margin: auto;
   text-align: center;
@@ -326,7 +326,7 @@ p.subhead {
   left: 5px;
   right: 5px;
   bottom: 5px;
-  background: content-box $blue;
+  background: content-box $theme;
   z-index: -1;
 }
 
@@ -336,7 +336,7 @@ p.subhead {
 
 .striped-icon-large {
   background: rgba(232, 233, 237, 0.5);
-  color: $blue;
+  color: $theme;
   font-size: 35px;
   margin: auto;
   text-align: center;
@@ -536,7 +536,7 @@ label {
 }
 
 .form-control-feedback {
-  //color: $blue;
+  //color: $theme;
   //top: 50%;
   //line-height: .75em;
   //-webkit-transform: translate(0, -50%);
@@ -571,7 +571,7 @@ label {
 
 .panel-alt-one > .panel-heading .panel-title a:hover,
 .panel-alt-one > .panel-heading .panel-title a:hover i {
-  color: $blue;
+  color: $theme;
 }
 
 .panel-alt-one > .panel-heading.active a {
@@ -579,7 +579,7 @@ label {
 }
 
 .panel-alt-one > .panel-heading.active a i {
-  color: $blue;
+  color: $theme;
 }
 
 .panel-alt-two {
@@ -632,7 +632,7 @@ label {
 }
 
 .panel-alt-two .panel-heading .panel-title a:hover {
-  color: $blue;
+  color: $theme;
 }
 
 .panel-alt-two .panel-heading a:hover .accordion-icon {
@@ -644,7 +644,7 @@ label {
 }
 
 .panel-alt-two .panel-heading.active .accordion-icon .stacked-icon {
-  background: $blue;
+  background: $theme;
   color: white;
 }
 
@@ -694,7 +694,7 @@ label {
 }
 
 .nav-tabs-one > li > a:hover {
-  color: $blue;
+  color: $theme;
 }
 
 .nav-tabs-one > li:first-of-type > a {
@@ -709,8 +709,8 @@ label {
 .nav-tabs-one > li.active > a,
 .nav-tabs-one > li.active > a:hover,
 .nav-tabs-one > li.active > a:focus {
-  background-color: $blue;
-  border-color: $blue;
+  background-color: $theme;
+  border-color: $theme;
   color: white;
   cursor: default;
 }
@@ -721,13 +721,13 @@ label {
 }
 
 .nav-tabs-two > li > a:hover {
-  color: $blue;
+  color: $theme;
 }
 
 .nav-tabs-two > li.active > a,
 .nav-tabs-two > li.active > a:hover,
 .nav-tabs-two > li.active > a:focus {
-  border-color: $blue;
+  border-color: $theme;
   color: #2b2e33;
   cursor: default;
 }
@@ -748,7 +748,7 @@ label {
 }
 
 .nav-tabs-vertical > li i {
-  color: $blue;
+  color: $theme;
 }
 
 .nav-tabs-vertical > li > a {
@@ -758,11 +758,11 @@ label {
 }
 
 .nav-tabs-vertical > li > a:hover {
-  color: $blue;
+  color: $theme;
 }
 
 .nav-tabs-vertical > li.active {
-  border-color: $blue;
+  border-color: $theme;
 }
 
 .nav-tabs-vertical > li.active > a,
@@ -961,12 +961,12 @@ label {
 }
 
 .contacts .contacts-block i {
-  color: $blue;
+  color: $theme;
   padding-right: 1em;
 }
 
 .contacts .twitter-block span {
-  color: $blue;
+  color: $theme;
 }
 
 .contacts .twitter-block strong {
@@ -989,7 +989,7 @@ label {
     position: absolute;
     top: 15px;
     left: 38px;
-    color: $blue;
+    color: $theme;
     font-size: 36px;
   }
 }
@@ -1037,7 +1037,7 @@ label {
 }
 
 .contacts .post-block .media-heading a:hover {
-  color: $blue;
+  color: $theme;
 }
 
 .contacts .post-block .media-body ul {
@@ -1150,19 +1150,6 @@ label {
   margin: 35px 0;
 }
 
-.elements .section-header {
-  margin: 75px 0 45px;
-}
-
-.section-header {
-  margin: 130px 0 90px;
-}
-
-.section-header h2,
-.section-header p {
-  text-align: center;
-}
-
 .divider.striped-icon {
   position: absolute;
   left: 50%;
@@ -1174,7 +1161,7 @@ label {
 
 .divider.striped-icon:hover,
 .divider.striped-icon:focus {
-  color: $blue;
+  color: $theme;
 }
 
 section.divider.striped-icon {
@@ -1210,12 +1197,10 @@ section.divider.striped-icon {
 
 .about-product {
   margin-top: 100px;
-  /*background: #fff;*/
+  /*background: $white;*/
 }
 
-.about-product .section-header {
-  margin-top: 30px;
-}
+
 
 .about-product article:before {
   position: absolute;
@@ -1870,9 +1855,6 @@ a h5:hover {
   }
 }
 
-.application .section-header ul li {
-  padding: 0 15px;
-}
 
 .application .app-features {
   margin-bottom: 60px;
@@ -2026,7 +2008,7 @@ a h5:hover {
 }
 
 #filters button.active {
-  color: #fff;
+  color: $white;
 }
 
 #page-preloader {
@@ -2190,7 +2172,7 @@ section.team {
 
 .wrap-programs .program-item .program-title {
   font-size: 18px;
-  color: #fff;
+  color: $white;
   margin-bottom: 2px;
   font-weight: 600;
 }
@@ -2213,7 +2195,7 @@ section.team {
   left: 0px;
   right: 0;
   font-size: 40px;
-  color: #fff;
+  color: $white;
   font-weight: 300;
 }
 
@@ -2254,7 +2236,7 @@ section.team {
 .round-ico {
   width: 40px;
   height: 40px;
-  background: #fff;
+  background: $white;
   border: 5px solid #eeeef2;
   border-radius: 50%;
   -webkit-box-shadow: inset 0px 0px 0px 2px rgba(202, 205, 220, 1);
@@ -2265,7 +2247,7 @@ section.team {
 .round-ico.little {
   width: 25px;
   height: 25px;
-  background: #fff;
+  background: $white;
   border: 5px solid #eeeef2;
   border-radius: 50%;
   -webkit-border-radius: 50%;
@@ -2420,7 +2402,7 @@ section.team {
   position: relative;
   width: 50px;
   height: 50px;
-  background: #fff;
+  background: $white;
   border: 5px solid #eeeef2;
   border-radius: 50%;
   -webkit-border-radius: 50%;
@@ -2449,7 +2431,7 @@ section.team {
 }
 
 .wrap-timeline .plus .plus-ico:hover {
-  color: #fff;
+  color: $white;
   background: #27ae60;
   box-shadow: none;
 }
@@ -2611,7 +2593,7 @@ section.team {
   transform-style: preserve-3d;
   transition: all .2s linear;
   text-align: center;
-  background: #fff;
+  background: $white;
   padding: 40px 0;
   margin: 0 auto 25px;
   max-width: 300px;
@@ -2721,7 +2703,7 @@ section.team {
 
 .wrap-counters .row-counters .counter-item {
   margin-bottom: 30px;
-  color: #fff;
+  color: $white;
   text-align: center;
 }
 
@@ -2748,7 +2730,7 @@ section.team {
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
   border-radius: 50%;
-  background: #fff;
+  background: $white;
   border: 3px solid #7abf91;
   top: 0;
   left: 50%;
@@ -2807,7 +2789,7 @@ body {
   position: absolute;
   left: 50%;
   width: 2px;
-  background: #fff;
+  background: $white;
   margin-left: -1px;
   bottom: 0;
 }
@@ -2821,7 +2803,7 @@ body {
   height: 16px;
   left: 50%;
   margin-left: -8px;
-  border: 2px solid #fff;
+  border: 2px solid $white;
   border-radius: 50%;
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
@@ -2876,7 +2858,7 @@ body {
 }
 
 .wrap-rates ul li {
-  color: #fff;
+  color: $white;
   font-size: 14px;
   padding: 18px 0;
   border-bottom: 1px solid #75b78a;
@@ -2955,7 +2937,7 @@ body {
 
 .wrap-questions .info-icon i {
   font-size: 36px;
-  color: #fff;
+  color: $white;
 }
 
 .wrap-questions h4 {
@@ -3000,7 +2982,7 @@ body {
   position: absolute;
   left: 50%;
   width: 2px;
-  background: #fff;
+  background: $white;
   margin-left: -1px;
   bottom: 0;
 }
@@ -3014,7 +2996,7 @@ body {
   height: 16px;
   left: 50%;
   margin-left: -8px;
-  border: 2px solid #fff;
+  border: 2px solid $white;
   border-radius: 50%;
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
@@ -3045,7 +3027,7 @@ body {
 
 .wrap-contacts .anchor-icon i {
   font-size: 36px;
-  color: #fff;
+  color: $white;
 }
 
 .wrap-contacts .copyright-links li {
@@ -3212,7 +3194,7 @@ body {
   position: absolute;
   left: 50%;
   width: 2px;
-  background: #fff;
+  background: $white;
   margin-left: -1px;
   bottom: 0;
 }
@@ -3226,7 +3208,7 @@ body {
   height: 16px;
   left: 50%;
   margin-left: -8px;
-  border: 2px solid #fff;
+  border: 2px solid $white;
   border-radius: 50%;
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
@@ -3234,30 +3216,7 @@ body {
 
 .wrap-who-we {
   padding: 100px 0;
-  background: #fff;
-}
-
-.video {
-  position: relative;
-}
-
-.video #custom {
-  top: 0;
-  left: 0;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-}
-
-.video .video-bg {
-  display: none;
-  top: 0;
-  left: 0;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  background: url(../images/placehold/1920x1080.gif) center no-repeat;
-  background-attachment: fixed;
+  background: $white;
 }
 
 .wrap-in-work {
@@ -3268,9 +3227,7 @@ body {
   border-top: 1px solid #e7e8ec;
 }
 
-.wrap-in-work .section-header {
-  margin-bottom: 50px;
-}
+
 
 .gallery-squares .gallery-item {
   margin-bottom: 50px;
@@ -3317,11 +3274,11 @@ body {
   background: #27ae60;
   background: rgba(39, 174, 96, 0.8);
   padding: 30px;
-  color: #fff;
+  color: $white;
 }
 
 .gallery-squares .gallery-item .image .mask i {
-  color: #fff;
+  color: $white;
 }
 
 .gallery-squares .gallery-item .image .mask .icons {
@@ -3358,9 +3315,7 @@ body {
   color: #7e848e;
 }
 
-.gallery-2 .section-header {
-  margin-bottom: 10px;
-}
+
 
 .gallery-2 .btn-group {
   margin-bottom: 30px;
@@ -3370,9 +3325,7 @@ body {
   padding-top: 0;
 }
 
-.gallery-3 .section-header {
-  margin-bottom: 10px;
-}
+
 
 .gallery-3 .btn-group {
   margin-bottom: 30px;
@@ -3555,7 +3508,7 @@ body {
   position: absolute;
   left: 50%;
   width: 2px;
-  background: #fff;
+  background: $white;
   margin-left: -1px;
   bottom: 0;
 }
@@ -3569,7 +3522,7 @@ body {
   height: 16px;
   left: 50%;
   margin-left: -8px;
-  border: 2px solid #fff;
+  border: 2px solid $white;
   border-radius: 50%;
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
@@ -3702,7 +3655,7 @@ body {
   -moz-border-radius-bottomright: 3px;
   -webkit-border-bottom-right-radius: 3px;
   border-bottom-right-radius: 3px;
-  background: #fff;
+  background: $white;
   position: relative;
 }
 
@@ -3791,13 +3744,13 @@ body {
 .wrap-blog-content .left-column .wrap-pagination .pagination-list li a:hover {
   background: #27ae60;
   border-color: #27ae60;
-  color: #fff;
+  color: $white;
 }
 
 .wrap-blog-content .left-column .wrap-pagination .pagination-list li.active a {
   background: #27ae60;
   border-color: #27ae60;
-  color: #fff;
+  color: $white;
 }
 
 .wrap-blog-content .sidebar h5 .fa {
@@ -4376,9 +4329,6 @@ body {
   padding: 0 0 100px 0;
 }
 
-.wrap-service-nav .section-header {
-  margin-bottom: 0;
-}
 
 .wrap-service-nav .list-nav .list-wrap:last-child .nav-item:after {
   display: none;
@@ -4434,11 +4384,11 @@ body {
 }
 
 .wrap-service-nav .list-nav .list-wrap .nav-item:hover span, .wrap-service-nav .list-nav .list-wrap .nav-item.active span {
-  color: #fff;
+  color: $white;
 }
 
 .wrap-service-nav .list-nav .list-wrap .nav-item:hover .text, .wrap-service-nav .list-nav .list-wrap .nav-item.active .text {
-  color: #fff;
+  color: $white;
 }
 
 .wrap-service-nav .list-nav .list-wrap .nav-item:hover:before, .wrap-service-nav .list-nav .list-wrap .nav-item.active:before {
@@ -4552,7 +4502,7 @@ body {
 }
 
 .wrap-technical .map-column .wrap-map-item .popover .arrow:after {
-  border-top-color: #fff;
+  border-top-color: $white;
 }
 
 .wrap-technical .map-column .wrap-map-item .popover .popover-content {
@@ -4560,7 +4510,7 @@ body {
 }
 
 .wrap-technical .map-column .wrap-map-item .popover .popover-content .map-popover {
-  background: #fff;
+  background: $white;
   border: none !important;
   width: 250px;
 }
@@ -4571,7 +4521,7 @@ body {
   text-transform: uppercase;
   padding-left: 20px;
   background: #27ae60;
-  color: #fff;
+  color: $white;
   font-size: 10px;
   font-weight: bold;
   -moz-border-radius-topleft: 5px;
@@ -4817,7 +4767,7 @@ body {
   position: absolute;
   left: 50%;
   width: 2px;
-  background: #fff;
+  background: $white;
   margin-left: -1px;
   bottom: 0;
 }
@@ -4831,7 +4781,7 @@ body {
   height: 16px;
   left: 50%;
   margin-left: -8px;
-  border: 2px solid #fff;
+  border: 2px solid $white;
   border-radius: 50%;
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
@@ -4997,7 +4947,7 @@ body {
 }
 
 .wrap-inside-nav h5 {
-  color: #fff;
+  color: $white;
   padding-left: 30px;
 }
 
@@ -5048,7 +4998,7 @@ body {
   position: absolute;
   right: 0;
   background: #2a2d32;
-  color: #fff;
+  color: $white;
   width: 300px;
   z-index: 5;
 }
@@ -5111,7 +5061,7 @@ body {
 }
 
 .wrap-user-control .wrap-login-signup .tab-content .signup-content h5 {
-  color: #fff;
+  color: $white;
   font-size: 18px;
   font-weight: 500;
   margin-bottom: 20px;
@@ -5124,7 +5074,7 @@ body {
   line-height: 50px;
   height: 50px;
   margin-bottom: 15px;
-  color: #fff;
+  color: $white;
   font-weight: normal;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
@@ -5136,7 +5086,7 @@ body {
 }
 
 .wrap-user-control .wrap-login-signup .tab-content .signup-content .signup-facebook .fa {
-  color: #fff;
+  color: $white;
 }
 
 .wrap-user-control .wrap-login-signup .tab-content .signup-content .or-sep {
@@ -5199,7 +5149,7 @@ body {
   display: block;
   text-align: center;
   background: #27ae60;
-  color: #fff;
+  color: $white;
   box-shadow: none;
 }
 
@@ -5237,7 +5187,7 @@ body {
 
 .top-block-icon i {
   font-size: 36px;
-  color: #fff;
+  color: $white;
 }
 
 .no-margin {
@@ -5620,7 +5570,7 @@ text[text-anchor="end"] {
 }
 
 .home-slider .subscribe {
-  background: #fff;
+  background: $white;
 }
 
 .home-slider .carousel-caption {
@@ -5732,9 +5682,5 @@ text[text-anchor="end"] {
 }
 
 #response .success {
-  color: $blue;
-}
-
-.control-cand{
-  margin-top: 30px !important;
+  color: $theme;
 }

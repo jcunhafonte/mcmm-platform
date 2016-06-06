@@ -231,7 +231,7 @@
 	   -moz-border-radius: 15px;
 	        border-radius: 15px;
 	text-shadow: 0 1px 2px #222;
-	color: #FFF;
+	color: $white;
 	font-weight: bold;
 	line-height: 24px;
 	white-space: nowrap;
@@ -240,7 +240,7 @@
 .fancybox-title-outside-wrap {
 	position: relative;
 	margin-top: 10px;
-	color: #fff;
+	color: $white;
 }
 
 .fancybox-title-inside-wrap {
@@ -251,7 +251,7 @@
 	position: absolute;
 	bottom: 0;
 	left: 0;
-	color: #fff;
+	color: $white;
 	padding: 10px;
 	background: $black;
 	background: rgba(0, 0, 0, .8);

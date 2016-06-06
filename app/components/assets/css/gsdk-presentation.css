@@ -470,7 +470,7 @@ button::-moz-focus-inner {
 .section {
   padding: 40px 0;
   position: relative;
-  background-color: #$black;
+  background-color: white;
 }
 
 .section-gray {
@@ -484,7 +484,7 @@ button::-moz-focus-inner {
 }
 
 .section-white {
-  background-color: #$black;
+  background-color: white;
 }
 .section-cards{
     overflow: hidden;
@@ -929,7 +929,7 @@ button::-moz-focus-inner {
   line-height: 25px;
   font-size: 25px;
   text-align: center;
-  color: #$black;
+  color: white;
 }
 .icon.icon-sm [class*="fa-"] {
   width: 25px;
@@ -937,7 +937,7 @@ button::-moz-focus-inner {
   line-height: 25px;
   font-size: 19px;
   text-align: center;
-  color: #$black;
+  color: white;
 }
 .icon [class*="pe-7s-"] {
   width: 50px;
@@ -945,7 +945,7 @@ button::-moz-focus-inner {
   line-height: 50px;
   font-size: 46px;
   text-align: center;
-  color: #$black;
+  color: white;
 }
 .icon [class*="fa-"] {
   width: 50px;
@@ -953,7 +953,7 @@ button::-moz-focus-inner {
   line-height: 50px;
   font-size: 36px;
   text-align: center;
-  color: #$black;
+  color: white;
 }
 
 .icon-blue {
@@ -1066,7 +1066,7 @@ button::-moz-focus-inner {
 .card {
   border-radius: 6px;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.23);
-  background-color: #$black;
+  background-color: white;
   margin-bottom: 20px;
 }
 .card .image {
@@ -1290,7 +1290,7 @@ button::-moz-focus-inner {
   }
 
   .navbar-nav > li > .dropdown-menu:after {
-    border-bottom: 11px solid #$black;
+    border-bottom: 11px solid white;
     border-left: 11px solid rgba(0, 0, 0, 0);
     border-right: 11px solid rgba(0, 0, 0, 0);
     content: "";
@@ -1924,7 +1924,7 @@ button::-moz-focus-inner {
 }
 
 .main{
-    background-color: #$black;
+    background-color: white;
 /*     position: relative; */
 
 }
@@ -1937,7 +1937,7 @@ button::-moz-focus-inner {
     margin-top:0;
 }
 #notifications{
-    background-color: #$black;
+    background-color: white;
     display: block;
     width: 100%;
     position: relative;
@@ -1947,7 +1947,7 @@ button::-moz-focus-inner {
 }
 
 .footer-card{
-    background-color: #$black;
+    background-color: white;
     padding: 10px 0 20px;
     width: 100%;
 }
@@ -1976,7 +1976,7 @@ button::-moz-focus-inner {
     margin: 0 auto 40px;
 }
 .txt-white{
-    color: #$black;
+    color: white;
 }
 .txt-gray{
     color: #ddd !important;
@@ -2002,14 +2002,14 @@ button::-moz-focus-inner {
     color: #EEE;
 }
 .footer-demo .credits a{
-    color: #$black;
+    color: white;
 }
 .social-share{
     float: left;
     margin-right: 8px;
 }
 .social-share a{
-    color: #$black;
+    color: white;
 }
 #subscribe_email{
     border-radius: 0;
@@ -2018,7 +2018,7 @@ button::-moz-focus-inner {
 }
 .pick-class-label{
     border-radius: 8px;
-    color: #$black;
+    color: white;
     cursor: pointer;
     display: inline-block;
     font-size: 75%;
@@ -2053,7 +2053,7 @@ button::-moz-focus-inner {
 
 .logo-container .brand{
     font-size: 18px;
-    color: #$black;
+    color: white;
     line-height: 20px;
     float: left;
     margin-left: 10px;
@@ -2071,7 +2071,7 @@ button::-moz-focus-inner {
     color: #333333;
 }
 .parallax .motto{
-    color: #$black;
+    color: white;
     font-size: 64px;
     font-weight: 600;
     position: relative;
@@ -2088,7 +2088,7 @@ button::-moz-focus-inner {
     bottom: 74px;
     right: -28px;
     font-size: 18px;
-    background-color: #$black;
+    background-color: white;
     width: 70px;
     height: 70px;
     border-radius: 50%;
@@ -2098,7 +2098,7 @@ button::-moz-focus-inner {
     text-shadow: 0 0 0;
 }
 .parallax .motivation{
-    color: #$black;
+    color: white;
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.27);
     top: 400px;
     position: absolute;
@@ -2108,7 +2108,7 @@ button::-moz-focus-inner {
 }
 .parallax .motto .border{
     float: left;
-    border: 3px solid #$black;
+    border: 3px solid white;
     padding: 0px 30px;
     text-align: center;
 }
@@ -2145,7 +2145,7 @@ button::-moz-focus-inner {
 .separator{
 /*     height: 50px; */
     content: "Separator";
-    color: #$black;
+    color: white;
 
     display: block;
     width: 100%;
@@ -2247,7 +2247,7 @@ button::-moz-focus-inner {
 }
 .presentation .section-description .card-component h4{
     margin-top: 50%;
-    color: #$black;
+    color: white;
     font-size: 26px;
     
 }
@@ -2291,7 +2291,7 @@ button::-moz-focus-inner {
     overflow: hidden;
 }
 .presentation .white-text{
-    color: #$black;
+    color: white;
 }
 .presentation .section-better-kit p{
     color: #777777;
@@ -2450,7 +2450,7 @@ button::-moz-focus-inner {
     background: -o-linear-gradient(top,  rgba(255,255,255,1) 25%,rgba(231,231,231,1) 100%); /* Opera 11.10+ */
     background: -ms-linear-gradient(top,  rgba(255,255,255,1) 25%,rgba(231,231,231,1) 100%); /* IE10+ */
     background: linear-gradient(to bottom,  rgba(255,255,255,1) 25%,rgba(231,231,231,1) 100%); /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#$black', endColorstr='#e7e7e7',GradientType=0 ); /* IE6-9 */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='white', endColorstr='#e7e7e7',GradientType=0 ); /* IE6-9 */
 }
 .presentation .section-black{
     background-color: #333;
@@ -2465,7 +2465,7 @@ button::-moz-focus-inner {
     border-radius: 6px;
     bottom: 22px;
     right: -25px;
-    color: #$black;
+    color: white;
     background-color: #ff9500;
     font-weight: 300;
     background-color: #ff9500;    
@@ -2537,7 +2537,7 @@ button::-moz-focus-inner {
 }
 
 .presentation .text-white{
-    color: #$black;
+    color: white;
     text-shadow: 0 1px 2px rgba(0,0,0,.13);
 }
 .presentation .section-images .card-image{
@@ -2701,21 +2701,21 @@ button::-moz-focus-inner {
     color: #EEE;
 }
 .presentation footer .credits a{
-    color: #$black;
+    color: white;
 }
 .social-share{
     float: left;
     margin-right: 8px;
 }
 .social-share a{
-    color: #$black;
+    color: white;
 }
 .presentation footer .card{
     border-radius: 0;
     box-shadow: none;
     background-color: transparent;
     margin: 0;
-    color: #$black;
+    color: white;
     padding: 20px 0 60px;
 }
 .presentation footer .card h3{
@@ -2746,7 +2746,7 @@ button::-moz-focus-inner {
   height: 100%;
   width: 100%;
   opacity: 0;
-  background: #$black;
+  background: white;
   color: #777;
   padding: 20px;
   position: relative;
@@ -2946,7 +2946,7 @@ button::-moz-focus-inner {
     height: 406px;
     overflow: hidden;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.23);
-    background-color: #$black;
+    background-color: white;
 }
 .card-html-code .front-image{
     z-index: 3;
@@ -3091,14 +3091,14 @@ button::-moz-focus-inner {
 
 .navbar-transparent .navbar-nav > .dropdown > a:hover .caret,
 .navbar-transparent .navbar-nav > .dropdown > a:focus .caret {
-  border-bottom-color: #$black;
-  border-top-color: #$black;
+  border-bottom-color: white;
+  border-top-color: white;
 }
 
 .navbar-transparent .navbar-nav > .open > a,
 .navbar-transparent .navbar-nav > .open > a:hover,
 .navbar-transparent .navbar-nav > .open > a:focus{
-    color: #$black;
+    color: white;
 }
 .navbar-default .btn-neutral .caret{
     border-top-color: #888888;

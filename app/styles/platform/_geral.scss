@@ -8,16 +8,16 @@
 
 #nprogress {
   .spinner-icon {
-    border-top-color: $blue !important;
-    border-left-color: $blue !important;
+    border-top-color: $theme !important;
+    border-left-color: $theme !important;
     width: 24px !important;
     height: 24px !important;
   }
   .bar{
-    background: $blue !important;
+    background: $theme !important;
     height: 5px !important;
   }
   .peg{
-    box-shadow: 0 0 10px $blue, 0 0 5px $blue !important;
+    box-shadow: 0 0 10px $theme, 0 0 5px $theme !important;
   }
 }

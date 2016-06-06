@@ -1,7 +1,7 @@
 'use strict';
 
 $(document).ready(function () {
-    
+
     // js_height_init();
     controlNavbar();
     checkTransparent();
@@ -228,26 +228,28 @@ $(document).ready(function () {
     /* <!-- ============ Prarallax =========== --> */
     /* <!-- =============================================== -->  */
     if (!Modernizr.touch) {
-       $('.parallax-section-1').parallax("50%", 0.5);
-       $('.parallax-section-2').parallax("50%", 0.5);
-       $('.parallax-section-3').parallax("50%", 0.5);
-       $('.wrap-features').parallax("50%", 0.5);
-       $('.wrap-counters').parallax("50%", 0.5);
-       $('.wrap-rates').parallax("50%", 0.5);
-       $('.wrap-programs').parallax("50%", 0.5);
-       $('#programs').parallax("50%", 0.5);
+        $('.parallax-section-1').parallax("50%", 0.5);
+        $('.parallax-section-2').parallax("50%", 0.5);
+        $('.parallax-section-3').parallax("50%", 0.5);
+        $('.wrap-features').parallax("50%", 0.5);
+        $('.wrap-counters').parallax("50%", 0.5);
+        $('.wrap-rates').parallax("50%", 0.5);
+        $('.wrap-programs').parallax("50%", 0.5);
+        $('#programs').parallax("50%", 0.5);
     }
 
     /* <!-- =============================================== --> */
     /* <!-- ============ Progress Bar Animation =========== --> */
     /* <!-- =============================================== -->  */
     $('.skills').waypoint(function (direction) {
-        $('.skills-animated').each(function () {
-            var persent = $(this).attr('data-percent');
-            $(this).find('.progress').animate({
-                width: persent + '%'
-            }, 300);
-        });
+        setTimeout(function () {
+            $('.skills-animated').each(function () {
+                var persent = $(this).attr('data-percent');
+                $(this).find('.progress').animate({
+                    width: persent + '%'
+                }, 300);
+            });
+        }, 1000);
     }, {
         offset: '100%',
         triggerOnce: true
@@ -256,13 +258,6 @@ $(document).ready(function () {
     /* <!-- =============================================== --> */
     /* <!-- ============ Herader Animation =========== --> */
     /* <!-- =============================================== -->  */
-    // $(window).scroll(function () {
-    //     if ($(this).scrollTop() > 80) {
-    //         $('nav').addClass("navbar-alt")
-    //     } else {
-    //         $('nav').removeClass("navbar-alt")
-    //     }
-    // });
     function controlNavbar() {
         if ($(window).width() < 992) {
             $('#topbar').addClass('navbar-white');
@@ -296,7 +291,7 @@ $(document).ready(function () {
     /* <!-- =============================================== -->  */
     //switch from monthly to annual programa tables
     bouncy_filter($('.cd-programa-container'));
-
+    var old_selected = 'first';
     function bouncy_filter(container) {
         container.each(function () {
             var programa_table = $(this);
@@ -315,6 +310,8 @@ $(document).ready(function () {
                 event.preventDefault();
                 //detect which radio input item was checked
                 var selected_filter = $(event.target).val();
+                if(selected_filter == old_selected) return false;
+                old_selected = selected_filter;
                 //give higher z-index to the programa table items selected by the radio input
                 show_selected_items(table_elements[selected_filter]);
                 //rotate each cd-programa-wrapper
@@ -439,64 +436,42 @@ function checkTransparent() {
     });
 }
 
+var animationStarted = false;
 $(document).ready(function () {
+    $('.researchareas').waypoint(function () {
+        if (animationStarted == false) {
+            animationStarted = true;
+            new Vivus('tec-com_svg', {
+                type: 'scenario',
+                duration: 200,
+                start: 'autostart',
+                dashGap: 200
+            });
+            setTimeout(function () {
+                $('.researchareas svg').css('display','block');
+                new Vivus('social-sci_svg', {
+                    type: 'scenario',
+                    duration: 200,
+                    start: 'autostart',
+                    dashGap: 200
+                });
+                new Vivus('design_svg', {
+                    type: 'scenario',
+                    duration: 200,
+                    start: 'autostart',
+                    dashGap: 200
+                });
+            }, 300);
 
-    //redrawDotNav();
-
-    /* Scroll event handler */
-    $(window).bind('scroll', function (e) {
-      //  parallaxScroll();
-      //  redrawDotNav();
-    });
-
-    /* Next/prev and primary nav btn click handlers */
-    $('a.manned-flight').click(function () {
-        $('html, body').animate({
-            scrollTop: 0
-        }, 1000, function () {
-        });
-        return false;
-    });
-    $('a.frameless-parachute').click(function () {
-        $('html, body').animate({
-            scrollTop: $('#frameless-parachute').offset().top
-        }, 500, function () {
-        });
-        return false;
-    });
-    $('a.english-channel').click(function () {
-        $('html, body').animate({
-            scrollTop: $('#english-channel').offset().top
-        }, 500, function () {
-        });
-        return false;
-    });
-    $('a.about').click(function () {
-        $('html, body').animate({
-            scrollTop: $('#about').offset().top
-        }, 500, function () {
-
-        });
-        return false;
-    });
-
-    /* Show/hide dot lav labels on hover */
-    $('nav#primary a').hover(
-        function () {
-            $(this).prev('h1').show();
-        },
-        function () {
-            $(this).prev('h1').hide();
         }
-    );
-
-    $(".cd-programa-wrapper").hover(function(){
-            $(this).toggleClass('panel-highlited').siblings().removeClass('panel-highlited');
-    })
+    }, {
+        offset: '100%',
+        triggerOnce: true
+    });
 
 });
 
-NProgress.configure({ showSpinner: false });
+NProgress.configure({showSpinner: false});
 $(window).load(function () {
     NProgress.done();
 });

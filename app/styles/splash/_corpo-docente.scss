@@ -1,5 +1,5 @@
 .corpo-docente {
-  background: #fff;
+  background: $white;
   padding: 80px 0 100px;
 }
 
@@ -26,7 +26,7 @@
 }
 
 .corpo-docente .list-dream-team .team-item.add-new .image .mask {
-  background: #fff;
+  background: $white;
   opacity: 1 !important;
   display: block;
   text-align: center;
@@ -82,11 +82,11 @@
   background: #27ae60;
   background: rgba(39, 174, 96, 0.8);
   padding: 30px;
-  color: #fff;
+  color: $white;
 }
 
 .corpo-docente .list-dream-team .team-item .image .mask .fa {
-  color: #fff;
+  color: $white;
 }
 
 .corpo-docente .list-dream-team .team-item .bottom-info {

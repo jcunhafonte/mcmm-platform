@@ -5,7 +5,6 @@ $( document ).ready(function() {
 
     // Resive video
     scaleVideoContainer();
-
     initBannerVideoSize('.video-container .filter');
     initBannerVideoSize('.video-container video');
 

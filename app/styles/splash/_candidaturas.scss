@@ -38,21 +38,30 @@
   left: 20%;
   z-index: 1;
   background: none !important;
+  color: $theme;
+  &:after {
+    background: none;
+    border: 2px solid $theme;
+ }
 }
 
 .candidaturas article span {
   font-size: 100px;
   height: 160px;
   margin-top: 20px;
-  color: $blue
+  color: $theme
 }
 
-.candidaturas article h5{
+.candidaturas article h5 {
   text-transform: none;
 }
 
-.candidaturas h2{
-  font-family: Hind;
+.candidaturas article p{
+  line-height: 25px;
+}
+
+.candidaturas h2 {
+  font-family: "Hind";
   font-size: 42px !important;
   line-height: 48px;
   font-weight: 300;
@@ -61,4 +70,20 @@
 
 .candidaturas [class^="col-"]:last-child article:after {
   display: none;
+}
+
+.control-cand {
+  margin-top: 30px !important;
+}
+
+@media screen and (max-width: $screen-sm-min) and (orientation: landscape) {
+  .control-cand {
+    margin-top: 0px !important;
+  }
+}
+
+@media screen and (max-width: $screen-sm-min) {
+  .control-cand {
+    display: none;
+  }
 }

@@ -269,7 +269,7 @@ th {
     page-break-after: avoid;
   }
   select {
-    background: #fff !important;
+    background: $white !important;
   }
   .navbar {
     display: none;
@@ -286,7 +286,7 @@ th {
   }
   .table td,
   .table th {
-    background-color: #fff !important;
+    background-color: $white !important;
   }
   .table-bordered th,
   .table-bordered td {
@@ -1429,7 +1429,7 @@ mark,
 }
 
 .text-primary {
-  color: $blue;
+  color: $theme;
 }
 
 a.text-primary:hover {
@@ -1461,7 +1461,7 @@ a.text-warning:hover {
 }
 
 .text-danger {
-  color: $red;
+  color: $theme_red;
 }
 
 a.text-danger:hover {
@@ -1469,8 +1469,8 @@ a.text-danger:hover {
 }
 
 .bg-primary {
-  color: #fff;
-  background-color: $blue;
+  color: $white;
+  background-color: $theme;
 }
 
 a.bg-primary:hover {
@@ -2797,7 +2797,7 @@ output {
 }
 
 .form-control:focus {
-  border-color: $blue;
+  border-color: $theme;
   outline: 0;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(40, 173, 98, 0.6);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(40, 173, 98, 0.6);
@@ -3082,7 +3082,7 @@ select[multiple].form-group-lg .form-control {
 }
 
 .has-success .input-group-addon {
-  color: $green;
+  color: $theme_green;
   font-weight: 600;
   //border-color: #3c763d;
   //background-color: #dff0d8;
@@ -3137,11 +3137,11 @@ select[multiple].form-group-lg .form-control {
 .has-error.checkbox label,
 .has-error.radio-inline label,
 .has-error.checkbox-inline label {
-  color: $red;
+  color: $theme_red;
 }
 
 .has-error .form-control {
-  border-color: $red;
+  border-color: $theme_red;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
 }
@@ -3153,13 +3153,13 @@ select[multiple].form-group-lg .form-control {
 }
 
 .has-error .input-group-addon {
-  color: $red;
-  //border-color: $red;
+  color: $theme_red;
+  //border-color: $theme_red;
   //background-color: #f2dede;
 }
 
 .has-error .form-control-feedback {
-  color: $red;
+  color: $theme_red;
 }
 
 .has-feedback label ~ .form-control-feedback {
@@ -3370,7 +3370,7 @@ fieldset[disabled] .btn-default:active,
 .btn-default.disabled.active,
 .btn-default[disabled].active,
 fieldset[disabled] .btn-default.active {
-  background-color: $blue_lighten;
+  background-color: $theme_lighten;
   border-color: #cccccc;
 }
 
@@ -3381,8 +3381,8 @@ fieldset[disabled] .btn-default.active {
 
 .btn-primary {
   color: $white;
-  background-color: $blue;
-  border-color: $blue;
+  background-color: $theme;
+  border-color: $theme;
 }
 
 .btn-primary:hover,
@@ -3420,12 +3420,12 @@ fieldset[disabled] .btn-primary:active,
 .btn-primary.disabled.active,
 .btn-primary[disabled].active,
 fieldset[disabled] .btn-primary.active {
-  background-color: $blue;
-  border-color: $blue;
+  background-color: $theme;
+  border-color: $theme;
 }
 
 .btn-primary .badge {
-  color: $blue;
+  color: $theme;
   background-color: $white;
 }
 
@@ -3823,7 +3823,7 @@ tbody.collapse.in {
   color: $white;
   text-decoration: none;
   outline: 0;
-  background-color: $blue;
+  background-color: $theme;
 }
 
 .dropdown-menu > .disabled > a,
@@ -4354,7 +4354,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 
 .nav-tabs {
-  border-bottom: 1px solid $blue;
+  border-bottom: 1px solid $theme;
 }
 
 .nav-tabs > li {
@@ -4370,7 +4370,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 
 .nav-tabs > li > a:hover {
-  border-color: #eeeeee #eeeeee $blue;
+  border-color: #eeeeee #eeeeee $theme;
 }
 
 .nav-tabs > li.active > a,
@@ -4451,7 +4451,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .nav-pills > li.active > a:hover,
 .nav-pills > li.active > a:focus {
   color: $white;
-  background-color: $blue;
+  background-color: $theme;
 }
 
 .nav-stacked > li {
@@ -5212,8 +5212,8 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 .pagination > .active > span:focus {
   z-index: 2;
   color: $white;
-  background-color: $blue;
-  border-color: $blue;
+  background-color: $theme;
+  border-color: $theme;
   cursor: default;
 }
 
@@ -5349,7 +5349,7 @@ a.label:focus {
 }
 
 .label-primary {
-  background-color: $blue;
+  background-color: $theme;
 }
 
 .label-primary[href]:hover,
@@ -5567,8 +5567,8 @@ a.thumbnail.active {
 }
 
 .alert-info {
-  background-color: $blue;
-  border-color: $blue;
+  background-color: $theme;
+  border-color: $theme;
   color: $white;
   line-height: 1.6;
 }
@@ -5582,8 +5582,8 @@ a.thumbnail.active {
 }
 
 .alert-warning {
-  background-color: $yellow;
-  border-color: $yellow;
+  background-color: $theme_yellow;
+  border-color: $theme_yellow;
   color: $white;
 }
 
@@ -5596,8 +5596,8 @@ a.thumbnail.active {
 }
 
 .alert-danger {
-  background-color: $red;
-  border-color: $red;
+  background-color: $theme_red;
+  border-color: $theme_red;
   color: $white;
 }
 
@@ -5645,7 +5645,7 @@ a.thumbnail.active {
   line-height: 29px;
   color: $white;
   text-align: center;
-  background-color: $blue;
+  background-color: $theme;
   -webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
   box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
   -webkit-transition: width 0.6s ease;
@@ -5669,7 +5669,7 @@ a.thumbnail.active {
 }
 
 .progress-bar-success {
-  background-color: $green;
+  background-color: $theme_green;
 }
 
 .progress-striped .progress-bar-success {
@@ -5689,7 +5689,7 @@ a.thumbnail.active {
 }
 
 .progress-bar-warning {
-  background-color: $yellow;
+  background-color: $theme_yellow;
 }
 
 .progress-striped .progress-bar-warning {
@@ -5699,7 +5699,7 @@ a.thumbnail.active {
 }
 
 .progress-bar-danger {
-  background-color: $red;
+  background-color: $theme_red;
 }
 
 .progress-striped .progress-bar-danger {
@@ -5824,8 +5824,8 @@ a.list-group-item:focus {
 .list-group-item.active:focus {
   z-index: 2;
   color: $white;
-  background-color: $blue;
-  border-color: $blue;
+  background-color: $theme;
+  border-color: $theme;
 }
 
 .list-group-item.active .list-group-item-heading,
@@ -5868,7 +5868,7 @@ a.list-group-item-success:focus {
 a.list-group-item-success.active,
 a.list-group-item-success.active:hover,
 a.list-group-item-success.active:focus {
-  color: #fff;
+  color: $white;
   background-color: #3c763d;
   border-color: #3c763d;
 }
@@ -5895,7 +5895,7 @@ a.list-group-item-info:focus {
 a.list-group-item-info.active,
 a.list-group-item-info.active:hover,
 a.list-group-item-info.active:focus {
-  color: #fff;
+  color: $white;
   background-color: #31708f;
   border-color: #31708f;
 }
@@ -5922,18 +5922,18 @@ a.list-group-item-warning:focus {
 a.list-group-item-warning.active,
 a.list-group-item-warning.active:hover,
 a.list-group-item-warning.active:focus {
-  color: #fff;
+  color: $white;
   background-color: #8a6d3b;
   border-color: #8a6d3b;
 }
 
 .list-group-item-danger {
-  color: $red;
+  color: $theme_red;
   background-color: #f2dede;
 }
 
 a.list-group-item-danger {
-  color: $red;
+  color: $theme_red;
 }
 
 a.list-group-item-danger .list-group-item-heading {
@@ -5942,16 +5942,16 @@ a.list-group-item-danger .list-group-item-heading {
 
 a.list-group-item-danger:hover,
 a.list-group-item-danger:focus {
-  color: $red;
+  color: $theme_red;
   background-color: #ebcccc;
 }
 
 a.list-group-item-danger.active,
 a.list-group-item-danger.active:hover,
 a.list-group-item-danger.active:focus {
-  color: #fff;
-  background-color: $red;
-  border-color: $red;
+  color: $white;
+  background-color: $theme_red;
+  border-color: $theme_red;
 }
 
 .list-group-item-heading {
@@ -6253,26 +6253,26 @@ a.list-group-item-danger.active:focus {
 }
 
 .panel-primary {
-  border-color: $blue;
+  border-color: $theme;
 }
 
 .panel-primary > .panel-heading {
   color: $white;
-  background-color: $blue;
-  border-color: $blue;
+  background-color: $theme;
+  border-color: $theme;
 }
 
 .panel-primary > .panel-heading + .panel-collapse > .panel-body {
-  border-top-color: $blue;
+  border-top-color: $theme;
 }
 
 .panel-primary > .panel-heading .badge {
-  color: $blue;
+  color: $theme;
   background-color: $white;
 }
 
 .panel-primary > .panel-footer + .panel-collapse > .panel-body {
-  border-bottom-color: $blue;
+  border-bottom-color: $theme;
 }
 
 .panel-success {
@@ -6349,7 +6349,7 @@ a.list-group-item-danger.active:focus {
 }
 
 .panel-danger > .panel-heading {
-  color: $red;
+  color: $theme_red;
   background-color: #f2dede;
   border-color: #ebccd1;
 }
@@ -6360,7 +6360,7 @@ a.list-group-item-danger.active:focus {
 
 .panel-danger > .panel-heading .badge {
   color: #f2dede;
-  background-color: $red;
+  background-color: $theme_red;
 }
 
 .panel-danger > .panel-footer + .panel-collapse > .panel-body {

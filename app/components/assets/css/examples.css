@@ -43,7 +43,7 @@
 }
 
 .parallax .small-info {
-  color: #$black;
+  color: white;
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.27);
   top: 37%;
   position: absolute;
@@ -129,7 +129,7 @@
   margin: 15px 0;
 }
 .about-us .copyright a {
-  color: #$black;
+  color: white;
 }
 .about-us .info .icon {
   background: transparent;
@@ -157,7 +157,7 @@
   z-index: 3;
   padding: 20px 60px 20px 20px;
   border-radius: 6px 0 0 6px;
-  color: #$black;
+  color: white;
 }
 .contact-us .company-description h4 {
   margin: 0;

@@ -68,7 +68,7 @@
 }
 
 .main{
-    background-color: #$black;
+    background-color: white;
 /*     position: relative; */
 
 }
@@ -81,7 +81,7 @@
     margin-top:0;
 }
 #notifications{
-    background-color: #$black;
+    background-color: white;
     display: block;
     width: 100%;
     position: relative;
@@ -91,7 +91,7 @@
 }
 
 .footer-card{
-    background-color: #$black;
+    background-color: white;
     padding: 10px 0 20px;
     width: 100%;
 }
@@ -120,7 +120,7 @@
     margin: 0 auto 40px;
 }
 .txt-white{
-    color: #$black;
+    color: white;
 }
 .txt-gray{
     color: #ddd !important;
@@ -131,7 +131,7 @@
     margin-right: 8px;
 }
 .social-share a{
-    color: #$black;
+    color: white;
 }
 #subscribe_email{
     border-radius: 0;
@@ -140,7 +140,7 @@
 }
 .pick-class-label{
     border-radius: 8px;
-    color: #$black;
+    color: white;
     cursor: pointer;
     display: inline-block;
     font-size: 75%;
@@ -175,7 +175,7 @@
 
 .logo-container .brand{
     font-size: 18px;
-    color: #$black;
+    color: white;
     line-height: 20px;
     float: left;
     margin-left: 10px;
@@ -193,7 +193,7 @@
     color: #333333;
 }
 .parallax .motto{
-    color: #$black;
+    color: white;
     font-size: 64px;
     font-weight: 600;
     position: relative;
@@ -210,7 +210,7 @@
     bottom: 74px;
     right: -28px;
     font-size: 18px;
-    background-color: #$black;
+    background-color: white;
     width: 70px;
     height: 70px;
     border-radius: 50%;
@@ -220,7 +220,7 @@
     text-shadow: 0 0 0;
 }
 .parallax .motivation{
-    color: #$black;
+    color: white;
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.27);
     top: 400px;
     position: absolute;
@@ -230,7 +230,7 @@
 }
 .parallax .motto .border{
     float: left;
-    border: 3px solid #$black;
+    border: 3px solid white;
     padding: 0px 30px;
     text-align: center;
 }
@@ -265,7 +265,7 @@
 
 .separator{
     content: "Separator";
-    color: #$black;
+    color: white;
     display: block;
     width: 100%;
     padding: 20px;
@@ -516,7 +516,7 @@
     background: -o-linear-gradient(top,  rgba(255,255,255,1) 25%,rgba(231,231,231,1) 100%); /* Opera 11.10+ */
     background: -ms-linear-gradient(top,  rgba(255,255,255,1) 25%,rgba(231,231,231,1) 100%); /* IE10+ */
     background: linear-gradient(to bottom,  rgba(255,255,255,1) 25%,rgba(231,231,231,1) 100%); /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#$black', endColorstr='#e7e7e7',GradientType=0 ); /* IE6-9 */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='white', endColorstr='#e7e7e7',GradientType=0 ); /* IE6-9 */
 }
 .presentation .section-black{
     background-color: #333;
@@ -542,7 +542,7 @@
 
     margin-top: 20px;    
   position: relative;
-   background: none repeat scroll 0 0 #$black;
+   background: none repeat scroll 0 0 white;
     border-radius: 20px;
     color: #444444;    
 }
@@ -633,7 +633,7 @@
     border-radius: 6px;
     bottom: 52px;
     right: -30px;
-    color: #$black;
+    color: white;
     background-color: #ff9500;
     font-weight: 300;
 }
@@ -647,7 +647,7 @@
     border-radius: 6px;
     bottom: 42px;
     right: -25px;
-    color: #$black;
+    color: white;
     background-color: #ff9500;    
 }
 
@@ -702,7 +702,7 @@
 }
 
 .presentation .text-white{
-    color: #$black;
+    color: white;
     text-shadow: 0 1px 2px rgba(0,0,0,.13);
 }
 .presentation .section-images .card-image{
@@ -800,7 +800,7 @@
     color: #333333;
 }
 .navbar-transparent.navbar-small .logo-container .brand{
-    color: #$black;
+    color: white;
 }
 .navbar-default.navbar-small .logo-container .brand{
     color: #333333;

@@ -1,3 +1,6 @@
+section.whatwedo{
+  background: $background_light_gray;
+}
 
 section.whatwedo .ui-slider-horizontal .ui-slider-handle {
   top: -10px;
@@ -6,7 +9,7 @@ section.whatwedo .ui-slider-horizontal .ui-slider-handle {
 }
 
 section.whatwedo .ui-widget-content {
-  background-color: #fff;
+  background-color: $white;
   background: rgba(0, 0, 0, 0.1);
   height: 5px;
 }
@@ -18,7 +21,7 @@ section.whatwedo .ui-slider-horizontal .ui-slider-handle {
 }
 
 section.whatwedo .whatwedo-description h3 {
-  font-family: Hind;
+  font-family: "Hind";
   font-size: 42px !important;
   line-height: 48px;
   font-weight: 300;
@@ -26,8 +29,17 @@ section.whatwedo .whatwedo-description h3 {
 }
 
 section.whatwedo .whatwedo-description p {
-  font-size: 14px;
+  font-size: 16px;
+  line-height: 31px;
+  color: $black;
 }
+
+section.whatwedo .whatwedo-description p.bottom {
+  font-size: 16px;
+  line-height: 31px;
+  color: $dark_gray;
+}
+
 
 section.whatwedo .whatwedo-description {
   margin-bottom: 40px;
@@ -43,7 +55,7 @@ section.whatwedo .section-header {
 }
 
 section.whatwedo .ui-widget-content {
-  background-color: #fff;
+  background-color: $white;
   background: rgba(0, 0, 0, 0.1);
   height: 5px;
 }
@@ -53,13 +65,13 @@ section.whatwedo .whatwedo-description h3 {
 }
 
 section.whatwedo .whatwedo-description p {
-  font-size: 14px;
+  font-size: 16px;
 }
 
 
 .whatwedo .skills {
   margin: 0;
-  padding: 34px 0 130px;
+  padding: 34px 0 0px;
 }
 
 @media (max-width: 991px) {
@@ -70,10 +82,10 @@ section.whatwedo .whatwedo-description p {
 
 .whatwedo .skills li {
   background-color: #e8e9ed;
-  border-radius: 3px;
-  -webkit-box-shadow: 0 1px #e0e1e6 inset;
-  box-shadow: 0 1px #e0e1e6 inset;
-  height: 10px;
+  //border-radius: 3px;
+  //-webkit-box-shadow: 0 1px #e0e1e6 inset;
+  //box-shadow: 0 1px #e0e1e6 inset;
+  height: 14px;
   margin-top: 70px;
   position: relative;
 }
@@ -83,8 +95,8 @@ section.whatwedo .whatwedo-description p {
 }
 
 .whatwedo .skills li .progress {
-  background-color: $blue;
-  border-radius: 3px;
+  background-color: $theme;
+  border-radius: 0;
   height: 100%;
   left: 0;
   overflow: visible !important;
@@ -94,11 +106,12 @@ section.whatwedo .whatwedo-description p {
   -o-transition: width 1.2s ease-in-out 0s;
   transition: width 1.2s ease-in-out 0s;
   width: 0;
+  box-shadow: none;
 }
 
 .whatwedo .skills li .progress-percent {
   background-color: rgba(0, 0, 0, 0.8);
-  border-radius: 2px;
+  //border-radius: 2px;
   color: white;
   font-size: 11px;
   height: 20px;
@@ -141,12 +154,13 @@ section.whatwedo .whatwedo-description p {
 
 .whatwedo .skills li > span {
   color: #2b2e33;
-  font-weight: 700;
+  font-weight: 500;
   left: 0;
   position: absolute;
   text-transform: capitalize;
   top: -36px;
   z-index: 1;
+  font-size: 16px;
 }
 
 .whatwedo-description-container {

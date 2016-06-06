@@ -176,7 +176,7 @@
 .login .social .circle {
   background-color: #EEEEEE;
   color: $white;
-  border-radius: 100px;
+  border-radius: 50%;
   display: inline-block;
   margin: 0 17px;
   padding: 15px;
@@ -223,15 +223,15 @@
   padding-top: 15px !important;
 }
 
-.register-footer{
+.register-footer {
   padding-top: 0 !important;
 }
 
 .login .btn-login,
 .registerBox .btn-register,
-.registerBox-2 .btn-register{
-  background-color: $blue;
-  border-color: $blue;
+.registerBox-2 .btn-register {
+  background-color: $theme;
+  border-color: $theme;
   border-width: 0;
   color: $white;
   display: block;
@@ -244,8 +244,8 @@
 
 .login .btn-login:hover,
 .registerBox .btn-register:hover,
-.registerBox-2 .btn-register:hover{
-  background-color: $blue_hover;
+.registerBox-2 .btn-register:hover {
+  background-color: $theme_hover;
   color: $white;
 }
 
@@ -358,7 +358,7 @@
 }
 
 .checkbox.checked {
-  color: $blue;
+  color: $theme;
 }
 
 .checkbox.checked .first-icon {
@@ -369,7 +369,7 @@
 .checkbox.checked .second-icon {
   opacity: 1;
   filter: alpha(opacity=100);
-  color: $blue;
+  color: $theme;
   -webkit-transition: color 0.2s linear;
   transition: color 0.2s linear;
 }
@@ -408,9 +408,11 @@
   color: $dark_gray;
 }
 
-.col-lg-12, .col-lg-6, .col-xs-12, .col-xs-6 {
-  padding-left: 0 !important;
-  padding-right: 0 !important;
+.login {
+  .col-lg-12, .col-lg-6, .col-xs-12, .col-xs-6 {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
 }
 
 .recover-password {
@@ -425,27 +427,27 @@ label {
 
 .btn-default {
   &:focus {
-    background-color: $blue_hover !important;
+    background-color: $theme_hover !important;
   }
 }
 
-.registerBox-2{
-  .progress{
+.registerBox-2 {
+  .progress {
     margin-bottom: 5px !important;
   }
-  .nome_signupEnd{
+  .nome_signupEnd {
     margin-top: 15px;
   }
-  .input-group-addon{
+  .input-group-addon {
     padding: 13px 12px !important;
   }
-  label{
+  label {
     margin-bottom: 0 !important;
   }
-  #utilizador_signupEnd{
+  #utilizador_signupEnd {
     margin-bottom: 0 !important;
   }
-  .input-group-addon{
+  .input-group-addon {
     margin-bottom: 5px !important;
   }
 }

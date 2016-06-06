@@ -205,7 +205,7 @@ gsdk = {
 
     fitBackgroundForCards: function () {
         $('.card').each(function () {
-            if (!$(this).hasClass('card-product') && !$(this).hasClass('card-user')) {
+            if (!$(this).hasClass('card-many') && !$(this).hasClass('card-user')) {
                 image = $(this).find('.image img');
 
                 image.hide();
@@ -214,7 +214,7 @@ gsdk = {
                 $(this).find('.image').css({
                     "background-image": "url('" + image_src + "')",
                     "background-position": "center center",
-                    "background-size": "cover"
+                    "background-size": "cover",
                 });
             }
         });
@@ -400,7 +400,7 @@ function debounce(func, wait, immediate) {
     };
 }
 
-NProgress.configure({ showSpinner: false });
+NProgress.configure({showSpinner: false});
 $(window).load(function () {
     NProgress.done();
 });

@@ -1,0 +1,30 @@
+.video {
+  position: relative;
+}
+
+.video #custom {
+  top: 0;
+  left: 0;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: rgba(98, 98, 98, 0.7) !important;
+}
+
+.video .video-bg {
+  display: none;
+  top: 0;
+  left: 0;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-attachment: fixed;
+}
+
+.control-channel-icon {
+  text-align: center;
+  img {
+    position: relative;
+    bottom: 12px;
+  }
+}

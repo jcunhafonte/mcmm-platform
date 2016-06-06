@@ -4,7 +4,7 @@
   line-height: 12px;
   right: 17px;
   bottom: 17px;
-  color: #fff;
+  color: $white;
   border-radius: 200px;
   z-index: 10000;
   height: 29px;
@@ -32,7 +32,7 @@
   }
 
   &:after{
-    background: $blue;
+    background: $theme;
   }
 
   &:hover {

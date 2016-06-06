@@ -899,7 +899,7 @@ h3.mcmm-nav-logo--noControls {
 }
 
 .platforms-anchor:active {
-  color: #000
+  color: $black
 }
 
 .platforms-item.is-active .platforms-anchor {
@@ -953,11 +953,11 @@ h3.mcmm-nav-logo--noControls {
 }
 
 .platforms--light .platforms-anchor:hover, .platforms--light .platforms-item.is-active .platforms-anchor {
-  color: #fff
+  color: $white
 }
 
 .platforms--light .platforms-item.is-active .platforms-anchor {
-  border-color: #fff
+  border-color: $white
 }
 
 .platforms--dark .platforms-anchor {
@@ -1052,18 +1052,18 @@ h3.mcmm-nav-logo--noControls {
 
 .navbar-white {
   .btn-sign {
-    color: $blue !important;
+    color: $theme !important;
     opacity: 1 !important;
     &:hover {
-      color: $blue_hover !important;
+      color: $theme_hover !important;
       opacity: 1 !important;
     }
     &:focus{
-      color: $blue !important;
+      color: $theme !important;
     }
   }
   .divider-bar {
-    color: $blue;
+    color: $theme;
     opacity: 1;
   }
 }
@@ -1092,10 +1092,10 @@ h3.mcmm-nav-logo--noControls {
     opacity: 1 !important;
   }
   .hvr-underline-from-center:before {
-    background: $blue !important;
+    background: $theme !important;
   }
   .platforms--mcmm-nav .platforms-item.is-active > .platforms-anchor {
-    border-bottom: 2px solid $blue;
+    border-bottom: 2px solid $theme;
   }
 }
 

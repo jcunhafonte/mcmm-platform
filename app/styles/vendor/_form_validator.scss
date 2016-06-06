@@ -123,7 +123,7 @@
 }
 
 .help-block {
-  color: $red !important;
+  color: $theme_red !important;
   line-height: 17px;
   margin-bottom: 10px !important;
 }
@@ -134,27 +134,27 @@
 }
 
 .has-error .form-control-feedback {
-  color: $red !important;
+  color: $theme_red !important;
 }
 
 .has-success .form-control-feedback {
-  color: $green !important;
+  color: $theme_green !important;
 }
 
 .has-error .form-control {
-  border-color: $red !important;
+  border-color: $theme_red !important;
 }
 
 .has-success .form-control {
-  border-color: $green !important;
+  border-color: $theme_green !important;
 }
 
 .has-error .form-control:focus {
-  border-color: $red !important;
+  border-color: $theme_red !important;
 }
 
 .has-success .form-control:focus {
-  border-color: $green !important;
+  border-color: $theme_green !important;
 }
 
 .glyphicon-refresh-animate {

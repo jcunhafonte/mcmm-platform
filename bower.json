@@ -33,7 +33,8 @@
     "ustream-embedapi": "^0.0.1",
     "masonry": "^4.1.0",
     "imagesloaded": "^4.1.0",
-    "nprogress": "^0.2.0"
+    "nprogress": "^0.2.0",
+    "vide": "^0.5.0"
   },
   "overrides": {
     "bootstrap-sass": {

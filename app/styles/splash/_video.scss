@@ -52,24 +52,6 @@
   min-height: 100vh;
 }
 
-.video-title {
-  font-family: "Hind" !important;
-  letter-spacing: -0.5px !important;
-  font-weight: 700 !important;
-  font-size: 56px !important;
-  line-height: 56px !important;
-  z-index: 400 !important;
-}
-
-.video-description {
-  margin-top: 70px;
-  font-family: "Hind" !important;
-  font-size: 42px;
-  line-height: 48px;
-  font-weight: 300;
-  z-index: 400 !important;
-}
-
 #arrow-header a {
   position: absolute;
   left: 0;
@@ -78,7 +60,7 @@
   z-index: 400;
 }
 
-.headline{
+.headline {
   z-index: 400 !important;
 }
 
@@ -91,8 +73,8 @@
   top: -25px;
   width: 24px;
   height: 24px;
-  border-left: 3px solid #fff;
-  border-bottom: 3px solid #fff;
+  border-left: 3px solid $white;
+  border-bottom: 3px solid $white;
   -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg);
   -webkit-animation: sdb05 1.5s infinite;
@@ -152,7 +134,7 @@
   height: 100%;
   width: 100%;
   overflow: hidden;
-  background: #000;
+  background: $black;
 }
 
 .video-container .poster img {
@@ -175,7 +157,7 @@
   top: 35%;
   width: 100%;
   text-align: center;
-  color: #fff;
+  color: $white;
 }
 
 .video-container video {
@@ -186,4 +168,78 @@
 
 .video-container video.fillWidth {
   width: 100%;
+}
+
+@media screen and (max-width: $screen-md-min) {
+  .video-description {
+    font-size: 36px !important;
+  }
+  .video-title {
+    font-size: 52px !important;
+  }
+}
+
+@media screen and (max-width: $screen-sm-min) {
+  .video-description {
+    font-size: 30px !important;
+    line-height: 40px !important;
+  }
+  .video-title {
+    font-size: 42px !important;
+    line-height: 55px !important;
+  }
+}
+
+@media screen and (max-width: $screen-xs-min) {
+  .video-description {
+    font-size: 4vh !important;
+    line-height: 40px !important;
+    margin-top: 10% !important;
+  }
+  .video-title {
+    font-size: 5.5vh !important;
+    line-height: 8vh !important;
+  }
+  .video-container .title-container {
+    top: 30%;
+  }
+}
+
+@media screen and (max-width: $screen-sm-min) and (orientation: landscape) {
+  .video-description {
+    font-size: 5vh !important;
+    line-height: 40px !important;
+    margin-top: 0 !important;
+  }
+  .video-title {
+    font-size: 6vh !important;
+  }
+  .video-container .title-container {
+    top: 50%;
+  }
+}
+
+.video-title {
+  font-family: "Hind" !important;
+  font-weight: 700;
+  font-size: 56px;
+  line-height: 72px;
+  z-index: 400;
+  padding: 0 30px;
+}
+
+.video-description {
+  margin-top: 70px;
+  font-family: "Hind" !important;
+  font-size: 40px;
+  line-height: 48px;
+  font-weight: 300;
+  z-index: 400;
+  padding: 0 30px;
+}
+
+@media screen and (max-width: 1230px) {
+  .video-title {
+    font-size: 5vh !important;
+  }
 }

@@ -1,4 +1,3 @@
-
 .researchareas {
   padding: 40px 0 120px;
   position: relative;
@@ -22,15 +21,26 @@
 
 .researchareas article {
   margin-top: 90px;
+  color: $white;
+  width: 100%;
+  //stroke-width: 4;
 }
 
-.researchareas article span {
-  font-size: 80px;
+.researchareas article svg {
   margin-bottom: .6em;
   display: block;
-  color: #dddddd;
+  height: 100px;
+  width: 100%;
+  //stroke-width: 0;
 }
 
-.researchareas article h5{
+.researchareas article svg path {
+  fill: none;
+  stroke: $white;
+}
+
+.researchareas article h5 {
   text-transform: normal;
+  font-size: 20px;
+  font-weight: normal;
 }

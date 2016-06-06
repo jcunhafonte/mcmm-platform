@@ -3,14 +3,14 @@
   padding-right: 42px;
   &:hover {
     cursor: pointer !important;
-  span {
+    span {
       left: -18px;
     }
   }
 }
 
-.mcmm-button{
-  &:hover{
+.mcmm-button {
+  &:hover {
     i {
       opacity: 1 !important;
       -ms-filter: "alpha(opacity=100)";
@@ -22,7 +22,6 @@
 .mcmm-button span {
   left: 0px;
   transition: opacity 0.2s ease-out, left 0.2s ease-out;
-  -webkit-transition: opacity 0.2s ease-out, left 0.2s ease-out;
   position: relative;
 }
 
@@ -41,53 +40,29 @@
   background: transparent;
 }
 
-.mcmm-button {
-  border-radius: 200px !important;
-  -webkit-border-radius: 200px !important;
-  -o-border-radius: 200px !important;
-}
-
 .mcmm-button.see-through-2 {
   background-color: transparent;
   box-shadow: none !important;
-  -webkit-box-shadow: none !important;
-  -moz-box-shadow: none !important;
-  -o-box-shadow: none !important;
   opacity: 1;
   transition: all 0.2s linear !important;
-  -moz-transition: all 0.2s linear !important;
-  -webkit-transition: all 0.2s linear !important;
-  -o-transition: all 0.2s linear !important;
   border: 2px solid rgba(255, 255, 255, 0.75);
   &:hover {
-    border-color: $blue !important;
-    background-color: $blue !important;
+    border-color: $theme !important;
+    background-color: $theme !important;
     color: $white !important;
   }
 }
 
 .mcmm-button.large {
-  font-size: 14px;
+  font-size: 13px;
   padding: 15px 40px;
   box-shadow: 0 -3px rgba(0, 0, 0, 0.1) inset;
-  -moz-box-shadow: 0 -3px rgba(0, 0, 0, 0.1) inset;
-  -webkit-box-shadow: 0 -3px rgba(0, 0, 0, 0.1) inset;
-  -o-box-shadow: 0 -3px rgba(0, 0, 0, 0.1) inset;
 }
 
 .mcmm-button {
-  border-radius: 5px 5px 5px 5px;
-  -moz-border-radius: 5px 5px 5px 5px;
-  -webkit-border-radius: 5px 5px 5px 5px;
-  -o-border-radius: 5px 5px 5px 5px;
+  border-radius: 200px !important;
   box-shadow: 0 -3px rgba(0, 0, 0, 0.1) inset;
-  -moz-box-shadow: 0 -3px rgba(0, 0, 0, 0.1) inset;
-  -webkit-box-shadow: 0 -3px rgba(0, 0, 0, 0.1) inset;
-  -o-box-shadow: 0 -3px rgba(0, 0, 0, 0.1) inset;
   transition: opacity 0.3s linear;
-  -moz-transition: opacity 0.3s linear;
-  -webkit-transition: opacity 0.3s linear;
-  -o-transition: opacity 0.3s linear;
   color: $white;
   font-weight: 700;
   font-size: 12px;
@@ -99,6 +74,43 @@
   margin-bottom: 10px;
   opacity: 1;
   line-height: 20px;
-  background-color: #27CFC3;
+  background-color: $white;
   display: inline-block;
+  font-family: "Montserrat" !important;
+}
+
+@media screen and (max-width: $screen-sm-min) and (orientation: landscape) {
+  .mcmm-button.large {
+    padding: 10px 15px !important;
+  }
+}
+
+@media screen and (max-width: $screen-sm-min) {
+  .mcmm-button.large {
+    padding: 13px 15px !important;
+  }
+}
+
+.whatwedo{
+  .mcmm-button{
+    margin-top: 27px;
+    color: $theme;
+    border-color: $theme;
+    padding: 10px 44px !important;
+  }
+}
+
+.candidaturas{
+  .mcmm-button{
+    color: $white;
+    border-color: $black;
+    background: $black;
+    opacity: 1;
+    &:hover {
+      border-color: $black !important;
+      background-color: $black !important;
+      color: $white !important;
+      opacity: 0.8;
+    }
+  }
 }

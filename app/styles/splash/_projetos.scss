@@ -53,14 +53,14 @@
   left: 0;
   bottom: 0;
   right: 0;
-  background: $blue;
+  background: $theme;
   background: rgba(41,121,255, 0.8);
   padding: 30px;
-  color: #fff;
+  color: $white;
 }
 
 .projetos .post .post-heading .post-image .mask i {
-  color: #fff;
+  color: $white;
 }
 
 .projetos .post .post-heading .post-image .mask .icons {
