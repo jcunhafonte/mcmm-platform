@@ -1,0 +1,20 @@
+<component name="libraryTable">
+  <library name="debug">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/app/app/build/intermediates/pre-dexed/debug/picasso-2.5.2_bd9f88fe75506c0b32d6a189a69d3c491b32f04c.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app/app/build/intermediates/pre-dexed/debug/debug_ac24219d11fbe12849dc6ff373935ec9b1aa7962.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app/app/build/intermediates/pre-dexed/debug/com.daimajia.easing-library-1.0.1_81f45955ab19ba2ecb515a666830e4e94f14bf31.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app/app/build/intermediates/pre-dexed/debug/internal_impl-21.0.3_83c8f88404687a59a5dba5058bd595e5f9daf937.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app/app/build/intermediates/pre-dexed/debug/library-2.4.0_9adc056f356dce69fbef746eb9c77571a28bcea4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app/app/build/intermediates/pre-dexed/debug/support-annotations-23.0.1_51eff3bc4645b0896e3658c040624988a12328f7.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app/app/build/intermediates/pre-dexed/debug/app-libstreaming-unspecified_d84ed2831aa84bd936eefd8b0984ecd42fb70d4d.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app/app/build/intermediates/pre-dexed/debug/com.mcxiaoke.volley-library-aar-1.0.0_7426e8c728d40f5ef42afce6ed45b859a9cb2cf4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-21.0.3_b62fce0b4109530e30cb8300604446e343907c67.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app/app/build/intermediates/pre-dexed/debug/de.hdodenhof-circleimageview-2.0.0_aa2aeec4f32e2debc34139f9315d586b036d92bf.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app/app/build/intermediates/pre-dexed/debug/app-library-unspecified_edec964d04715cfef5ebddbe3552b61cacdf9a9d.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-21.0.3_9b8fa884ffc89205ae3bfad919b98b316a690939.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

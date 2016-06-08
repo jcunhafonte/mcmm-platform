@@ -1,0 +1,149 @@
+.mcmm-button.has-icon {
+  padding-left: 42px;
+  padding-right: 42px;
+  &:hover {
+    cursor: pointer !important;
+    span {
+      left: -18px;
+    }
+  }
+}
+
+.mcmm-button {
+  &:hover {
+    i {
+      opacity: 1 !important;
+      -ms-filter: "alpha(opacity=100)";
+      right: 13px;
+    }
+  }
+}
+
+.mcmm-button span {
+  left: 0px;
+  transition: opacity 0.2s ease-out, left 0.2s ease-out;
+  position: relative;
+}
+
+.mcmm-button i {
+  font-size: 36px;
+  line-height: 18px;
+  width: 18px;
+  position: absolute;
+  top: 50%;
+  right: 30px;
+  margin-top: -9px;
+  opacity: 0;
+  -ms-filter: "alpha(opacity=0)";
+  transition: all 0.2s ease-out;
+  -webkit-transition: all 0.2s ease-out;
+  background: transparent;
+}
+
+.mcmm-button.see-through-2 {
+  background-color: transparent;
+  box-shadow: none !important;
+  opacity: 1;
+  transition: all 0.2s linear !important;
+  border: 2px solid rgba(255, 255, 255, 0.75);
+  &:hover {
+    border-color: $theme !important;
+    background-color: $theme !important;
+    color: $white !important;
+  }
+}
+
+.mcmm-button.large {
+  font-size: 13px;
+  padding: 15px 40px;
+  box-shadow: 0 -3px rgba(0, 0, 0, 0.1) inset;
+}
+
+.mcmm-button {
+  border-radius: 200px !important;
+  box-shadow: 0 -3px rgba(0, 0, 0, 0.1) inset;
+  transition: opacity 0.3s linear;
+  color: $white;
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 2px !important;
+  padding: 13px 18px;
+  position: relative;
+  text-transform: uppercase;
+  top: -3px;
+  margin-bottom: 10px;
+  opacity: 1;
+  line-height: 20px;
+  background-color: $white;
+  display: inline-block;
+  font-family: "Montserrat" !important;
+}
+
+@media screen and (max-width: $screen-sm-min) and (orientation: landscape) {
+  .mcmm-button.large {
+    padding: 10px 15px !important;
+  }
+}
+
+@media screen and (max-width: $screen-sm-min) {
+  .mcmm-button.large {
+    padding: 13px 15px !important;
+  }
+}
+
+.whatwedo{
+  .mcmm-button{
+    margin-top: 27px;
+    color: $theme;
+    border-color: $theme;
+    padding: 10px 44px !important;
+  }
+}
+
+.candidaturas{
+  .mcmm-button{
+    color: $white;
+    border-color: $black;
+    background: $black;
+    opacity: 1;
+    margin-top: 60px;
+    &:hover {
+      border-color: $black !important;
+      background-color: $black !important;
+      color: $white !important;
+      opacity: 0.8;
+    }
+  }
+}
+
+.noticias_section{
+  .mcmm-button{
+    color: $white;
+    border-color: $theme_green;
+    background: $theme_green;
+    opacity: 1;
+    margin-top: 80px;
+    &:hover {
+      border-color: $theme_green !important;
+      background-color: $theme_green !important;
+      color: $white !important;
+      opacity: 0.8;
+    }
+  }
+}
+
+.projetos{
+  .mcmm-button{
+    color: $white;
+    border-color: $theme_yellow !important;
+    background: $theme_yellow !important;
+    opacity: 1;
+    margin-top: 70px;
+    &:hover {
+      border-color: $theme_yellow !important;
+      background-color: $theme_yellow !important;
+      color: $white !important;
+      opacity: 0.8;
+    }
+  }
+}

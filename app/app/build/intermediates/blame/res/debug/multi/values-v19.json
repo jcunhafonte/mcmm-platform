@@ -1,0 +1,228 @@
+[
+    {
+        "outputFile": "D:\\Escola\\Universidade\\Java\\WEREC\\app\\app\\build\\intermediates\\res\\merged\\debug\\values-v19\\values-v19.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 45,
+                    "endOffset": 96
+                },
+                "from": {
+                    "file": "D:\\Escola\\Universidade\\Java\\WEREC\\app\\app\\build\\intermediates\\exploded-aar\\it.neokree\\MaterialNavigationDrawer\\1.3.2\\res\\values-v19\\values.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 215,
+                        "endColumn": 45,
+                        "endOffset": 256
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 3,
+                    "startColumn": 4,
+                    "startOffset": 101,
+                    "endColumn": 42,
+                    "endOffset": 139
+                },
+                "from": {
+                    "file": "D:\\Escola\\Universidade\\Java\\WEREC\\app\\app\\build\\intermediates\\exploded-aar\\it.neokree\\MaterialNavigationDrawer\\1.3.2\\res\\values-v19\\values.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 261,
+                        "endColumn": 42,
+                        "endOffset": 299
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 4,
+                    "startColumn": 4,
+                    "startOffset": 144,
+                    "endColumn": 55,
+                    "endOffset": 195
+                },
+                "from": {
+                    "file": "D:\\Escola\\Universidade\\Java\\WEREC\\app\\app\\build\\intermediates\\exploded-aar\\it.neokree\\MaterialNavigationDrawer\\1.3.2\\res\\values-v19\\values.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 304,
+                        "endColumn": 55,
+                        "endOffset": 355
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 5,
+                    "startColumn": 4,
+                    "startOffset": 200,
+                    "endColumn": 53,
+                    "endOffset": 249
+                },
+                "from": {
+                    "file": "D:\\Escola\\Universidade\\Java\\WEREC\\app\\app\\build\\intermediates\\exploded-aar\\it.neokree\\MaterialNavigationDrawer\\1.3.2\\res\\values-v19\\values.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 4,
+                        "startOffset": 360,
+                        "endColumn": 53,
+                        "endOffset": 409
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 6,
+                    "startColumn": 4,
+                    "startOffset": 254,
+                    "endColumn": 41,
+                    "endOffset": 291
+                },
+                "from": {
+                    "file": "D:\\Escola\\Universidade\\Java\\WEREC\\app\\app\\build\\intermediates\\exploded-aar\\it.neokree\\MaterialNavigationDrawer\\1.3.2\\res\\values-v19\\values.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 4,
+                        "startOffset": 414,
+                        "endColumn": 41,
+                        "endOffset": 451
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 7,
+                    "startColumn": 4,
+                    "startOffset": 296,
+                    "endLine": 17,
+                    "endColumn": 12,
+                    "endOffset": 915
+                },
+                "from": {
+                    "file": "D:\\Escola\\Universidade\\Java\\WEREC\\app\\app\\build\\intermediates\\exploded-aar\\it.neokree\\MaterialNavigationDrawer\\1.3.2\\res\\values-v19\\values.xml",
+                    "position": {
+                        "startLine": 11,
+                        "startColumn": 4,
+                        "startOffset": 616,
+                        "endLine": 21,
+                        "endColumn": 12,
+                        "endOffset": 1235
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 18,
+                    "startColumn": 4,
+                    "startOffset": 920,
+                    "endLine": 28,
+                    "endColumn": 12,
+                    "endOffset": 1566
+                },
+                "from": {
+                    "file": "D:\\Escola\\Universidade\\Java\\WEREC\\app\\app\\build\\intermediates\\exploded-aar\\it.neokree\\MaterialNavigationDrawer\\1.3.2\\res\\values-v19\\values.xml",
+                    "position": {
+                        "startLine": 22,
+                        "startColumn": 4,
+                        "startOffset": 1240,
+                        "endLine": 32,
+                        "endColumn": 12,
+                        "endOffset": 1886
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 29,
+                    "startColumn": 4,
+                    "startOffset": 1571,
+                    "endLine": 41,
+                    "endColumn": 12,
+                    "endOffset": 2394
+                },
+                "from": {
+                    "file": "D:\\Escola\\Universidade\\Java\\WEREC\\app\\app\\build\\intermediates\\exploded-aar\\it.neokree\\MaterialNavigationDrawer\\1.3.2\\res\\values-v19\\values.xml",
+                    "position": {
+                        "startLine": 33,
+                        "startColumn": 4,
+                        "startOffset": 1891,
+                        "endLine": 45,
+                        "endColumn": 12,
+                        "endOffset": 2714
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 42,
+                    "startColumn": 4,
+                    "startOffset": 2399,
+                    "endLine": 45,
+                    "endColumn": 12,
+                    "endOffset": 2675
+                },
+                "from": {
+                    "file": "D:\\Escola\\Universidade\\Java\\WEREC\\app\\app\\build\\intermediates\\exploded-aar\\it.neokree\\MaterialNavigationDrawer\\1.3.2\\res\\values-v19\\values.xml",
+                    "position": {
+                        "startLine": 46,
+                        "startColumn": 4,
+                        "startOffset": 2719,
+                        "endLine": 49,
+                        "endColumn": 12,
+                        "endOffset": 2995
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 46,
+                    "startColumn": 4,
+                    "startOffset": 2680,
+                    "endLine": 49,
+                    "endColumn": 12,
+                    "endOffset": 2928
+                },
+                "from": {
+                    "file": "D:\\Escola\\Universidade\\Java\\WEREC\\app\\app\\build\\intermediates\\exploded-aar\\it.neokree\\MaterialNavigationDrawer\\1.3.2\\res\\values-v19\\values.xml",
+                    "position": {
+                        "startLine": 50,
+                        "startColumn": 4,
+                        "startOffset": 3000,
+                        "endLine": 53,
+                        "endColumn": 12,
+                        "endOffset": 3248
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 50,
+                    "startColumn": 4,
+                    "startOffset": 2933,
+                    "endLine": 53,
+                    "endColumn": 12,
+                    "endOffset": 3169
+                },
+                "from": {
+                    "file": "D:\\Escola\\Universidade\\Java\\WEREC\\app\\app\\build\\intermediates\\exploded-aar\\it.neokree\\MaterialNavigationDrawer\\1.3.2\\res\\values-v19\\values.xml",
+                    "position": {
+                        "startLine": 54,
+                        "startColumn": 4,
+                        "startOffset": 3253,
+                        "endLine": 57,
+                        "endColumn": 12,
+                        "endOffset": 3489
+                    }
+                }
+            }
+        ]
+    }
+]

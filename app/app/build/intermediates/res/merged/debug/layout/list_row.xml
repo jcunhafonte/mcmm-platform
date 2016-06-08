@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="200dp"
+    android:background="@drawable/list_row_selector"
+    android:padding="2dp">
+
+    <!-- Thumbnail Image -->
+    <net.majorkernelpanic.example3.circleimageview.CircleImageView
+        android:id="@+id/thumbnail"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginRight="8dp" />
+
+    <!-- Movie Title -->
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_alignTop="@+id/thumbnail"
+        android:layout_toRightOf="@+id/thumbnail"
+        android:background="@drawable/rounded_corner"
+        android:padding="4dp">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="4dp"
+            android:text="AAA"
+            android:textColor="@color/year"
+            android:textSize="@dimen/title"
+            android:textStyle="bold" />
+
+        <!-- Release Year -->
+        <TextView
+            android:id="@+id/FAclock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/year"
+            android:paddingTop="4px"
+            android:text="@string/relogio_chat"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5px"
+            android:textSize="@dimen/title" />
+        <!-- Release Year -->
+
+        <!-- Release Year -->
+        <TextView
+            android:id="@+id/releaseYear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/title"
+            android:paddingTop="4px"
+            android:text="AAA"
+            android:layout_marginRight="25px"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/year"
+            android:textSize="@dimen/year" />
+
+        <!-- Rating -->
+        <TextView
+            android:id="@+id/rating"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title"
+            android:layout_marginTop="-1dip"
+            android:paddingLeft="4dp"
+            android:text="AAA"
+            android:textColor="@color/chat_text"
+            android:textSize="@dimen/rating" />
+
+        <!-- Genre -->
+        <TextView
+            android:id="@+id/genre"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rating"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/chat_text"
+            android:textSize="@dimen/genre"
+            android:visibility="gone" />
+    </RelativeLayout>
+</RelativeLayout>

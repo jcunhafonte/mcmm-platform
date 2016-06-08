@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html lang="pt" xmlns:height="http://www.w3.org/1999/xhtml" xmlns:width="http://www.w3.org/1999/xhtml">
+
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7">
+<![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8">
+<![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9">
+<![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script type="text/javascript" src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script type="text/javascript" src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+<head>
+
+    <title>MCMM</title>
+
+    <!--METAS-->
+    <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="author" content="MCMM">
+    <meta name="description" content="Plataforma MCMM">
+    <meta name="keywords" content="UA, DECA, MCMM, AV, ...">
+    <meta name="title" content="MCMM">
+    <meta name="referrer" content="always">
+
+    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="content-language" content="pt">
+
+    <meta property="og:title" content="MCMM - Mestrado em Comunicação Multimédia">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://mcmm.ua.pt">
+    <meta property="og:image" content="http://mcmm.ua.pt/img/share.jpg">
+    <meta property="og:site_name" content="MCMM é ...">
+    <meta property="og:description" content="MCMM é ...">
+    <meta property="al:android:app_name" content="MCMM">
+    <meta property="al:android:url" content="mcmm://">
+    <meta property="al:web:url" content="http://mcmm.ua.pt">
+    <meta property="al:android:package" content="com.mcmm.reader">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://mcmm.ua.pt">
+    <meta name="twitter:title" content="MCMM - Mestrado em Comunicação Multimédia">
+    <meta name="twitter:description" content="MCMM é ...">
+    <meta name="twitter:image" content="http://mcmm.ua.pt/img/share.jpg">
+
+    <!--FAVICON-->
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="images/favicon/green/apple-touch-icon-57x57.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/favicon/green/apple-touch-icon-114x114.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/favicon/green/apple-touch-icon-72x72.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/favicon/green/apple-touch-icon-144x144.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="images/favicon/green/apple-touch-icon-60x60.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="images/favicon/green/apple-touch-icon-120x120.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="images/favicon/green/apple-touch-icon-76x76.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="images/favicon/green/apple-touch-icon-152x152.png"/>
+    <link rel="icon" type="image/png" href="images/favicon/green/favicon-196x196.png" sizes="196x196"/>
+    <link rel="icon" type="image/png" href="images/favicon/green/favicon-96x96.png" sizes="96x96"/>
+    <link rel="icon" type="image/png" href="images/favicon/green/favicon-32x32.png" sizes="32x32"/>
+    <link rel="icon" type="image/png" href="images/favicon/green/favicon-16x16.png" sizes="16x16"/>
+    <link rel="icon" type="image/png" href="images/favicon/green/favicon-128.png" sizes="128x128"/>
+    <meta name="application-name" content="MCMM"/>
+    <meta name="msapplication-TileColor" content="#FFFFFF"/>
+    <meta name="msapplication-TileImage" content="images/favicon/green/mstile-144x144.png"/>
+    <meta name="msapplication-square70x70logo" content="images/favicon/green/mstile-70x70.png"/>
+    <meta name="msapplication-square150x150logo" content="images/favicon/green/mstile-150x150.png"/>
+    <meta name="msapplication-wide310x150logo" content="images/favicon/green/mstile-310x150.png"/>
+    <meta name="msapplication-square310x310logo" content="images/favicon/green/mstile-310x310.png"/>
+
+    <!-- build:css styles/vendor.css -->
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:css styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+
+    <!-- build:js scripts/vendor/modernizr.js -->
+    <script src="/bower_components/modernizr/modernizr.js"></script>
+    <!-- endbuild -->
+
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+
+</head>
+
+<body data-offset="80" data-target=".navbar" data-spy="scroll" id="news">
+
+<!-- Navigation -->
+<nav class="mcmm-nav mcmm-nav--top navbar-transparent" id="topbar" role="navigation">
+    <div class="container">
+        <div class="mcmm-nav-inner">
+            <div class="mcmm-nav-block mcmm-nav-block--left float-left">
+                <a href="/" class="brand">
+                    <img class="brand-img" src="images/logo-w.svg"/>
+                </a>
+            </div>
+            <div class="mcmm-nav-block mcmm-nav-block--center">
+                <nav class="platforms platforms--mcmm-nav platforms--narrow">
+                    <ul class="platforms-list single">
+                        <li class="platforms-item is-active">
+                            <a class="platforms-anchor" href="/news">Notícias</a>
+                        </li>
+                        <li class="platforms-item">
+                            <a class="platforms-anchor hvr-underline-from-center"
+                               href="/projects">Projetos</a>
+                        </li>
+                        <li class="platforms-item">
+                            <a class="platforms-anchor hvr-underline-from-center" href="/videos">Vídeos</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="mcmm-nav-block mcmm-nav-block--right float-right">
+                <div class="buttons-area">
+                    <a class="btn btn-primary btn-short btn-sign" data-toggle="modal"
+                       href="javascript:void(0)" onclick="openLoginModal();">
+                        Entrar
+                    </a>
+                    <span class="divider-bar">/</span>
+                    <a class="btn btn-primary btn-short btn-sign" data-toggle="modal"
+                       href="javascript:void(0)" onclick="openRegisterModal();">
+                        Registar
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+<!-- ++++++++++++++++++++++++++++++++++++++++ -->
+
+<div id="platform">
+    <div class="header-page">
+        <div id="carousel" class="carousel">
+            <div class="owl-carousel">
+                <div class="item">
+                    <img src="http://themenectar.com/demo/salient-corporate/wp-content/uploads/2016/01/sparks.jpg"
+                         alt="Awesome Image">
+                    <div class="titles">
+                        <div class="control-title">
+                            <span>Tecnologia</span>
+                            <h2>A new beggining is comming fast fast fast</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="http://themenectar.com/demo/salient-corporate/wp-content/uploads/2016/01/crime.jpg"
+                         alt="Awesome Image">
+                    <div class="titles">
+                        <div class="control-title">
+                            <span>Tecnologia</span>
+                            <h2>A new beggining is comming fast fast fast</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="http://themenectar.com/demo/salient-corporate/wp-content/uploads/2016/01/crime.jpg"
+                         alt="Awesome Image">
+                    <div class="titles">
+                        <div class="control-title">
+                            <span>Tecnologia</span>
+                            <h2>A new beggining is comming fast fast fast</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="dots-wrapper">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section section-gray">
+        <div class="container-fluid">
+            <div class="row masonry-container" id="blog-cards">
+
+                <div class="normal col-xs-12 col-sm-6 col-md-4 col-lg-3 masonry">
+                    <div class="card">
+                        <span class="theme">
+                            <a href="http://themenectar.com/demo/salient-corporate/category/fashion/">Tecnologia</a>
+                        </span>
+                        <div class="control-image">
+                            <div class="image">
+                                <img src="http://themenectar.com/demo/salient-corporate/wp-content/uploads/2016/01/kid-600x403.jpg"/>
+                            </div>
+                        </div>
+                        <div class="content">
+                            <p class="category">25 de maio, 2016</p>
+                            <a class="card-link">
+                                <h4 class="title">A Barafunda</h4>
+                            </a>
+                            <div class="excerpt">Wild Question Marks and devious Semikoli, but the Little Blind Text
+                                didn’t...
+                            </div>
+                        </div>
+                        <div class="footer">
+                            <div class="author">
+                                <a class="card-link" href="#">
+                                    <img src="images/faces/face-5.jpg" alt="..." class="avatar">
+                                    <span> Daniela Bessa </span>
+                                </a>
+                            </div>
+                            <div class="stats pull-right info-card">
+                                <div class="card-link" href="#">
+                                    <i class="fa fa-comment-o"></i> 41
+                                </div>
+                                <div class="card-link" href="#">
+                                    <i class="fa fa-heart-o"></i> 89
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- end card -->
+                </div>
+
+                <div class="normal col-xs-12 col-sm-6 col-md-4 col-lg-3 masonry">
+                    <div class="card">
+                        <span class="theme">
+                            <a href="http://themenectar.com/demo/salient-corporate/category/fashion/">Tecnologia</a>
+                        </span>
+                        <div class="control-image">
+                            <div class="image">
+                                <img src="http://themenectar.com/demo/salient-corporate/wp-content/uploads/2016/01/kid-600x403.jpg"/>
+                            </div>
+                        </div>
+                        <div class="content">
+                            <p class="category">25 de maio, 2016</p>
+                            <a class="card-link">
+                                <h4 class="title">A Barafunda</h4>
+                            </a>
+                            <div class="excerpt">Wild Question Marks and devious Semikoli, but the Little Blind Text
+                                didn’t...
+                            </div>
+                        </div>
+                        <div class="footer">
+                            <div class="author">
+                                <a class="card-link" href="#">
+                                    <img src="images/faces/face-5.jpg" alt="..." class="avatar">
+                                    <span> Daniela Bessa </span>
+                                </a>
+                            </div>
+                            <div class="stats pull-right info-card">
+                                <div class="card-link" href="#">
+                                    <i class="fa fa-comment-o"></i> 41
+                                </div>
+                                <div class="card-link" href="#">
+                                    <i class="fa fa-heart-o"></i> 89
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- end card -->
+                </div>
+
+                <div class="text col-xs-12 col-sm-6 col-md-4 col-lg-3 masonry">
+                    <div class="card-quote">
+                        <div class="quote">
+                            <img src="images/icons/right-quotation-sign.png">
+                        </div>
+                        <div class="content">
+                            <h4 class="title">
+                                Courage is not the absence of fear, but rather the judgment that something else is more
+                                important than fear
+                            </h4>
+                            <span class="author">Daniela Bessa</span>
+                        </div>
+                    </div> <!-- end card -->
+                </div>
+
+                <div class="slider-carousel col-xs-12 col-sm-6 col-md-4 col-lg-3 masonry">
+                    <div class="card card-many">
+                        <span class="theme">
+                            <a href="http://themenectar.com/demo/salient-corporate/category/fashion/">Tecnologia</a>
+                        </span>
+                        <div class="footer">
+                            <div class="author">
+                                <a class="card-link" href="#">
+                                    <img src="images/faces/face-5.jpg" alt="..." class="avatar">
+                                    <span> Daniela Bessa </span>
+                                </a>
+                            </div>
+                            <div class="stats pull-right info-card">
+                                <div class="card-link" href="#">
+                                    <i class="fa fa-comment-o"></i> 41
+                                </div>
+                                <div class="card-link" href="#">
+                                    <i class="fa fa-heart-o"></i> 89
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content">
+                            <p class="category">25 de maio, 2016</p>
+                            <a class="card-link">
+                                <h4 class="title">A Barafunda</h4>
+                            </a>
+                            <div class="excerpt">Wild Question Marks and devious Semikoli, but the Little Blind Text
+                                didn’t...
+                            </div>
+                        </div>
+                        <div class="image">
+                            <div id="card-many-carousel-1" class="carousel slide" data-ride="carousel">
+                                <!-- Wrapper for slides -->
+                                <div class="carousel-inner">
+                                    <div class="item active">
+                                        <img src="http://themenectar.com/demo/salient-corporate/wp-content/uploads/2015/12/guy5.jpg"
+                                             alt="">
+                                    </div>
+                                    <div class="item">
+                                        <img src="http://themenectar.com/demo/salient-corporate/wp-content/uploads/2015/12/guy5.jpg"
+                                             alt="">
+                                    </div>
+                                    <div class="item">
+                                        <img src="http://themenectar.com/demo/salient-corporate/wp-content/uploads/2015/12/guy5.jpg"
+                                             alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Controls -->
+                        <div class="controlos">
+                            <a class="left carousel-control" href="#card-many-carousel-1" data-slide="prev">
+                                <span class="icone pe-7s-angle-left"></span>
+                            </a>
+                            <span id="slide-number-1" class="slide-number"></span>
+                            <a class="right carousel-control" href="#card-many-carousel-1" data-slide="next">
+                                <span class="icone pe-7s-angle-right"></span>
+                            </a>
+                        </div> <!-- end card -->
+                    </div>
+                </div>
+
+                <div class="video col-xs-12 col-sm-6 col-md-4 col-lg-3 masonry">
+                    <div class="card card-video">
+                        <span class="theme">
+                            <a href="http://themenectar.com/demo/salient-corporate/category/fashion/">Tecnologia</a>
+                        </span>
+                        <div class="control-image">
+                            <div class="image">
+                                <img src="http://themenectar.com/demo/salient-corporate/wp-content/uploads/2016/01/kid-600x403.jpg"/>
+                            </div>
+                            <div class="play">
+                                <span class="pe-7s-play"></span>
+                            </div>
+                        </div>
+                        <div class="content">
+                            <p class="category">25 de maio, 2016</p>
+                            <a class="card-link">
+                                <h4 class="title">A Barafunda</h4>
+                            </a>
+                            <div class="excerpt">Wild Question Marks and devious Semikoli, but the Little Blind Text
+                                didn’t...
+                            </div>
+                        </div>
+                        <div class="footer">
+                            <div class="author">
+                                <a class="card-link" href="#">
+                                    <img src="images/faces/face-5.jpg" alt="..." class="avatar">
+                                    <span> Daniela Bessa </span>
+                                </a>
+                            </div>
+                            <div class="stats pull-right info-card">
+                                <div class="card-link" href="#">
+                                    <i class="fa fa-comment-o"></i> 41
+                                </div>
+                                <div class="card-link" href="#">
+                                    <i class="fa fa-heart-o"></i> 89
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- end card -->
+                </div>
+
+                <div class="video col-xs-12 col-sm-6 col-md-4 col-lg-3 masonry">
+                    <div class="card card-video">
+                        <span class="theme">
+                            <a href="http://themenectar.com/demo/salient-corporate/category/fashion/">Tecnologia</a>
+                        </span>
+                        <div class="control-image">
+                            <div class="image">
+                                <img src="http://themenectar.com/demo/salient-corporate/wp-content/uploads/2016/01/kid-600x403.jpg"/>
+                            </div>
+                            <div class="play">
+                                <span class="pe-7s-play"></span>
+                            </div>
+                        </div>
+                        <div class="content">
+                            <p class="category">25 de maio, 2016</p>
+                            <a class="card-link">
+                                <h4 class="title">A Barafunda</h4>
+                            </a>
+                            <div class="excerpt">Wild Question Marks and devious Semikoli, but the Little Blind Text
+                                didn’t...
+                            </div>
+                        </div>
+                        <div class="footer">
+                            <div class="author">
+                                <a class="card-link" href="#">
+                                    <img src="images/faces/face-5.jpg" alt="..." class="avatar">
+                                    <span> Daniela Bessa </span>
+                                </a>
+                            </div>
+                            <div class="stats pull-right info-card">
+                                <div class="card-link" href="#">
+                                    <i class="fa fa-comment-o"></i> 41
+                                </div>
+                                <div class="card-link" href="#">
+                                    <i class="fa fa-heart-o"></i> 89
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- end card -->
+                </div>
+
+                <div class="normal col-xs-12 col-sm-6 col-md-4 col-lg-3 masonry">
+                    <div class="card">
+                        <span class="theme">
+                            <a href="http://themenectar.com/demo/salient-corporate/category/fashion/">Tecnologia</a>
+                        </span>
+                        <div class="control-image">
+                            <div class="image">
+                                <img src="http://themenectar.com/demo/salient-corporate/wp-content/uploads/2016/01/kid-600x403.jpg"/>
+                            </div>
+                        </div>
+                        <div class="content">
+                            <p class="category">25 de maio, 2016</p>
+                            <a class="card-link">
+                                <h4 class="title">A Barafunda</h4>
+                            </a>
+                            <div class="excerpt">Wild Question Marks and devious Semikoli, but the Little Blind Text
+                                didn’t...
+                            </div>
+                        </div>
+                        <div class="footer">
+                            <div class="author">
+                                <a class="card-link" href="#">
+                                    <img src="images/faces/face-5.jpg" alt="..." class="avatar">
+                                    <span> Daniela Bessa </span>
+                                </a>
+                            </div>
+                            <div class="stats pull-right info-card">
+                                <div class="card-link" href="#">
+                                    <i class="fa fa-comment-o"></i> 41
+                                </div>
+                                <div class="card-link" href="#">
+                                    <i class="fa fa-heart-o"></i> 89
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- end card -->
+                </div>
+
+                <div class="text col-xs-12 col-sm-6 col-md-4 col-lg-3 masonry">
+                    <div class="card-quote">
+                        <div class="quote">
+                            <img src="images/icons/right-quotation-sign.png">
+                        </div>
+                        <div class="content">
+                            <h4 class="title">
+                                Courage is not the absence of fear, but rather the judgment that something else is more
+                                important than fear
+                            </h4>
+                            <span class="author">Daniela Bessa</span>
+                        </div>
+                    </div> <!-- end card -->
+                </div>
+
+                <div class="slider-carousel col-xs-12 col-sm-6 col-md-4 col-lg-3 masonry">
+                    <div class="card card-many">
+                        <span class="theme">
+                            <a href="http://themenectar.com/demo/salient-corporate/category/fashion/">Tecnologia</a>
+                        </span>
+                        <div class="footer">
+                            <div class="author">
+                                <a class="card-link" href="#">
+                                    <img src="images/faces/face-5.jpg" alt="..." class="avatar">
+                                    <span> Daniela Bessa </span>
+                                </a>
+                            </div>
+                            <div class="stats pull-right info-card">
+                                <div class="card-link" href="#">
+                                    <i class="fa fa-comment-o"></i> 41
+                                </div>
+                                <div class="card-link" href="#">
+                                    <i class="fa fa-heart-o"></i> 89
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content">
+                            <p class="category">25 de maio, 2016</p>
+                            <a class="card-link">
+                                <h4 class="title">A Barafunda</h4>
+                            </a>
+                            <div class="excerpt">Wild Question Marks and devious Semikoli, but the Little Blind Text
+                                didn’t...
+                            </div>
+                        </div>
+                        <div class="image">
+                            <div id="card-many-carousel-2" class="carousel slide" data-ride="carousel">
+                                <!-- Wrapper for slides -->
+                                <div class="carousel-inner">
+                                    <div class="item active">
+                                        <img src="http://themenectar.com/demo/salient-corporate/wp-content/uploads/2015/12/guy5.jpg"
+                                             alt="">
+                                    </div>
+                                    <div class="item">
+                                        <img src="http://themenectar.com/demo/salient-corporate/wp-content/uploads/2015/12/guy5.jpg"
+                                             alt="">
+                                    </div>
+                                    <div class="item">
+                                        <img src="http://themenectar.com/demo/salient-corporate/wp-content/uploads/2015/12/guy5.jpg"
+                                             alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Controls -->
+                        <div class="controlos">
+                            <a class="left carousel-control" href="#card-many-carousel-2" data-slide="prev">
+                                <span class="icone pe-7s-angle-left"></span>
+                            </a>
+                            <span id="slide-number" class="slide-number-2"></span>
+                            <a class="right carousel-control" href="#card-many-carousel-2" data-slide="next">
+                                <span class="icone pe-7s-angle-right"></span>
+                            </a>
+                        </div> <!-- end card -->
+                    </div>
+                </div>
+
+                <div class="normal col-xs-12 col-sm-6 col-md-4 col-lg-3 masonry">
+                    <div class="card">
+                        <span class="theme">
+                            <a href="http://themenectar.com/demo/salient-corporate/category/fashion/">Tecnologia</a>
+                        </span>
+                        <div class="control-image">
+                            <div class="image">
+                                <img src="http://themenectar.com/demo/salient-corporate/wp-content/uploads/2016/01/kid-600x403.jpg"/>
+                            </div>
+                        </div>
+                        <div class="content">
+                            <p class="category">25 de maio, 2016</p>
+                            <a class="card-link">
+                                <h4 class="title">A Barafunda</h4>
+                            </a>
+                            <div class="excerpt">Wild Question Marks and devious Semikoli, but the Little Blind Text
+                                didn’t...
+                            </div>
+                        </div>
+                        <div class="footer">
+                            <div class="author">
+                                <a class="card-link" href="#">
+                                    <img src="images/faces/face-5.jpg" alt="..." class="avatar">
+                                    <span> Daniela Bessa </span>
+                                </a>
+                            </div>
+                            <div class="stats pull-right info-card">
+                                <div class="card-link" href="#">
+                                    <i class="fa fa-comment-o"></i> 41
+                                </div>
+                                <div class="card-link" href="#">
+                                    <i class="fa fa-heart-o"></i> 89
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- end card -->
+                </div>
+
+                <div class="text col-xs-12 col-sm-6 col-md-4 col-lg-3 masonry">
+                    <div class="card-quote">
+                        <div class="quote">
+                            <img src="images/icons/right-quotation-sign.png">
+                        </div>
+                        <div class="content">
+                            <h4 class="title">
+                                Courage is not the absence of fear, but rather the judgment that something else is more
+                                important than fear
+                            </h4>
+                            <span class="author">Daniela Bessa</span>
+                        </div>
+                    </div> <!-- end card -->
+                </div>
+
+                <div class="slider-carousel col-xs-12 col-sm-6 col-md-4 col-lg-3 masonry">
+                    <div class="card card-many">
+                        <span class="theme">
+                            <a href="http://themenectar.com/demo/salient-corporate/category/fashion/">Tecnologia</a>
+                        </span>
+                        <div class="footer">
+                            <div class="author">
+                                <a class="card-link" href="#">
+                                    <img src="images/faces/face-5.jpg" alt="..." class="avatar">
+                                    <span> Daniela Bessa </span>
+                                </a>
+                            </div>
+                            <div class="stats pull-right info-card">
+                                <div class="card-link" href="#">
+                                    <i class="fa fa-comment-o"></i> 41
+                                </div>
+                                <div class="card-link" href="#">
+                                    <i class="fa fa-heart-o"></i> 89
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content">
+                            <p class="category">25 de maio, 2016</p>
+                            <a class="card-link">
+                                <h4 class="title">A Barafunda</h4>
+                            </a>
+                            <div class="excerpt">Wild Question Marks and devious Semikoli, but the Little Blind Text
+                                didn’t...
+                            </div>
+                        </div>
+                        <div class="image">
+                            <div id="card-many-carousel-3" class="carousel slide" data-ride="carousel">
+                                <!-- Wrapper for slides -->
+                                <div class="carousel-inner">
+                                    <div class="item active">
+                                        <img src="http://themenectar.com/demo/salient-corporate/wp-content/uploads/2015/12/guy5.jpg"
+                                             alt="">
+                                    </div>
+                                    <div class="item">
+                                        <img src="http://themenectar.com/demo/salient-corporate/wp-content/uploads/2015/12/guy5.jpg"
+                                             alt="">
+                                    </div>
+                                    <div class="item">
+                                        <img src="http://themenectar.com/demo/salient-corporate/wp-content/uploads/2015/12/guy5.jpg"
+                                             alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Controls -->
+                        <div class="controlos">
+                            <a class="left carousel-control" href="#card-many-carousel-3" data-slide="prev">
+                                <span class="icone pe-7s-angle-left"></span>
+                            </a>
+                            <span id="slider-number-3" class="slide-number"></span>
+                            <a class="right carousel-control" href="#card-many-carousel-3" data-slide="next">
+                                <span class="icone pe-7s-angle-right"></span>
+                            </a>
+                        </div> <!-- end card -->
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer footer-big footer-default">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-6 col-sm-6 col-md-3">
+                    <h5 class="title">Ligações</h5>
+                    <nav>
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    Entrada
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Notícias
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Projetos
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Vídeos
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Contactos
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-3">
+                    <h5 class="title">Informações</h5>
+                    <nav class="numbers">
+                        <ul>
+                            <li>
+                                <h4>200
+                                    <small>Mestres</small>
+                                </h4>
+                            </li>
+                            <li>
+                                <h4>500
+                                    <small>Alunos</small>
+                                </h4>
+                            </li>
+                            <li>
+                                <h4>101
+                                    <small>Projetos</small>
+                                </h4>
+                            </li>
+
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-3">
+                    <h5 class="title">Morada</h5>
+                    <nav>
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    Universidade de Aveiro
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Dep. Comunicação e Arte
+                                </a>
+                            </li>
+                            <li>
+                                <a class="no-link">
+                                    Campus Universitário de Santiago
+                                </a>
+                            </li>
+                            <li>
+                                <a class="no-link">
+                                    3810-193 Aveiro
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-3">
+                    <h5 class="title">Contactos</h5>
+                    <nav>
+                        <ul>
+                            <li>
+                                <a class="no-link">
+                                    234 370 389
+                                </a>
+                            </li>
+                            <li>
+                                <a class="no-link">
+                                    234 370 868
+                                </a>
+                            </li>
+                            <li>
+                                <a href="mailto:deca-mcmm@ua.pt">
+                                    deca-mcmm@ua.pt
+                                </a>
+                            </li>
+                            <li>
+                                <a href="www.mcmm.pt" target="_blank" a>
+                                    www.mcmm.pt
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <hr/>
+            <div class="social-area text-center">
+                <a href="#" class="btn btn-social btn-round">
+                    <i class="fa fa-facebook"></i>
+                </a>
+                <a href="#" class="btn btn-social btn-round">
+                    <i class="fa fa-youtube"></i>
+                </a>
+                <a href="#" class="btn btn-social btn-round">
+                    <i class="fa fa-envelope"></i>
+                </a>
+            </div>
+            <div class="copyright">
+                &copy; 2016 Mestrado em Comunicação Multimédia
+            </div>
+        </div>
+    </footer>
+</div>
+
+<!--MODALS-->
+<div class="container">
+    <div class="modal fade login" id="loginModal">
+        <div class="modal-dialog login animated">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title text-center">Entrar</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="box">
+                        <div class="content">
+                            <div class="social">
+                                <a class="circle twitter" href="/auth/twitter">
+                                    <i class="fa fa-twitter fa-fw"></i>
+                                </a>
+                                <a id="google_login" class="circle google" href="/auth/google_oauth2">
+                                    <i class="fa fa-google-plus fa-fw"></i>
+                                </a>
+                                <a id="facebook_login" class="circle facebook" href="/auth/facebook">
+                                    <i class="fa fa-facebook fa-fw"></i>
+                                </a>
+                            </div>
+                            <div class="division">
+                                <div class="line l"></div>
+                                <span>ou</span>
+                                <div class="line r"></div>
+                            </div>
+                            <div class="error"></div>
+                            <div class="form loginBox">
+                                <form method="post" action="/login" accept-charset="UTF-8">
+                                    <input id="email" class="form-control" type="text" placeholder="Email" name="email">
+                                    <input id="password" class="form-control" type="password" placeholder="Password"
+                                           name="password">
+                                    <input class="btn btn-login" type="button" value="Entrar" onclick="loginAjax()">
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="forgot login-footer">
+                        <span>Não tens uma conta? <a href="/signup">Regista-te</a></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- build:js scripts/vendor.js -->
+<!-- bower:js -->
+<script type="text/javascript" src="/bower_components/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="/bower_components/jquery-ui/jquery-ui.min.js"></script>
+<script type="text/javascript" src="/bower_components/sass-bootstrap/dist/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/bower_components/scroll-up-bar/dist/scroll-up-bar.min.js"></script>
+<script type="text/javascript" src="/bower_components/owl.carousel/dist/owl.carousel.min.js"></script>
+<script type="text/javascript" src="/bower_components/masonry/dist/masonry.pkgd.min.js"></script>
+<script type="text/javascript" src="/bower_components/imagesloaded/imagesloaded.pkgd.min.js"></script>
+<script type="text/javascript" src="/bower_components/nprogress/nprogress.js"></script>
+<!-- endbower -->
+<!-- endbuild -->
+
+<!-- build:js scripts/plugins.js -->
+
+<!-- endbuild -->
+
+<!-- build:js scripts/news.js -->
+<script type="text/javascript" src="scripts/news.js"></script>
+<script type="text/javascript" src="scripts/platform.js"></script>
+<script type="text/javascript" src="scripts/carousel.js"></script>
+<script type="text/javascript" src="scripts/demo.js"></script>
+<!--<script type="text/javascript" src="scripts/login_regist.js"></script>-->
+<!-- endbuild -->
+
+</body>
+</html>

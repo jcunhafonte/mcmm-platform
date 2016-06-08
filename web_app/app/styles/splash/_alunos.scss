@@ -1,0 +1,131 @@
+.alunos_section {
+  border-top: 1px solid #e8e9ed;
+  margin-bottom: 100px;
+
+  .owl-carousel {
+    cursor: -webkit-grab;
+    cursor: -moz-grab;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  .owl-carousel.owl-grab {
+    cursor: -webkit-grabbing;
+    cursor: -moz-grabbing;
+  }
+
+  .owl-carousel {
+    .owl-item {
+      .item {
+        padding: 1rem 30px 1rem 30px;
+        transition: all 0.2s ease;
+        -webkit-transition: all 0.2s ease;
+        position: relative;
+        height: 500px;
+
+        .box-student {
+          height: 300px;
+          border-radius: 10px;
+          position: relative;
+
+          p {
+            padding: 30px;
+            color: $gray;
+            font-size: 18px;
+            line-height: 30px;
+            letter-spacing: 0.5px;
+          }
+
+          .arrow {
+            position: absolute;
+            display: block;
+            border-radius: 5px;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 100%;
+            margin-top: -3px;
+            opacity: 1;
+            border-left: 20px solid transparent;
+            border-right: 20px solid transparent;
+          }
+        }
+
+        .profile {
+          position: relative;
+          top: 40px;
+          opacity: 0.5;
+          .user-image {
+            text-align: center;
+            img {
+              width: 70px;
+              height: 70px;
+              margin: 0 auto;
+              text-align: center;
+            }
+          }
+          .user-name {
+            margin-top: 10px;
+            text-align: center;
+            color: $black;
+            font-size: 18px;
+          }
+          .user-job {
+            text-align: center;
+            color: $gray_cards;
+            font-size: 14px;
+            margin-top: -5px;
+          }
+        }
+      }
+    }
+    .owl-item.active.center {
+      .item {
+        .box-student {
+          background: $theme;
+          transition: all 0.2s ease;
+          -webkit-transition: all 0.2s ease;
+          p{
+            color: $white;
+          }
+          .arrow {
+            border-top: 20px solid $theme;
+          }
+        }
+        .profile {
+          opacity: 1;
+          .user-name {
+            color: $black;
+          }
+          .user-job {
+            color: $gray_cards;
+          }
+        }
+      }
+    }
+
+    .owl-dots {
+      text-align: center;
+
+      .owl-dot {
+        display: inline-block;
+
+        span {
+          background: none repeat scroll 0 0 $light_gray;
+          display: inline-block;
+          width: 30px;
+          height: 4px;
+          margin: 40px 4px 0 4px;
+        }
+
+        &.active{
+          span{
+            background: none repeat scroll 0 0 $theme;
+          }
+        }
+      }
+    }
+  }
+}

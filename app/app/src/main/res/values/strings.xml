@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">MCMM</string>
+    <string name="start">Começar/Parar Tranmissão</string>
+    <string name="flash">Flash</string>
+    <string name="camera">Câmera</string>
+    <string name="video">Definições de Vídeo</string>
+    <string name="save">OK</string>
+    <string name="username">Nome de Utilizador</string>
+    <string name="password">Palavra-passe</string>
+    <string name="uri">URI</string>
+    <string name="password_hint">Não preencher se não for necessário</string>
+    <string name="username_hint">Não preencher se não for necessário</string>
+    <string name="default_bitrate">0 kbps</string>
+    <string name="default_stream">rtsp://54.200.172.163:1935/live/</string>
+
+    <string name="hint_email">Endereço Email</string>
+    <string name="hint_password">Palavra-passe</string>
+    <string name="hint_name">Nome Completo</string>
+    <string name="btn_login">INICIAR SESSÃO</string>
+    <string name="btn_register">REGISTAR</string>
+    <string name="btn_link_to_register">Registar no WESEE</string>
+    <string name="btn_link_to_login">Already registred! Login Me.</string>
+    <string name="welcome">Bem-vindo</string>
+    <string name="btn_logout">SAIR</string>
+    <string name="name">Nome Completo</string>
+    <string name="titTransmissao">Título da Transmissão</string>
+    <string name="cat">Categoria</string>
+
+    <string name="sempp">Esqueceste-te da palavra-passe?</string>
+
+    <string name="Success">Success</string>
+    <string name="Loading">A Carregar ...</string>
+
+    <string name="defs">Definições de Vídeo</string>
+
+    <string name="escreveMsg">Escreva uma mensagem...</string>
+    <string name="relogio_chat">&#xf017;</string>
+    <string name="enviar_msg">&#xf1d8;</string>
+    <string name="publico_transmissao">&#xf007;</string>
+
+    <string name="publicoInicial">0</string>
+
+    <string-array name="brew_array">
+        <item>Categoria</item>
+        <item>Aulas</item>
+        <item>Conferências</item>
+        <item>Eventos</item>
+        <item>Concertos</item>
+        <item>Exposições</item>
+        <item>Workshops</item>
+        <item>Investigação</item>
+        <item>Desporto</item>
+        <item>Notícias</item>
+    </string-array>
+
+    <string-array name="brew_array2">
+        <item>176x144, 30 fps, 170 Kbps</item>
+        <item>176x144, 30 fps, 200 Kbps</item>
+        <item>176x144, 30 fps, 250 Kbps</item>
+        <item>320x240, 30 fps, 250 Kbps</item>
+        <item>352x288, 30 fps, 300 Kbps</item>
+        <item>352x288, 30 fps, 400 Kbps</item>
+        <item>640x480, 30 fps, 600 Kbps</item>
+    </string-array>
+
+    <string name="all">All</string>
+    <string name="createnote">Create note</string>
+    <string name="closedrawer">Close drawer</string>
+    <string name="favorites">Favorites</string>
+    <string name="notes">MCMM</string>
+    <string name="opendrawer">Open drawer</string>
+    <string name="photo">Photo</string>
+    <string name="recording">Recording</string>
+    <string name="refresh">Refresh</string>
+    <string name="reminder">Reminder</string>
+    <string name="search">Search</string>
+    <string name="shared">Shared</string>
+    <string name="sheet_item_pressed">Item pressed</string>
+    <string name="snackbar_shared_msg">Gordon Wong shared a note with you.</string>
+    <string name="view">View</string>
+
+    <string name="action_settings">A</string>
+    <string name="action_find_location">B</string>
+
+</resources>

@@ -1,0 +1,74 @@
+[
+    {
+        "merged": "D:\\Escola\\Universidade\\Java\\WEREC\\app\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\sprite_check.png",
+        "source": "D:\\Escola\\Universidade\\Java\\WEREC\\app\\app\\build\\intermediates\\exploded-aar\\com.github.vajro\\MaterialDesignLibrary\\1.6\\res\\drawable-ldpi-v4\\sprite_check.png"
+    },
+    {
+        "merged": "D:\\Escola\\Universidade\\Java\\WEREC\\app\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\spinner_white_76.png",
+        "source": "D:\\Escola\\Universidade\\Java\\WEREC\\app\\app\\src\\main\\res\\drawable-ldpi\\spinner_white_76.png"
+    },
+    {
+        "merged": "D:\\Escola\\Universidade\\Java\\WEREC\\app\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\abc_ic_menu_share_material.png",
+        "source": "D:\\Escola\\Universidade\\Java\\WEREC\\app\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\abc_ic_menu_share_material.png"
+    },
+    {
+        "merged": "D:\\Escola\\Universidade\\Java\\WEREC\\app\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\abc_btn_radio_off_mtrl.png",
+        "source": "D:\\Escola\\Universidade\\Java\\WEREC\\app\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\abc_btn_radio_off_mtrl.png"
+    },
+    {
+        "merged": "D:\\Escola\\Universidade\\Java\\WEREC\\app\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\abc_ic_menu_cut_material.png",
+        "source": "D:\\Escola\\Universidade\\Java\\WEREC\\app\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\abc_ic_menu_cut_material.png"
+    },
+    {
+        "merged": "D:\\Escola\\Universidade\\Java\\WEREC\\app\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\abc_ic_clear_material.png",
+        "source": "D:\\Escola\\Universidade\\Java\\WEREC\\app\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\abc_ic_clear_material.png"
+    },
+    {
+        "merged": "D:\\Escola\\Universidade\\Java\\WEREC\\app\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\abc_btn_checkbox_unchecked_mtrl.png",
+        "source": "D:\\Escola\\Universidade\\Java\\WEREC\\app\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\abc_btn_checkbox_unchecked_mtrl.png"
+    },
+    {
+        "merged": "D:\\Escola\\Universidade\\Java\\WEREC\\app\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\abc_ic_menu_overflow_material.png",
+        "source": "D:\\Escola\\Universidade\\Java\\WEREC\\app\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\abc_ic_menu_overflow_material.png"
+    },
+    {
+        "merged": "D:\\Escola\\Universidade\\Java\\WEREC\\app\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\abc_btn_radio_on_mtrl.png",
+        "source": "D:\\Escola\\Universidade\\Java\\WEREC\\app\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\abc_btn_radio_on_mtrl.png"
+    },
+    {
+        "merged": "D:\\Escola\\Universidade\\Java\\WEREC\\app\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\abc_ic_menu_paste_material.png",
+        "source": "D:\\Escola\\Universidade\\Java\\WEREC\\app\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\abc_ic_menu_paste_material.png"
+    },
+    {
+        "merged": "D:\\Escola\\Universidade\\Java\\WEREC\\app\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\abc_ic_menu_copy_material.png",
+        "source": "D:\\Escola\\Universidade\\Java\\WEREC\\app\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\abc_ic_menu_copy_material.png"
+    },
+    {
+        "merged": "C:\\Users\\Java\\Desktop\\WESEE\\WEREC\\app\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\spinner_white_76.png",
+        "source": "C:\\Users\\Java\\Desktop\\WESEE\\WEREC\\app\\app\\src\\main\\res\\drawable-ldpi\\spinner_white_76.png"
+    },
+    {
+        "merged": "D:\\Escola\\Universidade\\Java\\WEREC\\app\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\abc_ic_menu_selectall_material.png",
+        "source": "D:\\Escola\\Universidade\\Java\\WEREC\\app\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\abc_ic_menu_selectall_material.png"
+    },
+    {
+        "merged": "C:\\Users\\Java\\Desktop\\WESEE\\WESEE RECORDER\\app\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\spinner_white_76.png",
+        "source": "C:\\Users\\Java\\Desktop\\WESEE\\WESEE RECORDER\\app\\app\\src\\main\\res\\drawable-ldpi\\spinner_white_76.png"
+    },
+    {
+        "merged": "D:\\Escola\\Universidade\\Java\\WEREC\\app\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\abc_ic_voice_search_api_material.png",
+        "source": "D:\\Escola\\Universidade\\Java\\WEREC\\app\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\abc_ic_voice_search_api_material.png"
+    },
+    {
+        "merged": "D:\\Escola\\Universidade\\Java\\WEREC\\app\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\abc_btn_checkbox_checked_mtrl.png",
+        "source": "D:\\Escola\\Universidade\\Java\\WEREC\\app\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\abc_btn_checkbox_checked_mtrl.png"
+    },
+    {
+        "merged": "D:\\Escola\\Universidade\\Java\\WEREC\\app\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\abc_ic_go_search_api_material.png",
+        "source": "D:\\Escola\\Universidade\\Java\\WEREC\\app\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\abc_ic_go_search_api_material.png"
+    },
+    {
+        "merged": "D:\\Escola\\Universidade\\Java\\WEREC\\app\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\abc_ic_ab_back_material.png",
+        "source": "D:\\Escola\\Universidade\\Java\\WEREC\\app\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\abc_ic_ab_back_material.png"
+    }
+]

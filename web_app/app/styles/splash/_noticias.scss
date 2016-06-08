@@ -1,0 +1,112 @@
+.noticias_section {
+  padding-bottom: 130px;
+  background: $background_light_gray;
+
+  .post {
+    padding-bottom: 70px;
+    max-width: 370px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+    .post-heading {
+      position: relative;
+
+      .post-image {
+        display: block;
+        overflow: hidden;
+        height: 230px;
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
+
+        img{
+          -webkit-transition: all 1s ease; /* Safari and Chrome */
+          -moz-transition: all 1s ease; /* Firefox */
+          -o-transition: all 1s ease; /* IE 9 */
+          -ms-transition: all 1s ease; /* Opera */
+          transition: all 1s ease;
+        }
+
+        &:hover {
+          img {
+            -webkit-transform:scale(1.20); /* Safari and Chrome */
+            -moz-transform:scale(1.20); /* Firefox */
+            -ms-transform:scale(1.20); /* IE 9 */
+            -o-transform:scale(1.20); /* Opera */
+            transform:scale(1.20);
+          }
+        }
+      }
+
+      .post-avatar {
+        position: absolute;
+        right: 25px;
+        bottom: -35px;
+      }
+
+      .post-avatar > img {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        border: 5px solid white;
+      }
+    }
+    .post-body {
+      padding: 10px 30px 20px;
+      border: 1px solid #e8e9ed;
+      border-top: 0;
+      border-bottom-left-radius: 3px;
+      border-bottom-right-radius: 3px;
+
+      p {
+        margin-bottom: 0;
+      }
+
+      ul li {
+        font-size: 0.928em;
+        color: #c8c9cc;
+        margin-right: .5em;
+
+        &:first-of-type {
+          margin-right: 20px;
+        }
+      }
+    }
+  }
+
+  .subscribe {
+    border: 1px solid #e8e9ed;
+    padding: 4px;
+    border-radius: 28px;
+
+    input {
+      background-color: transparent;
+      width: 55%;
+      padding-right: 10px;
+      box-shadow: none;
+      border: 0;
+      &:focus{
+        box-shadow: none;
+        border: 0;
+      }
+    }
+  }
+
+  .btn-round {
+    border-radius: 28px;
+  }
+
+  .btn-round-small {
+    border-radius: 50%;
+    padding: 9px;
+    width: 49px;
+  }
+
+  h2 {
+    font-family: Hind;
+    font-size: 42px !important;
+    line-height: 48px;
+    font-weight: 300;
+    text-transform: none !important;
+  }
+}
