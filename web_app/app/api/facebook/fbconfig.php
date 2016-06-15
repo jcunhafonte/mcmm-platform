@@ -13,35 +13,36 @@ use Facebook\GraphObject;
 use Facebook\Entities\AccessToken;
 use Facebook\HttpClients\FacebookCurlHttpClient;
 use Facebook\HttpClients\FacebookHttpable;
+
 // init app with app id and secret
-FacebookSession::setDefaultApplication( '949143628540497','412c0de237304e5f173bd9f4026aad70');
+FacebookSession::setDefaultApplication('1732285890385262', '8e5665736e5ee640f797f46220242ea7');
 // login helper with redirect_uri
-    $helper = new FacebookRedirectLoginHelper('http://178.62.86.141/');
+$helper = new FacebookRedirectLoginHelper('http://www.mcmm.tech/');
 try {
-  $session = $helper->getSessionFromRedirect();
-} catch( FacebookRequestException $ex ) {
-  // When Facebook returns an error
-} catch( Exception $ex ) {
-  // When validation fails or other local issues
+    $session = $helper->getSessionFromRedirect();
+} catch (FacebookRequestException $ex) {
+    // When Facebook returns an error
+} catch (Exception $ex) {
+    // When validation fails or other local issues
 }
 // see if we have a session
-if ( isset( $session ) ) {
-  // graph api request for user data
-  $request = new FacebookRequest( $session, 'GET', '/me', '/{user-id}/photos' );
-  $response = $request->execute();
-  // get response
-  $graphObject = $response->getGraphObject();
-     	$fbid = $graphObject->getProperty('id');              // To Get Facebook ID
- 	    $fbfullname = $graphObject->getProperty('name'); // To Get Facebook full name
-	    $femail = $graphObject->getProperty('email');    // To Get Facebook email ID
-	/* ---- Session Variables -----*/
-	    $_SESSION['FBID'] = $fbid;           
-        $_SESSION['FULLNAME'] = $fbfullname;
-	    $_SESSION['EMAIL'] =  $femail;
+if (isset($session)) {
+    // graph api request for user data
+    $request = new FacebookRequest($session, 'GET', '/me', '/{user-id}/photos');
+    $response = $request->execute();
+    // get response
+    $graphObject = $response->getGraphObject();
+    $fbid = $graphObject->getProperty('id');              // To Get Facebook ID
+    $fbfullname = $graphObject->getProperty('name'); // To Get Facebook full name
+    $femail = $graphObject->getProperty('email');    // To Get Facebook email ID
+    /* ---- Session Variables -----*/
+    $_SESSION['FBID'] = $fbid;
+    $_SESSION['FULLNAME'] = $fbfullname;
+    $_SESSION['EMAIL'] = $femail;
     /* ---- header location after session ----*/
-  header("Location: index.php");
+    header("Location: index.php");
 } else {
-  $loginUrl = $helper->getLoginUrl();
- header("Location: ".$loginUrl);
+    $loginUrl = $helper->getLoginUrl();
+    header("Location: " . $loginUrl);
 }
 ?>

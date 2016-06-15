@@ -29,9 +29,9 @@ $(document).ready(function () {
         currentIndex3 = $("#card-many-carousel-3 div.active").index() + 1;
         $("#slide-number-3").html('' + currentIndex3 + '/' + totalItems3 + '');
     });
-    
+
     var elem = document.querySelector('.masonry-container');
-    var msnry = new Masonry( elem, {
+    var msnry = new Masonry(elem, {
         columnWidth: '.masonry',
         itemSelector: '.masonry'
     });
@@ -64,7 +64,18 @@ $(document).ready(function () {
             $(".brand-img").attr("src", "images/logo-w.svg");
         }
     }
-}); // Document ready
+
+    // Carousel
+    $('.owl-carousel').owlCarousel({
+        items: 1,
+        loop: true,
+        nav: false,
+        dots: true,
+        dotsContainer: '.dots-wrapper',
+    });
+
+    $('.owl-dots, #carousel .titles').addClass('container');
+});
 
 function checkTransparent() {
 

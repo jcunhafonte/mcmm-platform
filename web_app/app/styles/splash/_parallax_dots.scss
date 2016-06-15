@@ -1,10 +1,12 @@
 #menu-dots {
+  z-index: 90000000000;
+  position: relative;
 
   nav#primary {
     z-index: 5;
     position: fixed;
     top: 50%;
-    right: 19px;
+    right: 10px;
     margin-top: -124px;
     display: none;
   }

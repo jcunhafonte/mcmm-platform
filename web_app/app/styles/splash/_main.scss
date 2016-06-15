@@ -244,7 +244,6 @@ p.subhead {
 }
 
 .striped-icon {
-  background: rgba(232, 233, 237, 0.5);
   color: $theme;
   font-size: 18px;
   margin: auto;
@@ -305,7 +304,6 @@ p.subhead {
 }
 
 .striped-icon-xlarge {
-  background: rgba(41, 121, 255, 0.6);
   color: white;
   font-size: 36px;
   font-weight: 700;
@@ -1640,32 +1638,6 @@ section.divider.striped-icon {
   margin-left: 30px;
 }
 
-.brands {
-  margin-top: 70px;
-}
-
-.brand-logo {
-  box-shadow: 0 0 0 1px #e8e9ed;
-  width: 100%;
-  height: 120px;
-  background-color: white;
-  display: table;
-  text-align: center;
-}
-
-.brand-logo .brand-logo-wrap {
-  display: table-cell;
-  vertical-align: middle;
-  opacity: 0.7;
-  -webkit-transition: opacity 0.3s;
-  -o-transition: opacity 0.3s;
-  transition: opacity 0.3s;
-}
-
-.brand-logo .brand-logo-wrap:hover {
-  opacity: 1;
-}
-
 .twitter {
   //background: url('../images/placehold/1920x1080.gif') no-repeat center center;
   //background-size: cover;
@@ -1915,66 +1887,6 @@ a h5:hover {
   .application .app-demo {
     margin-left: 5px;
   }
-}
-
-.home-footer {
-  padding: 100px 0 0;
-  text-align: center;
-}
-
-.home-footer .nav {
-  display: inline-block;
-}
-
-.home-footer .nav-tabs-two li:not(.active) a {
-  border-color: rgba(255, 255, 255, 0.3);
-}
-
-.home-footer .tab-content {
-  margin: 70px 0 0;
-}
-
-.home-footer .footer-header {
-  margin-bottom: 50px;
-}
-
-.home-footer .footer-header h2 {
-  color: white;
-}
-
-.home-footer .contact-item h5,
-.home-footer .contact-item p {
-  color: white;
-}
-
-.home-footer .contact-item h5 {
-  margin-top: 27px;
-}
-
-.home-footer form .form-control {
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  border-bottom: 0;
-  box-shadow: none;
-  padding-left: 22px;
-  background-color: rgba(255, 255, 255, 0.2);
-  border-radius: 0;
-  color: white;
-  width: 100%;
-}
-
-.home-footer form .form-control:first-child {
-  border-top-left-radius: 3px;
-  border-top-right-radius: 3px;
-}
-
-.home-footer form .btn {
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-}
-
-.home-footer #mapCanvas {
-  height: 470px;
-  width: 100%;
 }
 
 .dotted-line {

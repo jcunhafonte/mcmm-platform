@@ -1,5 +1,5 @@
 .modal-dialog {
-  margin-top: 150px !important;
+  margin-top: 70px !important;
 }
 
 .modal-backdrop {
@@ -19,5 +19,50 @@
   }
   .peg{
     box-shadow: 0 0 10px $theme, 0 0 5px $theme !important;
+  }
+}
+
+#news{
+  #nprogress {
+    .spinner-icon {
+      border-top-color: $theme_green !important;
+      border-left-color: $theme_green !important;
+    }
+    .bar{
+      background: $theme_green !important;
+    }
+    .peg{
+      box-shadow: 0 0 10px $theme_green, 0 0 5px $theme_green !important;
+    }
+  }
+}
+
+#projects{
+  #nprogress {
+    .spinner-icon {
+      border-top-color: $theme_yellow !important;
+      border-left-color: $theme_yellow !important;
+    }
+    .bar{
+      background: $theme_yellow !important;
+    }
+    .peg{
+      box-shadow: 0 0 10px $theme_yellow, 0 0 5px $theme_yellow !important;
+    }
+  }
+}
+
+#video{
+  #nprogress {
+    .spinner-icon {
+      border-top-color: $theme_red !important;
+      border-left-color: $theme_red !important;
+    }
+    .bar{
+      background: $theme_red !important;
+    }
+    .peg{
+      box-shadow: 0 0 10px $theme_red, 0 0 5px $theme_red !important;
+    }
   }
 }

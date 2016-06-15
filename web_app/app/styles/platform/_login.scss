@@ -450,4 +450,21 @@ label {
   .input-group-addon {
     margin-bottom: 5px !important;
   }
+  .btn-register {
+    margin-top: 25px;
+  }
+  .agree-box {
+    .form-control-feedback {
+      line-height: 24px !important;
+    }
+    .glyphicon-ok {
+      display: none !important;
+    }
+  }
+}
+
+.registerBox {
+  .btn-register {
+    margin-top: 25px;
+  }
 }

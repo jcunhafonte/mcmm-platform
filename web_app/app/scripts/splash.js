@@ -134,8 +134,27 @@ $(document).ready(function () {
             0: {
                 items: 1
             },
-            600: {
+            1000: {
                 items: 2
+            }
+        }
+    });
+
+    var owl = $('.sponsors .owl-carousel');
+    owl.owlCarousel({
+        singleItem: false,
+        center: true,
+        loop: true,
+        margin: 10,
+        dots: false,
+        autoplay: true,
+        autoplayTimeout: 5000,
+        responsive: {
+            0: {
+                items: 3
+            },
+            1000: {
+                items: 6
             }
         }
     });
@@ -219,6 +238,7 @@ $(document).ready(function () {
         $('.wrap-rates').parallax("50%", 0.5);
         $('.wrap-programs').parallax("50%", 0.5);
         $('#programs').parallax("50%", 0.5);
+        $('.parallax-section-1').parallax("50%", 0.1);
     }
 
     /* <!-- =============================================== --> */
@@ -498,4 +518,19 @@ $(document).ready(function () {
             invert: true
         });
     }
+
+    $('.card').each(function () {
+        if (!$(this).hasClass('card-many') && !$(this).hasClass('card-user')) {
+            var image = $(this).find('.image img');
+
+            image.hide();
+            var image_src = image.attr('src');
+
+            $(this).find('.image').css({
+                "background-image": "url('" + image_src + "')",
+                "background-position": "center center",
+                "background-size": "cover"
+            });
+        }
+    });
 });

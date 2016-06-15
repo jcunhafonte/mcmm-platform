@@ -58,9 +58,16 @@ $(document).ready(function () {
         });
         return false;
     });
+    $('a.docentes').click(function () {
+        $('html, body').animate({
+            scrollTop: $('#docentes').offset().top - 200
+        }, 1000, function () {
+        });
+        return false;
+    });
     $('a.informacoes').click(function () {
         $('html, body').animate({
-            scrollTop: $('#informacoes').offset().top
+            scrollTop: $('#sponsors').offset().top
         }, 1000, function () {
         });
         return false;
@@ -102,8 +109,9 @@ function redrawDotNav() {
     var section4Top = $('#canal').offset().top - (($('#noticias').offset().top - $('#canal').offset().top) / 2);
     var section5Top = $('#noticias').offset().top - (($('#projetos').offset().top - $('#noticias').offset().top) / 2);
     var section6Top = $('#projetos').offset().top - (($('#alunos').offset().top - $('#projetos').offset().top) / 2);
-    var section7Top = $('#alunos').offset().top - (($('#informacoes').offset().top - $('#alunos').offset().top) / 2);
-    var section8Top = $('#informacoes').offset().top - (($(document).height() - $('#informacoes').offset().top) / 2);
+    var section7Top = $('#alunos').offset().top - (($('#docentes').offset().top - $('#alunos').offset().top) / 2);
+    var section8Top = $('#docentes').offset().top - (($('#informacoes').offset().top - $('#docentes').offset().top) / 2);
+    var section9Top = $('#informacoes').offset().top - (($(document).height() - $('#informacoes').offset().top) / 2);
 
     $('nav#primary a').removeClass('active');
     if ($(document).scrollTop() >= section1Top && $(document).scrollTop() < section2Top) {
@@ -120,7 +128,9 @@ function redrawDotNav() {
         $('nav#primary a.projetos').addClass('active');
     } else if ($(document).scrollTop() >= section7Top && $(document).scrollTop() < section8Top) {
         $('nav#primary a.alunos').addClass('active');
-    } else if ($(document).scrollTop() >= section8Top) {
+    } else if ($(document).scrollTop() >= section8Top && $(document).scrollTop() < section9Top) {
+        $('nav#primary a.docentes').addClass('active');
+    } else if ($(document).scrollTop() >= section9Top) {
         $('nav#primary a.informacoes').addClass('active');
     }
 

@@ -91,8 +91,8 @@
   }
 }
 
-.whatwedo{
-  .mcmm-button{
+.whatwedo {
+  .mcmm-button {
     margin-top: 27px;
     color: $theme;
     border-color: $theme;
@@ -100,8 +100,8 @@
   }
 }
 
-.candidaturas{
-  .mcmm-button{
+.candidaturas {
+  .mcmm-button {
     color: $white;
     border-color: $black;
     background: $black;
@@ -116,8 +116,8 @@
   }
 }
 
-.noticias_section{
-  .mcmm-button{
+.noticias_section {
+  .mcmm-button {
     color: $white;
     border-color: $theme_green;
     background: $theme_green;
@@ -132,8 +132,8 @@
   }
 }
 
-.projetos{
-  .mcmm-button{
+.projetos {
+  .mcmm-button {
     color: $white;
     border-color: $theme_yellow !important;
     background: $theme_yellow !important;
@@ -144,6 +144,35 @@
       background-color: $theme_yellow !important;
       color: $white !important;
       opacity: 0.8;
+    }
+  }
+}
+
+.alunos_section {
+  .mcmm-button {
+    color: $white;
+    border-color: $theme !important;
+    background: $theme !important;
+    opacity: 1;
+    margin-top: 30px;
+    margin-bottom: 200px !important;
+    &:hover {
+      border-color: $theme !important;
+      background-color: $theme !important;
+      color: $white !important;
+      opacity: 0.8;
+    }
+  }
+}
+
+.home-footer {
+  .mcmm-button.has-icon {
+    margin-top: 60px;
+    &:hover {
+      cursor: pointer !important;
+      span {
+        left: 0 !important;
+      }
     }
   }
 }

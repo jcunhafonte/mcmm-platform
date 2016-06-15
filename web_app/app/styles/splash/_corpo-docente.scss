@@ -1,122 +1,63 @@
 .corpo-docente {
-  background: $white;
-  padding: 80px 0 100px;
-}
-
-.corpo-docente .list-dream-team .team-item {
-  margin-bottom: 50px;
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-  border-radius: 5px;
-}
-
-.corpo-docente .list-dream-team .team-item.active .image .mask {
-  opacity: 1;
-}
-
-.corpo-docente .list-dream-team .team-item.add-new {
-  border: 1px solid #e7e8ec;
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-  border-radius: 5px;
-}
-
-.corpo-docente .list-dream-team .team-item.add-new .bottom-info {
-  border: none;
-}
-
-.corpo-docente .list-dream-team .team-item.add-new .image .mask {
-  background: $white;
-  opacity: 1 !important;
-  display: block;
-  text-align: center;
-  padding-top: 43%;
-}
-
-.corpo-docente .list-dream-team .team-item.add-new .image .mask p {
-  color: #7e848e;
-}
-
-.corpo-docente .list-dream-team .team-item.add-new .image .mask p.large {
-  color: #2a2d32;
-  margin-bottom: 5px;
-}
-
-.corpo-docente .list-dream-team .team-item.add-new .image .mask i {
-  color: #27ae60;
-  font-size: 36px;
-}
-
-.corpo-docente .list-dream-team .team-item .image {
+  padding: 0 0 10px;
   position: relative;
-}
+  bottom: 200px;
+  z-index: 100;
+  margin-bottom: -140px;
 
-.corpo-docente .list-dream-team .team-item .image img {
-  -moz-border-radius-topleft: 5px;
-  -webkit-border-top-left-radius: 5px;
-  border-top-left-radius: 5px;
-  -moz-border-radius-topright: 5px;
-  -webkit-border-top-right-radius: 5px;
-  border-top-right-radius: 5px;
-}
+  .team-item {
+    position: relative;
+    margin-bottom: 30px;
+    .info {
+      position: absolute;
+      bottom: 0;
+      padding-left: 20px;
+      width: 100%;
+      .name {
+        position: relative;
+        z-index: 900;
+        color: $white;
+        font-family: "Hind";
+        font-size: 20px;
+        font-weight: bold;
+        transition: all 0.3s;
+        opacity: 0;
+      }
+    }
+    &:after {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      top: 0;
+      left: 0;
+      content: ' ';
+      opacity: 0;
+      display: block;
+      transition: all 0.3s;
+      background: linear-gradient(to top, rgba(51, 51, 51, 1) 0%, rgba(51, 51, 51, 0.8) 10%, rgba(51, 51, 51, 0) 100%);
+    }
+    &:hover {
+      .info {
+        .name {
+          opacity: 1;
+          margin-bottom: 20px;
+        }
+      }
+      &:after {
+        opacity: 1;
+      }
+    }
 
-.corpo-docente .list-dream-team .team-item .image .mask {
-  -moz-border-radius-topleft: 5px;
-  -webkit-border-top-left-radius: 5px;
-  border-top-left-radius: 5px;
-  -moz-border-radius-topright: 5px;
-  -webkit-border-top-right-radius: 5px;
-  border-top-right-radius: 5px;
-  transition: all 0.3s ease-out;
-  -webkit-transition: all 0.3s ease-out;
-  -moz-transition: all 0.3s ease-out;
-  -o-transition: all 0.3s ease-out;
-  -ms-transition: all 0.3s ease-out;
-  opacity: 0.01;
-  /*display: none;*/
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  background: #27ae60;
-  background: rgba(39, 174, 96, 0.8);
-  padding: 30px;
-  color: $white;
-}
-
-.corpo-docente .list-dream-team .team-item .image .mask .fa {
-  color: $white;
-}
-
-.corpo-docente .list-dream-team .team-item .bottom-info {
-  padding: 20px;
-  border: 1px solid #e7e8ec;
-  border-top: none;
-  height: 100px;
-  -moz-border-radius-bottomleft: 5px;
-  -webkit-border-bottom-left-radius: 5px;
-  border-bottom-left-radius: 5px;
-  -moz-border-radius-bottomright: 5px;
-  -webkit-border-bottom-right-radius: 5px;
-  border-bottom-right-radius: 5px;
-  text-align: center;
-}
-
-.corpo-docente .list-dream-team .team-item .bottom-info .name {
-  font-weight: bold;
-  color: #2a2d32;
-}
-
-.corpo-docente .list-dream-team .team-item .bottom-info .post {
-  font-size: 13px;
-  color: #7e848e;
-}
-
-.corpo-docente h2{
-  font-family: Hind;
-  font-size: 42px !important;
-  line-height: 48px;
-  font-weight: 300;
-  text-transform: none !important;
+    @media screen and (max-width: $screen-sm-min) {
+      .info {
+        .name {
+          opacity: 1;
+          margin-bottom: 20px;
+        }
+      }
+      &:after {
+        opacity: 1;
+      }
+    }
+  }
 }

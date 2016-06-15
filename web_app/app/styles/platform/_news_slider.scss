@@ -1,0 +1,169 @@
+#news {
+  .header-page {
+    height: 500px;
+    .carousel {
+      .owl-item {
+        -webkit-backface-visibility: hidden;
+        -webkit-transform: translateZ(0) scale(1.0, 1.0);
+      }
+
+      .dots-wrapper {
+        -webkit-tap-highlight-color: transparent;
+        z-index: 10;
+        position: absolute;
+        bottom: 30px;
+      }
+
+      .dots-wrapper .owl-dot {
+        display: inline-block;
+        zoom: 1;
+        *display: inline;
+        cursor: pointer;
+      }
+
+      .dots-wrapper .owl-dot span {
+        width: 30px;
+        height: 5px;
+        margin: 5px 7px;
+        background: $white;
+        opacity: 0.25;
+        display: block;
+        -webkit-backface-visibility: visible;
+        -webkit-transition: opacity 200ms ease;
+        -moz-transition: opacity 200ms ease;
+        -ms-transition: opacity 200ms ease;
+        -o-transition: opacity 200ms ease;
+        transition: opacity 200ms ease;
+      }
+      .dots-wrapper .owl-dot.active span, .owl-theme .dots-wrapper .owl-dot:hover span {
+        background: $white;
+        opacity: 1;
+      }
+      .owl-carousel.owl-grab {
+        cursor: -webkit-grabbing !important;
+        cursor: -moz-grabbing !important;
+      }
+      .owl-carousel {
+        position: relative;
+        cursor: -webkit-grab !important;
+        cursor: -moz-grab !important;
+        -webkit-user-select: none !important;
+        -khtml-user-select: none !important;
+        -moz-user-select: none !important;
+        -ms-user-select: none !important;
+        user-select: none !important;
+        overflow: hidden;
+        background: #EEEEEE !important;
+        height: 500px;
+
+        .background-img {
+          img {
+            height: 500px;
+            width: 100%;
+            object-fit: cover;
+            -o-object-fit: cover;
+          }
+          &:after {
+            background-color: rgba(45, 45, 45, 0.3);
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            content: ' ';
+            z-index: 0;
+            display: block
+          }
+        }
+        .titles {
+          .control-title {
+            position: absolute;
+            bottom: 20%;
+            margin-left: auto !important;
+            margin-right: auto !important;
+            -webkit-font-smoothing: antialiased;
+            width: 60%;
+            h2 {
+              font-family: "Hind" !important;
+              color: $white !important;
+              font-weight: 700 !important;
+              letter-spacing: -0.5px;
+              font-size: 66px;
+              line-height: 66px;
+              margin-top: 15px !important;
+              cursor: pointer;
+              opacity: 1;
+              &:hover {
+                opacity: .8;
+              }
+            }
+            span {
+              font-family: "Montserrat";
+              display: inline-block;
+              position: relative;
+              text-transform: uppercase;
+              color: $white;
+              letter-spacing: 1px;
+              font-size: 14px;
+              left: 10px;
+              &:before {
+                display: block;
+                content: ' ';
+                height: 14px;
+                margin-right: 10px;
+                position: absolute;
+                left: -10px;
+                top: 8px;
+                width: 3px;
+                transition: all .3s cubic-bezier(.175, .885, .32, 1.1);
+                -webkit-transition: all .3s cubic-bezier(.175, .885, .32, 1.1);
+                z-index: 10;
+                background: $theme_green;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $screen-md-min) {
+  .header-page {
+    height: 350px;
+    .carousel {
+      .owl-carousel {
+        height: 350px;
+        img {
+          height: 350px;
+        }
+        .titles {
+          .control-title {
+            width: 80%;
+            h2 {
+              font-size: 50px !important;
+              line-height: 50px !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $screen-sm-min) {
+  .header-page {
+    .carousel {
+      .owl-carousel {
+        .titles {
+          .control-title {
+            h2 {
+              font-size: 35px !important;
+              line-height: 35px !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}

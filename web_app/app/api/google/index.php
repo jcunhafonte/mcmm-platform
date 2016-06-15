@@ -1,8 +1,7 @@
 <?php
+
 include_once("config.php");
 include_once("includes/functions.php");
-
-//print_r($_GET);die;
 
 if(isset($_REQUEST['code'])){
 	$gClient->authenticate();
@@ -18,7 +17,9 @@ if ($gClient->getAccessToken()) {
 	$userProfile = $google_oauthV2->userinfo->get();
 	//DB Insert
 	$gUser = new Users();
-	$gUser->checkUser('google',$userProfile['id'],$userProfile['given_name'],$userProfile['family_name'],$userProfile['email'],$userProfile['gender'],$userProfile['locale'],$userProfile['link'],$userProfile['picture']);
+	$gUser->checkUser('google',$userProfile['id'],$userProfile['given_name'],$userProfile['family_name'],
+		$userProfile['email'],$userProfile['gender'],$userProfile['locale'],$userProfile['link'],
+		$userProfile['picture']);
 	$_SESSION['google_data'] = $userProfile; // Storing Google User Data in Session
 	header("location: account.php");
 	$_SESSION['token'] = $gClient->getAccessToken();

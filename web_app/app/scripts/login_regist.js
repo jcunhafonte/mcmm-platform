@@ -1,10 +1,14 @@
 function showRegisterForm2() {
+    
+    $("#strengthBar").css('width','0%')
     $('.registerBox-2').fadeIn('fast');
+
     $('.social').fadeOut('fast');
     $('.division').fadeOut('fast');
 
     $('.loginBox').fadeOut('fast', function () {
         $('.registerBox').fadeOut('fast');
+        resetForm2();
         $('.login-footer').fadeOut('fast', function () {
             $('.register-footer').fadeIn('fast');
         });
@@ -20,14 +24,29 @@ function showRegisterForm() {
 
     $('.loginBox').fadeOut('fast', function () {
         $('.registerBox').fadeIn('fast');
+        resetForm1();
         $('.login-footer').fadeOut('fast', function () {
             $('.register-footer').fadeIn('fast');
         });
         $('.modal-title').html('Registar');
     });
     $('.error').removeClass('alert alert-danger').html('');
-
 }
+
+function resetForm1() {
+    $("#signupForm").data('formValidation').resetForm();
+    $("#email_signup").val('');
+    $("#email_signupEnd").val('');
+}
+
+function resetForm2() {
+    $("#password").val('');
+    $("#confirmPassword").val('');
+    $("#nome_signupEnd").val('');
+    $("#utilizador_signupEnd").val('');
+    $("#signupFormEnd").formValidation('resetForm', true);
+}
+
 function showLoginForm() {
     $('.social').fadeIn('fast');
     $('.division').fadeIn('fast');
@@ -49,7 +68,6 @@ function openLoginModal() {
     setTimeout(function () {
         $('#loginModal').modal('show');
     }, 230);
-
 }
 function openRegisterModal() {
     showRegisterForm();
@@ -286,10 +304,6 @@ $(document).ready(function () {
                         notEmpty: {
                             message: 'Necessitas de introduzir um nome de utilizador'
                         },
-                        regexp: {
-                            regexp: /^[a-z]+$/,
-                            message: 'O nome de utilizador não deve conter letras maiúsculas, espaços e/ou números'
-                        },
                         remote: {
                             headers: {
                                 'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
@@ -300,6 +314,17 @@ $(document).ready(function () {
                             },
                             message: 'O email introduzido já se encontra registado',
                             type: 'POST'
+                        }
+                    }
+                },
+                agree: {
+                    excluded: false,
+                    validators: {
+                        callback: {
+                            message: 'Deves concordar com os termos e condições',
+                            callback: function (value, validator, $field) {
+                                return value === 'yes';
+                            }
                         }
                     }
                 },
@@ -368,9 +393,23 @@ $(document).ready(function () {
             }
         })
         .on('success.form.fv', function (e) {
-            submitSignup2();
             e.preventDefault();
+            submitRegist();
         });
+
+    // Update the value of "agree" input when clicking the Agree/Disagree button
+    $('#click-agree').on('click', function () {
+
+        if ($('#agree').val() == 'no') {
+            $('#agree').val('yes');
+        } else {
+            $('#agree').val('no');
+        }
+
+        $('#signupFormEnd')
+            .formValidation('revalidateField', 'agree');
+    });
+
 });
 
 function submitLogin() {
@@ -438,9 +477,6 @@ function submitLogin() {
 function submitSignup() {
     var email = $("#email_signup").val();
     $('#email_signupEnd').val(email);
-    var string = $('#email_signupEnd').val();
-    var user = string.slice(0, string.indexOf("@"));
-    $('#utilizador_signupEnd').val(user);
     showRegisterForm2();
     return true;
 }
@@ -472,6 +508,68 @@ function submitSignup2() {
             if (html == 'registo=2') {
                 shakeModal();
                 $('.error').addClass('alert alert-danger').html('Verifica se o email que introduziste é válido.');
+                return true;
+            }
+
+            if (html == 'registo=3') {
+                shakeModal();
+                $('.error').addClass('alert alert-info').html('Para acederes a esta página precisas de estar autenticado.');
+                return true;
+            }
+        }
+    });
+}
+
+function submitRegist() {
+
+    var email = $("#email_signupEnd").val();
+    var pass = $("#password").val();
+    var confirmPass = $("#confirmPassword").val();
+    var nome = $("#nome_signupEnd").val();
+    var utilizador = $("#utilizador_signupEnd").val();
+
+    var informacao = "emailUtilizador=" + email + "&palavraPasseUtilizador=" + pass +
+        "&confirmarPalavraPasseUtilizador=" + confirmPass + "&nomeUtilizador=" + nome + "&utilizadorId=" + utilizador;
+
+    $.ajax({
+        type: "POST",
+        url: mcmm_dns + "api/verificacoes/verificaRegisto.php",
+        data: informacao,
+
+        success: function (html) {
+
+            if (html == 'registo=0') {
+                shakeModal();
+                $('.error').addClass('alert alert-danger').html('O email introduzido já encontra registado.');
+                return true;
+            }
+
+            if (html == 'registo=1') {
+                $('#loginModal').modal('hide');
+                noty({
+                    text: 'O teu registo foi concluído com <b>sucesso</b>! <br>' +
+                    ' Acede ao <b>email inserido</b> para validares a tua conta.',
+                    type: 'success',
+                    layout: 'topRight',
+                    theme: 'bootstrapTheme',
+                    animation: {
+                        open: 'animated bounceInLeft',
+                        close: 'animated bounceOutRight',
+                        easing: 'swing',
+                        speed: 250
+                    }
+                });
+            }
+
+            if (html == 'registo=3') {
+                shakeModal();
+                $('.error').addClass('alert alert-danger').html('Verifica se as palavras-passes que introduziste coincidem.');
+                return true;
+            }
+
+            if (html == 'registo=4') {
+                shakeModal();
+                $('.error').addClass('alert alert-danger').html('Verifica se o email introduzido é válido.');
                 return true;
             }
 

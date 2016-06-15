@@ -45,8 +45,9 @@
 .mcmm-nav--top {
   position: absolute;
   top: 0;
-  height: 88px;
-  padding-top: 17px;
+  height: 75px;
+  padding-top: 12px;
+  z-index: 100000000;
 }
 
 .mcmm-nav--top.mcmm-nav--tall {
@@ -134,7 +135,7 @@
 }
 
 .mcmm-nav .buttons-area, .mcmm-nav .inputGroup, .mcmm-nav .mcmm-nav-text, .mcmm-nav-block > .button {
-  margin: 6px;
+  margin: 4px;
   margin-right: 0 !important;
   display: inline-block;
   white-space: nowrap;
@@ -416,7 +417,7 @@ h3.mcmm-nav-logo--noControls {
 }
 
 .mcmm-nav-message.is-active {
-  display: inline-block
+  display: inline-block;
 }
 
 .mcmm-nav .textInput--displayAuthor {
@@ -616,7 +617,7 @@ h3.mcmm-nav-logo--noControls {
 
 @media screen and (max-width: 767px) {
   .mcmm-nav--top {
-    height: 56px
+    height: 134px !important;
   }
 
   .mcmm-nav--resumeReading {
@@ -755,7 +756,7 @@ h3.mcmm-nav-logo--noControls {
     text-decoration: none !important;
   }
   .mcmm-nav--top {
-    height: 143px !important;
+    height: 126px;
     position: fixed;
     top: 0;
     background-color: rgba(255, 255, 255, 0.96) !important;
@@ -803,7 +804,6 @@ h3.mcmm-nav-logo--noControls {
   font-weight: 400;
   padding: 26px 0 19px;
   text-transform: none;
-  //font-family: Varela Round;
   font-size: 16px;
   line-height: 22.4px;
   font-weight: 400;
@@ -840,7 +840,18 @@ h3.mcmm-nav-logo--noControls {
 }
 
 .platforms--mcmm-nav .platforms-item.is-active {
-  border-bottom: 0
+  border-bottom: 0;
+  a{
+    position: relative;
+    top: 1.5px;
+  }
+}
+
+.navbar-white .platforms-item.is-active {
+  a{
+    position: relative;
+    top: 0;
+  }
 }
 
 .platforms--mcmm-nav .platforms-item.is-active > .platforms-anchor {
@@ -852,7 +863,7 @@ h3.mcmm-nav-logo--noControls {
 }
 
 .navbar-transparent .platforms--mcmm-nav .platforms-item.is-active > .platforms-anchor {
-  padding-bottom: 5px;
+  padding-bottom: 3.5px;
 }
 
 .float-left {
@@ -866,10 +877,11 @@ h3.mcmm-nav-logo--noControls {
   padding-right: 14px;
   z-index: 700;
   border: 0;
+  top:4px;
 }
 
 .brand-img {
-  height: 55px;
+  height: 45px;
 }
 
 .platforms {
@@ -1083,7 +1095,6 @@ h3.mcmm-nav-logo--noControls {
       color: $theme_green;
       &:hover {
         color: $theme_green_hover !important;
-        opacity: 1 !important;
       }
       &:focus {
         color: $theme_green_hover !important;
@@ -1091,7 +1102,40 @@ h3.mcmm-nav-logo--noControls {
     }
     .divider-bar {
       color: $theme_green;
-      opacity: 1;
+    }
+  }
+}
+
+#projects {
+  .navbar-white {
+    .btn-sign {
+      color: $theme_yellow;
+      &:hover {
+        color: $theme_yellow_hover !important;
+      }
+      &:focus {
+        color: $theme_yellow_hover !important;
+      }
+    }
+    .divider-bar {
+      color: $theme_yellow;
+    }
+  }
+}
+
+#video {
+  .navbar-white {
+    .btn-sign {
+      color: $theme_red;
+      &:hover {
+        color: $theme_red_hover !important;
+      }
+      &:focus {
+        color: $theme_red_hover !important;
+      }
+    }
+    .divider-bar {
+      color: $theme_red;
     }
   }
 }
@@ -1138,14 +1182,36 @@ h3.mcmm-nav-logo--noControls {
 
 #news .platforms--mcmm-nav .platforms-item.is-active > .platforms-anchor {
   border-bottom: 2px solid $theme_green !important;
+  a{
+    position: relative;
+    top: 1.5px;
+  }
 }
 
 #projects .platforms--mcmm-nav .platforms-item.is-active > .platforms-anchor {
   border-bottom: 2px solid $theme_yellow !important;
 }
 
+#projects{
+  .hvr-underline-from-center:before {
+    background: $theme_yellow !important;
+  }
+  .platforms--mcmm-nav .platforms-item.is-active > .platforms-anchor {
+    border-bottom: 2px solid $theme_yellow;
+  }
+}
+
 #video .platforms--mcmm-nav .platforms-item.is-active > .platforms-anchor {
   border-bottom: 2px solid $theme_red !important;
+}
+
+#video{
+  .hvr-underline-from-center:before {
+    background: $theme_red !important;
+  }
+  .platforms--mcmm-nav .platforms-item.is-active > .platforms-anchor {
+    border-bottom: 2px solid $theme_red;
+  }
 }
 
 @media all and (max-width: 767px) {
@@ -1194,7 +1260,7 @@ h3.mcmm-nav-logo--noControls {
   .platforms--mcmm-nav {
     //background-color: rgba(255, 255, 255, 0.96) !important;
     width: 100%;
-    margin: 75px 0 0;
+    margin: 64px 0 0;
     padding-top: 2px;
     padding-bottom: 0;
     border-top: 1px solid #f0f0f0;
@@ -1257,4 +1323,8 @@ h3.mcmm-nav-logo--noControls {
   .platforms--collection .linkSet {
     display: none
   }
+}
+
+.alert{
+
 }

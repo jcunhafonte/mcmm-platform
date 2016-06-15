@@ -2,6 +2,24 @@
   border-top: 1px solid #e8e9ed;
   margin-bottom: 100px;
 
+  .parallax-section-1 {
+    background: no-repeat url("../images/backgrounds/students.jpg");
+    margin-top: 20px;
+    background-size: cover;
+
+    &:before {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      content: ' ';
+      background: linear-gradient(to bottom, #ffffff 0%, rgba(255, 255, 255, 0.001) 55%);
+      z-index: -1;
+    }
+  }
+
   .owl-carousel {
     cursor: -webkit-grab;
     cursor: -moz-grab;
@@ -32,7 +50,7 @@
           position: relative;
 
           p {
-            padding: 30px;
+            padding: 30px 30px 30px 80px;
             color: $gray;
             font-size: 18px;
             line-height: 30px;
@@ -50,6 +68,19 @@
             opacity: 1;
             border-left: 20px solid transparent;
             border-right: 20px solid transparent;
+          }
+
+          .quote-symbol {
+            position: relative;
+            top: 30px;
+            left: 20px;
+            float: left;
+            svg {
+              position: relative;
+              top: 0;
+              fill: $gray;
+              width: 44px;
+            }
           }
         }
 
@@ -87,11 +118,16 @@
           background: $theme;
           transition: all 0.2s ease;
           -webkit-transition: all 0.2s ease;
-          p{
+          p {
             color: $white;
           }
           .arrow {
             border-top: 20px solid $theme;
+          }
+          .quote-symbol {
+            svg {
+              fill: $theme_hover;
+            }
           }
         }
         .profile {
@@ -120,12 +156,47 @@
           margin: 40px 4px 0 4px;
         }
 
-        &.active{
-          span{
+        &.active {
+          span {
             background: none repeat scroll 0 0 $theme;
           }
         }
       }
+    }
+  }
+
+  .section-subheader {
+    margin-top: 100px;
+    h2 {
+      font-family: "Hind";
+      font-size: 36px !important;
+      line-height: 40px !important;
+      color: $theme;
+      text-transform: none;
+    }
+    p {
+      margin-top: 45px;
+      font-size: 16px;
+      color: $white;
+      line-height: 30px !important;
+    }
+  }
+}
+
+@media screen and (max-width: $screen-sm-min) {
+  .alunos_section {
+    h2 {
+      font-size: 24px !important;
+      line-height: 28px !important;
+    }
+  }
+}
+
+@media screen and (max-width: $screen-md-min) {
+  .alunos_section {
+    h2 {
+      font-size: 28px !important;
+      line-height: 32px !important;
     }
   }
 }

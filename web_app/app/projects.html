@@ -56,26 +56,26 @@
 
     <!--FAVICON-->
     <!--FAVICON-->
-    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="images/favicon/yellow/apple-touch-icon-57x57.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/favicon/yellow/apple-touch-icon-114x114.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/favicon/yellow/apple-touch-icon-72x72.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/favicon/yellow/apple-touch-icon-144x144.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="images/favicon/yellow/apple-touch-icon-60x60.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="images/favicon/yellow/apple-touch-icon-120x120.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="images/favicon/yellow/apple-touch-icon-76x76.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="images/favicon/yellow/apple-touch-icon-152x152.png" />
-    <link rel="icon" type="image/png" href="images/favicon/yellow/favicon-196x196.png" sizes="196x196" />
-    <link rel="icon" type="image/png" href="images/favicon/yellow/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/png" href="images/favicon/yellow/favicon-32x32.png" sizes="32x32" />
-    <link rel="icon" type="image/png" href="images/favicon/yellow/favicon-16x16.png" sizes="16x16" />
-    <link rel="icon" type="image/png" href="images/favicon/yellow/favicon-128.png" sizes="128x128" />
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="images/favicon/yellow/apple-touch-icon-57x57.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/favicon/yellow/apple-touch-icon-114x114.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/favicon/yellow/apple-touch-icon-72x72.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/favicon/yellow/apple-touch-icon-144x144.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="images/favicon/yellow/apple-touch-icon-60x60.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="images/favicon/yellow/apple-touch-icon-120x120.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="images/favicon/yellow/apple-touch-icon-76x76.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="images/favicon/yellow/apple-touch-icon-152x152.png"/>
+    <link rel="icon" type="image/png" href="images/favicon/yellow/favicon-196x196.png" sizes="196x196"/>
+    <link rel="icon" type="image/png" href="images/favicon/yellow/favicon-96x96.png" sizes="96x96"/>
+    <link rel="icon" type="image/png" href="images/favicon/yellow/favicon-32x32.png" sizes="32x32"/>
+    <link rel="icon" type="image/png" href="images/favicon/yellow/favicon-16x16.png" sizes="16x16"/>
+    <link rel="icon" type="image/png" href="images/favicon/yellow/favicon-128.png" sizes="128x128"/>
     <meta name="application-name" content="MCMM"/>
-    <meta name="msapplication-TileColor" content="#FFFFFF" />
-    <meta name="msapplication-TileImage" content="images/favicon/yellow/mstile-144x144.png" />
-    <meta name="msapplication-square70x70logo" content="images/favicon/yellow/mstile-70x70.png" />
-    <meta name="msapplication-square150x150logo" content="images/favicon/yellow/mstile-150x150.png" />
-    <meta name="msapplication-wide310x150logo" content="images/favicon/yellow/mstile-310x150.png" />
-    <meta name="msapplication-square310x310logo" content="images/favicon/yellow/mstile-310x310.png" />
+    <meta name="msapplication-TileColor" content="#FFFFFF"/>
+    <meta name="msapplication-TileImage" content="images/favicon/yellow/mstile-144x144.png"/>
+    <meta name="msapplication-square70x70logo" content="images/favicon/yellow/mstile-70x70.png"/>
+    <meta name="msapplication-square150x150logo" content="images/favicon/yellow/mstile-150x150.png"/>
+    <meta name="msapplication-wide310x150logo" content="images/favicon/yellow/mstile-310x150.png"/>
+    <meta name="msapplication-square310x310logo" content="images/favicon/yellow/mstile-310x310.png"/>
 
     <!-- build:css styles/vendor.css -->
     <!-- bower:css -->
@@ -139,642 +139,203 @@
 </nav>
 <!-- ++++++++++++++++++++++++++++++++++++++++ -->
 
-<style>
-
-    .project {
-        width: 90%;
-        float: left;
-    }
-
-    .project:not(:last-child) {
-        margin-right: 4%;
-    }
-
-    .project-list:after {
-        content: " ";
-        display: block;
-        clear: both;
-    }
-
-    .project__image {
-        display: block;
-        position: relative;
-    }
-
-    .project__image img {
-        width: 100%;
-        max-width: 100%;
-        height: auto;
-        display: block;
-    }
-
-    .project__image:after {
-        content: " ";
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        left: 0;
-        top: 0;
-        background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.4));
-        transition: opacity .3s ease;
-        opacity: 0;
-    }
-
-    .project__card {
-        position: relative;
-        will-change: transform;
-        transition: box-shadow .3s ease;
-        box-shadow: 0 10px 30px transparent;
-    }
-
-    .project__card.hover-in {
-        transition: -webkit-transform .2s ease-out;
-        transition: transform .2s ease-out;
-        transition: transform .2s ease-out, -webkit-transform .2s ease-out;
-    }
-
-    .project__card.hover-out {
-        transition: -webkit-transform .2s ease-in;
-        transition: transform .2s ease-in;
-        transition: transform .2s ease-in, -webkit-transform .2s ease-in;
-    }
-
-    .project:hover .project__card {
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-    }
-
-    .project:hover .project__image:after {
-        opacity: 1;
-    }
-
-    .project:hover .project__detail {
-        border-width: 10px;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-    }
-
-    .project:hover .project__title, .project:hover .project__category {
-        -webkit-transform: translateY(0) scale(1);
-        -ms-transform: translateY(0) scale(1);
-        transform: translateY(0) scale(1);
-        opacity: 1;
-    }
-
-    .project__detail {
-        position: absolute;
-        left: 30px;
-        right: 30px;
-        top: 30px;
-        bottom: 30px;
-        display: -webkit-flex;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-        flex-direction: column;
-        -webkit-justify-content: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-        text-align: center;
-        pointer-events: none;
-        -webkit-transform: translateZ(30px);
-        transform: translateZ(30px);
-        border: 0 solid #00BCD4;
-        transition: border .4s ease;
-    }
-
-    .project__title {
-        margin: 0 0 10px;
-        font-size: 36px;
-        font-weight: 700;
-        transition: .4s ease;
-        opacity: 0;
-        -webkit-transform: translateY(40px) scale(0);
-        -ms-transform: translateY(40px) scale(0);
-        transform: translateY(40px) scale(0);
-        will-change: transform;
-    }
-
-    .project__title a {
-        color: white;
-    }
-
-    .project__category {
-        opacity: 0;
-        transition: .4s ease;
-        transition-delay: .1s;
-        -webkit-transform: translateY(40px) scale(0);
-        -ms-transform: translateY(40px) scale(0);
-        transform: translateY(40px) scale(0);
-        will-change: transform;
-    }
-
-    .project__category a {
-        color: rgba(255, 255, 255, 0.8);
-        font-size: 1.3em;
-    }
-</style>
-
 <div id="platform">
-    <div id="carousel" class="carousel">
-        <div class="owl-carousel">
-            <div class="item">
-                <img src="http://themenectar.com/demo/salient-corporate/wp-content/uploads/2016/01/sparks.jpg"
-                     alt="Awesome Image">
-                <h2>A old ending</h2>
-            </div>
-            <div class="item">
-                <img src="http://themenectar.com/demo/salient-corporate/wp-content/uploads/2016/01/crime.jpg"
-                     alt="Awesome Image">
-            </div>
-            <div class="item">
-                <img src="http://themenectar.com/demo/salient-corporate/wp-content/uploads/2016/01/crime.jpg"
-                     alt="Awesome Image">
-            </div>
-        </div>
-    </div> <!-- end carousel -->
 
-    <div class="section section-white">
-        <div class="container">
-            <div class="row project">
-                <div class="project__card col-md-4">
-                    <div class="card card-background">
-                        <div class="image">
-                            <img src="assets/images/card-full-2.jpg" alt="..."/>
-                            <div class="filter"></div>
-                        </div>
-                        <div class="content">
-                            <p class="category">Latest news</p>
-                            <a href="#">
-                                <h4 class="title">mcmm, a plataforma do momento </h4>
-                            </a>
-                        </div>
-                        <div class="footer">
-                            <div class="author">
-                                <a href="#">
-                                    <img src="assets/images/faces/face-6.jpg" alt="..." class="avatar">
-                                    <span> Conacel Elena </span>
-                                </a>
-                            </div>
-                            <div class="stats pull-right">
-                                <i class="fa fa-clock-o"></i> 3 hours ago
-                            </div>
-                        </div>
-                    </div> <!-- end card -->
+    <div class="projects-header">
+        <div class="contents">
+            <div class="container">
+                <div class="row">
+                    <div class="description">
+                        <h2 class="title">As nossas produções</h2>
+                    </div>
                 </div>
-
-                <div class="col-md-4">
-                    <div class="card card-background">
-                        <div class="image">
-                            <img src="assets/images/card-full-3.jpg" alt="..."/>
-                            <div class="filter"></div>
-                        </div>
-                        <div class="content">
-                            <p class="category text-right">
-                                <i class="fa fa-star"></i> Promo
-                            </p>
-                            <a href="#">
-                                <h4 class="title">The next big thing in web development is here!</h4>
-                            </a>
-                        </div>
-                        <div class="footer">
-                            <div class="stats">
-                                <a href="#">
-                                    <i class="fa fa-comment"></i> 68 comments
-                                </a>
-                            </div>
-                            <div class="stats">
-                                <a href="#">
-                                    <i class="fa fa-heart"></i> 221 likes
-                                </a>
-                            </div>
-                        </div>
-                    </div> <!-- end card -->
-                </div>
-
-                <div class="col-md-4">
-                    <div class="card card-background">
-                        <div class="image">
-                            <img src="assets/images/card-full-4.jpg" alt="..."/>
-                            <div class="filter filter-azure"></div>
-                        </div>
-                        <div class="content">
-                            <p class="category">
-                                <i class="fa fa-twitter"></i> From Twitter
-                            </p>
-                            <a href="#">
-                                <h4 class="title">We gonna celebrate hard for the next big thing in web
-                                    development...</h4>
-                            </a>
-                        </div>
-                        <div class="footer">
-                            <div class="author">
-                                <a href="#">
-                                    <img src="assets/images/faces/face-5.jpg" alt="..." class="avatar">
-                                </a>
-                            </div>
-                            <div class="stats pull-right">
-                                <i class="fa fa-comment"></i> 68
-                            </div>
-                            <div class="stats pull-right">
-                                <i class="fa fa-heart"></i> 221
-                            </div>
-                        </div>
-                    </div> <!-- end card -->
-                </div>
-
-            </div>
-
-
-            <div class="row">
-                <div class="col-md-3">
-                    <div class="card card-background">
-                        <div class="image">
-                            <img src="assets/images/card-full-6.jpg" alt="..."/>
-                            <div class="filter filter-orange"></div>
-                        </div>
-                        <div class="content text-center">
-                            <a href="#"><br>
-                                <h1 class="title"> 37&deg;C </h1>
-                                <h5>Very Hot</h5>
-                            </a>
-                        </div>
-                        <div class="footer">
-                            <div class="stats">
-                                <i class="fa fa-map-marker"></i> New York, USA
-                            </div>
-                        </div>
-                    </div> <!-- end card -->
-                </div>
-                <div class="col-md-4">
-                    <div class="card card-background">
-                        <div class="image">
-                            <img src="assets/images/card-full-7.jpg" alt="..."/>
-                            <div class="filter"></div>
-                        </div>
-                        <div class="content">
-                            <h5 class="price">&euro; 129,00
-                                <a href="#" class="pull-right">
-                                    <i class="fa fa-heart"></i>
-                                </a>
-                            </h5>
-                            <a href="#"><br>
-                                <h4 class="title">Premium Apartment in Old Town</h4>
-
-                            </a>
-                        </div>
-                        <div class="footer">
-                            <div class="author">
-                                <a href="#">
-                                    <img src="assets/images/faces/face-5.jpg" alt="..." class="avatar">
-                                    <span>Alex</span>
-                                </a>
-                            </div>
-                            <div class="stats pull-right">
-                                <i class="fa fa-comment"></i> 253 Reviews
-                            </div>
-                        </div>
-                    </div> <!-- end card -->
-                </div>
-                <div class="col-md-5">
-                    <div class="card card-background">
-                        <div class="image">
-                            <img src="assets/images/card-full-5.jpg" alt="..."/>
-                            <div class="filter"></div>
-                        </div>
-                        <div class="content">
-                            <p class="category">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-
-                                <a href="#" class="pull-right btn-hover">
-                                    <i class="fa fa-heart-o"></i> Wishlist
-                                </a>
-                            </p>
-
-                            <a href="#"><br>
-                                <h4 class="title">Exclusive Penthouse in Downtown<br>
-                                    <small> &euro; 450/mo</small>
-                                </h4>
-
-                            </a>
-                        </div>
-                        <div class="footer">
-                            <i class="fa fa-map-marker"></i> Paris, France
-
-                            <div class="author pull-right">
-                                <a href="#" rel="tooltip" title="Radu Tintescu" data-placement="left">
-                                    <img src="assets/images/faces/face-7.jpg" alt="..." class="avatar">
-
-                                </a>
-                            </div>
-                        </div>
-                    </div> <!-- end card -->
-                </div>
-
             </div>
         </div>
     </div>
 
     <div class="section section-gray">
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
-                <div class="col-md-8">
-                    <div class="card card-background">
-                        <div class="image">
-                            <img src="assets/images/card-full-2.jpg" alt="..."/>
-                            <div class="filter"></div>
-                        </div>
-                        <div class="content">
-                            <p class="category">Latest news</p>
-                            <a href="#">
-                                <h4 class="title">mcmm, a plataforma do momento </h4>
-                            </a>
-                        </div>
-                        <div class="footer">
-                            <div class="author">
-                                <a href="#">
-                                    <img src="assets/images/faces/face-6.jpg" alt="..." class="avatar">
-                                    <span> Conacel Elena </span>
-                                </a>
-                            </div>
-                            <div class="stats pull-right">
-                                <i class="fa fa-clock-o"></i> 3 hours ago
-                            </div>
-                        </div>
-                    </div> <!-- end card -->
-                </div>
+                <div class="col-sm-12 col-lg-6 no-padding">
 
-                <div class="col-md-4">
-                    <div class="card card-background">
-                        <div class="image">
-                            <img src="assets/images/card-full-3.jpg" alt="..."/>
-                            <div class="filter"></div>
-                        </div>
-                        <div class="content">
-                            <p class="category text-right">
-                                <i class="fa fa-star"></i> Promo
-                            </p>
-                            <a href="#">
-                                <h4 class="title">The next big thing in web development is here!</h4>
-                            </a>
-                        </div>
-                        <div class="footer">
-                            <div class="stats">
-                                <a href="#">
-                                    <i class="fa fa-comment"></i> 68 comments
-                                </a>
-                            </div>
-                            <div class="stats">
-                                <a href="#">
-                                    <i class="fa fa-heart"></i> 221 likes
-                                </a>
-                            </div>
-                        </div>
-                    </div> <!-- end card -->
-                </div>
+                    <div class="projects-cards col-sm-6">
 
-                <div class="col-md-3">
-                    <div class="card card-background">
-                        <div class="image">
-                            <img src="assets/images/card-full-4.jpg" alt="..."/>
-                            <div class="filter filter-azure"></div>
-                        </div>
-                        <div class="content">
-                            <p class="category">
-                                <i class="fa fa-twitter"></i> From Twitter
-                            </p>
-                            <a href="#">
-                                <h4 class="title">We gonna celebrate hard for the next big thing in web
-                                    development...</h4>
-                            </a>
-                        </div>
-                        <div class="footer">
-                            <div class="author">
-                                <a href="#">
-                                    <img src="assets/images/faces/face-5.jpg" alt="..." class="avatar">
-                                </a>
-                            </div>
-                            <div class="stats pull-right">
-                                <i class="fa fa-comment"></i> 68
-                            </div>
-                            <div class="stats pull-right">
-                                <i class="fa fa-heart"></i> 221
-                            </div>
-                        </div>
-                    </div> <!-- end card -->
-                </div>
+                    </div>
 
-                <div class="col-md-9">
-                    <div class="card card-background">
-                        <div class="image">
-                            <img src="assets/images/card-full-4.jpg" alt="..."/>
-                            <div class="filter filter-azure"></div>
-                        </div>
-                        <div class="content">
-                            <p class="category">
-                                <i class="fa fa-twitter"></i> From Twitter
-                            </p>
-                            <a href="#">
-                                <h4 class="title">We gonna celebrate hard for the next big thing in web
-                                    development...</h4>
-                            </a>
-                        </div>
-                        <div class="footer">
-                            <div class="author">
-                                <a href="#">
-                                    <img src="assets/images/faces/face-5.jpg" alt="..." class="avatar">
-                                </a>
-                            </div>
-                            <div class="stats pull-right">
-                                <i class="fa fa-comment"></i> 68
-                            </div>
-                            <div class="stats pull-right">
-                                <i class="fa fa-heart"></i> 221
+                    <div class="col-sm-12 col-lg-6 no-padding">
+
+                        <div class="projects-cards col-sm-12 wow fadeInUp" data-wow-duration="2s">
+                            <div class="project project-large">
+                                <div class="project__card">
+                                    <a href="" class="project__image">
+                                        <img src="http://themenectar.com/demo/salient-corporate/wp-content/uploads/2015/12/waveform-4.jpg">
+                                    </a>
+                                    <div class="project__detail">
+                                        <h2 class="project__title"><a href="#">A Barafunda</a></h2>
+                                        <small class="project__category"><a href="#">Cinema</a></small>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div> <!-- end card -->
-                </div>
+
+                    </div>
+
+                </div><!--row-->
             </div>
         </div>
-    </div><!-- section -->
 
-    <footer class="footer footer-big footer-transparent"
-            style="background-image: url('assets/images/examples/blog_page8_black.jpg');">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-6 col-sm-6 col-md-3">
-                    <h5 class="title">Company</h5>
-                    <nav>
-                        <ul>
-                            <li>
-                                <a href="#">
-                                    Home
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    Find offers
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    Discover Projects
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    Our Portfolio
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    About Us
-                                </a>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
-                <div class="col-xs-6 col-sm-6 col-md-3">
-                    <h5 class="title"> Help and Support</h5>
-                    <nav>
-                        <ul>
-                            <li>
-                                <a href="#">
-                                    Contact Us
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    How it works
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    Terms & Conditions
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    Company Policy
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    Money Back
-                                </a>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
-                <div class="col-xs-6 col-sm-6 col-md-3">
-                    <h5 class="title">Happy people</h5>
-                    <nav class="numbers">
-                        <ul>
-                            <li>
-                                <h4>13.723
-                                    <small>accounts</small>
-                                </h4>
-                            </li>
-                            <li>
-                                <h4>55.234
-                                    <small>downloads</small>
-                                </h4>
-                            </li>
-                            <li>
-                                <h4>99.092
-                                    <small>shares</small>
-                                </h4>
-                            </li>
+        <footer class="footer footer-big footer-default">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-6 col-sm-6 col-md-3">
+                        <h5 class="title">Ligações</h5>
+                        <nav>
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        Notícias
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Projetos
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Vídeos
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Contactos
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-3">
+                        <h5 class="title">Informações</h5>
+                        <nav class="numbers">
+                            <ul>
+                                <li>
+                                    <h4>200
+                                        <small>Mestres</small>
+                                    </h4>
+                                </li>
+                                <li>
+                                    <h4>500
+                                        <small>Alunos</small>
+                                    </h4>
+                                </li>
+                                <li>
+                                    <h4>101
+                                        <small>Projetos</small>
+                                    </h4>
+                                </li>
 
-                        </ul>
-                    </nav>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-3">
+                        <h5 class="title">Morada</h5>
+                        <nav>
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        Universidade de Aveiro
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Dep. Comunicação e Arte
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="no-link">
+                                        Campus Universitário de Santiago
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="no-link">
+                                        3810-193 Aveiro
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-3">
+                        <h5 class="title">Contactos</h5>
+                        <nav>
+                            <ul>
+                                <li>
+                                    <a class="no-link">
+                                        234 370 389
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="no-link">
+                                        234 370 868
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="mailto:deca-mcmm@ua.pt">
+                                        deca-mcmm@ua.pt
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="www.mcmm.pt" target="_blank" a>
+                                        www.mcmm.pt
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
                 </div>
-                <div class="col-xs-6 col-sm-6 col-md-3">
-                    <h5 class="title">Latest News</h5>
-                    <nav>
-                        <ul>
-                            <li>
-                                <a href="#">
-                                    <i class="fa fa-twitter"></i> <b>Get Shit Done</b>
-                                    The best kit in the market is here, just give it a try and let us...
-                                    <hr class="hr-small">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="fa fa-twitter"></i>
-                                    We've just been featured on <b> Awwwards Website</b>! Thank you everybody for...
-                                </a>
-                            </li>
-
-                        </ul>
-                    </nav>
+                <hr/>
+                <div class="social-area text-center">
+                    <a href="#" class="btn btn-social btn-round">
+                        <i class="fa fa-facebook"></i>
+                    </a>
+                    <a href="#" class="btn btn-social btn-round">
+                        <i class="fa fa-youtube"></i>
+                    </a>
+                    <a href="#" class="btn btn-social btn-round">
+                        <i class="fa fa-envelope"></i>
+                    </a>
+                </div>
+                <div class="copyright">
+                    &copy; 2016 Mestrado em Comunicação Multimédia
                 </div>
             </div>
-            <hr/>
-            <div class="social-area text-center">
-                <a href="#" class="btn btn-social btn-round">
-                    <i class="fa fa-facebook"></i>
-                </a>
-                <a href="#" class="btn btn-social btn-round">
-                    <i class="fa fa-twitter"></i>
-                </a>
-                <a href="#" class="btn btn-social btn-round">
-                    <i class="fa fa-google-plus"></i>
-                </a>
-                <a href="#" class="btn btn-social btn-round">
-                    <i class="fa fa-pinterest"></i>
-                </a>
-                <a href="#" class="btn btn-social btn-round">
-                    <i class="fa fa-linkedin"></i>
-                </a>
-            </div>
-            <div class="copyright">
-                &copy; 2016 Creative Tim, made with love
-            </div>
-        </div>
-    </footer>
-</div>
+        </footer>
 
-<!-- build:js scripts/vendor.js -->
-<!-- bower:js -->
-<script type="text/javascript" src="/bower_components/jquery/dist/jquery.min.js"></script>
-<script type="text/javascript" src="/bower_components/jquery-ui/jquery-ui.min.js"></script>
-<script type="text/javascript" src="/bower_components/sass-bootstrap/dist/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="/bower_components/scroll-up-bar/dist/scroll-up-bar.min.js"></script>
-<script type="text/javascript" src="/bower_components/owl.carousel/dist/owl.carousel.min.js"></script>
-<script type="text/javascript" src="/bower_components/masonry/dist/masonry.pkgd.min.js"></script>
-<script type="text/javascript" src="/bower_components/imagesloaded/imagesloaded.pkgd.min.js"></script>
-<!-- endbower -->
-<!-- endbuild -->
+    </div>
 
-<!-- build:js scripts/plugins.js -->
+    <!-- build:js scripts/vendor.js -->
+    <!-- bower:js -->
+    <script type="text/javascript" src="/bower_components/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="/bower_components/jquery-ui/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="/bower_components/sass-bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/bower_components/scroll-up-bar/dist/scroll-up-bar.min.js"></script>
+    <script type="text/javascript" src="/bower_components/owl.carousel/dist/owl.carousel.min.js"></script>
+    <script type="text/javascript" src="/bower_components/masonry/dist/masonry.pkgd.min.js"></script>
+    <script type="text/javascript" src="/bower_components/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script type="text/javascript" src="/bower_components/nprogress/nprogress.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
 
-<!-- endbuild -->
+    <!-- build:js scripts/plugins.js -->
 
-<!-- build:js scripts/projects.js -->
-<script type="text/javascript" src="scripts/projects.js"></script>
-<script type="text/javascript" src="scripts/platform.js"></script>
-<script type="text/javascript" src="scripts/carousel.js"></script>
-<script type="text/javascript" src="scripts/demo.js"></script>
-<script type="text/javascript" src="scripts/vendor/jquery.hover3d.js"></script>
-<!-- endbuild -->
+    <!-- endbuild -->
 
-<script>
-    var $container = $('.masonry-container');
-    $container.imagesLoaded( function () {
-        $container.masonry({
-            columnWidth: '.item',
-            itemSelector: '.item'
-        });
-    });
+    <!-- build:js scripts/projects.js -->
+    <script type="text/javascript" src="scripts/projects.js"></script>
+    <script type="text/javascript" src="scripts/platform.js"></script>
+    <script type="text/javascript" src="scripts/carousel.js"></script>
+    <script type="text/javascript" src="scripts/demo.js"></script>
+    <!-- endbuild -->
 
-    $(".project").hover3d({
-        selector: ".project__card"
-    });
-</script>
 
 </body>
 </html>
