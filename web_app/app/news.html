@@ -788,54 +788,6 @@
 </div>
 
 <!--MODALS-->
-<div class="container">
-    <div class="modal fade login" id="loginModal">
-        <div class="modal-dialog login animated">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                    <h4 class="modal-title text-center">Entrar</h4>
-                </div>
-                <div class="modal-body">
-                    <div class="box">
-                        <div class="content">
-                            <div class="social">
-                                <a class="circle twitter" href="/auth/twitter">
-                                    <i class="fa fa-twitter fa-fw"></i>
-                                </a>
-                                <a id="google_login" class="circle google" href="/auth/google_oauth2">
-                                    <i class="fa fa-google-plus fa-fw"></i>
-                                </a>
-                                <a id="facebook_login" class="circle facebook" href="/auth/facebook">
-                                    <i class="fa fa-facebook fa-fw"></i>
-                                </a>
-                            </div>
-                            <div class="division">
-                                <div class="line l"></div>
-                                <span>ou</span>
-                                <div class="line r"></div>
-                            </div>
-                            <div class="error"></div>
-                            <div class="form loginBox">
-                                <form method="post" action="/login" accept-charset="UTF-8">
-                                    <input id="email" class="form-control" type="text" placeholder="Email" name="email">
-                                    <input id="password" class="form-control" type="password" placeholder="Password"
-                                           name="password">
-                                    <input class="btn btn-login" type="button" value="Entrar" onclick="loginAjax()">
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <div class="forgot login-footer">
-                        <span>Não tens uma conta? <a href="/signup">Regista-te</a></span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 
 
 <!-- build:js scripts/vendor.js -->
@@ -858,9 +810,7 @@
 <!-- build:js scripts/news.js -->
 <script type="text/javascript" src="scripts/news.js"></script>
 <script type="text/javascript" src="scripts/platform.js"></script>
-<script type="text/javascript" src="scripts/carousel.js"></script>
 <script type="text/javascript" src="scripts/demo.js"></script>
-
 <!-- endbuild -->
 
 </body>

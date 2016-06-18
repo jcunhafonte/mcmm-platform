@@ -97,9 +97,6 @@ $(document).ready(function () {
     // Init Sliders
     gsdk.initSliders();
 
-    //  Init video card actions
-    gsdk.initVideoCards();
-
 });
 
 var gsdk = {
@@ -216,24 +213,6 @@ var gsdk = {
                 animate: true
             });
         }
-    },
-    initVideoCards: function () {
-        $('[data-toggle="video"]').click(function () {
-            var id_video = $(this).data('video');
-            var video = $('#' + id_video).get(0);
-
-            var card_parent = $(this).closest('.card');
-
-            if (video.paused) {
-                video.play();
-                $(this).html('<i class="fa fa-pause"></i> Pause');
-                card_parent.addClass('state-play');
-            } else {
-                video.pause();
-                $(this).html('<i class="fa fa-play"></i> Play');
-                card_parent.removeClass('state-play');
-            }
-        });
     },
     initNavbarSearch: function () {
         $('[data-toggle="search"]').click(function () {

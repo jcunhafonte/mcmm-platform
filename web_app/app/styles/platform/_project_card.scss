@@ -88,18 +88,13 @@
 
   .project__title {
     margin: 0 0 10px;
-    font-size: 36px;
-    font-weight: 700;
+    font-weight: 700 !important;
     transition: .4s ease;
     opacity: 0;
     -webkit-transform: translateY(40px) scale(0);
     -ms-transform: translateY(40px) scale(0);
     transform: translateY(40px) scale(0);
     will-change: transform;
-  }
-
-  .project__title a {
-    color: white;
   }
 
   .project__category {
@@ -110,11 +105,6 @@
     -ms-transform: translateY(40px) scale(0);
     transform: translateY(40px) scale(0);
     will-change: transform;
-  }
-
-  .project__category a {
-    color: rgba(255, 255, 255, 0.8);
-    font-size: 1.3em;
   }
 }
 
@@ -142,29 +132,33 @@
 
 .project-large {
   h2 {
-    font-size: 52px !important;
+    font-size: 52px;
+    color: $white;
   }
   small {
-    font-size: 14px !important;
+    font-size: 18px;
+    color: $white;
   }
 }
 
 .project-small {
   h2 {
-    font-size: 22px !important;
+    color: $white;
+    font-size: 22px;
   }
   small {
-    font-size: 10px !important;
+    color: $white;
+    font-size: 14px;
   }
 }
 
 @media screen and (max-width: $screen-lg-min) {
   .project-small {
     h2 {
-      font-size: 52px !important;
+      font-size: 22px;
     }
     small {
-      font-size: 14px !important;
+      font-size: 14px;
     }
   }
 }
@@ -172,10 +166,10 @@
 @media screen and (max-width: $screen-sm-min) {
   .project-small, .project-large {
     h2 {
-      font-size: 52px !important;
+      font-size: 52px;
     }
     small {
-      font-size: 14px !important;
+      font-size: 14px;
     }
   }
   .project-large.project:hover .project__detail {
@@ -192,10 +186,10 @@
 @media screen and (max-width: $screen-md-min) {
   .project-small, .project-large {
     h2 {
-      font-size: 38px !important;
+      font-size: 38px;
     }
     small {
-      font-size: 12px !important;
+      font-size: 12px;
     }
   }
   .project__image {
@@ -220,5 +214,50 @@
     -webkit-transform: scale(1) !important;
     -ms-transform: scale(1) !important;
     transform: scale(1) !important;
+  }
+}
+
+#projects{
+
+  .project-small {
+    h2 {
+      font-size: 34px;
+    }
+    small {
+      font-size: 18px;
+    }
+  }
+
+  @media screen and (max-width: $screen-lg-min) {
+    .project-small {
+      h2 {
+        font-size: 34px;
+      }
+      small {
+        font-size: 18px;
+      }
+    }
+  }
+
+  @media screen and (max-width: $screen-sm-min) {
+    .project-small {
+      h2 {
+        font-size: 52px;
+      }
+      small {
+        font-size: 14px;
+      }
+    }
+  }
+
+  @media screen and (max-width: $screen-md-min) {
+    .project-small {
+      h2 {
+        font-size: 34px;
+      }
+      small {
+        font-size: 12px;
+      }
+    }
   }
 }

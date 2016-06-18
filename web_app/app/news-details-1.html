@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="pt" xmlns:height="http://www.w3.org/1999/xhtml" xmlns:width="http://www.w3.org/1999/xhtml">
+
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7">
+<![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8">
+<![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9">
+<![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script type="text/javascript" src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script type="text/javascript" src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+<head>
+
+    <title>MCMM</title>
+
+    <!--METAS-->
+    <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="author" content="MCMM">
+    <meta name="description" content="Plataforma MCMM">
+    <meta name="keywords" content="UA, DECA, MCMM, AV, ...">
+    <meta name="title" content="MCMM">
+    <meta name="referrer" content="always">
+
+    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="content-language" content="pt">
+
+    <meta property="og:title" content="MCMM - Mestrado em Comunicação Multimédia">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://mcmm.ua.pt">
+    <meta property="og:image" content="http://mcmm.ua.pt/img/share.jpg">
+    <meta property="og:site_name" content="MCMM é ...">
+    <meta property="og:description" content="MCMM é ...">
+    <meta property="al:android:app_name" content="MCMM">
+    <meta property="al:android:url" content="mcmm://">
+    <meta property="al:web:url" content="http://mcmm.ua.pt">
+    <meta property="al:android:package" content="com.mcmm.reader">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://mcmm.ua.pt">
+    <meta name="twitter:title" content="MCMM - Mestrado em Comunicação Multimédia">
+    <meta name="twitter:description" content="MCMM é ...">
+    <meta name="twitter:image" content="http://mcmm.ua.pt/img/share.jpg">
+
+    <!--FAVICON-->
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="images/favicon/green/apple-touch-icon-57x57.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/favicon/green/apple-touch-icon-114x114.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/favicon/green/apple-touch-icon-72x72.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/favicon/green/apple-touch-icon-144x144.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="images/favicon/green/apple-touch-icon-60x60.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="images/favicon/green/apple-touch-icon-120x120.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="images/favicon/green/apple-touch-icon-76x76.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="images/favicon/green/apple-touch-icon-152x152.png"/>
+    <link rel="icon" type="image/png" href="images/favicon/green/favicon-196x196.png" sizes="196x196"/>
+    <link rel="icon" type="image/png" href="images/favicon/green/favicon-96x96.png" sizes="96x96"/>
+    <link rel="icon" type="image/png" href="images/favicon/green/favicon-32x32.png" sizes="32x32"/>
+    <link rel="icon" type="image/png" href="images/favicon/green/favicon-16x16.png" sizes="16x16"/>
+    <link rel="icon" type="image/png" href="images/favicon/green/favicon-128.png" sizes="128x128"/>
+    <meta name="application-name" content="MCMM"/>
+    <meta name="msapplication-TileColor" content="#FFFFFF"/>
+    <meta name="msapplication-TileImage" content="images/favicon/green/mstile-144x144.png"/>
+    <meta name="msapplication-square70x70logo" content="images/favicon/green/mstile-70x70.png"/>
+    <meta name="msapplication-square150x150logo" content="images/favicon/green/mstile-150x150.png"/>
+    <meta name="msapplication-wide310x150logo" content="images/favicon/green/mstile-310x150.png"/>
+    <meta name="msapplication-square310x310logo" content="images/favicon/green/mstile-310x310.png"/>
+
+    <!-- build:css styles/vendor.css -->
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:css styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+
+    <!-- build:js scripts/vendor/modernizr.js -->
+    <script src="/bower_components/modernizr/modernizr.js"></script>
+    <!-- endbuild -->
+
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+
+</head>
+
+<body data-offset="80" data-target=".navbar" data-spy="scroll" id="news">
+
+<!-- Navigation -->
+<nav class="mcmm-nav mcmm-nav--top navbar-transparent" id="topbar" role="navigation">
+    <div class="container">
+        <div class="mcmm-nav-inner">
+            <div class="mcmm-nav-block mcmm-nav-block--left float-left">
+                <a href="/" class="brand">
+                    <img class="brand-img" src="images/logo-w.svg"/>
+                </a>
+            </div>
+            <div class="mcmm-nav-block mcmm-nav-block--center">
+                <nav class="platforms platforms--mcmm-nav platforms--narrow">
+                    <ul class="platforms-list single">
+                        <li class="platforms-item is-active">
+                            <a class="platforms-anchor" href="/news">Notícias</a>
+                        </li>
+                        <li class="platforms-item">
+                            <a class="platforms-anchor hvr-underline-from-center"
+                               href="/projects">Projetos</a>
+                        </li>
+                        <li class="platforms-item">
+                            <a class="platforms-anchor hvr-underline-from-center" href="/videos">Vídeos</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="mcmm-nav-block mcmm-nav-block--right float-right">
+                <div class="buttons-area">
+                    <a class="btn btn-primary btn-short btn-sign" data-toggle="modal"
+                       href="javascript:void(0)" onclick="openLoginModal();">
+                        Entrar
+                    </a>
+                    <span class="divider-bar">/</span>
+                    <a class="btn btn-primary btn-short btn-sign" data-toggle="modal"
+                       href="javascript:void(0)" onclick="openRegisterModal();">
+                        Registar
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+<!-- ++++++++++++++++++++++++++++++++++++++++ -->
+
+<div id="platform">
+
+    <div class="author-card hidden-sm hidden-xs">
+        <div class="wrapper">
+            <div class="contents col-xs-12">
+                <div class="col-xs-3">
+                    <div class="avatar">
+                        <img class="img-circle" width="50" height="50"
+                             src="https://cdn-images-1.medium.com/fit/c/40/40/1*50A5OD0eb92S-q8-O-YJbw.png">
+                    </div>
+                </div>
+                <div class="col-xs-6">
+                    <div class="name">
+                        <span>Daniela Bessa </span>
+                    </div>
+                </div>
+                <div class="col-xs-4">
+                    <div class="btn-card-author">Seguir</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="arrows-area hidden-sm hidden-xs">
+        <div class="right">
+            <div class="wrapper">
+                <button type="button" class="arrows arrow-right"></button>
+                <span class="text">A Barafunda II A bara</span>
+            </div>
+        </div>
+
+        <div class="left">
+            <div class="wrapper">
+                <button type="button" class="arrows arrow-left"></button>
+                <span class="text">A Barafunda II A bara</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="news-details-header">
+        <div class="contents">
+            <div class="container">
+                <div class="row">
+                    <div class="informations">
+                        <div class="texts">
+                            <div class="principal">
+                                <span>Tecnologia</span>
+                                <h2>A Barafunda</h2>
+                            </div>
+                            <div class="secondary">
+                                <span class="author">Daniela Bessa</span>
+                                <span class="date">16 de junho, 2016</span>
+                                <span class="comments">3 Comentários</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section section-gray">
+        <div class="news-normal">
+            <div class="container">
+                <div class="row">
+                    <div class="first-text col-xs-12">
+                        <p>
+                            <span class="first-letter">A</span> DeCA_WebEx é uma webrádio, promovida pelo Departamento
+                            de Comunicação e Arte (DeCA), que
+                            tem
+                            como objetivo geral servir de suporte a atividades de ensino/aprendizagem e de investigação,
+                            em
+                            temáticas relacionadas com a produção, realização e emissão de rádio em ambiente Web. Esta
+                            webrádio pretende fomentar o conhecimento mútuo, a cooperação e a comunicação entre os
+                            públicos-alvo internos e externos da Universidade de Aveiro (UA), bem como apoiar a
+                            divulgação
+                            das atividades de investigação e atividades extraletivas levadas a cabo pela UA ou nas quais
+                            a
+                            universidade participe (ou apoie). Podem ainda ser divulgadas atividades de índole
+                            académica,
+                            científica, cultural, social ou desportiva, levadas a cabo por outras instituições da
+                            região, do
+                            país ou de outros locais considerados relevantes.
+                        </p>
+                    </div>
+                    <div class="sub-header col-xs-12">
+                        <h2 class="col-xs-12">
+                            A DeCA_WebEx é uma webrádio, promovida pelo Departamento de Comunicação e Arte (DeCA), que
+                            tem como objetivo geral servir de suporte a atividades de ensino/aprendizagem e de
+                            investigação, em temáticas relacionadas com a produção, realização e emissão de rádio em
+                            ambiente Web.
+                        </h2>
+                    </div>
+                </div>
+            </div>
+            <div class="background">
+                <div class="wrapper-image">
+                    <div class="image parallax-background"></div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="second-text">
+                        <p>
+                            A DeCA_WebEx surgiu no ano letivo 2012/2013, no âmbito de 3 propostas de dissertação,
+                            enquadradas no mestrado em Comunicação Multimédia do DeCA, sob orientação dos Professores
+                            Fernando Ramos e Hélder Caixinha.
+                            Desde o ano letivo 2013/2014 a webrádio tem emissões regulares quinzenais, às quartas-feiras
+                            (entre as 20h00 e as 23h00), durante o período letivo. A grelha de programação integra,
+                            presentemente, 12 programas com conteúdos diversificados: música, ambiente, cultura e saúde.
+                            A rádio integra estudantes e docentes da área de Ciências e Tecnologias da Comunicação do
+                            DeCA,
+                            aos quais se juntam colaboradores, docentes e discentes, de vários outros departamentos da
+                            UA
+                            (Ambiente, Educação e Química) e de outras instituições de ensino superior da Galiza e do
+                            Brasil
+                            (Universidade de Vigo e Universidade de Tiradentes). Existe ainda partilha de conteúdos com
+                            outros meios de comunicação social: Antena 1 e Rádio da Universidade de Coimbra.
+                            A DeCA_WebEx tem presença nas principais redes sociais, nomeadamente, Facebook, Instagram e
+                            Twitter e a ambição de no futuro melhorar a sua presença na Web, crescer em número de
+                            ouvintes,
+                            integrar mais colaboradores, oferecer mais horas de emissão e inovar a nível dos formatos
+                            dos
+                            programas, por via das linguagens transmedia.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="user-actions">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-6">
+                        <div class="pull-left">
+                            <button class="btn">
+                                <i class="heart fa fa-heart-o"></i>
+                                <span>3</span>
+                            </button>
+                            <button class="btn">
+                                <i class="fa fa-comment-o"></i>
+                                <span>7</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col-xs-6">
+                        <div class="pull-right">
+                            <button class="btn">
+                                <i class="fa fa-twitter"></i>
+                            </button>
+                            <button class="btn">
+                                <i class="fa fa-facebook"> </i>
+                            </button>
+                            <button class="btn">
+                                <i class="fa fa-google-plus"> </i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="next-new">
+            <div class="overlay"></div>
+            <div class="image"></div>
+            <div class="contents">
+                <div class="text">
+                    <span>Próxima Notícia</span>
+                    <h2>A Barafunda II</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="comments">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <div class="media-area">
+                            <h3 class="text-center">10 Comments</h3>
+                            <div class="media">
+                                <a class="pull-left" href="#">
+                                    <div class="avatar">
+                                        <img class="media-object" src="images/faces/face-1.jpg" alt="...">
+                                    </div>
+                                </a>
+                                <div class="media-body">
+                                    <h4 class="media-heading">Creative Tim</h4>
+                                    <h6 class="pull-right text-muted">Sep 11, 11:53 AM</h6>
+
+                                    <p>Hello guys, nice to have you on the platform! There will be a lot of great stuff
+                                        coming soon. We will keep you posted for the latest news.</p>
+                                    <p> Don't forget, You're Awesome!</p>
+
+                                    <div class="media-footer">
+                                        <a href="#" class="btn btn-info btn-simple "> <i class="fa fa-reply"></i> Reply</a>
+                                        <a href="#" class="btn btn-danger btn-simple pull-right">
+                                            <i class="fa fa-heart"></i> 243
+                                        </a>
+                                    </div>
+
+                                    <div class="media media-post">
+                                        <a class="pull-left author" href="#">
+                                            <div class="avatar">
+                                                <img class="media-object" alt="64x64" src="images/faces/face-2.jpg">
+                                            </div>
+                                        </a>
+                                        <div class="media-body">
+                                            <textarea class="form-control"
+                                                      placeholder="Write a nice reply or go home..."
+                                                      rows="4">
+                                            </textarea>
+                                            <div class="media-footer">
+                                                <a href="#" class="btn btn-info btn-fill pull-right">Reply</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer footer-big footer-default">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-6 col-sm-6 col-md-3">
+                    <h5 class="title">Ligações</h5>
+                    <nav>
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    Notícias
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Projetos
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Vídeos
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Contactos
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-3">
+                    <h5 class="title">Informações</h5>
+                    <nav class="numbers">
+                        <ul>
+                            <li>
+                                <h4>200
+                                    <small>Mestres</small>
+                                </h4>
+                            </li>
+                            <li>
+                                <h4>500
+                                    <small>Alunos</small>
+                                </h4>
+                            </li>
+                            <li>
+                                <h4>101
+                                    <small>Projetos</small>
+                                </h4>
+                            </li>
+
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-3">
+                    <h5 class="title">Morada</h5>
+                    <nav>
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    Universidade de Aveiro
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Dep. Comunicação e Arte
+                                </a>
+                            </li>
+                            <li>
+                                <a class="no-link">
+                                    Campus Universitário de Santiago
+                                </a>
+                            </li>
+                            <li>
+                                <a class="no-link">
+                                    3810-193 Aveiro
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-3">
+                    <h5 class="title">Contactos</h5>
+                    <nav>
+                        <ul>
+                            <li>
+                                <a class="no-link">
+                                    234 370 389
+                                </a>
+                            </li>
+                            <li>
+                                <a class="no-link">
+                                    234 370 868
+                                </a>
+                            </li>
+                            <li>
+                                <a href="mailto:deca-mcmm@ua.pt">
+                                    deca-mcmm@ua.pt
+                                </a>
+                            </li>
+                            <li>
+                                <a href="www.mcmm.pt" target="_blank" a>
+                                    www.mcmm.pt
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <hr/>
+            <div class="social-area text-center">
+                <a href="#" class="btn btn-social btn-round">
+                    <i class="fa fa-facebook"></i>
+                </a>
+                <a href="#" class="btn btn-social btn-round">
+                    <i class="fa fa-youtube"></i>
+                </a>
+                <a href="#" class="btn btn-social btn-round">
+                    <i class="fa fa-envelope"></i>
+                </a>
+            </div>
+            <div class="copyright">
+                &copy; 2016 Mestrado em Comunicação Multimédia
+            </div>
+        </div>
+    </footer>
+</div>
+
+<!--MODALS-->
+
+
+<!-- build:js scripts/vendor.js -->
+<!-- bower:js -->
+<script type="text/javascript" src="/bower_components/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="/bower_components/jquery-ui/jquery-ui.min.js"></script>
+<script type="text/javascript" src="/bower_components/sass-bootstrap/dist/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/bower_components/scroll-up-bar/dist/scroll-up-bar.min.js"></script>
+<script type="text/javascript" src="/bower_components/owl.carousel/dist/owl.carousel.min.js"></script>
+<script type="text/javascript" src="/bower_components/masonry/dist/masonry.pkgd.min.js"></script>
+<script type="text/javascript" src="/bower_components/imagesloaded/imagesloaded.pkgd.min.js"></script>
+<script type="text/javascript" src="/bower_components/nprogress/nprogress.js"></script>
+<script type="text/javascript" src="/bower_components/jquery-parallax/scripts/jquery.parallax-1.1.3.js"></script>
+<!-- endbower -->
+<!-- endbuild -->
+
+<!-- build:js scripts/plugins.js -->
+
+<!-- endbuild -->
+
+<!-- build:js scripts/news.js -->
+<script type="text/javascript" src="scripts/news-details.js"></script>
+<script type="text/javascript" src="scripts/platform.js"></script>
+<script type="text/javascript" src="scripts/demo.js"></script>
+<!-- endbuild -->
+
+</body>
+</html>

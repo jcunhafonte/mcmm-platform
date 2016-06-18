@@ -1,0 +1,25 @@
+.user-actions {
+  .pull-left {
+    .btn {
+      font-size: 22px;
+      border: none;
+      color: $black !important;
+
+      span{
+        padding-left: 7px;
+        font-size: 15px;
+      }
+      .heart{
+        color: $theme_green !important;
+      }
+    }
+  }
+
+  .pull-right {
+    .btn {
+      font-size: 22px;
+      border: none;
+      color: $black !important;
+    }
+  }
+}

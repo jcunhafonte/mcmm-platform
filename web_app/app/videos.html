@@ -55,26 +55,26 @@
     <meta name="twitter:image" content="http://mcmm.ua.pt/img/share.jpg">
 
     <!--FAVICON-->
-    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="images/favicon/red/apple-touch-icon-57x57.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/favicon/red/apple-touch-icon-114x114.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/favicon/red/apple-touch-icon-72x72.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/favicon/red/apple-touch-icon-144x144.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="images/favicon/red/apple-touch-icon-60x60.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="images/favicon/red/apple-touch-icon-120x120.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="images/favicon/red/apple-touch-icon-76x76.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="images/favicon/red/apple-touch-icon-152x152.png" />
-    <link rel="icon" type="image/png" href="images/favicon/red/favicon-196x196.png" sizes="196x196" />
-    <link rel="icon" type="image/png" href="images/favicon/red/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/png" href="images/favicon/red/favicon-32x32.png" sizes="32x32" />
-    <link rel="icon" type="image/png" href="images/favicon/red/favicon-16x16.png" sizes="16x16" />
-    <link rel="icon" type="image/png" href="images/favicon/red/favicon-128.png" sizes="128x128" />
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="images/favicon/red/apple-touch-icon-57x57.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/favicon/red/apple-touch-icon-114x114.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/favicon/red/apple-touch-icon-72x72.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/favicon/red/apple-touch-icon-144x144.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="images/favicon/red/apple-touch-icon-60x60.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="images/favicon/red/apple-touch-icon-120x120.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="images/favicon/red/apple-touch-icon-76x76.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="images/favicon/red/apple-touch-icon-152x152.png"/>
+    <link rel="icon" type="image/png" href="images/favicon/red/favicon-196x196.png" sizes="196x196"/>
+    <link rel="icon" type="image/png" href="images/favicon/red/favicon-96x96.png" sizes="96x96"/>
+    <link rel="icon" type="image/png" href="images/favicon/red/favicon-32x32.png" sizes="32x32"/>
+    <link rel="icon" type="image/png" href="images/favicon/red/favicon-16x16.png" sizes="16x16"/>
+    <link rel="icon" type="image/png" href="images/favicon/red/favicon-128.png" sizes="128x128"/>
     <meta name="application-name" content="MCMM"/>
-    <meta name="msapplication-TileColor" content="#FFFFFF" />
-    <meta name="msapplication-TileImage" content="images/favicon/red/mstile-144x144.png" />
-    <meta name="msapplication-square70x70logo" content="images/favicon/red/mstile-70x70.png" />
-    <meta name="msapplication-square150x150logo" content="images/favicon/red/mstile-150x150.png" />
-    <meta name="msapplication-wide310x150logo" content="images/favicon/red/mstile-310x150.png" />
-    <meta name="msapplication-square310x310logo" content="images/favicon/red/mstile-310x310.png" />
+    <meta name="msapplication-TileColor" content="#FFFFFF"/>
+    <meta name="msapplication-TileImage" content="images/favicon/red/mstile-144x144.png"/>
+    <meta name="msapplication-square70x70logo" content="images/favicon/red/mstile-70x70.png"/>
+    <meta name="msapplication-square150x150logo" content="images/favicon/red/mstile-150x150.png"/>
+    <meta name="msapplication-wide310x150logo" content="images/favicon/red/mstile-310x150.png"/>
+    <meta name="msapplication-square310x310logo" content="images/favicon/red/mstile-310x310.png"/>
 
     <!-- build:css styles/vendor.css -->
     <!-- bower:css -->
@@ -107,22 +107,30 @@
             <div class="mcmm-nav-block mcmm-nav-block--center">
                 <nav class="platforms platforms--mcmm-nav platforms--narrow">
                     <ul class="platforms-list single">
-                        <li class="platforms-item is-active">
-                            <a class="platforms-anchor" href="/news">Notícias</a>
+                        <li class="platforms-item">
+                            <a class="platforms-anchor hvr-underline-from-center" href="/news">Notícias</a>
                         </li>
                         <li class="platforms-item">
                             <a class="platforms-anchor hvr-underline-from-center"
                                href="/projects">Projetos</a>
                         </li>
-                        <li class="platforms-item">
-                            <a class="platforms-anchor hvr-underline-from-center" href="/videos">Vídeos</a>
+                        <li class="platforms-item is-active">
+                            <a class="platforms-anchor" href="/videos">Vídeos</a>
                         </li>
                     </ul>
                 </nav>
             </div>
             <div class="mcmm-nav-block mcmm-nav-block--right float-right">
                 <div class="buttons-area">
-                    <a class="btn btn-primary btn-short btn-sign">Entrar / Registar</a>
+                    <a class="btn btn-primary btn-short btn-sign" data-toggle="modal"
+                       href="javascript:void(0)" onclick="openLoginModal();">
+                        Entrar
+                    </a>
+                    <span class="divider-bar">/</span>
+                    <a class="btn btn-primary btn-short btn-sign" data-toggle="modal"
+                       href="javascript:void(0)" onclick="openRegisterModal();">
+                        Registar
+                    </a>
                 </div>
             </div>
         </div>
@@ -132,283 +140,374 @@
 
 <div id="platform">
 
-    <div id="header-video">
-        <h2 class="text-center">Let’s Make Things Happen</h2>
-    </div> <!-- end carousel -->
+    <div class="video-header">
+        <div class="contents">
+            <div id="video-background"
+                 data-vide-bg="mp4: video/video.mp4, webm: video/video.webm, ogg: video/video.ogg, poster: video/video.jpg"
+                 data-vide-options="posterType: jpg, position: 0% 0%">
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="description">
+                        <h2 class="title">A dinâmica dos nossos</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    <div class="section section-white">
-        <div class="container">
+    <div class="section section-gray">
+        <div class="container-fluid">
             <div class="row">
-                <div class="col-md-6">
-                    <div class="card card-background">
+
+                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                    <div class="card card-background card-video" data-video="video-source1">
                         <div class="video">
                             <video id="video-source1" preload="auto" loop="loop" muted="muted" volume="0">
-                                <source src="video/video.mp4" type="video/mp4">
+                                <source src="http://54.200.172.163/cunha.jose@ua.pt_11.mp4" type="video/mp4">
                                 Video not supported
                             </video>
                             <div class="filter"></div>
+                            <div class="play">
+                                <span class="pe-7s-play"></span>
+                            </div>
                         </div>
                         <div class="content">
                             <p class="category">
-                                Featured
+                                Direto
                             </p>
-                            <h4 class="title">mcmm  is here...</h4>
+                            <h4 class="title">A Barafunda em Direto</h4>
                         </div>
+
                         <div class="footer">
-                            <button type="button" data-video="video-source1" data-toggle="video"
-                                    class="btn btn-neutral btn-round">
-                                <i class="fa fa-play"></i> Play
-                            </button>
-                            <div class="stats pull-right">
-                                <i class="fa fa-comment"></i> 68
+                            <div class="author">
+                                <a class="card-link" href="#">
+                                    <img src="images/faces/face-5.jpg" alt="..." class="avatar">
+                                    <span> Daniela Bessa </span>
+                                </a>
                             </div>
                             <div class="stats pull-right">
-                                <i class="fa fa-heart"></i> 221
+                                <div class="card-link" href="#">
+                                    <i class="fa fa-comment-o"></i> 41
+                                </div>
+                                <div class="card-link" href="#">
+                                    <i class="fa fa-heart-o"></i> 89
+                                </div>
                             </div>
                         </div>
                     </div> <!-- end card -->
                 </div>
-                <div class="col-md-6">
-                    <div class="card card-background">
+                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                    <div class="card card-background card-video" data-video="video-source2">
                         <div class="video">
                             <video id="video-source2" preload="auto" loop="loop" muted="muted" volume="0">
                                 <source src="http://54.200.172.163/cunha.jose@ua.pt_11.mp4" type="video/mp4">
                                 Video not supported
                             </video>
                             <div class="filter"></div>
+                            <div class="play">
+                                <span class="pe-7s-play"></span>
+                            </div>
                         </div>
                         <div class="content">
                             <p class="category">
-                                Featured
+                                16 de junho, 2016
                             </p>
-                            <h4 class="title">mcmm  is here...</h4>
+                            <h4 class="title">A Barafunda</h4>
                         </div>
+
                         <div class="footer">
-                            <button type="button" data-video="video-source2" data-toggle="video"
-                                    class="btn btn-neutral btn-round">
-                                <i class="fa fa-play"></i> Play
-                            </button>
-                            <div class="stats pull-right">
-                                <i class="fa fa-comment"></i> 68
+                            <div class="author">
+                                <a class="card-link" href="#">
+                                    <img src="images/faces/face-5.jpg" alt="..." class="avatar">
+                                    <span> Daniela Bessa </span>
+                                </a>
                             </div>
                             <div class="stats pull-right">
-                                <i class="fa fa-heart"></i> 221
+                                <div class="card-link" href="#">
+                                    <i class="fa fa-comment-o"></i> 41
+                                </div>
+                                <div class="card-link" href="#">
+                                    <i class="fa fa-heart-o"></i> 89
+                                </div>
                             </div>
                         </div>
                     </div> <!-- end card -->
                 </div>
-                <div class="col-md-6">
-                    <div class="card card-background">
+                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                    <div class="card card-background card-video" data-video="video-source3">
                         <div class="video">
                             <video id="video-source3" preload="auto" loop="loop" muted="muted" volume="0">
-                                <source src="video/video.webm" type="video/webm">
-                                <source src="video/video.ogg" type="video/ogg">
-                                <source src="video/video.mp4" type="video/mp4">
+                                <source src="http://54.200.172.163/cunha.jose@ua.pt_11.mp4" type="video/mp4">
                                 Video not supported
                             </video>
                             <div class="filter"></div>
+                            <div class="play">
+                                <span class="pe-7s-play"></span>
+                            </div>
                         </div>
                         <div class="content">
                             <p class="category">
-                                Featured
+                                16 de junho, 2016
                             </p>
-                            <h4 class="title">mcmm  is here...</h4>
+                            <h4 class="title">A Barafunda</h4>
                         </div>
+
                         <div class="footer">
-                            <button type="button" data-video="video-source3" data-toggle="video"
-                                    class="btn btn-neutral btn-round">
-                                <i class="fa fa-play"></i> Play
-                            </button>
-                            <div class="stats pull-right">
-                                <i class="fa fa-comment"></i> 68
+                            <div class="author">
+                                <a class="card-link" href="#">
+                                    <img src="images/faces/face-5.jpg" alt="..." class="avatar">
+                                    <span> Daniela Bessa </span>
+                                </a>
                             </div>
                             <div class="stats pull-right">
-                                <i class="fa fa-heart"></i> 221
+                                <div class="card-link" href="#">
+                                    <i class="fa fa-comment-o"></i> 41
+                                </div>
+                                <div class="card-link" href="#">
+                                    <i class="fa fa-heart-o"></i> 89
+                                </div>
                             </div>
                         </div>
                     </div> <!-- end card -->
                 </div>
-                <div class="col-md-6">
-                    <div class="card card-background">
+                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                    <div class="card card-background card-video" data-video="video-source4">
                         <div class="video">
                             <video id="video-source4" preload="auto" loop="loop" muted="muted" volume="0">
-                                <source src="video/video.webm" type="video/webm">
-                                <source src="video/video.ogg" type="video/ogg">
-                                <source src="video/video.mp4" type="video/mp4">
+                                <source src="http://54.200.172.163/cunha.jose@ua.pt_11.mp4" type="video/mp4">
                                 Video not supported
                             </video>
                             <div class="filter"></div>
+                            <div class="play">
+                                <span class="pe-7s-play"></span>
+                            </div>
                         </div>
                         <div class="content">
                             <p class="category">
-                                Featured
+                                16 de junho, 2016
                             </p>
-                            <h4 class="title">mcmm  is here...</h4>
+                            <h4 class="title">A Barafunda</h4>
                         </div>
+
                         <div class="footer">
-                            <button type="button" data-video="video-source4" data-toggle="video"
-                                    class="btn btn-neutral btn-round">
-                                <i class="fa fa-play"></i> Play
-                            </button>
-                            <div class="stats pull-right">
-                                <i class="fa fa-comment"></i> 68
+                            <div class="author">
+                                <a class="card-link" href="#">
+                                    <img src="images/faces/face-5.jpg" alt="..." class="avatar">
+                                    <span> Daniela Bessa </span>
+                                </a>
                             </div>
                             <div class="stats pull-right">
-                                <i class="fa fa-heart"></i> 221
+                                <div class="card-link" href="#">
+                                    <i class="fa fa-comment-o"></i> 41
+                                </div>
+                                <div class="card-link" href="#">
+                                    <i class="fa fa-heart-o"></i> 89
+                                </div>
                             </div>
                         </div>
                     </div> <!-- end card -->
                 </div>
-                <div class="col-md-6">
-                    <div class="card card-background">
+                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                    <div class="card card-background card-video" data-video="video-source5">
                         <div class="video">
                             <video id="video-source5" preload="auto" loop="loop" muted="muted" volume="0">
-                                <source src="video/video.webm" type="video/webm">
-                                <source src="video/video.ogg" type="video/ogg">
-                                <source src="video/video.mp4" type="video/mp4">
+                                <source src="http://54.200.172.163/cunha.jose@ua.pt_11.mp4" type="video/mp4">
                                 Video not supported
                             </video>
                             <div class="filter"></div>
+                            <div class="play">
+                                <span class="pe-7s-play"></span>
+                            </div>
                         </div>
                         <div class="content">
                             <p class="category">
-                                Featured
+                                16 de junho, 2016
                             </p>
-                            <h4 class="title">mcmm  is here...</h4>
+                            <h4 class="title">A Barafunda</h4>
                         </div>
+
                         <div class="footer">
-                            <button type="button" data-video="video-source5" data-toggle="video"
-                                    class="btn btn-neutral btn-round">
-                                <i class="fa fa-play"></i> Play
-                            </button>
-                            <div class="stats pull-right">
-                                <i class="fa fa-comment"></i> 68
+                            <div class="author">
+                                <a class="card-link" href="#">
+                                    <img src="images/faces/face-5.jpg" alt="..." class="avatar">
+                                    <span> Daniela Bessa </span>
+                                </a>
                             </div>
                             <div class="stats pull-right">
-                                <i class="fa fa-heart"></i> 221
+                                <div class="card-link" href="#">
+                                    <i class="fa fa-comment-o"></i> 41
+                                </div>
+                                <div class="card-link" href="#">
+                                    <i class="fa fa-heart-o"></i> 89
+                                </div>
                             </div>
                         </div>
                     </div> <!-- end card -->
                 </div>
-                <div class="col-md-6">
-                    <div class="card card-background">
+                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                    <div class="card card-background card-video" data-video="video-source6">
                         <div class="video">
                             <video id="video-source6" preload="auto" loop="loop" muted="muted" volume="0">
-                                <source src="video/video.webm" type="video/webm">
-                                <source src="video/video.ogg" type="video/ogg">
-                                <source src="video/video.mp4" type="video/mp4">
+                                <source src="http://54.200.172.163/cunha.jose@ua.pt_11.mp4" type="video/mp4">
                                 Video not supported
                             </video>
                             <div class="filter"></div>
+                            <div class="play">
+                                <span class="pe-7s-play"></span>
+                            </div>
                         </div>
                         <div class="content">
                             <p class="category">
-                                Featured
+                                16 de junho, 2016
                             </p>
-                            <h4 class="title">mcmm  is here...</h4>
+                            <h4 class="title">A Barafunda</h4>
                         </div>
+
                         <div class="footer">
-                            <button type="button" data-video="video-source6" data-toggle="video"
-                                    class="btn btn-neutral btn-round">
-                                <i class="fa fa-play"></i> Play
-                            </button>
-                            <div class="stats pull-right">
-                                <i class="fa fa-comment"></i> 68
+                            <div class="author">
+                                <a class="card-link" href="#">
+                                    <img src="images/faces/face-5.jpg" alt="..." class="avatar">
+                                    <span> Daniela Bessa </span>
+                                </a>
                             </div>
                             <div class="stats pull-right">
-                                <i class="fa fa-heart"></i> 221
+                                <div class="card-link" href="#">
+                                    <i class="fa fa-comment-o"></i> 41
+                                </div>
+                                <div class="card-link" href="#">
+                                    <i class="fa fa-heart-o"></i> 89
+                                </div>
                             </div>
                         </div>
                     </div> <!-- end card -->
                 </div>
+                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                    <div class="card card-background card-video" data-video="video-source7">
+                        <div class="video">
+                            <video id="video-source7" preload="auto" loop="loop" muted="muted" volume="0">
+                                <source src="http://54.200.172.163/cunha.jose@ua.pt_11.mp4" type="video/mp4">
+                                Video not supported
+                            </video>
+                            <div class="filter"></div>
+                            <div class="play">
+                                <span class="pe-7s-play"></span>
+                            </div>
+                        </div>
+                        <div class="content">
+                            <p class="category">
+                                16 de junho, 2016
+                            </p>
+                            <h4 class="title">A Barafunda</h4>
+                        </div>
+
+                        <div class="footer">
+                            <div class="author">
+                                <a class="card-link" href="#">
+                                    <img src="images/faces/face-5.jpg" alt="..." class="avatar">
+                                    <span> Daniela Bessa </span>
+                                </a>
+                            </div>
+                            <div class="stats pull-right">
+                                <div class="card-link" href="#">
+                                    <i class="fa fa-comment-o"></i> 41
+                                </div>
+                                <div class="card-link" href="#">
+                                    <i class="fa fa-heart-o"></i> 89
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- end card -->
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                    <div class="card card-background card-video" data-video="video-source8">
+                        <div class="video">
+                            <video id="video-source8" preload="auto" loop="loop" muted="muted" volume="0">
+                                <source src="http://54.200.172.163/cunha.jose@ua.pt_11.mp4" type="video/mp4">
+                                Video not supported
+                            </video>
+                            <div class="filter"></div>
+                            <div class="play">
+                                <span class="pe-7s-play"></span>
+                            </div>
+                        </div>
+                        <div class="content">
+                            <p class="category">
+                                16 de junho, 2016
+                            </p>
+                            <h4 class="title">A Barafunda</h4>
+                        </div>
+
+                        <div class="footer">
+                            <div class="author">
+                                <a class="card-link" href="#">
+                                    <img src="images/faces/face-5.jpg" alt="..." class="avatar">
+                                    <span> Daniela Bessa </span>
+                                </a>
+                            </div>
+                            <div class="stats pull-right">
+                                <div class="card-link" href="#">
+                                    <i class="fa fa-comment-o"></i> 41
+                                </div>
+                                <div class="card-link" href="#">
+                                    <i class="fa fa-heart-o"></i> 89
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- end card -->
+                </div>
+
             </div>
         </div>
     </div>
 
-    <footer class="footer footer-big footer-transparent" style="background-image: url('assets/images/examples/blog_page8_black.jpg');">
+    <footer class="footer footer-big footer-default">
         <div class="container">
             <div class="row">
                 <div class="col-xs-6 col-sm-6 col-md-3">
-                    <h5 class="title">Company</h5>
+                    <h5 class="title">Ligações</h5>
                     <nav>
                         <ul>
                             <li>
                                 <a href="#">
-                                    Home
+                                    Notícias
                                 </a>
                             </li>
                             <li>
                                 <a href="#">
-                                    Find offers
+                                    Projetos
                                 </a>
                             </li>
                             <li>
                                 <a href="#">
-                                    Discover Projects
+                                    Vídeos
                                 </a>
                             </li>
                             <li>
                                 <a href="#">
-                                    Our Portfolio
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    About Us
+                                    Contactos
                                 </a>
                             </li>
                         </ul>
                     </nav>
                 </div>
                 <div class="col-xs-6 col-sm-6 col-md-3">
-                    <h5 class="title"> Help and Support</h5>
-                    <nav>
-                        <ul>
-                            <li>
-                                <a href="#">
-                                    Contact Us
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    How it works
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    Terms & Conditions
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    Company Policy
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    Money Back
-                                </a>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
-                <div class="col-xs-6 col-sm-6 col-md-3">
-                    <h5 class="title">Happy people</h5>
+                    <h5 class="title">Informações</h5>
                     <nav class="numbers">
                         <ul>
                             <li>
-                                <h4>13.723
-                                    <small>accounts</small>
+                                <h4>200
+                                    <small>Mestres</small>
                                 </h4>
                             </li>
                             <li>
-                                <h4>55.234
-                                    <small>downloads</small>
+                                <h4>500
+                                    <small>Alunos</small>
                                 </h4>
                             </li>
                             <li>
-                                <h4>99.092
-                                    <small>shares</small>
+                                <h4>101
+                                    <small>Projetos</small>
                                 </h4>
                             </li>
 
@@ -416,23 +515,56 @@
                     </nav>
                 </div>
                 <div class="col-xs-6 col-sm-6 col-md-3">
-                    <h5 class="title">Latest News</h5>
+                    <h5 class="title">Morada</h5>
                     <nav>
                         <ul>
                             <li>
                                 <a href="#">
-                                    <i class="fa fa-twitter"></i> <b>Get Shit Done</b>
-                                    The best kit in the market is here, just give it a try and let us...
-                                    <hr class="hr-small">
+                                    Universidade de Aveiro
                                 </a>
                             </li>
                             <li>
                                 <a href="#">
-                                    <i class="fa fa-twitter"></i>
-                                    We've just been featured on <b> Awwwards Website</b>! Thank you everybody for...
+                                    Dep. Comunicação e Arte
                                 </a>
                             </li>
-
+                            <li>
+                                <a class="no-link">
+                                    Campus Universitário de Santiago
+                                </a>
+                            </li>
+                            <li>
+                                <a class="no-link">
+                                    3810-193 Aveiro
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-3">
+                    <h5 class="title">Contactos</h5>
+                    <nav>
+                        <ul>
+                            <li>
+                                <a class="no-link">
+                                    234 370 389
+                                </a>
+                            </li>
+                            <li>
+                                <a class="no-link">
+                                    234 370 868
+                                </a>
+                            </li>
+                            <li>
+                                <a href="mailto:deca-mcmm@ua.pt">
+                                    deca-mcmm@ua.pt
+                                </a>
+                            </li>
+                            <li>
+                                <a href="www.mcmm.pt" target="_blank" a>
+                                    www.mcmm.pt
+                                </a>
+                            </li>
                         </ul>
                     </nav>
                 </div>
@@ -443,20 +575,14 @@
                     <i class="fa fa-facebook"></i>
                 </a>
                 <a href="#" class="btn btn-social btn-round">
-                    <i class="fa fa-twitter"></i>
+                    <i class="fa fa-youtube"></i>
                 </a>
                 <a href="#" class="btn btn-social btn-round">
-                    <i class="fa fa-google-plus"></i>
-                </a>
-                <a href="#" class="btn btn-social btn-round">
-                    <i class="fa fa-pinterest"></i>
-                </a>
-                <a href="#" class="btn btn-social btn-round">
-                    <i class="fa fa-linkedin"></i>
+                    <i class="fa fa-envelope"></i>
                 </a>
             </div>
             <div class="copyright">
-                &copy; 2016 Creative Tim, made with love
+                &copy; 2016 Mestrado em Comunicação Multimédia
             </div>
         </div>
     </footer>
@@ -470,8 +596,8 @@
 <script type="text/javascript" src="/bower_components/sass-bootstrap/dist/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="/bower_components/scroll-up-bar/dist/scroll-up-bar.min.js"></script>
 <script type="text/javascript" src="/bower_components/owl.carousel/dist/owl.carousel.min.js"></script>
-<script type="text/javascript" src="/bower_components/masonry/dist/masonry.pkgd.min.js"></script>
-<script type="text/javascript" src="/bower_components/imagesloaded/imagesloaded.pkgd.min.js"></script>
+<script type="text/javascript" src="/bower_components/nprogress/nprogress.js"></script>
+<script type="text/javascript" src="/bower_components/vide/dist/jquery.vide.min.js"></script>
 <!-- endbower -->
 <!-- endbuild -->
 
@@ -485,16 +611,6 @@
 <script type="text/javascript" src="scripts/carousel.js"></script>
 <script type="text/javascript" src="scripts/demo.js"></script>
 <!-- endbuild -->
-
-<script>
-    var $container = $('.masonry-container');
-    $container.imagesLoaded( function () {
-        $container.masonry({
-            columnWidth: '.item',
-            itemSelector: '.item'
-        });
-    });
-</script>
 
 </body>
 </html>

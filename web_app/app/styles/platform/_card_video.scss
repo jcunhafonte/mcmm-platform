@@ -1,0 +1,109 @@
+#video {
+  .card-video {
+    background-color: transparent !important;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.08) !important;
+
+    .video {
+      transition: all .5s ease-in-out;
+    }
+
+    .content {
+      padding: 5% !important;
+    }
+
+    .play {
+      background: $theme_red;
+    }
+
+    .footer {
+      border-top: 1px solid rgba(0, 0, 0, 0.06);
+      .card-link {
+        color: $white !important;
+        i {
+          &:hover {
+            color: $theme_red !important;
+          }
+        }
+        span {
+          color: $white !important;
+          &:hover {
+            color: $theme_red !important;
+          }
+        }
+      }
+    }
+
+    &:hover {
+      .video {
+        transform: scale(1.2);
+      }
+    }
+  }
+
+  .card-background {
+    position: relative;
+    .image {
+      border-radius: 6px;
+    }
+    .filter {
+      opacity: 0.55;
+      filter: alpha(opacity=55.0);
+      border-radius: 6px;
+      position: absolute;
+      z-index: 2;
+      background-color: rgba(0, 0, 0, 0.68);
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+    }
+
+    .title, .category, .description, small, a {
+      color: $white;
+    }
+    small {
+      font-weight: 400;
+    }
+    .title {
+      margin: 0 0 10px 0 !important;
+      font-weight: 700 !important;
+      font-family: "Hind" !important;
+      font-size: 32px !important;
+      line-height: 32px !important;
+      color: $white !important;
+    }
+    .content, .footer {
+      position: absolute;
+      z-index: 3;
+      top: 0;
+      left: 0;
+      width: 100%;
+    }
+    .footer {
+      bottom: 0;
+      top: auto;
+      padding: 10px 15px;
+      width: 100%;
+      line-height: 40px;
+      color: $white;
+    }
+    .video {
+      overflow: hidden;
+      border-radius: 6px;
+      position: relative;
+      max-height: 400px;
+    }
+    video {
+      transform: scale(1.1);
+      width: 100%;
+      border-radius: 6px;
+      -webkit-border-radius: 6px;
+    }
+    &:hover {
+      .filter {
+        opacity: 0;
+      }
+    }
+  }
+}

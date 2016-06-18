@@ -312,7 +312,7 @@ $(document).ready(function () {
                             data: {
                                 type: 'username'
                             },
-                            message: 'O email introduzido já se encontra registado',
+                            message: 'O nome de utilizador introduzido já se encontra registado',
                             type: 'POST'
                         }
                     }
@@ -557,7 +557,8 @@ function submitRegist() {
                         close: 'animated bounceOutRight',
                         easing: 'swing',
                         speed: 250
-                    }
+                    },
+                    timeout: 10000
                 });
             }
 

@@ -26,6 +26,12 @@ $(document).ready(function () {
             $(".brand-img").attr("src", "images/logo-w.svg");
         }
     }
+
+    $(".project-small").hover3d({
+        selector: ".project__card",
+        perspective: 768,
+        invert: true
+    });
 }); // Document ready
 
 function checkTransparent() {

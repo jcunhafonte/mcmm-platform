@@ -35,7 +35,6 @@ $(document).ready(function () {
         columnWidth: '.masonry',
         itemSelector: '.masonry'
     });
-
 });
 
 $(document).ready(function () {
