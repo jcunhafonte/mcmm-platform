@@ -2791,9 +2791,9 @@ output {
   border-radius: 3px;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
-  -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
-  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  -webkit-transition: border-color ease-in-out .30s, box-shadow ease-in-out .30s;
+  -o-transition: border-color ease-in-out .30s, box-shadow ease-in-out .30s;
+  transition: border-color ease-in-out .30s, box-shadow ease-in-out .30s;
 }
 
 .form-control:focus {
@@ -2804,16 +2804,16 @@ output {
 }
 
 .form-control::-moz-placeholder {
-  color: #c6c8cc;
+  color: $gray_placeholder;
   opacity: 1;
 }
 
 .form-control:-ms-input-placeholder {
-  color: #c6c8cc;
+  color: $gray_placeholder;
 }
 
 .form-control::-webkit-input-placeholder {
-  color: #c6c8cc;
+  color: $gray_placeholder;
 }
 
 .form-control[disabled],

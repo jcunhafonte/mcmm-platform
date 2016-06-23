@@ -1,19 +1,31 @@
+//GERAL
 @import "awesome";
-@import "news_slider";
 @import "geral";
 @import "footer";
-@import "header_videos";
 @import "login";
-@import "news_cards";
 @import "scrollbar";
 @import "notifications";
-@import "projects_header";
-@import "project_card";
-@import "card_video";
-@import "news_details_header";
-@import "news_normal";
 @import "author_card";
 @import "arrows";
 @import "user_actions";
 @import "next_new";
 @import "comments";
+@import "fixed-title";
+
+//NEWS
+@import "news_details_header";
+@import "news_slider";
+@import "news_normal";
+@import "news_text";
+@import "news_video";
+@import "news_slider_detail";
+@import "news_cards";
+
+//PROJECTS
+@import "projects_header";
+@import "news_projects_header";
+@import "project_card";
+
+//VIDEOS
+@import "header_videos";
+@import "card_video";

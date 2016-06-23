@@ -4,7 +4,6 @@ $(document).ready(function () {
 
     redrawDotNav();
 
-    /* Scroll event handler */
     $(window).bind('scroll', function (e) {
         redrawDotNav();
     });
@@ -74,7 +73,7 @@ $(document).ready(function () {
     });
     $('#to-top').click(function () {
         $('html, body').animate({
-            scrollTop: $('#video').offset().top
+            scrollTop: $('#video-splash').offset().top
         }, 1000, function () {
         });
         return false;
@@ -94,7 +93,6 @@ $(document).ready(function () {
 
 /* Set navigation dots to an active state as the user scrolls */
 function redrawDotNav() {
-
     if ($(document).scrollTop() >= ($('#sobre').offset().top / 1.5)) {
         $('nav#primary').fadeIn();
         $('#to-top').fadeIn();
@@ -103,7 +101,7 @@ function redrawDotNav() {
         $('#to-top').fadeOut();
     }
 
-    var section1Top = $('#sobre').offset().top - (($('#video').offset().top));
+    var section1Top = $('#sobre').offset().top - (($('#video-splash').offset().top));
     var section2Top = $('#candidaturas').offset().top - (($('#programa-curricular').offset().top - $('#candidaturas').offset().top) / 2);
     var section3Top = $('#programa-curricular').offset().top - (($('#canal').offset().top - $('#programa-curricular').offset().top) / 2);
     var section4Top = $('#canal').offset().top - (($('#noticias').offset().top - $('#canal').offset().top) / 2);

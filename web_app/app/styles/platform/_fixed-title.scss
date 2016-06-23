@@ -1,0 +1,57 @@
+.fixed-title {
+  height: 60px;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.08) !important;
+  z-index: 10000;
+  display: none;
+  position: fixed;
+  top: 0;
+
+  .pull-left {
+
+    > .btn {
+      padding-left: 6px !important;
+    }
+
+    .btn {
+      font-size: 22px;
+      border: none;
+      color: $black !important;
+      padding: 0 6px !important;
+      line-height: 60px !important;
+      height: 60px;
+
+      span {
+        padding-left: 7px;
+        font-size: 15px;
+      }
+      .heart {
+        color: $theme_green !important;
+      }
+    }
+  }
+
+  .pull-right {
+    .btn {
+      border: none;
+      color: $black !important;
+      padding: 0 6px !important;
+      line-height: 60px !important;
+    }
+    svg {
+      color: $black !important;
+      vertical-align: middle;
+    }
+  }
+
+  h3 {
+    margin: 0 !important;
+    line-height: 53px !important;
+    font-family: Hind !important;
+    font-size: 35px !important;
+    color: $black !important;
+    font-weight: bold !important;
+    padding-top: 7px !important;
+  }
+}

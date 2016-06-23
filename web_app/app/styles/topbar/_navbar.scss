@@ -45,7 +45,7 @@
 .mcmm-nav--top {
   position: absolute;
   top: 0;
-  height: 75px;
+  height: 67px;
   padding-top: 12px;
   z-index: 100000;
 }
@@ -135,7 +135,7 @@
 }
 
 .mcmm-nav .buttons-area, .mcmm-nav .inputGroup, .mcmm-nav .mcmm-nav-text, .mcmm-nav-block > .button {
-  margin: 4px;
+  margin: 0.5px;
   margin-right: 0 !important;
   display: inline-block;
   white-space: nowrap;
@@ -192,7 +192,7 @@
 }
 
 .mcmm-nav--top .mcmm-nav-block {
-  height: 65px
+  height: 52px
 }
 
 .mcmm-nav--top .mcmm-nav-block--below {
@@ -617,7 +617,7 @@ h3.mcmm-nav-logo--noControls {
 
 @media screen and (max-width: 767px) {
   .mcmm-nav--top {
-    height: 134px !important;
+    height: 127px !important;
   }
 
   .mcmm-nav--resumeReading {
@@ -749,6 +749,10 @@ h3.mcmm-nav-logo--noControls {
 }
 
 @media screen and (max-width: 991px) {
+  .platforms--mcmm-nav .platforms-item.is-active > .platforms-anchor {
+    padding-bottom: 12px !important;
+  }
+
   .platforms--mcmm-nav .platforms-anchor {
     padding-top: 10px;
     padding-bottom: 10px;
@@ -756,7 +760,7 @@ h3.mcmm-nav-logo--noControls {
     text-decoration: none !important;
   }
   .mcmm-nav--top {
-    height: 126px;
+    height: 117px;
     position: fixed;
     top: 0;
     background-color: rgba(255, 255, 255, 0.96) !important;
@@ -831,8 +835,8 @@ h3.mcmm-nav-logo--noControls {
 
 .hvr-underline-from-center:before {
   background: $white !important;
-  bottom: 12px !important;
-  height: 2px !important;
+  bottom: 0 !important;
+  height: 3px !important;
 }
 
 .platforms--mcmm-nav .u-showOnNetbook .platforms-anchor {
@@ -841,14 +845,14 @@ h3.mcmm-nav-logo--noControls {
 
 .platforms--mcmm-nav .platforms-item.is-active {
   border-bottom: 0;
-  a{
+  a {
     position: relative;
     top: 1.5px;
   }
 }
 
 .navbar-white .platforms-item.is-active {
-  a{
+  a {
     position: relative;
     top: 0;
   }
@@ -859,13 +863,13 @@ h3.mcmm-nav-logo--noControls {
   font-weight: 400;
   opacity: 1 !important;
   border-bottom: 2px solid white;
-  padding-bottom: 4px;
+  padding-bottom: 16px;
   position: relative;
-  top: 1px;
+  top: 0;
 }
 
 .navbar-transparent .platforms--mcmm-nav .platforms-item.is-active > .platforms-anchor {
-  padding-bottom: 3.5px;
+  padding-bottom: 14.5px;
 }
 
 .float-left {
@@ -875,11 +879,10 @@ h3.mcmm-nav-logo--noControls {
 .brand {
   position: relative;
   display: inline-block;
-  //padding-top: 7.5px;
   padding-right: 14px;
   z-index: 700;
   border: 0;
-  top:4px;
+  top: 0px;
 }
 
 .brand-img {
@@ -964,7 +967,8 @@ h3.mcmm-nav-logo--noControls {
 }
 
 .platforms--narrow .platforms-anchor {
-  padding: 17px 0
+  padding: 13px 0;
+  padding-bottom: 20px;
 }
 
 .platforms--light {
@@ -1162,7 +1166,7 @@ h3.mcmm-nav-logo--noControls {
   -webkit-box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.22);
 
   .platforms--mcmm-nav .platforms-anchor {
-    color: #888 !important;
+    color: $black !important;
     opacity: 1 !important;
   }
   .hvr-underline-from-center:before {
@@ -1173,46 +1177,46 @@ h3.mcmm-nav-logo--noControls {
   }
 }
 
-#news{
+#news {
   .hvr-underline-from-center:before {
     background: $theme_green !important;
   }
   .platforms--mcmm-nav .platforms-item.is-active > .platforms-anchor {
-    border-bottom: 2px solid $theme_green;
+    border-bottom: 3px solid $theme_green;
   }
 }
 
 #news .platforms--mcmm-nav .platforms-item.is-active > .platforms-anchor {
-  border-bottom: 2px solid $theme_green !important;
-  a{
+  border-bottom: 3px solid $theme_green !important;
+  a {
     position: relative;
     top: 1.5px;
   }
 }
 
 #projects .platforms--mcmm-nav .platforms-item.is-active > .platforms-anchor {
-  border-bottom: 2px solid $theme_yellow !important;
+  border-bottom: 3px solid $theme_yellow !important;
 }
 
-#projects{
+#projects {
   .hvr-underline-from-center:before {
     background: $theme_yellow !important;
   }
   .platforms--mcmm-nav .platforms-item.is-active > .platforms-anchor {
-    border-bottom: 2px solid $theme_yellow;
+    border-bottom: 3px solid $theme_yellow;
   }
 }
 
 #video .platforms--mcmm-nav .platforms-item.is-active > .platforms-anchor {
-  border-bottom: 2px solid $theme_red !important;
+  border-bottom: 3px solid $theme_red !important;
 }
 
-#video{
+#video {
   .hvr-underline-from-center:before {
     background: $theme_red !important;
   }
   .platforms--mcmm-nav .platforms-item.is-active > .platforms-anchor {
-    border-bottom: 2px solid $theme_red;
+    border-bottom: 3px solid $theme_red;
   }
 }
 
@@ -1262,7 +1266,7 @@ h3.mcmm-nav-logo--noControls {
   .platforms--mcmm-nav {
     //background-color: rgba(255, 255, 255, 0.96) !important;
     width: 100%;
-    margin: 64px 0 0;
+    margin: 55px 0 0;
     padding-top: 2px;
     padding-bottom: 0;
     border-top: 1px solid #f0f0f0;
@@ -1314,7 +1318,7 @@ h3.mcmm-nav-logo--noControls {
   }
 
   .platforms--mcmm-nav {
-    margin: 73px -16px 0
+    margin: 65px -16px 0
   }
 
   .platforms--collection {
@@ -1327,6 +1331,6 @@ h3.mcmm-nav-logo--noControls {
   }
 }
 
-.alert{
+.alert {
 
 }

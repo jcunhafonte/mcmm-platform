@@ -4,7 +4,7 @@
     position: fixed;
     transform: translateY(-50%);
     top: 50%;
-    z-index: 90000;
+    z-index: 90000000;
     background: transparent;
     padding: 0 10px;
     border-top-right-radius: 3px;
@@ -102,7 +102,7 @@
     transform: translateY(-50%);
     top: 50%;
     right: 0;
-    z-index: 90000;
+    z-index: 90000000;
     background: transparent;
     padding: 0 10px;
     border-top-left-radius: 3px;
@@ -193,5 +193,4 @@
       }
     }
   }
-
 }

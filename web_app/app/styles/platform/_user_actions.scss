@@ -1,15 +1,20 @@
 .user-actions {
   .pull-left {
+
+    > .btn{
+      padding-left: 6px !important;
+    }
+
     .btn {
       font-size: 22px;
       border: none;
       color: $black !important;
 
-      span{
+      span {
         padding-left: 7px;
         font-size: 15px;
       }
-      .heart{
+      .heart {
         color: $theme_green !important;
       }
     }
@@ -19,6 +24,11 @@
     .btn {
       font-size: 22px;
       border: none;
+      color: $black !important;
+      padding: 8px 6px !important;
+    }
+    svg {
+      margin-top: 10px;
       color: $black !important;
     }
   }

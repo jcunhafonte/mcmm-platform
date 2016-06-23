@@ -66,7 +66,7 @@ function checkTransparent() {
                         transparent = false;
                         $('nav[role="navigation"]').removeClass('navbar-transparent');
                         $('nav[role="navigation"]').addClass('navbar-white');
-                        $(".brand-img").attr("src", "images/logo_green.svg")
+                        $(".brand-img").attr("src", "images/logo_yellow.svg")
                     }
                 } else {
                     if (!transparent) {

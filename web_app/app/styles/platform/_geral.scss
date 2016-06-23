@@ -6,7 +6,7 @@
   z-index: 2000000 !important;
 }
 
-.modal{
+.modal {
   z-index: 3000000 !important;
 }
 
@@ -74,11 +74,12 @@
 ::selection {
   background: $theme !important;
 }
+
 ::-moz-selection {
   background: $theme !important;
 }
 
-#news{
+#news {
   ::selection {
     background: $theme_green !important;
   }
@@ -87,7 +88,7 @@
   }
 }
 
-#projects{
+#projects {
   ::selection {
     background: $theme_yellow !important;
   }
@@ -96,11 +97,23 @@
   }
 }
 
-#video{
+#video {
   ::selection {
     background: $theme_red !important;
   }
   ::-moz-selection {
     background: $theme_red !important;
+  }
+}
+
+#progress-wrapper {
+  position: fixed;
+  top: 55px;
+  display: none;
+  z-index: 100000;
+  bottom: inherit !important;
+
+  #progress-element {
+    background: $theme_green !important;
   }
 }
