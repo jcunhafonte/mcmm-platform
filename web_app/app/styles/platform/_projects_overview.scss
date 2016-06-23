@@ -1,0 +1,84 @@
+.projects-overview {
+  padding-top: 40px;
+
+  .single-image {
+    background: $white;
+    padding-top: 50px;
+    z-index: 99999999999;
+    img {
+      height: 500px;
+      margin-bottom: 10px;
+    }
+    .align-img{
+      background: $white;
+      position: absolute;
+      height: 40px;
+      width: 100%;
+    }
+  }
+
+  .container {
+    .header {
+      h2 {
+        color: $theme_yellow !important;
+        font-family: Hind !important;
+        font-size: 42px !important;
+        font-weight: 300 !important;
+        letter-spacing: -0.5px !important;
+        margin: 10px 0 !important;
+      }
+    }
+
+    .text {
+      display: inline-block;
+      margin-top: 20px;
+      padding-bottom: 20px !important;
+
+      p {
+        color: $gray_footer !important;
+        font-size: 16px !important;
+        line-height: 31px !important;
+        display: block !important;
+        padding-bottom: 27px;
+      }
+
+      p:first-child .first-letter {
+        font-size: 68px !important;
+        line-height: 48px;
+        color: $theme_green;
+        float: left;
+        padding-right: 10px;
+        padding-top: 5px;
+      }
+
+      p:last-child {
+        padding-bottom: 0px;
+      }
+
+    }
+
+    .topics {
+      display: inline-block;
+      margin-top: 20px;
+      padding-bottom: 20px !important;
+
+      h4 {
+        margin: 0 !important;
+        font-family: Montserrat !important;
+        color: $theme_yellow !important;
+        font-size: 14px !important;
+        font-weight: bold !important;
+        text-transform: uppercase !important;
+        line-height: 30px !important;
+        letter-spacing: 1px !important;
+        padding-bottom: 5px;
+      }
+      p {
+        color: $gray_footer !important;
+        font-size: 16px !important;
+        line-height: 20px !important;
+        padding-bottom: 15px;
+      }
+    }
+  }
+}

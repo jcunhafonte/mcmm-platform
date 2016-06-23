@@ -8,7 +8,7 @@
 @import "author_card";
 @import "arrows";
 @import "user_actions";
-@import "next_new";
+@import "next_page";
 @import "comments";
 @import "fixed-title";
 
@@ -22,9 +22,11 @@
 @import "news_cards";
 
 //PROJECTS
+@import "projects_slider_detail";
 @import "projects_header";
 @import "news_projects_header";
 @import "project_card";
+@import "projects_overview";
 
 //VIDEOS
 @import "header_videos";

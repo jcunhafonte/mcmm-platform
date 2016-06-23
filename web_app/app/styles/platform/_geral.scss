@@ -112,8 +112,22 @@
   display: none;
   z-index: 100000;
   bottom: inherit !important;
+}
 
+#news{
   #progress-element {
     background: $theme_green !important;
+  }
+}
+
+#projects{
+  #progress-element {
+    background: $theme_yellow !important;
+  }
+}
+
+#video{
+  #progress-element {
+    background: $theme_red !important;
   }
 }

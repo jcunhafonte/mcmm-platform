@@ -28,6 +28,12 @@
       }
       .heart {
         color: $theme_green !important;
+        &-yellow{
+          color: $theme_yellow !important;
+        }
+        &-red{
+          color: $theme_red !important;
+        }
       }
     }
   }

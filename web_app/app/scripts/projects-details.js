@@ -30,7 +30,7 @@ $(document).ready(function () {
          $('.parallax-background').parallax("50%", 0.5);
     }
 
-    $('.next-new').mousemove(function(e){
+    $('.next-page').mousemove(function(e){
         var amountMovedX = (e.pageX * -1 / 15);
         var amountMovedY = (e.pageY * -1 / 15);
         $('.image').css('background-position', amountMovedX + 'px ' + amountMovedY + 'px');
@@ -43,8 +43,8 @@ $(document).ready(function () {
 function scrollBanner() {
     var scrollPos = window.scrollY;
     var headerText = document.querySelector('.informations .texts');
-    headerText.style.marginTop = -(scrollPos/3)+"px";
-    headerText.style.opacity = 1-(scrollPos/480);
+    headerText.style.marginTop = -(scrollPos/5)+"px";
+    headerText.style.opacity = 1-(scrollPos/380);
 }
 
 function checkTransparent() {

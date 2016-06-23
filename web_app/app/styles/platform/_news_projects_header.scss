@@ -41,27 +41,6 @@
         transform: translateY(-50%);
 
         .principal {
-          span {
-            font-family: Montserrat;
-            color: $white;
-            font-size: 12px;
-            text-transform: uppercase;
-            font-weight: 700;
-            padding: 6px 10px !important;
-            border: solid rgba(255, 255, 255, 0.4) 2px;
-            border-radius: 100px;
-            line-height: 18px;
-            letter-spacing: 1px;
-            display: inline-block;
-            transition: all 0.2s ease;
-            cursor: pointer;
-
-            &:hover {
-              background: $theme_green;
-              border-color: transparent;
-            }
-          }
-
           h2 {
             color: $white;
             margin: 0 !important;

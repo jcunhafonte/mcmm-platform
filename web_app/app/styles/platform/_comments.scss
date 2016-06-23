@@ -27,13 +27,31 @@
     a {
       color: $theme_green !important;
       text-transform: none !important;
+      transition: all 0.2s;
+
       &:hover {
         color: $theme_green_hover !important;
       }
     }
+
+    .yellow {
+      color: $theme_yellow !important;
+
+      &:hover {
+        color: $theme_yellow_hover !important;
+      }
+    }
+
+    .red {
+      color: $theme_red !important;
+
+      &:hover {
+        color: $theme_red_hover !important;
+      }
+    }
   }
 
-  .media-post .media-body{
+  .media-post .media-body {
     width: 87% !important;
     float: right !important;
   }
@@ -84,6 +102,24 @@
       display: inline-block !important;
       font-size: 16px !important;
       font-weight: 600 !important;
+      cursor: pointer;
+      transition: all .2s;
+
+      &:hover {
+        color: $theme_green;
+      }
+
+      &-yellow {
+        &:hover {
+          color: $theme_yellow;
+        }
+      }
+
+      &-red {
+        &:hover {
+          color: $theme_red;
+        }
+      }
     }
 
     .control-date {
@@ -166,9 +202,11 @@
 
     textarea {
       margin: 0 0 10px 0;
-      padding: 8px 0 8px 16px !important;
+      padding: 8px 16px 8px 16px !important;
       font-size: 16px;
       height: auto !important;
+      resize: inherit;
+      line-height: 1.9 !important;
     }
 
     ::-moz-placeholder {
@@ -223,10 +261,18 @@
       transition: all .4s;
       margin-bottom: 40px;
 
-      &:hover{
+      &:hover {
         color: $white !important;
         background: $theme_green !important;
         border: $theme_green !important;
+      }
+
+      &-yellow {
+        &:hover {
+          color: $white !important;
+          background: $theme_yellow !important;
+          border: $theme_yellow !important;
+        }
       }
     }
   }

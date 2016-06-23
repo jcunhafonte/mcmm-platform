@@ -1,0 +1,65 @@
+.projects-overview {
+  padding-top: 40px;
+
+  .images {
+    padding-top: 40px;
+    background: $white;
+    height: 590px;
+    width: 100%;
+
+    .owl-carousel {
+      cursor: -webkit-grab;
+      cursor: -moz-grab;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    .owl-carousel.owl-grab {
+      cursor: -webkit-grabbing;
+      cursor: -moz-grabbing;
+    }
+
+    .owl-carousel {
+      .owl-item {
+        .item {
+          padding: 1rem 10px 1rem 10px;
+          transition: all 0.2s ease;
+          -webkit-transition: all 0.2s ease;
+          position: relative;
+          height: 500px;
+          img{
+            height: 500px;
+            width: 100%;
+          }
+        }
+      }
+
+      .owl-dots {
+        text-align: center;
+        height: 90px;
+        background: $white;
+
+        .owl-dot {
+          display: inline-block;
+
+          span {
+            background: none repeat scroll 0 0 $light_gray;
+            display: inline-block;
+            width: 30px;
+            height: 4px;
+            margin: 40px 4px 0 4px;
+          }
+
+          &.active {
+            span {
+              background: none repeat scroll 0 0 $theme_yellow;
+            }
+          }
+        }
+      }
+    }
+  }
+}

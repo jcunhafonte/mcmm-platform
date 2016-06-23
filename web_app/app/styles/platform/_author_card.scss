@@ -5,7 +5,7 @@
   opacity: 1;
   width: 350px;
   height: 100px;
-  z-index: 9000000000;
+  z-index: 1000000000;
   border-radius: 5px;
   background-color: rgba(255, 255, 255, 0.9);
   display: block;
@@ -33,6 +33,22 @@
           color: $black;
           font-size: 14px !important;
           line-height: 14px;
+          cursor: pointer;
+          transition: all .2s;
+
+          &:hover{
+            color: $theme_green;
+          }
+          &-yellow{
+            &:hover{
+              color: $theme_yellow_hover;
+            }
+          }
+          &-red{
+            &:hover{
+              color: $theme_red_hover;
+            }
+          }
         }
       }
 
@@ -46,8 +62,28 @@
         transition: all .2s;
 
         &:hover{
-          color: $theme_green_hover !important;
+          color: $theme_green_hover;
           border: solid $theme_green_hover 1px;
+        }
+
+        &-yellow{
+          color: $theme_yellow !important;
+          border: solid $theme_yellow 1px;
+
+          &:hover{
+            color: $theme_yellow_hover !important;
+            border: solid $theme_yellow_hover 1px;
+          }
+        }
+
+        &-red{
+          color: $theme_red !important;
+          border: solid $theme_red 1px;
+
+          &:hover{
+            color: $theme_red_hover !important;
+            border: solid $theme_red_hover 1px;
+          }
         }
       }
     }
