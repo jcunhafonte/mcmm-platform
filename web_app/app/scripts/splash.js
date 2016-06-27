@@ -444,7 +444,12 @@ function testLargeProject() {
     if ($(window).width() < 768) {
         $(".project-large").hover3d({
             selector: ".project__card",
-            perspective: 768,
+            perspective: 0,
+            invert: true
+        });
+        $(".project-small").hover3d({
+            selector: ".project__card",
+            perspective: 0,
             invert: true
         });
     } else {
@@ -500,18 +505,23 @@ $(document).ready(function () {
 });
 
 $(document).ready(function () {
-    $(".project-small").hover3d({
-        selector: ".project__card",
-        perspective: 768,
-        invert: true
-    });
     if ($(window).width() < 768) {
         $(".project-large").hover3d({
+            selector: ".project__card",
+            perspective: 0,
+            invert: true
+        });
+        $(".project-small").hover3d({
+            selector: ".project__card",
+            perspective: 0,
+            invert: true
+        });
+    } else {
+        $(".project-small").hover3d({
             selector: ".project__card",
             perspective: 768,
             invert: true
         });
-    } else {
         $(".project-large").hover3d({
             selector: ".project__card",
             perspective: 1680,

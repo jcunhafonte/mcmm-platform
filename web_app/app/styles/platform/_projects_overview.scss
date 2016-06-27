@@ -5,10 +5,13 @@
     background: $white;
     padding-top: 50px;
     z-index: 99999999999;
+
     img {
       height: 500px;
       margin-bottom: 10px;
+      max-width: 100%;
     }
+
     .align-img{
       background: $white;
       position: absolute;
@@ -32,23 +35,13 @@
     .text {
       display: inline-block;
       margin-top: 20px;
-      padding-bottom: 20px !important;
+      padding-bottom: 60px !important;
 
       p {
         color: $gray_footer !important;
         font-size: 16px !important;
         line-height: 31px !important;
         display: block !important;
-        padding-bottom: 27px;
-      }
-
-      p:first-child .first-letter {
-        font-size: 68px !important;
-        line-height: 48px;
-        color: $theme_green;
-        float: left;
-        padding-right: 10px;
-        padding-top: 5px;
       }
 
       p:last-child {
@@ -59,8 +52,12 @@
 
     .topics {
       display: inline-block;
-      margin-top: 20px;
       padding-bottom: 20px !important;
+
+      .nopadding{
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+      }
 
       h4 {
         margin: 0 !important;

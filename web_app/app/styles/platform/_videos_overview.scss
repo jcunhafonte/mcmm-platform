@@ -1,7 +1,8 @@
-.news-video {
+.videos-overview {
   padding-top: 40px;
 
   .container {
+
     .video {
       margin-bottom: 60px;
 
@@ -21,7 +22,7 @@
           background: transparent;
         }
         .jw-progress {
-          background: $theme_green;
+          background: $theme_red;
         }
         .jw-skin-seven .jw-controlbar-right-group .jw-icon-inline:before, .jw-skin-seven .jw-controlbar-right-group .jw-icon-tooltip:before {
           border: none;
@@ -54,54 +55,61 @@
       }
     }
 
+    .header {
+      h2 {
+        color: $theme_red !important;
+        font-family: Hind !important;
+        font-size: 42px !important;
+        font-weight: 300 !important;
+        letter-spacing: -0.5px !important;
+        margin: 10px 0 !important;
+      }
+    }
+
     .text {
-      padding-bottom: 20px !important;
+      display: inline-block;
+      margin-top: 20px;
+      padding-bottom: 10px !important;
+
       p {
-        color: $black !important;
+        color: $gray_footer !important;
         font-size: 16px !important;
         line-height: 31px !important;
         display: block !important;
-        padding-bottom: 40px;
-        margin: 0;
-      }
-
-      p:first-child .first-letter {
-        font-size: 68px !important;
-        line-height: 48px;
-        color: $theme_green;
-        float: left;
-        padding-right: 10px;
-        padding-top: 5px;
       }
 
       p:last-child {
-        margin: 0;
         padding-bottom: 0px;
       }
 
-      blockquote {
-        border: none;
-        color: $white;
-        font-size: 18px;
-        line-height: 30px;
-        padding: 40px 55px;
-        margin: 0 30px;
-        position: relative;
-        z-index: 1000;
-        margin-bottom: 40px;
+    }
 
-        &:before {
-          content: '';
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          background: $theme_green url('../images/icons/quotes.svg') top 5px left 12px no-repeat;
-          background-size: 40px;
-          transform: rotate(180deg);
-          z-index: -1;
-        }
+    .topics {
+      display: inline-block;
+      padding-bottom: 20px !important;
+
+      h4 {
+        margin: 0 !important;
+        font-family: Montserrat !important;
+        color: $theme_red !important;
+        font-size: 14px !important;
+        font-weight: bold !important;
+        text-transform: uppercase !important;
+        line-height: 30px !important;
+        letter-spacing: 1px !important;
+        padding-bottom: 5px;
+      }
+
+      p {
+        color: $gray_footer !important;
+        font-size: 16px !important;
+        line-height: 20px !important;
+        padding-bottom: 15px;
+      }
+
+      .nopadding{
+        padding-left: 0 !important;
+        padding-right: 0 !important;
       }
     }
   }

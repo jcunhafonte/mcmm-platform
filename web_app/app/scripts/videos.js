@@ -65,15 +65,57 @@ function checkTransparent() {
     });
 }
 
-function videoCards() {
-    $('.card-video').hover(function () {
-        var id_video = $(this).data('video');
-        var video = $('#' + id_video).get(0);
+var i = 1;
+var firstTime = {};
+var id = "";
 
-        if (video.paused) {
-            video.play();
+function videoCards() {
+
+    var videos = $('.card-video').length;
+    var url = "http://178.62.86.141/api/utilizadores/videos/video.mp4";
+
+    for (i = 1; i <= videos; i++) {
+
+        jwplayer("video-player-" + i).setup
+        (
+            {
+                file: url,
+                controls: false,
+                autostart: true,
+                mute: true,
+                loop: true
+            }
+        );
+
+        firstTime["video-player-" + i] = true;
+        checkIfPlays(i);
+    }
+
+    $('.card-video').hover(function (event) {
+        var video = $(this).data('video');
+
+        if (jwplayer(video).getState() == "playing") {
+            jwplayer(video).pause();
         } else {
-            video.pause();
+            jwplayer(video).play();
         }
     });
+}
+
+function checkIfPlays(i) {
+console.log(jwplayer("video-player-" + i).getState())
+        if (firstTime["video-player-" + i] == true) {
+            if (jwplayer("video-player-" + i).getState() !== "playing") {
+
+                setTimeout(function () {
+                    checkIfPlays(i);
+                }, 400);
+
+            } else {
+                firstTime["video-player-" + i] = false;
+                setTimeout(function () {
+                    jwplayer("video-player-" + i).pause();
+                }, 5000);
+            }
+        }
 }

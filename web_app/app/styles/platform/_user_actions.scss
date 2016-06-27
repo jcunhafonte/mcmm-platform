@@ -1,7 +1,11 @@
 .user-actions {
-  .pull-left {
 
-    > .btn{
+  &-force-align {
+    margin-top: 90px;
+  }
+
+  .pull-left {
+    > .btn {
       padding-left: 6px !important;
     }
 
@@ -16,6 +20,12 @@
       }
       .heart {
         color: $theme_green !important;
+        &-yellow {
+          color: $theme_yellow !important;
+        }
+        &-red {
+          color: $theme_red !important;
+        }
       }
     }
   }

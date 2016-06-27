@@ -18,7 +18,7 @@ $(document).ready(function () {
         if ($(window).width() < 992) {
             $('#topbar').addClass('navbar-white');
             $('#topbar').removeClass('navbar-transparent');
-            $(".brand-img").attr("src", "images/logo_green.svg");
+            $(".brand-img").attr("src", "images/logo_yellow.svg");
         } else {
             $('#topbar').removeClass('navbar-white');
             $('#topbar').addClass('navbar-transparent');

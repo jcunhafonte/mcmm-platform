@@ -173,13 +173,15 @@
     }
   }
   .project-large.project:hover .project__detail {
-    border-width: 15px;
+    border-width: 10px;
   }
-  .project-large,.project-small .project__detail {
-    left: 20px !important;
-    right: 20px !important;
-    top: 20px !important;
-    bottom: 20px !important;
+  .project-large, .project-small {
+    .project__detail {
+      left: 20px !important;
+      right: 20px !important;
+      top: 20px !important;
+      bottom: 20px !important;
+    }
   }
 }
 
@@ -193,7 +195,7 @@
     }
   }
   .project__image {
-    &:before{
+    &:before {
       content: "";
       position: absolute;
       top: 0;
@@ -217,7 +219,7 @@
   }
 }
 
-#projects{
+#projects {
 
   .project-small {
     h2 {

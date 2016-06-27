@@ -77,8 +77,9 @@
   }
 }
 
+
 @media screen and (max-width: $screen-md-min) {
-  .news-details-header {
+  .news-projects-header {
     .contents {
       .informations {
         .texts {
@@ -92,9 +93,9 @@
           .secondary {
             > span {
               padding: 0 3px;
-              }
+            }
             span {
-             font-size: 12px;
+              font-size: 12px;
               &:first-child {
                 border-left: none;
               }
@@ -107,7 +108,7 @@
 }
 
 @media screen and (max-width: $screen-sm-min) {
-  .news-details-header {
+  .news-projects-header {
     .contents {
       .informations {
         .texts {

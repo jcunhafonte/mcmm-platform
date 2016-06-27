@@ -274,6 +274,14 @@
           border: $theme_yellow !important;
         }
       }
+
+      &-red {
+        &:hover {
+          color: $white !important;
+          background: $theme_red !important;
+          border: $theme_red !important;
+        }
+      }
     }
   }
 
