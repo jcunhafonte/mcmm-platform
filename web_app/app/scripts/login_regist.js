@@ -296,6 +296,10 @@ $(document).ready(function () {
                         regexp: {
                             regexp: /^[A-zÀ-ú]+[\s|,][A-zÀ-ú]{1,19}$/,
                             message: 'Deves introduzir um nome próprio e apelido válidos'
+                        },
+                        stringLength: {
+                            max: 39,
+                            message: 'O teu nome não deve possuir mais que 39 caracteres'
                         }
                     }
                 },
