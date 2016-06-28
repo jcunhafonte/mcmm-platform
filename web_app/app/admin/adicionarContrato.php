@@ -385,7 +385,7 @@ echo "</select>
 
                                <label for='input-text' class='col-sm-1 control-label'>Venc. Base</label>
                              <div class='col-sm-1'>
-                                 <input type='text' id='inputEmail' placeholder='Vencimento' data-mask='9999.99€'
+                                 <input type='text' id='inputEmail' placeholder='Vencimento' data-mask='999.99€'
                                  autocomplete='on' class='form-control' name='vencBaseColaborador'>
                              </div>
 

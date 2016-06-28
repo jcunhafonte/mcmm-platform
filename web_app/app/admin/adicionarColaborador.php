@@ -662,8 +662,7 @@ if (!isset($_SESSION['ativoAdmin'])) {
                                     <div class="col-sm-3">
                                         <div class="form-group">
                                             <label for="inputEmail">Vencimento Base</label>
-                                            <input type="text" id="inputEmail" placeholder="Vencimento Base"
-                                                   data-mask="9999.99€"
+                                            <input type="text" id="inputEmail" placeholder="Vencimento Base" data-mask="999.99€"
                                                    autocomplete="on" class="form-control" name="vencBaseColaborador">
                                         </div>
                                     </div>
