@@ -1,0 +1,339 @@
+head	1.22;
+access;
+symbols;
+locks
+	bentoena:1.22; strict;
+comment	@# @;
+
+
+1.22
+date	2014.09.12.15.25.47;	author bentoena;	state Exp;
+branches;
+next	1.21;
+
+1.21
+date	2014.09.12.13.31.17;	author bentoena;	state Exp;
+branches;
+next	1.20;
+
+1.20
+date	2014.08.19.16.44.27;	author bentoena;	state Exp;
+branches;
+next	1.19;
+
+1.19
+date	2014.07.07.14.45.35;	author bentoena;	state Exp;
+branches;
+next	1.18;
+
+1.18
+date	2014.07.01.15.11.21;	author bentoena;	state Exp;
+branches;
+next	1.17;
+
+1.17
+date	2014.07.01.09.17.25;	author bentoena;	state Exp;
+branches;
+next	1.16;
+
+1.16
+date	2014.06.02.08.17.19;	author bentoena;	state Exp;
+branches;
+next	1.15;
+
+1.15
+date	2013.08.28.19.12.19;	author bentoena;	state Exp;
+branches;
+next	1.14;
+
+1.14
+date	2013.08.28.19.12.19;	author bentoena;	state Exp;
+branches;
+next	1.13;
+
+1.13
+date	2013.03.01.16.34.43;	author bentoena;	state Exp;
+branches;
+next	1.12;
+
+1.12
+date	2013.03.01.16.33.48;	author bentoena;	state Exp;
+branches;
+next	1.11;
+
+1.11
+date	2013.03.01.16.27.39;	author bentoena;	state Exp;
+branches;
+next	1.10;
+
+1.10
+date	2013.01.16.18.24.18;	author bentoena;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2013.01.16.17.33.20;	author bentoena;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2011.09.29.08.05.34;	author bentoena;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2011.09.28.17.48.54;	author bentoena;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2011.09.28.17.47.41;	author bentoena;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2011.09.28.17.46.26;	author bentoena;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2011.06.02.18.17.55;	author bentoena;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2011.06.02.18.11.41;	author bentoena;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2011.06.02.18.11.41;	author bentoena;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2010.06.25.10.22.24;	author bentoena;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.22
+log
+@"Modified by /usr/local/cpanel/cpanel "
+@
+text
+@vitor:x:966:962::/home/bentoena/mail/bentoenascimento.com/vitor:/usr/local/cpanel/bin/noshell
+comercial:x:966:962::/home/bentoena/mail/bentoenascimento.com/comercial:/usr/local/cpanel/bin/noshell
+raposeiro:x:966:962::/home/bentoena/mail/bentoenascimento.com/raposeiro:/usr/local/cpanel/bin/noshell
+geral:x:966:962::/home/bentoena/mail/bentoenascimento.com/geral:/usr/local/cpanel/bin/noshell
+paulo.oliveira:x:966:962::/home/bentoena/mail/bentoenascimento.com/paulo.oliveira:/usr/local/cpanel/bin/noshell
+raquel:x:966:962::/home/bentoena/mail/bentoenascimento.com/raquel:/usr/local/cpanel/bin/noshell
+rojas:x:966:962::/home/bentoena/mail/bentoenascimento.com/rojas:/usr/local/cpanel/bin/noshell
+jdias:x:966:962::/home/bentoena/mail/bentoenascimento.com/jdias:/usr/local/cpanel/bin/noshell
+ricardo:x:966:962::/home/bentoena/mail/bentoenascimento.com/ricardo:/usr/local/cpanel/bin/noshell
+bruno.neves:x:781:778::/home/bentoena/mail/bentoenascimento.com/bruno.neves:/home/bentoena
+cesar:x:781:778::/home/bentoena/mail/bentoenascimento.com/cesar:/home/bentoena
+joaofrancisco:x:781:778::/home/bentoena/mail/bentoenascimento.com/joaofrancisco:/home/bentoena
+ruidias:x:781:778::/home/bentoena/mail/bentoenascimento.com/ruidias:/home/bentoena
+joaoaraujo:x:781:778::/home/bentoena/mail/bentoenascimento.com/joaoaraujo:/home/bentoena
+@
+
+
+1.21
+log
+@"Modified by /usr/local/cpanel/cpanel "
+@
+text
+@d14 1
+@
+
+
+1.20
+log
+@"Modified by /usr/local/cpanel/cpanel "
+@
+text
+@a9 1
+joliveira:x:781:778::/home/bentoena/mail/bentoenascimento.com/joliveira:/home/bentoena
+@
+
+
+1.19
+log
+@"Modified by /usr/local/cpanel/cpanel "
+@
+text
+@a14 1
+website:x:781:778::/home/bentoena/mail/bentoenascimento.com/website:/home/bentoena
+@
+
+
+1.18
+log
+@"Modified by /usr/local/cpanel/cpanel "
+@
+text
+@d15 1
+@
+
+
+1.17
+log
+@"Modified by /usr/local/cpanel/cpanel "
+@
+text
+@d14 1
+@
+
+
+1.16
+log
+@"Modified by /usr/local/cpanel/cpanel "
+@
+text
+@d13 1
+@
+
+
+1.15
+log
+@"Modified by /usr/local/cpanel/cpanel "
+@
+text
+@d12 1
+@
+
+
+1.14
+log
+@"Modified by /usr/local/cpanel/cpanel "
+@
+text
+@d11 1
+@
+
+
+1.13
+log
+@"Modified by /usr/local/cpanel/cpanel "
+@
+text
+@d10 1
+a10 1
+joliveira:x:781:778::/home/bentoena/mail/bentoenascimento.com/mail/bentoenascimento.com/joliveira:/home/bentoena
+@
+
+
+1.12
+log
+@"Modified by /usr/local/cpanel/cpanel "
+@
+text
+@d10 1
+@
+
+
+1.11
+log
+@"Modified by /usr/local/cpanel/cpanel "
+@
+text
+@a9 1
+jfrancisco:x:781:778::/home/bentoena/mail/bentoenascimento.com/mail/bentoenascimento.com/jfrancisco:/home/bentoena
+@
+
+
+1.10
+log
+@"Modified by /usr/local/cpanel/cpanel "
+@
+text
+@d10 1
+@
+
+
+1.9
+log
+@"Modified by /usr/local/cpanel/cpanel "
+@
+text
+@a9 1
+testeiberweb:x:966:962::/home/bentoena/mail/bentoenascimento.com/mail/bentoenascimento.com/testeiberweb:/home/bentoena
+@
+
+
+1.8
+log
+@"Modified by /usr/local/cpanel/cpanel "
+@
+text
+@d10 1
+@
+
+
+1.7
+log
+@"Modified by /usr/local/cpanel/cpanel "
+@
+text
+@d9 1
+@
+
+
+1.6
+log
+@"Modified by /usr/local/cpanel/cpanel "
+@
+text
+@d8 1
+@
+
+
+1.5
+log
+@"Modified by /usr/local/cpanel/cpanel "
+@
+text
+@d7 1
+@
+
+
+1.4
+log
+@"Modified by /usr/local/cpanel/cpanel "
+@
+text
+@d6 1
+@
+
+
+1.3
+log
+@"Modified by /usr/local/cpanel/cpanel "
+@
+text
+@d5 1
+@
+
+
+1.2
+log
+@"Modified by /usr/local/cpanel/cpanel "
+@
+text
+@a1 1
+bento:x:966:962::/home/bentoena/mail/bentoenascimento.com/bento:/usr/local/cpanel/bin/noshell
+@
+
+
+1.1
+log
+@"Modified by /usr/local/cpanel/cpanel "
+@
+text
+@d1 4
+@
