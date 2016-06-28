@@ -26,16 +26,6 @@ $(document).ready(function () {
         }
     }
 
-    if (!Modernizr.touch) {
-         $('.parallax-background').parallax("50%", 0.5);
-    }
-
-    $('.next-page').mousemove(function(e){
-        var amountMovedX = (e.pageX * -1 / 15);
-        var amountMovedY = (e.pageY * -1 / 15);
-        $('.image').css('background-position', amountMovedX + 'px ' + amountMovedY + 'px');
-    });
-
     window.addEventListener('scroll', scrollBanner);
 
 });
