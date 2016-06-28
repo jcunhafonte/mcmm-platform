@@ -3,8 +3,31 @@
 
   .container {
 
+    #video-wrapper{
+      display: inline-table;
+    }
+
     .video {
       margin-bottom: 60px;
+      transition: 1s all;
+
+      &-top {
+        transition: top 1s;
+        position: fixed;
+        top: 0;
+        height: 100px;
+        z-index: 10000;
+
+        .jwplayer.jw-flag-aspect-mode {
+          height: 100px !important;
+          width: 200px !important;
+        }
+
+        .jw-logo, .jw-sharing-dock-btn, .jw-slider-time, .jw-icon-volume {
+          display: none;
+        }
+
+      }
 
       #video-player {
         .jw-controlbar.jw-background-color.jw-reset {
@@ -51,6 +74,9 @@
         .jw-background-color {
           background: none;
           border: none;
+        }
+        .jw-icon-fullscreen:before {
+          border-left: none !important;
         }
       }
     }
@@ -107,7 +133,7 @@
         padding-bottom: 15px;
       }
 
-      .nopadding{
+      .nopadding {
         padding-left: 0 !important;
         padding-right: 0 !important;
       }

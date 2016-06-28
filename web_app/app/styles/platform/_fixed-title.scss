@@ -60,4 +60,15 @@
     font-weight: bold !important;
     padding-top: 7px !important;
   }
+
+  &-video{
+    height: 100px;
+
+    h3{
+      line-height: 93px !important;
+    }
+    .pull-right .btn {
+      line-height: 100px !important;
+    }
+  }
 }

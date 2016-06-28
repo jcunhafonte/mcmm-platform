@@ -1,0 +1,68 @@
+.dropdown-menu {
+  right: -4px !important;
+  left: inherit !important;
+  border: none !important;
+  margin-top: 12px !important;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, .25), 0 0 1px rgba(0, 0, 0, .35) !important;
+  transition: all 370ms cubic-bezier(0.34, 1.61, 0.7, 1) !important;
+  transform-origin: 29px -50px !important;
+  transform: scale(0) !important;
+  opacity: 0 !important;
+  filter: alpha(opacity=0) !important;
+  visibility: hidden !important;
+  display: block !important;
+
+  &:before {
+    border-bottom: 11px solid rgba(0, 0, 0, 1);
+    border-left: 11px solid transparent;
+    border-right: 11px solid transparent;
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: -11px;
+    left: auto;
+    right: 12px;
+  }
+
+  &:after {
+    border-bottom: 11px solid white;
+    border-left: 11px solid transparent;
+    border-right: 11px solid transparent;
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: -11px;
+    left: auto;
+    right: 12px;
+  }
+
+  a {
+    opacity: .8;
+    transition: .2s all;
+    padding: 3px 15px !important;
+
+    &:hover {
+      opacity: 1;
+      background: none !important;
+    }
+  }
+
+  .divider {
+    margin: 6px 0 !important;
+  }
+
+}
+
+.dropdown.open .dropdown-menu {
+  transform: scale(1) !important;
+  transform-origin: 29px -50px !important;
+  opacity: 1 !important;
+  filter: alpha(opacity=100) !important;
+  visibility: visible !important;
+}
+
+@media screen and (max-width: $screen-sm-min) {
+  .dropdown-menu {
+    right: -8px !important;
+  }
+}

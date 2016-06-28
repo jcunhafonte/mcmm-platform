@@ -428,7 +428,7 @@ h3.mcmm-nav-logo--noControls {
 
 .button--circle {
   padding: 0 !important;
-  width: 37px;
+  width: 40px;
   text-align: center
 }
 
@@ -457,7 +457,7 @@ h3.mcmm-nav-logo--noControls {
 .button {
   display: inline-block;
   position: relative;
-  height: 37px;
+  height: 40px;
   padding: 0 16px;
   color: rgba(0, 0, 0, .44);
   background: rgba(0, 0, 0, 0);
@@ -489,7 +489,7 @@ h3.mcmm-nav-logo--noControls {
 }
 
 .button, .button.button--truncated .icon {
-  line-height: 36px
+  line-height: 40px
 }
 
 .button:hover {
@@ -523,15 +523,11 @@ h3.mcmm-nav-logo--noControls {
 
 @media screen and (max-width: 767px) {
   .button {
-    height: 33px;
-    line-height: 32px;
-    font-size: 14px;
     padding: 0 14px
   }
 
   .button--circle {
     padding: 0;
-    width: 33px
   }
 
   .button--circle > .avatar, .button--circle > .avatar > .avatar-image {
@@ -614,7 +610,7 @@ h3.mcmm-nav-logo--noControls {
   position: absolute;
   text-align: right;
   right: 0;
-  bottom: 2px;
+  bottom: 3px;
 }
 
 @media screen and (max-width: 767px) {
@@ -1062,9 +1058,43 @@ h3.mcmm-nav-logo--noControls {
 }
 
 .buttons-area {
+
+  &-logged {
+    margin-top: 2.5px !important;
+  }
+
   a {
     font-weight: normal !important;
     letter-spacing: 0.5px !important;
+  }
+  .no-border {
+    border: none !important;
+  }
+
+  .button--circle {
+    margin: 0 3px !important;
+    font-size: 20px !important;
+    color: $black !important;
+    border: 1px solid rgba(0, 0, 0, 0.35) !important;
+    transition: .3s all;
+
+    &:hover {
+      border: 1px solid rgba(0, 0, 0, 0.65) !important;
+    }
+  }
+
+  .button--circle:last-child {
+    margin-right: 0 !important;
+    bottom: 2px !important;
+    border-color: transparent !important;
+  }
+
+}
+
+.navbar-transparent {
+  .button--circle {
+    color: $white !important;
+    border-color: transparent !important;
   }
 }
 

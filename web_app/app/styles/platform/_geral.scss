@@ -114,20 +114,29 @@
   bottom: inherit !important;
 }
 
-#news{
+#news {
   #progress-element {
     background: $theme_green !important;
   }
 }
 
-#projects{
+#projects {
   #progress-element {
     background: $theme_yellow !important;
   }
 }
 
-#video{
+#video {
+  #progress-wrapper {
+    top: 55px;
+  }
   #progress-element {
     background: $theme_red !important;
+  }
+}
+
+.fixed-title-video-ID {
+  #progress-wrapper {
+    top: 95px !important;
   }
 }
