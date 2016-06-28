@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="pt" xmlns:height="http://www.w3.org/1999/xhtml" xmlns:width="http://www.w3.org/1999/xhtml">
+
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7">
+<![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8">
+<![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9">
+<![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script type="text/javascript" src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script type="text/javascript" src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+<head>
+
+    <title>MCMM</title>
+
+    <!--METAS-->
+    <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="author" content="MCMM">
+    <meta name="description" content="Plataforma MCMM">
+    <meta name="keywords" content="UA, DECA, MCMM, AV, ...">
+    <meta name="title" content="MCMM">
+    <meta name="referrer" content="always">
+
+    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="content-language" content="pt">
+
+    <meta property="og:title" content="MCMM - Mestrado em Comunicação Multimédia">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://mcmm.ua.pt">
+    <meta property="og:image" content="http://gps.pt/img/share.jpg">
+    <meta property="og:site_name" content="MCMM é ...">
+    <meta property="og:description" content="MCMM é ...">
+    <meta property="al:android:app_name" content="MCMM">
+    <meta property="al:android:url" content="mcmm://">
+    <meta property="al:web:url" content="index.php">
+    <meta property="al:android:package" content="com.mcmm.reader">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://mcmm.ua.pt">
+    <meta name="twitter:title" content="MCMM - Mestrado em Comunicação Multimédia">
+    <meta name="twitter:description" content="MCMM é ...">
+    <meta name="twitter:image" content="http://mcmm.ua.pt/img/share.jpg">
+
+    <!--FAVICON-->
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="images/favicon/normal/apple-touch-icon-57x57.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/favicon/normal/apple-touch-icon-114x114.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/favicon/normal/apple-touch-icon-72x72.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/favicon/normal/apple-touch-icon-144x144.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="images/favicon/normal/apple-touch-icon-60x60.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="images/favicon/normal/apple-touch-icon-120x120.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="images/favicon/normal/apple-touch-icon-76x76.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="images/favicon/normal/apple-touch-icon-152x152.png"/>
+    <link rel="icon" type="image/png" href="images/favicon/normal/favicon-196x196.png" sizes="196x196"/>
+    <link rel="icon" type="image/png" href="images/favicon/normal/favicon-96x96.png" sizes="96x96"/>
+    <link rel="icon" type="image/png" href="images/favicon/normal/favicon-32x32.png" sizes="32x32"/>
+    <link rel="icon" type="image/png" href="images/favicon/normal/favicon-16x16.png" sizes="16x16"/>
+    <link rel="icon" type="image/png" href="images/favicon/normal/favicon-128.png" sizes="128x128"/>
+    <meta name="application-name" content="MCMM"/>
+    <meta name="msapplication-TileColor" content="#FFFFFF"/>
+    <meta name="msapplication-TileImage" content="images/favicon/normal/mstile-144x144.png"/>
+    <meta name="msapplication-square70x70logo" content="images/favicon/normal/mstile-70x70.png"/>
+    <meta name="msapplication-square150x150logo" content="images/favicon/normal/mstile-150x150.png"/>
+    <meta name="msapplication-wide310x150logo" content="images/favicon/normal/mstile-310x150.png"/>
+    <meta name="msapplication-square310x310logo" content="images/favicon/normal/mstile-310x310.png"/>
+
+    <!-- build:css styles/vendor.css -->
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:css styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+
+    <!-- build:js scripts/vendor/modernizr.js -->
+    <script src="/bower_components/modernizr/modernizr.js"></script>
+    <!-- endbuild -->
+
+</head>
+
+<body data-offset="80" data-target=".navbar" data-spy="scroll">
+
+<nav class="mcmm-nav mcmm-nav--top navbar-transparent" id="topbar" role="navigation">
+    <div class="container">
+        <div class="mcmm-nav-inner">
+            <div class="mcmm-nav-block mcmm-nav-block--left float-left">
+                <a href="/" class="brand">
+                    <img class="brand-img" src="images/logo-w.svg"/>
+                </a>
+            </div>
+            <div class="mcmm-nav-block mcmm-nav-block--center">
+                <nav class="platforms platforms--mcmm-nav platforms--narrow">
+                    <ul class="platforms-list single">
+                        <li class="platforms-item">
+                            <a class="platforms-anchor hvr-underline-from-center" href="/news">Notícias</a>
+                        </li>
+                        <li class="platforms-item">
+                            <a class="platforms-anchor hvr-underline-from-center"
+                               href="/projects">Projetos</a>
+                        </li>
+                        <li class="platforms-item">
+                            <a class="platforms-anchor hvr-underline-from-center" href="/videos">Vídeos</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="mcmm-nav-block mcmm-nav-block--right float-right">
+                <div class="buttons-area">
+                    <a class="btn btn-primary btn-short btn-sign" data-toggle="modal"
+                       href="javascript:void(0)" onclick="openLoginModal();">
+                        Entrar
+                    </a>
+                    <span class="divider-bar">/</span>
+                    <a class="btn btn-primary btn-short btn-sign" data-toggle="modal"
+                       href="javascript:void(0)" onclick="openRegisterModal();">
+                        Registar
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<div id="platform">
+
+    <div class="projects-header">
+        <div class="contents">
+            <div class="container">
+                <div class="row">
+                    <div class="description">
+                        <h2 class="title">Contactos</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section section-gray">
+        <div class="container-fluid">
+            <div class="row">
+                <div onclick="window.open('https://www.google.pt/maps/place/Universidade+de+Aveiro/@40.6303065,-8.6597,17z/data=!3m1!4b1!4m5!3m4!1s0xd23a2aa4e1bda2b:0xd70b976749475485!8m2!3d40.6303024!4d-8.657506', '_blank')"
+                     class="splash col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                    <div class="card card-splash card-splash-contacts">
+                        <div class="link">Obter direções
+                            <span class="arrow"></span>
+                        </div>
+                        <div class="content">
+                            <a class="card-link">
+                                <h4 class="title">Universidade de Aveiro</h4>
+                            </a>
+                            <div class="excerpt">
+                                <small>Campus Universitário de Santiago, 3810-193 Aveiro</small>
+                                <br>
+                                <small>234 370 200</small>
+                            </div>
+                        </div>
+                        <div class="image">
+                            <div class="carousel slide">
+                                <div class="carousel-inner">
+                                    <div class="item active">
+                                        <img src="http://seminariocts2016.web.ua.pt/wp-content/themes/nirvana/images/columns/ua.jpg"
+                                             alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div onclick="window.open('https://www.google.pt/maps/place/DECA+-+Departamento+de+Comunica%C3%A7%C3%A3o+e+Arte/@40.6288431,-8.65882,17z/data=!3m1!4b1!4m5!3m4!1s0xd23a2ac782797cd:0x829e10aa3e1ff33a!8m2!3d40.628839!4d-8.656626', '_blank')"
+                     class="splash col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                    <div class="card card-splash card-splash-contacts">
+                        <div class="link">Obter direções
+                            <span class="arrow"></span>
+                        </div>
+                        <div class="content">
+                            <a class="card-link">
+                                <h4 class="title">Mestrado em Comunicação Multimédia</h4>
+                            </a>
+                            <div class="excerpt">
+                                <small>Departamento de Comunicação e Arte</small>
+                                <br>
+                                <small>234 370 868</small>
+                            </div>
+                        </div>
+                        <div class="image">
+                            <div class="carousel slide">
+                                <div class="carousel-inner">
+                                    <div class="item active">
+                                        <img src="http://connector.web.ua.pt/users/17/foto/deca.jpg"
+                                             alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="container-fluid">
+            <div class="row">
+
+                <form id="contact-us" class="contact-us">
+                    <div class="col-lg-12">
+                        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 form-style">
+
+                            <span class="input input--isao">
+                                <input class="input__field input__field--isao" type="text" id="1"/>
+                                    <label class="input__label input__label--isao" for="1" data-content="Nome">
+                                         <span class="input__label-content input__label-content--isao">Nome
+                                        </span>
+                                    </label>
+                            </span>
+
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 form-style">
+
+                            <span class="input input--isao">
+                                <input class="input__field input__field--isao" type="text" id="2"/>
+                                    <label class="input__label input__label--isao" for="2" data-content="Apelido">
+                                         <span class="input__label-content input__label-content--isao">Apelido
+                                        </span>
+                                    </label>
+                            </span>
+
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 form-style">
+
+                          <span class="input input--isao">
+                                <input class="input__field input__field--isao" type="text" id="3"/>
+                                    <label class="input__label input__label--isao" for="3" data-content="Assunto">
+                                         <span class="input__label-content input__label-content--isao">Assunto
+                                        </span>
+                                    </label>
+                            </span>
+
+                        </div>
+                    </div>
+
+
+                    <div class="col-lg-12">
+                        <div class="col-lg-12 form-style">
+                         <span class="input input--isao">
+                                <textarea class="input__field input__field--isao" id="4" rows="4"></textarea>
+                                    <label class="input__label input__label--isao" for="4" data-content="Mensagem">
+                                         <span class="input__label-content input__label-content--isao">Mensagem
+                                        </span>
+                                    </label>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-12">
+                        <a class="btn btn-info pull-left">
+                            Enviar mensagem
+                        </a>
+
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer footer-big footer-default">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-6 col-sm-6 col-md-3">
+                    <h5 class="title">Ligações</h5>
+                    <nav>
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    Notícias
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Projetos
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Vídeos
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Contactos
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-3">
+                    <h5 class="title">Informações</h5>
+                    <nav class="numbers">
+                        <ul>
+                            <li>
+                                <h4>200
+                                    <small>Mestres</small>
+                                </h4>
+                            </li>
+                            <li>
+                                <h4>500
+                                    <small>Alunos</small>
+                                </h4>
+                            </li>
+                            <li>
+                                <h4>101
+                                    <small>Projetos</small>
+                                </h4>
+                            </li>
+
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-3">
+                    <h5 class="title">Morada</h5>
+                    <nav>
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    Universidade de Aveiro
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Dep. Comunicação e Arte
+                                </a>
+                            </li>
+                            <li>
+                                <a class="no-link">
+                                    Campus Universitário de Santiago
+                                </a>
+                            </li>
+                            <li>
+                                <a class="no-link">
+                                    3810-193 Aveiro
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-3">
+                    <h5 class="title">Contactos</h5>
+                    <nav>
+                        <ul>
+                            <li>
+                                <a class="no-link">
+                                    234 370 389
+                                </a>
+                            </li>
+                            <li>
+                                <a class="no-link">
+                                    234 370 868
+                                </a>
+                            </li>
+                            <li>
+                                <a href="mailto:deca-mcmm@ua.pt">
+                                    deca-mcmm@ua.pt
+                                </a>
+                            </li>
+                            <li>
+                                <a href="www.mcmm.pt" target="_blank" a>
+                                    www.mcmm.pt
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <hr/>
+            <div class="social-area text-center">
+                <a href="#" class="btn btn-social btn-round">
+                    <i class="fa fa-facebook"></i>
+                </a>
+                <a href="#" class="btn btn-social btn-round">
+                    <i class="fa fa-youtube"></i>
+                </a>
+                <a href="#" class="btn btn-social btn-round">
+                    <i class="fa fa-envelope"></i>
+                </a>
+            </div>
+            <div class="copyright">
+                &copy; 2016 Mestrado em Comunicação Multimédia
+            </div>
+        </div>
+    </footer>
+
+</div>
+
+<!-- build:js scripts/vendor.js -->
+<!-- bower:js -->
+<script type="text/javascript" src="/bower_components/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="/bower_components/jquery-ui/jquery-ui.min.js"></script>
+<script type="text/javascript" src="/bower_components/sass-bootstrap/dist/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/bower_components/scroll-up-bar/dist/scroll-up-bar.min.js"></script>
+<script type="text/javascript" src="/bower_components/owl.carousel/dist/owl.carousel.min.js"></script>
+<script type="text/javascript" src="/bower_components/masonry/dist/masonry.pkgd.min.js"></script>
+<script type="text/javascript" src="/bower_components/imagesloaded/imagesloaded.pkgd.min.js"></script>
+<script type="text/javascript" src="/bower_components/nprogress/nprogress.js"></script>
+<!-- endbower -->
+<!-- endbuild -->
+
+<!-- build:js scripts/plugins.js -->
+<!-- endbuild -->
+
+<!-- build:js scripts/projects.js -->
+<script type="text/javascript" src="scripts/platform.js"></script>
+<script type="text/javascript" src="scripts/contacts.js"></script>
+<!-- endbuild -->
+
+</body>
+</html>

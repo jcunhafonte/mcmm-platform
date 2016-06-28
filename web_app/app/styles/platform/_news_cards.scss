@@ -485,6 +485,7 @@
 }
 
 .card-splash {
+
   .image {
     height: 500px;
     &:after{
@@ -498,6 +499,7 @@
       content: ' ';
     }
   }
+
   .carousel-control:hover, .card-many .carousel-control:focus {
     opacity: 1;
     filter: alpha(opacity=100);
@@ -574,7 +576,6 @@
         left: -6px;
         cursor: pointer;
         transition: all 0.35s cubic-bezier(0.12, 0.75, 0.4, 1);
-        pointer-events: none;
         top: 11px;
         transform: translateX(-27px);
       }
@@ -598,6 +599,7 @@
       transform: scaleX(1) translateZ(0);
     }
   }
+  
   &:after {
     display: block;
     position: absolute;
@@ -612,6 +614,7 @@
     transform-origin: 0 0;
     transition: 0.45s cubic-bezier(0.24, 1, 0.30, 1);
   }
+  
   .content {
     position: absolute;
     z-index: 20;
@@ -625,4 +628,15 @@
       font-size: 16px !important;
     }
   }
+
+  &-contacts{
+    .image{
+      height: 350px;
+    }
+    
+    &:after{
+      background: $theme;
+    }
+  }
+
 }

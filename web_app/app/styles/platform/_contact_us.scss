@@ -1,0 +1,158 @@
+.contact-us {
+
+  .form-style {
+    padding: 0;
+    padding-right: 25px;
+
+    textarea {
+      overflow: hidden;
+      resize: none;
+    }
+
+    &:last-child {
+      padding-right: 0;
+    }
+
+    @media screen and (max-width: $screen-sm-min) {
+      padding-right: 0;
+    }
+
+    .input {
+      position: relative;
+      z-index: 1;
+      display: inline-block;
+      vertical-align: top;
+      width: 100%;
+    }
+
+    .input__field {
+      position: relative;
+      display: block;
+      float: right;
+      width: 60%;
+      border: none;
+      border-radius: 0;
+      background: #f0f0f0;
+      color: #aaa;
+      font-weight: bold;
+      font-family: Hind;
+      text-transform: uppercase;
+      -webkit-appearance: none;
+      letter-spacing: 1px;
+
+    }
+
+    .input__field:focus {
+      outline: none;
+    }
+
+    .input__label {
+      display: inline-block;
+      float: right;
+      padding: 0 1em;
+      width: 40%;
+      color: $gray;
+      font-weight: bold;
+      user-select: none;
+      font-family: Hind;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .input__label-content {
+      position: relative;
+      display: block;
+      padding: 1.6em 0;
+      width: 100%;
+    }
+
+    .input__field--isao {
+      z-index: 10;
+      padding: 0.75em 0.1em 0.25em;
+      width: 100%;
+      background: transparent;
+      color: $gray;
+    }
+
+    .input__label--isao {
+      position: relative;
+      overflow: hidden;
+      padding: 0;
+      width: 100%;
+      color: $gray;
+      text-align: left;
+    }
+
+    .input__label--isao::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 7px;
+      background: $gray;
+      transform: scale3d(1, 0.4, 1);
+      transform-origin: 50% 100%;
+      transition: transform 0.3s, background-color 0.3s;
+      transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+    }
+
+    .input__label--isao::after {
+      content: attr(data-content);
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 0.75em 0.15em;
+      color: $theme;
+      opacity: 0;
+      transform: translate3d(0, 50%, 0);
+      transition: opacity 0.3s, transform 0.3s;
+      transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+      pointer-events: none;
+    }
+
+    .input__field--isao:focus + .input__label--isao::before {
+      background-color: $theme;
+      transform: scale3d(1, 1, 1);
+    }
+
+    .input__field--isao:focus + .input__label--isao {
+      pointer-events: none;
+    }
+
+    .input__field--isao:focus + .input__label--isao::after {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+
+    .input__label-content--isao {
+      padding: 0.75em 0.15em;
+      transition: opacity 0.3s, transform 0.3s;
+      transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+    }
+
+    .input__field--isao:focus + .input__label--isao .input__label-content--isao {
+      opacity: 0;
+      transform: translate3d(0, -50%, 0);
+    }
+
+  }
+
+  a {
+    font-family: Montserrat !important;
+    font-size: 12px !important;
+    font-weight: bold !important;
+    letter-spacing: 1px !important;
+    text-transform: uppercase !important;
+    color: $white !important;
+    background: $black !important;
+    border: $black !important;
+    opacity: .8 !important;
+    transition: .4s all !important;
+
+    &:hover{
+      background: $theme !important;
+      border: $theme !important;
+      opacity: 1 !important;
+    }
+  }
+}
