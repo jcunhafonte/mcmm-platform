@@ -62,7 +62,7 @@
         transition: all .2s;
 
         &:hover{
-          color: $theme_green_hover;
+          color: $theme_green_hover !important;
           border: solid $theme_green_hover 1px;
         }
 

@@ -133,7 +133,8 @@
                     <div class="button button--circle no-border">
                         <li class="dropdown" style="list-style-type: none">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                <img class="avatar-image" src="https://cdn-images-1.medium.com/fit/c/40/40/0*TKqRznc7Uj1DN2D-.jpg">
+                                <img class="avatar-image"
+                                     src="https://cdn-images-1.medium.com/fit/c/40/40/0*TKqRznc7Uj1DN2D-.jpg">
                             </a>
                             <ul class="dropdown-menu">
                                 <li><a href="#">Perfil</a></li>
@@ -162,6 +163,11 @@
                                 <img class="img-circle" src="https://s3.amazonaws.com/creativetim_bucket/new_logo.png">
                                 <h2>Daniela Bessa</h2>
                             </div>
+                            <div class="col-md-12">
+                                <a class="mcmm-button large see-through-2" target="_blank">
+                                    <span>Seguir</span>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -173,8 +179,12 @@
         <div class="users-profile">
             <div class="container">
                 <div class="row">
-                    <div class="header col-xs-12">
+                    <div class="header col-xs-10">
                         <h2>Sobre</h2>
+                    </div>
+                    <div class="col-xs-2">
+                        <a href="#" class="btn btn-info btn-edit-profile pull-right" data-toggle="modal"
+                           data-target=".modal-profile">Editar</a>
                     </div>
                     <div class="wrapper">
                         <div class="text">
@@ -360,7 +370,54 @@
 </div>
 
 <!--MODALS-->
+<div class="container">
+    <div id="modal-socials">
+        <div class="modal fade modal-profile" id="edit-profile">
+            <button type="button" class="out-close close hidden-xs" data-dismiss="modal"
+                    aria-hidden="true">&times;</button>
+            <div class="modal-dialog vertical-align-center animated">
+                <div class="modal-content">
 
+                    <div class="modal-header">
+                        <button type="button" class="close hidden-sm hidden-md hidden-lg" data-dismiss="modal"
+                                aria-hidden="true">&times;</button>
+                        <h4 class="modal-title text-center">Editar</h4>
+                    </div>
+
+                    <div class="modal-body">
+                        <div class="content">
+                            <div class="form">
+                                <form method="post" accept-charset="UTF-8" id="edit_profile">
+
+                                    <div class="form-group">
+                                        <div class="col-xs-12">
+                                            <input id="nome" class="form-control"
+                                                   type="text" placeholder="Nome" name="nome">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <div class="col-xs-12">
+                                            <textarea id="sobre" class="form-control" placeholder="Sobre" name="sobre">
+
+                                            </textarea>
+                                        </div>
+                                    </div>
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default btn-simple" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-info btn-simple">Save</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 <!-- build:js scripts/vendor.js -->
 <!-- bower:js -->

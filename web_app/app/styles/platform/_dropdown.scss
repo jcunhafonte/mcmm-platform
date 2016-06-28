@@ -66,3 +66,9 @@
     right: -8px !important;
   }
 }
+
+@media screen and (max-width: $screen-sm-min) {
+  .dropdown-menu {
+    right: -5px !important;
+  }
+}

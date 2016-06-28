@@ -28,7 +28,24 @@
       p:last-child {
         padding-bottom: 0px;
       }
+    }
 
+    .btn-edit-profile{
+
+      font-family: Montserrat !important;
+      font-size: 12px !important;
+      font-weight: bold !important;
+      letter-spacing: 1px;
+      text-transform: uppercase !important;
+      color: $white !important;
+      background: $black !important;
+      border: $black !important;
+      transition: all .4s;
+      margin: 10px 0;
+
+      &:hover{
+        background: $theme !important;
+      }
     }
 
     .topics {
