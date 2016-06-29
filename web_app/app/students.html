@@ -89,6 +89,8 @@
     <script src="/bower_components/modernizr/modernizr.js"></script>
     <!-- endbuild -->
 
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+
 </head>
 
 <body data-offset="80" data-target=".navbar" data-spy="scroll">
@@ -141,7 +143,7 @@
             <div class="container">
                 <div class="row">
                     <div class="description">
-                        <h2 class="title">Contactos</h2>
+                        <h2 class="title">Alunos</h2>
                     </div>
                 </div>
             </div>
@@ -151,131 +153,9 @@
     <div class="section section-gray">
         <div class="container">
             <div class="row">
-                <div onclick="window.open('https://www.google.pt/maps/place/Universidade+de+Aveiro/@40.6303065,-8.6597,17z/data=!3m1!4b1!4m5!3m4!1s0xd23a2aa4e1bda2b:0xd70b976749475485!8m2!3d40.6303024!4d-8.657506', '_blank')"
-                     class="splash col-xs-12 col-sm-6 col-md-6 col-lg-6">
-                    <div class="card card-splash card-splash-contacts">
-                        <div class="link">Obter direções
-                            <span class="arrow"></span>
-                        </div>
-                        <div class="content">
-                            <a class="card-link">
-                                <h4 class="title">Universidade de Aveiro</h4>
-                            </a>
-                            <div class="excerpt">
-                                <small>Campus Universitário de Santiago, 3810-193 Aveiro</small>
-                                <br>
-                                <small>234 370 200</small>
-                            </div>
-                        </div>
-                        <div class="image">
-                            <div class="carousel slide">
-                                <div class="carousel-inner">
-                                    <div class="item active">
-                                        <img src="http://seminariocts2016.web.ua.pt/wp-content/themes/nirvana/images/columns/ua.jpg"
-                                             alt="">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
+                <div class="col-lg-12">
+                    <div id="map_students"></div>
                 </div>
-
-                <div onclick="window.open('https://www.google.pt/maps/place/DECA+-+Departamento+de+Comunica%C3%A7%C3%A3o+e+Arte/@40.6288431,-8.65882,17z/data=!3m1!4b1!4m5!3m4!1s0xd23a2ac782797cd:0x829e10aa3e1ff33a!8m2!3d40.628839!4d-8.656626', '_blank')"
-                     class="splash col-xs-12 col-sm-6 col-md-6 col-lg-6">
-                    <div class="card card-splash card-splash-contacts">
-                        <div class="link">Obter direções
-                            <span class="arrow"></span>
-                        </div>
-                        <div class="content">
-                            <a class="card-link">
-                                <h4 class="title">Mestrado em Comunicação Multimédia</h4>
-                            </a>
-                            <div class="excerpt">
-                                <small>Departamento de Comunicação e Arte</small>
-                                <br>
-                                <small>234 370 868</small>
-                            </div>
-                        </div>
-                        <div class="image">
-                            <div class="carousel slide">
-                                <div class="carousel-inner">
-                                    <div class="item active">
-                                        <img src="http://connector.web.ua.pt/users/17/foto/deca.jpg"
-                                             alt="">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-
-    <div class="section">
-        <div class="container">
-            <div class="row">
-
-                <form id="contact-us" class="contact-us">
-                    <div class="col-lg-12">
-                        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 form-style">
-
-                            <span class="input input--isao">
-                                <input class="input__field input__field--isao" type="text" id="1"/>
-                                    <label class="input__label input__label--isao" for="1" data-content="Nome">
-                                         <span class="input__label-content input__label-content--isao">Nome
-                                        </span>
-                                    </label>
-                            </span>
-
-                        </div>
-                        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 form-style">
-
-                            <span class="input input--isao">
-                                <input class="input__field input__field--isao" type="text" id="2"/>
-                                    <label class="input__label input__label--isao" for="2" data-content="Apelido">
-                                         <span class="input__label-content input__label-content--isao">Apelido
-                                        </span>
-                                    </label>
-                            </span>
-
-                        </div>
-                        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 form-style">
-
-                          <span class="input input--isao">
-                                <input class="input__field input__field--isao" type="text" id="3"/>
-                                    <label class="input__label input__label--isao" for="3" data-content="Assunto">
-                                         <span class="input__label-content input__label-content--isao">Assunto
-                                        </span>
-                                    </label>
-                            </span>
-
-                        </div>
-                    </div>
-
-
-                    <div class="col-lg-12">
-                        <div class="col-lg-12 form-style">
-                         <span class="input input--isao">
-                                <textarea class="input__field input__field--isao" id="4" rows="4"></textarea>
-                                    <label class="input__label input__label--isao" for="4" data-content="Mensagem">
-                                         <span class="input__label-content input__label-content--isao">Mensagem
-                                        </span>
-                                    </label>
-                            </span>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-12">
-                        <a class="btn btn-info pull-left">
-                            Enviar mensagem
-                        </a>
-
-                    </div>
-
-                </form>
             </div>
         </div>
     </div>
@@ -422,11 +302,14 @@
 <!-- endbuild -->
 
 <!-- build:js scripts/plugins.js -->
+<script type="text/javascript" src="scripts/infoBox.js"></script>
+<script type="text/javascript" src="scripts/markercluster.js"></script>
 <!-- endbuild -->
 
 <!-- build:js scripts/projects.js -->
 <script type="text/javascript" src="scripts/platform.js"></script>
-<script type="text/javascript" src="scripts/contacts.js"></script>
+<script type="text/javascript" src="scripts/students.js"></script>
+<script type="text/javascript" src="scripts/map_students.js"></script>
 <!-- endbuild -->
 
 </body>

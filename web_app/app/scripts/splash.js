@@ -458,6 +458,11 @@ function testLargeProject() {
             perspective: 1680,
             invert: true
         });
+        $(".project-small").hover3d({
+            selector: ".project__card",
+            perspective: 768,
+            invert: true
+        });
     }
 }
 

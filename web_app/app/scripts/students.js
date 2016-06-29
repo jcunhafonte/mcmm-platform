@@ -1,7 +1,6 @@
 'use strict';
 
 $(document).ready(function () {
-
     $('body').addClass(navigator.appVersion + ' is-js');
 
     controlNavbar();
@@ -10,48 +9,23 @@ $(document).ready(function () {
     $(window).resize(function () {
         controlNavbar();
         checkTransparent();
-        testLargeProject();
     });
 
     //TOPBAR
     $('#topbar').scrollupbar();
-
+    
     function controlNavbar() {
         if ($(window).width() < 992) {
             $('#topbar').addClass('navbar-white');
             $('#topbar').removeClass('navbar-transparent');
-            $(".brand-img").attr("src", "images/logo_yellow.svg");
+            $(".brand-img").attr("src", "images/logo.svg");
         } else {
             $('#topbar').removeClass('navbar-white');
             $('#topbar').addClass('navbar-transparent');
             $(".brand-img").attr("src", "images/logo-w.svg");
         }
     }
-
-    if ($(window).width() < 768) {
-        $(".project-large").hover3d({
-            selector: ".project__card",
-            perspective: 0,
-            invert: true
-        });
-        $(".project-small").hover3d({
-            selector: ".project__card",
-            perspective: 0,
-            invert: true
-        });
-    } else {
-        $(".project-large").hover3d({
-            selector: ".project__card",
-            perspective: 1680,
-            invert: true
-        });
-        $(".project-small").hover3d({
-            selector: ".project__card",
-            perspective: 768,
-            invert: true
-        });
-    }
-}); // Document ready
+});
 
 function checkTransparent() {
 
@@ -72,7 +46,7 @@ function checkTransparent() {
                         transparent = false;
                         $('nav[role="navigation"]').removeClass('navbar-transparent');
                         $('nav[role="navigation"]').addClass('navbar-white');
-                        $(".brand-img").attr("src", "images/logo_yellow.svg")
+                        $(".brand-img").attr("src", "images/logo.svg")
                     }
                 } else {
                     if (!transparent) {
@@ -85,30 +59,4 @@ function checkTransparent() {
             }
         }
     });
-}
-
-function testLargeProject() {
-    if ($(window).width() < 768) {
-        $(".project-large").hover3d({
-            selector: ".project__card",
-            perspective: 0,
-            invert: true
-        });
-        $(".project-small").hover3d({
-            selector: ".project__card",
-            perspective: 0,
-            invert: true
-        });
-    } else {
-        $(".project-large").hover3d({
-            selector: ".project__card",
-            perspective: 1680,
-            invert: true
-        });
-        $(".project-small").hover3d({
-            selector: ".project__card",
-            perspective: 768,
-            invert: true
-        });
-    }
 }
