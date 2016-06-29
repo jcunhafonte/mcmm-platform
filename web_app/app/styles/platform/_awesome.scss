@@ -186,3 +186,21 @@
       padding: 10px 44px !important;
     }
 }
+
+
+.home-footer {
+  .mcmm-button {
+    color: $white;
+    border-color: $white !important;
+    background: transparent !important;
+    opacity: 1;
+    margin-top: 30px;
+    margin-bottom: -20px !important;
+    &:hover {
+      border-color: $theme !important;
+      background-color: $theme !important;
+      color: $white !important;
+      opacity: 0.8;
+    }
+  }
+}
