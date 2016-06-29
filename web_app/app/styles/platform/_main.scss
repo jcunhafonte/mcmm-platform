@@ -18,24 +18,25 @@
 @import "contact_us";
 @import "map_students";
 @import "channel";
+@import "publish";
 
 //NEWS
-@import "news_details_header";
-@import "news_slider";
-@import "news_normal";
-@import "news_text";
-@import "news_video";
-@import "news_slider_detail";
-@import "news_cards";
+@import "news/_news_details_header";
+@import "news/_news_slider";
+@import "news/_news_normal";
+@import "news/_news_text";
+@import "news/_news_video";
+@import "news/_news_slider_detail";
+@import "news/_news_cards";
 
 //PROJECTS
-@import "projects_slider_detail";
-@import "projects_header";
-@import "news_projects_header";
-@import "project_card";
-@import "projects_overview";
+@import "projects/_projects_slider_detail";
+@import "projects/_projects_header";
+@import "projects/_news_projects_header";
+@import "projects/_project_card";
+@import "projects/_projects_overview";
 
 //VIDEOS
-@import "header_videos";
-@import "card_video";
-@import "videos_overview";
+@import "videos/_header_videos";
+@import "videos/_card_video";
+@import "videos/_videos_overview";

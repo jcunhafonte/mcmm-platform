@@ -1,7 +1,7 @@
 .card {
   border-radius: 4px;
   background-color: $white;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, .08) !important;
   cursor: pointer;
   overflow: hidden;
@@ -213,7 +213,7 @@
 
 .card-quote {
   border-radius: 4px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, .08) !important;
   cursor: pointer;
   overflow: hidden;
@@ -223,9 +223,11 @@
   -moz-transition: all 0.2s linear 0s;
   -o-transition: all 0.2s linear 0s;
   -webkit-transition: all 0.2s linear 0s;
+
   &:hover {
     background: $gray_card;
   }
+
   .content {
     padding: 17% !important;
     display: block;
@@ -251,7 +253,7 @@
 }
 
 .card-user {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 
   .image {
     height: 110px;

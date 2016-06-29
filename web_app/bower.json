@@ -36,7 +36,8 @@
     "nprogress": "^0.2.0",
     "vide": "^0.5.0",
     "noty": "^2.3.8",
-    "scrollprogress": "^2.1.2"
+    "scrollprogress": "^2.1.2",
+    "jquery.easywizard": "^1.1.4"
   },
   "overrides": {
     "bootstrap-sass": {

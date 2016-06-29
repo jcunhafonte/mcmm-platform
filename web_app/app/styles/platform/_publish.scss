@@ -1,0 +1,28 @@
+.publish {
+  height: auto;
+
+  .first {
+    margin-bottom: 30px;
+    display: inline-block;
+    width: 100%;
+  }
+
+  .second {
+    display: inline-table;
+    width: 100%;
+  }
+
+  .card-publish {
+    height: 350px;
+    background: black;
+
+    @media screen and (max-width: $screen-sm-min) {
+      margin: 10px 25%;
+    }
+
+    @media screen and (max-width: 450px) {
+      margin: 10px 0;
+    }
+
+  }
+}
