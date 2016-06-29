@@ -1,0 +1,26 @@
+.channel {
+
+  .video {
+    padding-bottom: 56.25%;
+    position: relative;
+    display: block;
+    width: 100%;
+
+    @media screen and (max-width: $screen-md-min) {
+      margin-bottom: 20px;
+    }
+  }
+
+  .chat {
+    height: 477px;
+    position: relative;
+    display: block;
+    width: 100%;
+
+    @media screen and (max-width: $screen-lg-min) {
+      height: 392px;
+    }
+
+  }
+
+}

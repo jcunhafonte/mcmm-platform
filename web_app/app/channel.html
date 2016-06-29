@@ -1,274 +1,331 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <title></title>
+<html lang="pt" xmlns:height="http://www.w3.org/1999/xhtml" xmlns:width="http://www.w3.org/1999/xhtml">
 
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7">
+<![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8">
+<![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9">
+<![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script type="text/javascript" src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script type="text/javascript" src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+<head>
+
+    <title>MCMM</title>
+
+    <!--METAS-->
+    <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="author" content="MCMM">
+    <meta name="description" content="Plataforma MCMM">
+    <meta name="keywords" content="UA, DECA, MCMM, AV, ...">
+    <meta name="title" content="MCMM">
+    <meta name="referrer" content="always">
+
+    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="content-language" content="pt">
+
+    <meta property="og:title" content="MCMM - Mestrado em Comunicação Multimédia">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://mcmm.ua.pt">
+    <meta property="og:image" content="http://gps.pt/img/share.jpg">
+    <meta property="og:site_name" content="MCMM é ...">
+    <meta property="og:description" content="MCMM é ...">
+    <meta property="al:android:app_name" content="MCMM">
+    <meta property="al:android:url" content="mcmm://">
+    <meta property="al:web:url" content="index.php">
+    <meta property="al:android:package" content="com.mcmm.reader">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://mcmm.ua.pt">
+    <meta name="twitter:title" content="MCMM - Mestrado em Comunicação Multimédia">
+    <meta name="twitter:description" content="MCMM é ...">
+    <meta name="twitter:image" content="http://mcmm.ua.pt/img/share.jpg">
+
+    <!--FAVICON-->
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="images/favicon/normal/apple-touch-icon-57x57.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/favicon/normal/apple-touch-icon-114x114.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/favicon/normal/apple-touch-icon-72x72.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/favicon/normal/apple-touch-icon-144x144.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="images/favicon/normal/apple-touch-icon-60x60.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="images/favicon/normal/apple-touch-icon-120x120.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="images/favicon/normal/apple-touch-icon-76x76.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="images/favicon/normal/apple-touch-icon-152x152.png"/>
+    <link rel="icon" type="image/png" href="images/favicon/normal/favicon-196x196.png" sizes="196x196"/>
+    <link rel="icon" type="image/png" href="images/favicon/normal/favicon-96x96.png" sizes="96x96"/>
+    <link rel="icon" type="image/png" href="images/favicon/normal/favicon-32x32.png" sizes="32x32"/>
+    <link rel="icon" type="image/png" href="images/favicon/normal/favicon-16x16.png" sizes="16x16"/>
+    <link rel="icon" type="image/png" href="images/favicon/normal/favicon-128.png" sizes="128x128"/>
+    <meta name="application-name" content="MCMM"/>
+    <meta name="msapplication-TileColor" content="#FFFFFF"/>
+    <meta name="msapplication-TileImage" content="images/favicon/normal/mstile-144x144.png"/>
+    <meta name="msapplication-square70x70logo" content="images/favicon/normal/mstile-70x70.png"/>
+    <meta name="msapplication-square150x150logo" content="images/favicon/normal/mstile-150x150.png"/>
+    <meta name="msapplication-wide310x150logo" content="images/favicon/normal/mstile-310x150.png"/>
+    <meta name="msapplication-square310x310logo" content="images/favicon/normal/mstile-310x310.png"/>
+
+    <!-- build:css styles/vendor.css -->
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:css styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+
+    <!-- build:js scripts/vendor/modernizr.js -->
+    <script src="/bower_components/modernizr/modernizr.js"></script>
+    <!-- endbuild -->
 
 </head>
-<body>
 
+<body data-offset="80" data-target=".navbar" data-spy="scroll">
 
-
-<div class="clearfix">
-
-
-    <div style="width: 680px; float: left; margin-bottom: 100px;">
-        <div class="well " >
-            <iframe src="http://www.ustream.tv/embed/22354809" id="UstreamFrame" width="640" height="392" style="border: 0 transparent none;"></iframe>
-        </div>
-
-        <div class="input-group">
-                    <span class="input-group-btn">
-                        <button class="btn control-content btn-info" type="button"><i class="icon-user"></i> Get Content</button>
-                    </span>
-            <input class="form-control span2" id="Content" readonly="readonly" type="text">
-        </div>
-
-
-
-    </div>
-
-    <form class="form-inline" action="#">
-        <fieldset style="margin: 0 20px; float: left; width: 200px;">
-
-
-            <button class="btn btn-success control-play" type="button"><i class="icon-play"></i> Play</button>
-            <button class="btn control-pause btn-info" type="button"><i class="icon-pause"></i> Pause</button>
-
-
-            <hr />
-            <div class="input-group">
-                    <span class="input-group-btn">
-                        <button class="btn control-seek btn-info" type="button"><i class="icon-forward"></i> Seek to</button>
-                    </span>
-                <input class="form-control span2" id="SeekTo" type="text">
+<nav class="mcmm-nav mcmm-nav--top navbar-transparent" id="topbar" role="navigation">
+    <div class="container">
+        <div class="mcmm-nav-inner">
+            <div class="mcmm-nav-block mcmm-nav-block--left float-left">
+                <a href="/" class="brand">
+                    <img class="brand-img" src="images/logo-w.svg"/>
+                </a>
             </div>
-            <hr />
-            <div class="input-group">
-                    <span class="input-group-btn">
-                        <button class="btn control-volume btn-info" type="button"><i class="icon-volume-up"></i> Set volume</button>
-                    </span>
-                <input class="form-control span2" value="100" id="SetVolume" type="number">
-            </div>
-            <hr />
-            <div class="input-group">
-                    <span class="input-group-btn">
-                        <button class="btn control-duration btn-info" type="button"><i class="icon-time"></i> Get Duration</button>
-                    </span>
-                <input class="form-control span2" id="Duration" readonly="readonly"  type="text">
-            </div>
-            <hr />
-            <div class="input-group">
-                    <span class="input-group-btn">
-                        <button class="btn control-progress btn-info" type="button"><i class="icon-map-marker"></i> Get Progress</button>
-                    </span>
-                <input class="form-control span2" id="Progress" readonly="readonly"  type="text">
-            </div>
-            <hr />
-            <div class="input-group">
-                    <span class="input-group-btn">
-                        <button class="btn control-viewers btn-info" type="button"><i class="icon-user"></i> Get Viewers</button>
-                    </span>
-                <input class="form-control span2" id="Viewers" readonly="readonly" type="text">
-            </div>
-            <hr />
-            <div class="input-group">
-                <input class="span2 form-control"  type="number" placeholder="content id" id="LoadContent">
-                <div class="input-group-btn">
-
-                    <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown">Load <span class="caret"></span></button>
-
-
-                    <ul class="dropdown-menu">
-                        <li><a href="#" class="control-load-channel">channel</a></li>
-                        <li><a href="#" class="control-load-video">video</a></li>
-
+            <div class="mcmm-nav-block mcmm-nav-block--center">
+                <nav class="platforms platforms--mcmm-nav platforms--narrow">
+                    <ul class="platforms-list single">
+                        <li class="platforms-item">
+                            <a class="platforms-anchor hvr-underline-from-center" href="/news">Notícias</a>
+                        </li>
+                        <li class="platforms-item">
+                            <a class="platforms-anchor hvr-underline-from-center"
+                               href="/projects">Projetos</a>
+                        </li>
+                        <li class="platforms-item">
+                            <a class="platforms-anchor hvr-underline-from-center" href="/videos">Vídeos</a>
+                        </li>
                     </ul>
+                </nav>
+            </div>
+            <div class="mcmm-nav-block mcmm-nav-block--right float-right">
+                <div class="buttons-area">
+                    <a class="btn btn-primary btn-short btn-sign" data-toggle="modal"
+                       href="javascript:void(0)" onclick="openLoginModal();">
+                        Entrar
+                    </a>
+                    <span class="divider-bar">/</span>
+                    <a class="btn btn-primary btn-short btn-sign" data-toggle="modal"
+                       href="javascript:void(0)" onclick="openRegisterModal();">
+                        Registar
+                    </a>
                 </div>
             </div>
-            <hr />
+        </div>
+    </div>
+</nav>
 
+<div id="platform">
 
-            <div class="btn-group">
-                <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown">
-                    Quality
-                    <span class="caret"></span>
-                </button>
-                <ul class="dropdown-menu quality-selector">
-                </ul>
+    <div class="projects-header">
+        <div class="contents">
+            <div class="container">
+                <div class="row">
+                    <div class="description">
+                        <h2 class="title">Canal</h2>
+                    </div>
+                </div>
             </div>
+        </div>
+    </div>
 
-            <hr />
+    <div class="section section-gray">
+        <div class="container">
+            <div class="row">
 
+                <div class="channel">
+                    <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
+                        <div class="video">
+                            <iframe width="100%" height="100%" id="UstreamIframe"
+                                    src="http://www.ustream.tv/embed/22354809"
+                                    frameborder="0"
+                                    style="position:absolute; top:0; left: 0">
+                            </iframe>
+                        </div>
+                    </div>
 
+                    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                        <div class="chat">
+                            <iframe width="100%" height="100%" id="chat" name="chat"
+                                    src="http://www.ustream.tv/socialstream/22354809?videos=0"
+                                    frameborder="0"
+                                    style="position:absolute; top:0; left: 0">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-        </fieldset>
-    </form>
+    <footer class="footer footer-big footer-default">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-6 col-sm-6 col-md-3">
+                    <h5 class="title">Ligações</h5>
+                    <nav>
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    Notícias
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Projetos
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Vídeos
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Contactos
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-3">
+                    <h5 class="title">Informações</h5>
+                    <nav class="numbers">
+                        <ul>
+                            <li>
+                                <h4>200
+                                    <small>Mestres</small>
+                                </h4>
+                            </li>
+                            <li>
+                                <h4>500
+                                    <small>Alunos</small>
+                                </h4>
+                            </li>
+                            <li>
+                                <h4>101
+                                    <small>Projetos</small>
+                                </h4>
+                            </li>
+
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-3">
+                    <h5 class="title">Morada</h5>
+                    <nav>
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    Universidade de Aveiro
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Dep. Comunicação e Arte
+                                </a>
+                            </li>
+                            <li>
+                                <a class="no-link">
+                                    Campus Universitário de Santiago
+                                </a>
+                            </li>
+                            <li>
+                                <a class="no-link">
+                                    3810-193 Aveiro
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-3">
+                    <h5 class="title">Contactos</h5>
+                    <nav>
+                        <ul>
+                            <li>
+                                <a class="no-link">
+                                    234 370 389
+                                </a>
+                            </li>
+                            <li>
+                                <a class="no-link">
+                                    234 370 868
+                                </a>
+                            </li>
+                            <li>
+                                <a href="mailto:deca-mcmm@ua.pt">
+                                    deca-mcmm@ua.pt
+                                </a>
+                            </li>
+                            <li>
+                                <a href="www.mcmm.pt" target="_blank" a>
+                                    www.mcmm.pt
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <hr/>
+            <div class="social-area text-center">
+                <a href="#" class="btn btn-social btn-round">
+                    <i class="fa fa-facebook"></i>
+                </a>
+                <a href="#" class="btn btn-social btn-round">
+                    <i class="fa fa-youtube"></i>
+                </a>
+                <a href="#" class="btn btn-social btn-round">
+                    <i class="fa fa-envelope"></i>
+                </a>
+            </div>
+            <div class="copyright">
+                &copy; 2016 Mestrado em Comunicação Multimédia
+            </div>
+        </div>
+    </footer>
+
 </div>
 
-<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
-<script src="bower_components/ustream-embedapi/pkg/ustream-embedapi.min.js"></script>
-<script type="text/javascript" src="bower_components/sass-bootstrap/dist/js/bootstrap.min.js"></script>
+<!-- build:js scripts/vendor.js -->
+<!-- bower:js -->
+<script type="text/javascript" src="/bower_components/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="/bower_components/jquery-ui/jquery-ui.min.js"></script>
+<script type="text/javascript" src="/bower_components/sass-bootstrap/dist/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/bower_components/scroll-up-bar/dist/scroll-up-bar.min.js"></script>
+<script type="text/javascript" src="/bower_components/owl.carousel/dist/owl.carousel.min.js"></script>
+<script type="text/javascript" src="/bower_components/masonry/dist/masonry.pkgd.min.js"></script>
+<script type="text/javascript" src="/bower_components/imagesloaded/imagesloaded.pkgd.min.js"></script>
+<script type="text/javascript" src="/bower_components/nprogress/nprogress.js"></script>
+<script type="text/javascript" src="/bower_components/ustream-embedapi/pkg/ustream-embedapi.min.js"></script>
+<!-- endbower -->
+<!-- endbuild -->
 
-<script type="text/javascript">
+<!-- build:js scripts/plugins.js -->
+<!-- endbuild -->
 
-    $(document).ready(function () {
-
-        var viewer = UstreamEmbed("UstreamFrame");
-
-        $('.media').on("click", function (e) {
-            clearFields();
-
-            var target = $(e.currentTarget),
-                    media = target.data('media'),
-                    type = target.data('type');
-
-            viewer.callMethod('load', type, media);
-
-            e.preventDefault();
-        });
-
-
-        /*
-         set up controls
-         */
-        $(document.body).on("click", '.btn, .dropdown-menu a', function (e) {
-            var target = $(e.currentTarget),
-                    control = target[0].className.match(/control-([a-zA-Z0-9\-]*)/);
-
-            if (control && control[1]) {
-
-                switch (control[1]) {
-
-                    case "play":
-                        viewer.callMethod('play');
-                        break;
-                    case "pause":
-                        viewer.callMethod('pause');
-                        break;
-                    case "seek":
-                        viewer.callMethod('seek', $("#SeekTo").val());
-                        break;
-                    case "volume":
-                        viewer.callMethod('volume', $("#SetVolume").val());
-                        break;
-                    case "duration":
-                        viewer.getProperty('duration', function (data) {
-                            $('#Duration').val(data);
-                        });
-                        break;
-                    case "progress":
-                        viewer.getProperty('progress', function (data) {
-                            $('#Progress').val(data);
-                        });
-                        break;
-                    case "viewers":
-                        viewer.getProperty('viewers', function (data) {
-                            $('#Viewers').val(data);
-                        });
-                        break;
-                    case "content":
-                        viewer.getProperty('content', function (data) {
-                            $('#Content').val(data.join(','));
-                        });
-                        break;
-                    case "load-video":
-                        clearFields();
-                        viewer.callMethod('load', 'video', $("#LoadContent").val());
-                        break;
-                    case "load-channel":
-                        clearFields();
-                        viewer.callMethod('load', 'channel', $("#LoadContent").val());
-                        break;
-                    case "quality":
-                        viewer.callMethod('quality', target.data('quality'));
-                        break;
-
-                }
-
-            }
-
-            e.preventDefault();
-        });
-
-
-        /*
-         populate quality selector with receiced data
-         */
-        var populateQualitySelector = function (data) {
-            var list =  $('.quality-selector');
-            list.find('li').remove(); // remove previously set data
-            for (var id in data) {
-                list.append('<li><a href="#" class="control-quality" data-quality="' + id + '">' + data[id].label + '</a></li>')
-            }
-        }
-
-        /*
-         clear some data fields that are relevant to content
-         */
-        var clearFields = function () {
-            populateQualitySelector({});
-            $('#Progress').val('');
-            $('#Viewers').val('');
-            $('#Duration').val('');
-
-            $('.st-ended').hide();
-            $('.st-playing').hide();
-            $('.st-offline').hide();
-            $('.st-live').hide();
-        }
-
-        /*
-         event handler for events received from the embed iframe
-         */
-        var onEmbedEvent = function (event, data) {
-            console.log(event)
-            switch (event) {
-                case "ready":
-                    clearFields();
-                    break;
-                case "quality":
-                    populateQualitySelector(data);
-                    break;
-                case "live":
-                    $('.st-live').show();
-                    $('.st-offline').hide();
-                    break;
-                case "offline":
-                    $('.st-offline').show();
-                    $('.st-live').hide();
-                    break;
-                case "playing":
-                    if (data) {
-                        $('.st-playing').show()
-                    } else {
-                        $('.st-playing').hide();
-                    }
-                    break;
-                case "finished":
-                    $('.st-ended').show();
-                    break;
-                case "content":
-                    $('.st-content').text(data.join(','));
-                    break;
-                case "size":
-                    break;
-            }
-        }
-
-        viewer.addListener('ready', onEmbedEvent);
-        viewer.addListener('quality', onEmbedEvent);
-        viewer.addListener('live', onEmbedEvent);
-        viewer.addListener('offline', onEmbedEvent);
-        viewer.addListener('playing', onEmbedEvent);
-        viewer.addListener('finished', onEmbedEvent);
-        viewer.addListener('size', onEmbedEvent);
-        viewer.addListener('content', onEmbedEvent);
-
-    });
-
-</script>
+<!-- build:js scripts/projects.js -->
+<script type="text/javascript" src="scripts/platform.js"></script>
+<script type="text/javascript" src="scripts/channel.js"></script>
+<!-- endbuild -->
 
 </body>
 </html>
