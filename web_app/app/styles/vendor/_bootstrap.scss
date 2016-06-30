@@ -5678,6 +5678,21 @@ a.thumbnail.active {
   background-color: #5bc0de;
 }
 
+.progress-bar {
+  &-normal {
+    background-color: $theme;
+  }
+  &-red {
+    background-color: $theme_red;
+  }
+  &-yellow {
+    background-color: $theme_yellow;
+  }
+  &-green {
+    background-color: $theme_green;
+  }
+}
+
 .progress-striped .progress-bar-info {
   background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
   background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
@@ -6526,7 +6541,7 @@ button.close {
 
 .modal-header {
   padding: 15px;
-  border-bottom: 1px solid #e5e5e5;
+  //border-bottom: 1px solid #e5e5e5;
   min-height: 17.14285714px;
 }
 
@@ -6537,6 +6552,14 @@ button.close {
 .modal-title {
   margin: 0;
   line-height: 2.14285714;
+}
+
+.modal-title {
+  font-family: Hind !important;
+  font-weight: bold !important;
+  letter-spacing: 0.5px !important;
+  text-transform: uppercase !important;
+  color: $black;
 }
 
 .modal-body {

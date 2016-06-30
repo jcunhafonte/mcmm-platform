@@ -37,7 +37,8 @@
     "vide": "^0.5.0",
     "noty": "^2.3.8",
     "scrollprogress": "^2.1.2",
-    "jquery.easywizard": "^1.1.4"
+    "jquery.easywizard": "^1.1.4",
+    "jquery.steps": "^1.1.0"
   },
   "overrides": {
     "bootstrap-sass": {

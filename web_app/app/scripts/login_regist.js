@@ -294,7 +294,7 @@ $(document).ready(function () {
                             message: 'Necessitas de introduzir um nome'
                         },
                         regexp: {
-                            regexp: /^[A-zÀ-ú]+[\s|,][A-zÀ-ú]{1,19}$/,
+                            regexp: /^[A-zÀ-ú]+[\s|,][A-zÀ-ú]$/,
                             message: 'Deves introduzir um nome próprio e apelido válidos'
                         },
                         stringLength: {

@@ -1,10 +1,82 @@
 .publish {
   height: auto;
 
+  .btn-publish {
+    font-family: Montserrat !important;
+    font-size: 12px !important;
+    font-weight: bold !important;
+    letter-spacing: 1px;
+    text-transform: uppercase !important;
+    color: $white !important;
+    background: $black !important;
+    border: $black !important;
+    transition: all .4s;
+    position: relative;
+    left: 50%;
+    margin-top: 20px;
+    transform: translateX(-50%);
+
+    &-red {
+      &:hover {
+        background: $theme_red !important;
+        border: $theme_red !important;
+      }
+    }
+
+    &-yellow{
+      &:hover {
+        background: $theme_yellow !important;
+        border: $theme_yellow !important;
+      }
+    }
+    &-green{
+      &:hover {
+        background: $theme_green !important;
+        border: $theme_green !important;
+      }
+    }
+  }
+
+  h2 {
+    font-family: Hind !important;
+    font-size: 42px !important;
+    font-weight: 300 !important;
+    letter-spacing: -0.5px !important;
+    margin: 30px 0 !important;
+
+    @media screen and (max-width: $screen-sm-min) {
+      margin: 10px 25% !important;
+    }
+
+    @media screen and (max-width: 450px) {
+      margin: 10px 0 !important;
+    }
+
+  }
+
+  .no-margin{
+  }
+
+  .yellow {
+    color: $theme_yellow;
+  }
+
+  .red {
+    color: $theme_red;
+  }
+
+  .green {
+    color: $theme_green
+  }
+
   .first {
     margin-bottom: 30px;
     display: inline-block;
     width: 100%;
+
+    @media screen and (max-width: $screen-sm-min){
+      margin-bottom: 0;
+    }
   }
 
   .second {
@@ -13,8 +85,7 @@
   }
 
   .card-publish {
-    height: 350px;
-    background: black;
+    height: 430px;
 
     @media screen and (max-width: $screen-sm-min) {
       margin: 10px 25%;
@@ -22,6 +93,55 @@
 
     @media screen and (max-width: 450px) {
       margin: 10px 0;
+    }
+
+    .img {
+      height: 350px;
+      box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.18) !important;
+      border-radius: 4px;
+
+      &-video {
+        background: url("../images/publish/videos.png") no-repeat;
+        background-size: cover;
+        background-position: center;
+      }
+
+      &-projects-normal{
+        background: url("../images/publish/projetos-normal.png") no-repeat;
+        background-size: cover;
+        background-position: center;
+      }
+
+      &-projects-slider{
+        background: url("../images/publish/projetos_slider.png") no-repeat;
+        background-size: cover;
+        background-position: center;
+      }
+
+      &-news-normal{
+        background: url("../images/publish/news-normal.png") no-repeat;
+        background-size: cover;
+        background-position: center;
+      }
+
+      &-news-text{
+        background: url("../images/publish/news-text.png") no-repeat;
+        background-size: cover;
+        background-position: center;
+      }
+
+      &-news-slider{
+        background: url("../images/publish/news_slider.png") no-repeat;
+        background-size: cover;
+        background-position: center;
+      }
+
+      &-news-video{
+        background: url("../images/publish/news-video.png") no-repeat;
+        background-size: cover;
+        background-position: center;
+      }
+
     }
 
   }

@@ -55,27 +55,26 @@
     <meta name="twitter:image" content="http://mcmm.ua.pt/img/share.jpg">
 
     <!--FAVICON-->
-    <!--FAVICON-->
-    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="images/favicon/yellow/apple-touch-icon-57x57.png"/>
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/favicon/yellow/apple-touch-icon-114x114.png"/>
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/favicon/yellow/apple-touch-icon-72x72.png"/>
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/favicon/yellow/apple-touch-icon-144x144.png"/>
-    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="images/favicon/yellow/apple-touch-icon-60x60.png"/>
-    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="images/favicon/yellow/apple-touch-icon-120x120.png"/>
-    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="images/favicon/yellow/apple-touch-icon-76x76.png"/>
-    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="images/favicon/yellow/apple-touch-icon-152x152.png"/>
-    <link rel="icon" type="image/png" href="images/favicon/yellow/favicon-196x196.png" sizes="196x196"/>
-    <link rel="icon" type="image/png" href="images/favicon/yellow/favicon-96x96.png" sizes="96x96"/>
-    <link rel="icon" type="image/png" href="images/favicon/yellow/favicon-32x32.png" sizes="32x32"/>
-    <link rel="icon" type="image/png" href="images/favicon/yellow/favicon-16x16.png" sizes="16x16"/>
-    <link rel="icon" type="image/png" href="images/favicon/yellow/favicon-128.png" sizes="128x128"/>
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="images/favicon/red/apple-touch-icon-57x57.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/favicon/red/apple-touch-icon-114x114.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/favicon/red/apple-touch-icon-72x72.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/favicon/red/apple-touch-icon-144x144.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="images/favicon/red/apple-touch-icon-60x60.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="images/favicon/red/apple-touch-icon-120x120.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="images/favicon/red/apple-touch-icon-76x76.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="images/favicon/red/apple-touch-icon-152x152.png"/>
+    <link rel="icon" type="image/png" href="images/favicon/red/favicon-196x196.png" sizes="196x196"/>
+    <link rel="icon" type="image/png" href="images/favicon/red/favicon-96x96.png" sizes="96x96"/>
+    <link rel="icon" type="image/png" href="images/favicon/red/favicon-32x32.png" sizes="32x32"/>
+    <link rel="icon" type="image/png" href="images/favicon/red/favicon-16x16.png" sizes="16x16"/>
+    <link rel="icon" type="image/png" href="images/favicon/red/favicon-128.png" sizes="128x128"/>
     <meta name="application-name" content="MCMM"/>
     <meta name="msapplication-TileColor" content="#FFFFFF"/>
-    <meta name="msapplication-TileImage" content="images/favicon/yellow/mstile-144x144.png"/>
-    <meta name="msapplication-square70x70logo" content="images/favicon/yellow/mstile-70x70.png"/>
-    <meta name="msapplication-square150x150logo" content="images/favicon/yellow/mstile-150x150.png"/>
-    <meta name="msapplication-wide310x150logo" content="images/favicon/yellow/mstile-310x150.png"/>
-    <meta name="msapplication-square310x310logo" content="images/favicon/yellow/mstile-310x310.png"/>
+    <meta name="msapplication-TileImage" content="images/favicon/red/mstile-144x144.png"/>
+    <meta name="msapplication-square70x70logo" content="images/favicon/red/mstile-70x70.png"/>
+    <meta name="msapplication-square150x150logo" content="images/favicon/red/mstile-150x150.png"/>
+    <meta name="msapplication-wide310x150logo" content="images/favicon/red/mstile-310x150.png"/>
+    <meta name="msapplication-square310x310logo" content="images/favicon/red/mstile-310x310.png"/>
 
     <!-- build:css styles/vendor.css -->
     <!-- bower:css -->
@@ -90,9 +89,11 @@
     <script src="/bower_components/modernizr/modernizr.js"></script>
     <!-- endbuild -->
 
+    <script type="text/javascript" src="http://content.jwplatform.com/libraries/uZA4sjXA.js"></script>
+
 </head>
 
-<body data-offset="80" data-target=".navbar" data-spy="scroll" id="projects">
+<body data-offset="80" data-target=".navbar" data-spy="scroll" id="video">
 
 <nav class="mcmm-nav mcmm-nav--top navbar-transparent" id="topbar" role="navigation">
     <div class="container">
@@ -108,8 +109,8 @@
                         <li class="platforms-item">
                             <a class="platforms-anchor hvr-underline-from-center" href="/news">Notícias</a>
                         </li>
-                        <li class="platforms-item is-active">
-                            <a class="platforms-anchor"
+                        <li class="platforms-item">
+                            <a class="platforms-anchor hvr-underline-from-center"
                                href="/projects">Projetos</a>
                         </li>
                         <li class="platforms-item">
@@ -142,7 +143,7 @@
             <div class="container">
                 <div class="row">
                     <div class="description">
-                        <h2 class="title">As nossas produções</h2>
+                        <h2 class="title">Normal</h2>
                     </div>
                 </div>
             </div>
@@ -150,157 +151,107 @@
     </div>
 
     <div class="section section-gray">
-        <div class="container-fluid">
+        <div class="container">
             <div class="row">
 
-                <div class="first">
-                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 no-padding">
-                        <div class="projects-cards col-sm-12">
-                            <div class="project project-large">
-                                <div class="project__card">
-                                    <a href="" class="project__image">
-                                        <img src="http://themenectar.com/demo/salient-corporate/wp-content/uploads/2015/12/waveform-4.jpg">
-                                    </a>
-                                    <div class="project__detail">
-                                        <h2 class="project__title">A Barafunda</h2>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 no-padding">
-                        <div class="projects-cards col-sm-12">
-                            <div class="project project-small">
-                                <div class="project__card">
-                                    <a href="" class="project__image">
-                                        <img src="http://themenectar.com/demo/salient-corporate/wp-content/uploads/2015/12/waveform-4.jpg">
-                                    </a>
-                                    <div class="project__detail">
-                                        <h2 class="project__title">A Barafunda</h2>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 no-padding">
-                        <div class="projects-cards col-sm-12">
-                            <div class="project project-small">
-                                <div class="project__card">
-                                    <a href="" class="project__image">
-                                        <img src="http://themenectar.com/demo/salient-corporate/wp-content/uploads/2015/12/waveform-4.jpg">
-                                    </a>
-                                    <div class="project__detail">
-                                        <h2 class="project__title">A Barafunda</h2>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 no-padding">
-                        <div class="projects-cards col-sm-12">
-                            <div class="project project-small">
-                                <div class="project__card">
-                                    <a href="" class="project__image">
-                                        <img src="http://themenectar.com/demo/salient-corporate/wp-content/uploads/2015/12/waveform-4.jpg">
-                                    </a>
-                                    <div class="project__detail">
-                                        <h2 class="project__title">A Barafunda</h2>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 no-padding">
-                        <div class="projects-cards col-sm-12">
-                            <div class="project project-small">
-                                <div class="project__card">
-                                    <a href="" class="project__image">
-                                        <img src="http://themenectar.com/demo/salient-corporate/wp-content/uploads/2015/12/waveform-4.jpg">
-                                    </a>
-                                    <div class="project__detail">
-                                        <h2 class="project__title">A Barafunda</h2>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <div class="col-xs-12 steps-wrapper">
 
-                <div class="second">
-                    <div class="col-md-6 col-lg-6 no-padding">
-                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 no-padding">
-                            <div class="projects-cards col-sm-12">
-                                <div class="project project-small">
-                                    <div class="project__card">
-                                        <a href="" class="project__image">
-                                            <img src="http://themenectar.com/demo/salient-corporate/wp-content/uploads/2015/12/waveform-4.jpg">
-                                        </a>
-                                        <div class="project__detail">
-                                            <h2 class="project__title">A Barafunda</h2>
-                                        </div>
+                    <form id="publish-video" method="post" class="form-horizontal" enctype="multipart/form-data">
+
+                        <h2>Identificação</h2>
+                        <section data-step="0">
+
+                            <div class="col-xs-12 col-md-4">
+                                <div class="form-group">
+                                    <div class="col-xs-12">
+                                        <input id="titulo" class="form-control"
+                                               type="text" placeholder="Título" name="titulo">
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 no-padding">
-                            <div class="projects-cards col-sm-12">
-                                <div class="project project-small">
-                                    <div class="project__card">
-                                        <a href="" class="project__image">
-                                            <img src="http://themenectar.com/demo/salient-corporate/wp-content/uploads/2015/12/waveform-4.jpg">
-                                        </a>
-                                        <div class="project__detail">
-                                            <h2 class="project__title">A Barafunda</h2>
-                                        </div>
+
+                            <div class="col-xs-12 col-md-4">
+                                <div class="form-group">
+                                    <div class="col-xs-12">
+                                        <input id="uc" class="form-control"
+                                               type="text" placeholder="Unidades Curriculares" name="uc">
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 no-padding">
-                            <div class="projects-cards col-sm-12">
-                                <div class="project project-small">
-                                    <div class="project__card">
-                                        <a href="" class="project__image">
-                                            <img src="http://themenectar.com/demo/salient-corporate/wp-content/uploads/2015/12/waveform-4.jpg">
-                                        </a>
-                                        <div class="project__detail">
-                                            <h2 class="project__title">A Barafunda</h2>
-                                        </div>
+
+                            <div class="col-xs-12 col-md-4">
+                                <div class="form-group">
+                                    <div class="col-xs-12">
+                                        <input id="tipologia" class="form-control"
+                                               type="text" placeholder="Tipologia (Ex: Curta ou longa metragem)"
+                                               name="tipologia">
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 no-padding">
-                            <div class="projects-cards col-sm-12">
-                                <div class="project project-small">
-                                    <div class="project__card">
-                                        <a href="" class="project__image">
-                                            <img src="http://themenectar.com/demo/salient-corporate/wp-content/uploads/2015/12/waveform-4.jpg">
-                                        </a>
-                                        <div class="project__detail">
-                                            <h2 class="project__title">A Barafunda</h2>
+
+                            <div class="input">
+
+                                <div class="col-xs-12">
+                                    <div class="form-group">
+                                        <div class="col-xs-12">
+                                            <div class="input-file-container">
+                                                <input class="input-file form-control" id="my_video" type="file"
+                                                       name="video">
+                                                <label tabindex="0" for="my_video" id="label_my_video"
+                                                       class="input-file-trigger">Vídeo<br>(MP4, WebM ou FLV)</label>
+                                            </div>
                                         </div>
+                                    </div>
+
+                                    <div class="video">
+                                        <div id="video-upload">
+
+                                        </div>
+                                    </div>
+
+                                    <script>
+                                        window.onload = function () {
+                                            var url = "http://178.62.86.141/api/utilizadores/videos/video.mp4";
+                                            var image = "/images/logo_red.svg";
+                                            jwplayer("video-upload").setup({
+                                                image: image,
+                                                file: url,
+                                                controls: false,
+                                                autostart: false
+                                            });
+                                        };
+                                    </script>
+                                </div>
+                            </div>
+
+                        </section>
+
+                        <h2>Descrição</h2>
+                        <section data-step="1">
+
+                            <div class="col-xs-12 col-md-6">
+                                <div class="form-group">
+                                    <div class="col-xs-12 text-area">
+                                        <textarea id="para_1" class="form-control" rows="8"
+                                                  placeholder="Primeiro parágrafo"
+                                                  name="para_1"></textarea>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-6 no-padding">
-                        <div class="col-xs-12 col-sm-6 col-md-12 col-lg-12 no-padding">
-                            <div class="projects-cards col-sm-12">
-                                <div class="project project-large">
-                                    <div class="project__card">
-                                        <a href="" class="project__image">
-                                            <img src="http://themenectar.com/demo/salient-corporate/wp-content/uploads/2015/12/waveform-4.jpg">
-                                        </a>
-                                        <div class="project__detail">
-                                            <h2 class="project__title">A Barafunda</h2
-                                        </div>
+
+                            <div class="col-xs-12 col-md-6">
+                                <div class="form-group">
+                                    <div class="col-xs-12 text-area">
+                                        <textarea id="para_2" class="form-control" rows="8"
+                                                  placeholder="Segundo parágrafo"
+                                                  name="para_2"></textarea>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
+
+                        </section>
+                    </form>
+
                 </div>
             </div>
         </div>
@@ -434,6 +385,28 @@
 
 </div>
 
+<!-- Modal Start here-->
+<div class="modal fade" id="myPleaseWait" tabindex="-1"
+     role="dialog" aria-hidden="true" data-backdrop="static">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title text-center">
+                    A Publicar...
+                </h4>
+            </div>
+            <div class="modal-body">
+                <div class="progress">
+                    <div id="progress_bar" class="progress-bar progress-bar-red progress-bar-striped active"
+                         style="width: 0%">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal ends Here -->
+
 <!-- build:js scripts/vendor.js -->
 <!-- bower:js -->
 <script type="text/javascript" src="/bower_components/jquery/dist/jquery.min.js"></script>
@@ -441,22 +414,22 @@
 <script type="text/javascript" src="/bower_components/sass-bootstrap/dist/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="/bower_components/scroll-up-bar/dist/scroll-up-bar.min.js"></script>
 <script type="text/javascript" src="/bower_components/owl.carousel/dist/owl.carousel.min.js"></script>
-<script type="text/javascript" src="/bower_components/masonry/dist/masonry.pkgd.min.js"></script>
-<script type="text/javascript" src="/bower_components/imagesloaded/imagesloaded.pkgd.min.js"></script>
 <script type="text/javascript" src="/bower_components/nprogress/nprogress.js"></script>
+<script type="text/javascript" src="/bower_components/vide/dist/jquery.vide.min.js"></script>
+<script type="text/javascript" src="/bower_components/jquery.steps/build/jquery.steps.js"></script>
+<script type="text/javascript" src="scripts/vendor/form_validator.js"></script>
+<script type="text/javascript" src="scripts/vendor/form_validator_bootstrap.js"></script>
 <!-- endbower -->
 <!-- endbuild -->
 
 <!-- build:js scripts/plugins.js -->
-<script type="text/javascript" src="scripts/vendor/jquery.hover3d.min.js"></script>
+
 <!-- endbuild -->
 
-<!-- build:js scripts/projects.js -->
-<script type="text/javascript" src="scripts/projects/projects.js"></script>
+<!-- build:js scripts/videos.js -->
+<script type="text/javascript" src="scripts/videos/publish-videos.js"></script>
 <script type="text/javascript" src="scripts/platform.js"></script>
-<script type="text/javascript" src="scripts/carousel.js"></script>
 <!-- endbuild -->
-
 
 </body>
 </html>

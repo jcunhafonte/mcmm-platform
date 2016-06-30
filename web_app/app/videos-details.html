@@ -194,7 +194,7 @@
     </div>
 
     <div class="section section-gray">
-            <div class="fixed-title fixed-title-video">
+        <div class="fixed-title fixed-title-video">
             <div class="container">
                 <div class="row">
                     <div class="col-xs-2 hidden-sm hidden-xs"></div>
@@ -283,12 +283,12 @@
                             <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12 topics">
                                 <div>
                                     <div class="col-sm-4 col-md-12 nopadding">
-                                        <h4>Projeto</h4>
+                                        <h4>Título</h4>
                                         <p>Night Sky Desktop</p>
                                     </div>
 
                                     <div class="col-sm-4 col-md-12 nopadding">
-                                        <h4>Unidade Curricular</h4>
+                                        <h4>Unidades Curriculares</h4>
                                         <p>Desktop II</p>
                                     </div>
                                     <div class="col-xs-4 col-md-12 nopadding">
@@ -593,9 +593,9 @@
 <!-- endbuild -->
 
 <!-- build:js scripts/news.js -->
-<script type="text/javascript" src="scripts/videos-details.js"></script>
+<script type="text/javascript" src="scripts/videos/videos-details.js"></script>
 <script type="text/javascript" src="scripts/platform.js"></script>
-<script type="text/javascript" src="scripts/fixed-title-video.js"></script>
+<script type="text/javascript" src="scripts/videos/fixed-title-video.js"></script>
 <!-- endbuild -->
 
 <script>
@@ -603,16 +603,7 @@
 </script>
 <script>
     var url = "http://178.62.86.141/api/utilizadores/videos/video.mp4";
-    jwplayer("video-player").setup({file: url});
-    jwplayer("video-player").onError(function (event) {
-//                jwplayer("video-player").load([{file: "js/aaa.mp4"}]);
-                setTimeout(function () {
-                    jwplayer("video-player").load([{
-                        file: url
-                    }]);
-                }, 5000);
-            }
-    );
+    jwplayer("video-player").setup({file: url, autostart: true});
 </script>
 
 </body>

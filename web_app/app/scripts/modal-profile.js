@@ -20,7 +20,7 @@ function userImg() {
 
             reader.onload = function (e) {
                 $('#img-user').attr('src', e.target.result);
-            }
+            };
 
             reader.readAsDataURL(input.files[0]);
         }
@@ -42,7 +42,7 @@ function formValidators() {
                         message: 'Necessitas de introduzir um nome'
                     },
                     regexp: {
-                        regexp: /^[A-zÀ-ú]+[\s|,][A-zÀ-ú]{1,19}$/,
+                        regexp: /^[A-zÀ-ú]+[\s|,][A-zÀ-ú]$/,
                         message: 'Deves introduzir um nome próprio e apelido válidos'
                     },
                     stringLength: {

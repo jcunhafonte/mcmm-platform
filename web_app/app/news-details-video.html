@@ -618,7 +618,7 @@
 <!-- endbuild -->
 
 <!-- build:js scripts/news.js -->
-<script type="text/javascript" src="scripts/news-details.js"></script>
+<script type="text/javascript" src="scripts/news/news-details.js"></script>
 <script type="text/javascript" src="scripts/platform.js"></script>
 <script type="text/javascript" src="scripts/fixed-title.js"></script>
 <!-- endbuild -->
@@ -628,16 +628,7 @@
 </script>
 <script>
     var url = "https://www.youtube.com/watch?v=NNudfQuu9qI";
-    jwplayer("video-player").setup({file: url});
-    jwplayer("video-player").onError(function (event) {
-//                jwplayer("video-player").load([{file: "js/aaa.mp4"}]);
-                setTimeout(function () {
-                    jwplayer("video-player").load([{
-                        file: url
-                    }]);
-                }, 5000);
-            }
-    );
+    jwplayer("video-player").setup({file: url, autostart: true});
 </script>
 </body>
 </html>
