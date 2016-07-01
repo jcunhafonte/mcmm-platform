@@ -6,6 +6,7 @@ $(document).ready(function () {
 
     controlNavbar();
     checkTransparent();
+    editor();
 
     $(window).resize(function () {
         controlNavbar();
@@ -19,7 +20,7 @@ $(document).ready(function () {
         if ($(window).width() < 992) {
             $('#topbar').addClass('navbar-white');
             $('#topbar').removeClass('navbar-transparent');
-            $(".brand-img").attr("src", "images/logo_red.svg");
+            $(".brand-img").attr("src", "images/logo_green.svg");
         } else {
             $('#topbar').removeClass('navbar-white');
             $('#topbar').addClass('navbar-transparent');
@@ -48,7 +49,7 @@ function checkTransparent() {
                         transparent = false;
                         $('nav[role="navigation"]').removeClass('navbar-transparent');
                         $('nav[role="navigation"]').addClass('navbar-white');
-                        $(".brand-img").attr("src", "images/logo_red.svg")
+                        $(".brand-img").attr("src", "images/logo_green.svg")
                     }
                 } else {
                     if (!transparent) {
@@ -64,16 +65,16 @@ function checkTransparent() {
 }
 
 $(document).ready(function () {
+
     function adjustIframeHeight() {
         var $body = $('body'),
             $iframe = $body.data('iframe.fv');
         if ($iframe) {
-            // Adjust the height of iframe
             $iframe.height($body.height());
         }
     }
 
-    $('#publish-video')
+    $('#publish-news-video')
         .steps({
             headerTag: 'h2',
             bodyTag: 'section',
@@ -94,8 +95,8 @@ $(document).ready(function () {
                 previous: 'Anterior'
             },
             onStepChanging: function (e, currentIndex, newIndex) {
-                var fv = $('#publish-video').data('formValidation'), // FormValidation instance
-                    $container = $('#publish-video').find('section[data-step="' + currentIndex + '"]');
+                var fv = $('#publish-news-video').data('formValidation'), // FormValidation instance
+                    $container = $('#publish-news-video').find('section[data-step="' + currentIndex + '"]');
 
                 fv.validateContainer($container);
 
@@ -107,8 +108,8 @@ $(document).ready(function () {
                 return true;
             },
             onFinishing: function (e, currentIndex) {
-                var fv = $('#publish-video').data('formValidation'),
-                    $container = $('#publish-video').find('section[data-step="' + currentIndex + '"]');
+                var fv = $('#publish-news-video').data('formValidation'),
+                    $container = $('#publish-news-video').find('section[data-step="' + currentIndex + '"]');
 
                 fv.validateContainer($container);
                 var isValidStep = fv.isValidContainer($container);
@@ -118,8 +119,8 @@ $(document).ready(function () {
                 return true;
             },
             onFinished: function (e, currentIndex) {
+                submitNewsvideo();
                 $('#myPleaseWait').modal('show');
-                $('#publish-video').submit();
                 e.preventDefault();
             }
         })
@@ -143,17 +144,22 @@ $(document).ready(function () {
                         }
                     }
                 },
-                uc: {
+                tema: {
                     validators: {
                         notEmpty: {
-                            message: 'Necessitas de inserir a/as unidades curriculares'
+                            message: 'Necessitas de inserir um tema'
+                        },
+                        stringLength: {
+                            min: 3,
+                            max: 16,
+                            message: 'O tema deve possuir entre 3 e 16 caracteres'
                         }
                     }
                 },
-                tipologia: {
+                cabecalho: {
                     validators: {
                         notEmpty: {
-                            message: 'Necessitas de inserir a/as tipologias'
+                            message: 'Necessitas de inserir um lead (cabeçalho)'
                         }
                     }
                 },
@@ -208,7 +214,6 @@ $(document).ready(function () {
 
         })
         .on('err.field.fv', function (e, data) {
-
             if (!firstTime) {
                 if (data.field === 'video') {
 
@@ -216,7 +221,7 @@ $(document).ready(function () {
 
                     firstTime = true;
                     var url = "http://178.62.86.141/api/utilizadores/videos/video.mp4";
-                    var image = "../images/logo_red.svg";
+                    var image = "../images/logo_green.svg";
                     jwplayer("video-upload").setup({
                         image: image,
                         file: url,
@@ -224,17 +229,73 @@ $(document).ready(function () {
                     });
                 }
             }
-        });
+        })
 });
+
+function editor() {
+
+    setTimeout(function () {
+        
+        var editor1 = new MediumEditor('.editable-1', {
+            placeholder: {
+                text: 'Primeiro parágrafo (Experimenta sublinhar o texto escrito)',
+                hideOnClick: false
+            },
+            toolbar: {
+                buttons: ['bold', 'italic', 'underline', 'anchor', 'quote']
+            },
+            anchor: {
+                customClassOption: null,
+                customClassOptionText: 'Button',
+                linkValidation: false,
+                placeholderText: 'Introduz um link',
+                targetCheckbox: false,
+                targetCheckboxText: 'Open in new window'
+            }
+        });
+        var editor2 = new MediumEditor('.editable-2', {
+            placeholder: {
+                text: 'Segundo parágrafo (Experimenta sublinhar o texto escrito)',
+                hideOnClick: false
+            },
+            toolbar: {
+                buttons: ['bold', 'italic', 'underline', 'anchor', 'quote']
+            },
+            anchor: {
+                customClassOption: null,
+                customClassOptionText: 'Button',
+                linkValidation: false,
+                placeholderText: 'Introduz um link',
+                targetCheckbox: false,
+                targetCheckboxText: 'Open in new window'
+            }
+        });
+
+        editor1.subscribe('editableInput', function (event, editable) {
+            $('#para_1_hidden').val(event.srcElement.innerText);
+            $('#para_1_submit').val(event.srcElement.innerHTML);
+            $('#publish-news-video').formValidation('revalidateField', 'para_1');
+        });
+
+        editor2.subscribe('editableInput', function (event, editable) {
+            $('#para_2_hidden').val(event.srcElement.innerText);
+            $('#para_2_submit').val(event.srcElement.innerHTML);
+            $('#publish-news-video').formValidation('revalidateField', 'para_2');
+        });
+
+    }, 1);
+
+}
 
 var firstTime = true;
 
-$('#publish-video').submit(function (e) {
+function submitNewsvideo() {
 
-    var formData = new FormData($("#publish-video")[0]);
+    var formData = new FormData($("#publish-news-video")[0]);
+
     $.ajax({
+        url: 'http://178.62.86.141/api/publicar/news_video.php',
         type: 'POST',
-        url: 'http://178.62.86.141/api/publicar/videos_normal.php',
         data: formData,
         xhr: function () {
             var myXhr = $.ajaxSettings.xhr();
@@ -243,17 +304,18 @@ $('#publish-video').submit(function (e) {
             }
             return myXhr;
         },
-        cache: false,
-        contentType: false,
-        processData: false,
         success: function (data) {
             $('#myPleaseWait').modal('hide');
-        }
+        },
+        cache: false,
+        contentType: false,
+        processData: false
     });
-    e.preventDefault();
-});
 
-function progress(e) {
+    return false;
+}
+
+function progress() {
     var percent = Math.round((event.loaded / event.total) * 100);
     $('#progress_bar').css('width', percent + '%');
 }

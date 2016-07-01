@@ -16,6 +16,7 @@
   }
 
   .steps {
+
     box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.16) !important;
     border-bottom: 1px solid $white !important;
     transition: .4s all !important;
@@ -426,6 +427,11 @@
       .input-file-trigger {
         color: $theme_yellow;
         border: 3px dashed $theme_yellow;
+
+        &-optional {
+          color: $gray;
+          border: 3px dashed $gray;
+        }
       }
 
       .input-file {
@@ -441,11 +447,20 @@
         background: $theme_yellow !important;
       }
 
+      .multiple-image {
+        margin-top: 50px;
+
+        img {
+          height: 200px;
+          margin-bottom: 10px;
+          max-width: 100%;
+        }
+      }
 
       .image {
         margin-top: 50px;
 
-        img{
+        img {
           height: 500px;
           margin-bottom: 10px;
           max-width: 100%;
@@ -453,4 +468,222 @@
       }
     }
   }
+}
+
+#news {
+  .steps-wrapper {
+    .wizard > .steps .done a {
+      background: $theme_green !important;
+    }
+
+    .wizard > .steps .current a {
+      color: $theme_green !important;
+    }
+
+    .wizard > .steps .disabled a {
+      background: $theme_green !important;
+    }
+
+    .actions {
+      li:nth-child(3) {
+        a {
+          &:hover {
+            background: $theme_green !important;
+            border-color: $theme_green !important;
+          }
+        }
+      }
+    }
+
+    .input {
+      .input-file-container {
+        &:hover {
+          .input-file-trigger {
+            background: $theme_green !important;
+          }
+        }
+      }
+
+      .has-success {
+        .input-file-container {
+          &:hover {
+            .input-file-trigger {
+              background: $theme_green !important;
+            }
+          }
+        }
+
+        .input-file-trigger {
+          color: $theme_green;
+          border: 3px dashed $theme_green;
+        }
+      }
+
+      .has-error {
+        .input-file-container {
+          &:hover {
+            .input-file-trigger {
+              background: $theme_red !important;
+            }
+          }
+        }
+
+        .input-file-trigger {
+          color: $theme_red;
+          border: 3px dashed $theme_red;
+        }
+      }
+
+      .input-file-trigger {
+        color: $theme_green;
+        border: 3px dashed $theme_green;
+
+        &-optional {
+          color: $gray;
+          border: 3px dashed $gray;
+        }
+      }
+
+      .input-file {
+        &:hover {
+          .input-file-trigger {
+            background: $theme_green !important;
+          }
+        }
+      }
+
+      .input-file:hover,
+      .input-file-trigger:hover {
+        background: $theme_green !important;
+      }
+
+      .multiple-image {
+        margin-top: 50px;
+
+        img {
+          height: 200px;
+          margin-bottom: 10px;
+          max-width: 100%;
+        }
+      }
+
+      .image {
+        margin-top: 50px;
+
+        img {
+          height: 500px;
+          margin-bottom: 10px;
+          max-width: 100%;
+        }
+      }
+    }
+  }
+
+  .input-off {
+    visibility: hidden;
+    position: absolute;
+  }
+
+  .medium-editable {
+    font-size: 16px !important;
+    line-height: 24px;
+    color: $black;
+    padding-right: 45px;
+
+    a {
+      color: $theme_green !important;
+    }
+
+    .medium-editor-placeholder:after {
+      color: $gray_placeholder;
+      font-style: normal !important;
+    }
+  }
+
+  .medium-editor-toolbar li button {
+    border-right: 1px solid $theme_green !important;
+  }
+
+  .medium-editor-toolbar {
+    background-color: $theme_green;
+    border: 1px solid $theme_green;
+    border-radius: 4px;
+  }
+
+  .medium-editor-toolbar li button:hover {
+    background-color: $theme_green_hover;
+  }
+
+  .medium-toolbar-arrow-under:after {
+    border-color: $theme_green transparent transparent transparent;
+  }
+
+  .medium-editor-toolbar-form .medium-editor-toolbar-input {
+    background: $theme_green;
+  }
+
+  .medium-editor-toolbar-form {
+    background: $theme_green;
+  }
+
+  .medium-editor-toolbar-anchor-preview {
+    background: $theme_green;
+  }
+
+  .medium-toolbar-arrow-over:before {
+    border-color: transparent transparent $theme_green transparent;
+  }
+
+  .medium-editor-toolbar li .medium-editor-button-active {
+    background-color: $theme_green_hover;
+  }
+
+  #video-upload {
+    .jw-controlbar.jw-background-color.jw-reset {
+      background: transparent;
+      border-top: none;
+    }
+    .jw-text.jw-dock-text.jw-reset {
+      display: none;
+      background: transparent;
+    }
+    .jw-skin-seven .jw-dock .jw-dock-button {
+      border: none;
+    }
+    .jw-slider-time.jw-background-color.jw-reset.jw-slider-horizontal.jw-reset {
+      background: transparent;
+    }
+    .jw-progress {
+      background: $theme_green;
+    }
+    .jw-skin-seven .jw-controlbar-right-group .jw-icon-inline:before, .jw-skin-seven .jw-controlbar-right-group .jw-icon-tooltip:before {
+      border: none;
+    }
+    .jw-slider-volume {
+      background: transparent;
+      border: none;
+    }
+    .jw-buffer {
+      background: rgba(255, 255, 255, .4);
+    }
+    .jw-rail {
+      background: rgba(255, 255, 255, .4);
+    }
+    .jw-knob {
+      box-shadow: none;
+    }
+    .jw-icon-tooltip:before {
+      border-left: none;
+    }
+    .jw-sharing-dock-btn {
+      .jw-background-color {
+        background: none;
+      }
+    }
+    .jw-background-color {
+      background: none;
+      border: none;
+    }
+  }
+
 }

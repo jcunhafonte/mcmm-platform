@@ -118,8 +118,8 @@ $(document).ready(function () {
                 return true;
             },
             onFinished: function (e, currentIndex) {
-                $('#myPleaseWait').modal('show');
                 submitProjectNormal();
+                $('#myPleaseWait').modal('show');
                 e.preventDefault();
             }
         })
@@ -160,7 +160,7 @@ $(document).ready(function () {
                 image: {
                     validators: {
                         notEmpty: {
-                            message: 'Necessitas de inserir um vídeo'
+                            message: 'Necessitas de inserir uma imagem'
                         },
                         file: {
                             message: 'Os formatos de imagem suportadas são JPEG, JPG ou PNG e não devem exceder os 10MB',
@@ -216,7 +216,7 @@ $(document).ready(function () {
 
 var firstTime = true;
 
-function submitProjectNormal(e) {
+function submitProjectNormal() {
 
     var formData = new FormData($("#publish-projects-normal")[0]);
 
@@ -234,14 +234,15 @@ function submitProjectNormal(e) {
         success: function (data) {
             $('#myPleaseWait').modal('hide');
         },
-        async: true,
         cache: false,
         contentType: false,
         processData: false
     });
+
+    return false;
 }
 
-function progress(e) {
+function progress() {
     var percent = Math.round((event.loaded / event.total) * 100);
     $('#progress_bar').css('width', percent + '%');
 }

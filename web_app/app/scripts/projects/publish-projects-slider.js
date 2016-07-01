@@ -19,7 +19,7 @@ $(document).ready(function () {
         if ($(window).width() < 992) {
             $('#topbar').addClass('navbar-white');
             $('#topbar').removeClass('navbar-transparent');
-            $(".brand-img").attr("src", "images/logo_red.svg");
+            $(".brand-img").attr("src", "images/logo_yellow.svg");
         } else {
             $('#topbar').removeClass('navbar-white');
             $('#topbar').addClass('navbar-transparent');
@@ -48,7 +48,7 @@ function checkTransparent() {
                         transparent = false;
                         $('nav[role="navigation"]').removeClass('navbar-transparent');
                         $('nav[role="navigation"]').addClass('navbar-white');
-                        $(".brand-img").attr("src", "images/logo_red.svg")
+                        $(".brand-img").attr("src", "images/logo_yellow.svg")
                     }
                 } else {
                     if (!transparent) {
@@ -64,16 +64,16 @@ function checkTransparent() {
 }
 
 $(document).ready(function () {
+
     function adjustIframeHeight() {
         var $body = $('body'),
             $iframe = $body.data('iframe.fv');
         if ($iframe) {
-            // Adjust the height of iframe
             $iframe.height($body.height());
         }
     }
 
-    $('#publish-video')
+    $('#publish-projects-slider')
         .steps({
             headerTag: 'h2',
             bodyTag: 'section',
@@ -94,8 +94,8 @@ $(document).ready(function () {
                 previous: 'Anterior'
             },
             onStepChanging: function (e, currentIndex, newIndex) {
-                var fv = $('#publish-video').data('formValidation'), // FormValidation instance
-                    $container = $('#publish-video').find('section[data-step="' + currentIndex + '"]');
+                var fv = $('#publish-projects-slider').data('formValidation'), // FormValidation instance
+                    $container = $('#publish-projects-slider').find('section[data-step="' + currentIndex + '"]');
 
                 fv.validateContainer($container);
 
@@ -107,8 +107,8 @@ $(document).ready(function () {
                 return true;
             },
             onFinishing: function (e, currentIndex) {
-                var fv = $('#publish-video').data('formValidation'),
-                    $container = $('#publish-video').find('section[data-step="' + currentIndex + '"]');
+                var fv = $('#publish-projects-slider').data('formValidation'),
+                    $container = $('#publish-projects-slider').find('section[data-step="' + currentIndex + '"]');
 
                 fv.validateContainer($container);
                 var isValidStep = fv.isValidContainer($container);
@@ -118,9 +118,11 @@ $(document).ready(function () {
                 return true;
             },
             onFinished: function (e, currentIndex) {
-                $('#myPleaseWait').modal('show');
-                $('#publish-video').submit();
                 e.preventDefault();
+                e.stopImmediatePropagation();
+
+                $('#myPleaseWait').modal('show');
+                submitProjectSlider();
             }
         })
         .formValidation({
@@ -150,23 +152,56 @@ $(document).ready(function () {
                         }
                     }
                 },
-                tipologia: {
+                ac: {
                     validators: {
                         notEmpty: {
-                            message: 'Necessitas de inserir a/as tipologias'
+                            message: 'Necessitas de inserir a/as áreas científicas'
                         }
                     }
                 },
-                video: {
+                image_1: {
                     validators: {
                         notEmpty: {
-                            message: 'Necessitas de inserir um vídeo'
+                            message: 'Necessitas de inserir uma imagem'
                         },
                         file: {
-                            extension: 'mp4,webm,flv',
-                            type: 'video/mp4,video/webm,video/x-flv',
-                            message: 'Os formatos de vídeos suportados são MP4, WebM ou FLV e não devem exceder os 50MB',
-                            maxSize: 50000000
+                            message: 'Os formatos de imagem suportadas são JPEG, JPG ou PNG e não devem exceder os 10MB',
+                            extension: 'jpeg,jpg,png',
+                            type: 'image/jpeg,image/png',
+                            maxSize: 10000000
+                        }
+                    }
+                },
+                image_2: {
+                    validators: {
+                        notEmpty: {
+                            message: 'Necessitas de inserir uma imagem'
+                        },
+                        file: {
+                            message: 'Os formatos de imagem suportadas são JPEG, JPG ou PNG e não devem exceder os 10MB',
+                            extension: 'jpeg,jpg,png',
+                            type: 'image/jpeg,image/png',
+                            maxSize: 10000000
+                        }
+                    }
+                },
+                image_3: {
+                    validators: {
+                        file: {
+                            message: 'Os formatos de imagem suportadas são JPEG, JPG ou PNG e não devem exceder os 10MB',
+                            extension: 'jpeg,jpg,png',
+                            type: 'image/jpeg,image/png',
+                            maxSize: 10000000
+                        }
+                    }
+                },
+                image_4: {
+                    validators: {
+                        file: {
+                            message: 'Os formatos de imagem suportadas são JPEG, JPG ou PNG e não devem exceder os 10MB',
+                            extension: 'jpeg,jpg,png',
+                            type: 'image/jpeg,image/png',
+                            maxSize: 10000000
                         }
                     }
                 },
@@ -188,54 +223,124 @@ $(document).ready(function () {
         })
         .on('success.field.fv', function (e, data) {
 
-            if (data.field === 'video') {
+            if (data.field === 'image_1') {
 
-                firstTime = false;
-                var file = $('#my_video')[0].files[0];
+                firstTime1 = false;
+                var file = $('#my_image_1')[0].files[0];
                 var type = file.type;
                 var name = file.name;
                 var url = URL.createObjectURL(file);
 
-                $('#label_my_video').html("Vídeo<br>" + name);
-
-                jwplayer("video-upload").setup({
-                    file: url,
-                    type: type,
-                    autostart: true
-                });
-
+                $('#label_my_image_1').html("Imagem<br>" + name);
+                $('#upload_img_1').attr('src', url);
             }
+
+
+            if (data.field === 'image_2') {
+
+                firstTime2 = false;
+                var file = $('#my_image_2')[0].files[0];
+                var type = file.type;
+                var name = file.name;
+                var url = URL.createObjectURL(file);
+
+                $('#label_my_image_2').html("Imagem<br>" + name);
+                $('#upload_img_2').attr('src', url);
+            }
+
+            if (data.field === 'image_3') {
+
+                if (typeof $('#my_image_3')[0].files[0] !== 'undefined') {
+
+                    firstTime3 = false;
+                    var file = $('#my_image_3')[0].files[0];
+                    var type = file.type;
+                    var name = file.name;
+                    var url = URL.createObjectURL(file);
+
+                    $('#label_my_image_3').html("Imagem<br>" + name);
+                    $('#upload_img_3').attr('src', url);
+                }
+            }
+
+
+            if (data.field === 'image_4') {
+
+                if (typeof $('#my_image_4')[0].files[0] !== 'undefined') {
+
+                    firstTime4 = false;
+                    var file = $('#my_image_4')[0].files[0];
+                    var type = file.type;
+                    var name = file.name;
+                    var url = URL.createObjectURL(file);
+
+                    $('#label_my_image_4').html("Imagem<br>" + name);
+                    $('#upload_img_4').attr('src', url);
+                }
+            }
+
+            e.preventDefault();
 
         })
         .on('err.field.fv', function (e, data) {
+            if (!firstTime1) {
+                if (data.field === 'image_1') {
 
-            if (!firstTime) {
-                if (data.field === 'video') {
+                    $('#label_my_image_1').html("Imagem Necessária<br>(JPEG, JPG ou PNG)");
+                    $('#upload_img_1').attr('src', '../images/backgrounds/default_background.png');
 
-                    $('#label_my_video').html("Vídeo<br>(MP4, WebM ou FLV)");
+                    firstTime1 = true;
+                }
+            }
 
-                    firstTime = true;
-                    var url = "http://178.62.86.141/api/utilizadores/videos/video.mp4";
-                    var image = "../images/logo_red.svg";
-                    jwplayer("video-upload").setup({
-                        image: image,
-                        file: url,
-                        controls: false
-                    });
+            if (!firstTime2) {
+                if (data.field === 'image_2') {
+
+                    $('#label_my_image_2').html("Imagem Necessária<br>(JPEG, JPG ou PNG)");
+                    $('#upload_img_2').attr('src', '../images/backgrounds/default_background.png');
+
+                    firstTime2 = true;
+                }
+            }
+
+            if (!firstTime3) {
+                if (data.field === 'image_3') {
+
+                    $('#label_my_image_3').html("Imagem Necessária<br>(JPEG, JPG ou PNG)");
+                    $('#upload_img_3').attr('src', '../images/backgrounds/default_background.png');
+
+                    firstTime3 = true;
+                }
+            }
+
+            if (!firstTime4) {
+                if (data.field === 'image_4') {
+
+                    $('#label_my_image_4').html("Imagem Necessária<br>(JPEG, JPG ou PNG)");
+                    $('#upload_img_4').attr('src', '../images/backgrounds/default_background.png');
+
+                    firstTime4 = true;
                 }
             }
         });
 });
 
-var firstTime = true;
+var firstTime1 = true;
+var firstTime2 = true;
+var firstTime3 = true;
+var firstTime4 = true;
 
-$('#publish-video').submit(function (e) {
+function submitProjectSlider() {
 
-    var formData = new FormData($("#publish-video")[0]);
+    var formData = new FormData($("#publish-projects-slider")[0]);
+
     $.ajax({
+        url: 'http://178.62.86.141/api/publicar/projects_slider.php',
         type: 'POST',
-        url: 'http://178.62.86.141/api/publicar/videos_normal.php',
         data: formData,
+        success: function (data) {
+            $('#myPleaseWait').modal('hide');
+        },
         xhr: function () {
             var myXhr = $.ajaxSettings.xhr();
             if (myXhr.upload) {
@@ -245,13 +350,9 @@ $('#publish-video').submit(function (e) {
         },
         cache: false,
         contentType: false,
-        processData: false,
-        success: function (data) {
-            $('#myPleaseWait').modal('hide');
-        }
+        processData: false
     });
-    e.preventDefault();
-});
+}
 
 function progress(e) {
     var percent = Math.round((event.loaded / event.total) * 100);
