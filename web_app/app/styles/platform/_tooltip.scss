@@ -1,0 +1,19 @@
+.tooltip-inner {
+  background: $black !important;
+  font-size: 14px !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1px !important;
+  font-weight: 500 !important;
+  font-family: Montserrat !important;
+  color: $white !important;
+
+  .tooltip-arrow{
+    border-color: $black !important;
+  }
+
+  .tooltip-top.tooltip-arrow{
+    border-color: $black !important;
+    color: $black !important;
+  }
+
+}

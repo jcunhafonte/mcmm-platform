@@ -263,7 +263,7 @@ $(document).ready(function () {
                             headers: {
                                 'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
                             },
-                            url: mcmm_dns + "api/verificacoes/verificaRegistoEmail.php",
+                            url: "http://178.62.86.141/api/verificacoes/verificaRegistoEmail.php",
                             data: {
                                 type: 'username'
                             },
@@ -294,12 +294,12 @@ $(document).ready(function () {
                             message: 'Necessitas de introduzir um nome'
                         },
                         regexp: {
-                            regexp: /^[A-zÀ-ú]+[\s|,][A-zÀ-ú]$/,
+                            regexp: /^[A-zÀ-ú]+[\s|,][A-zÀ-ú]{1,19}$/,
                             message: 'Deves introduzir um nome próprio e apelido válidos'
                         },
                         stringLength: {
-                            max: 39,
-                            message: 'O teu nome não deve possuir mais que 39 caracteres'
+                            max: 38,
+                            message: 'O teu nome não deve possuir mais que 38 caracteres'
                         }
                     }
                 },
@@ -312,7 +312,7 @@ $(document).ready(function () {
                             headers: {
                                 'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
                             },
-                            url: mcmm_dns + "api/verificacoes/verificaUserID.php",
+                            url: "http://178.62.86.141/api/verificacoes/verificaUserID.php",
                             data: {
                                 type: 'username'
                             },
@@ -427,13 +427,16 @@ function submitLogin() {
 
     $.ajax({
         type: "POST",
-        url: mcmm_dns + "api/verificacoes/verificaLogin.php",
+        url: "http://178.62.86.141/api/verificacoes/verificaLogin.php",
         data: informacao,
 
         success: function (html) {
 
-            if (html == 'entrar=1') {
+            console.log(html.startsWith("entrar"));
+            
+            if (html.startsWith("entrar") === false) {
                 $('#loginModal').modal('toggle');
+                window.location = "/@" + html;
                 return true;
             }
 
@@ -492,7 +495,7 @@ function submitSignup2() {
 
     $.ajax({
         type: "POST",
-        url: mcmm_dns + "api/verificacoes/verificaRegistoEmail.php",
+        url: "http://178.62.86.141/api/verificacoes/verificaRegistoEmail.php",
         data: informacao,
 
         success: function (html) {
@@ -537,7 +540,7 @@ function submitRegist() {
 
     $.ajax({
         type: "POST",
-        url: mcmm_dns + "api/verificacoes/verificaRegisto.php",
+        url: "http://178.62.86.141/api/verificacoes/verificaRegisto.php",
         data: informacao,
 
         success: function (html) {

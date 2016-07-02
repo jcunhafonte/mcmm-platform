@@ -2,6 +2,10 @@
 
   &-force-align {
     margin-top: 90px;
+
+    &-small{
+      margin-top: 30px;
+    }
   }
 
   .pull-left {
@@ -26,6 +30,9 @@
         }
         &-red {
           color: $theme_red !important;
+        }
+        &-normal {
+          color: $theme !important;
         }
       }
     }

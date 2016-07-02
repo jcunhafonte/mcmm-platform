@@ -1085,7 +1085,7 @@ h3.mcmm-nav-logo--noControls {
 
   .button--circle:last-child {
     margin-right: 0 !important;
-    bottom: 2px !important;
+    bottom: 3px !important;
     border-color: transparent !important;
   }
 
@@ -1095,6 +1095,17 @@ h3.mcmm-nav-logo--noControls {
   .button--circle {
     color: $white !important;
     border-color: transparent !important;
+    opacity: .75 !important;
+
+    &:hover {
+      border-color: transparent !important;
+      opacity: 1 !important;
+    }
+
+    &:last-child{
+      opacity: 1 !important;
+    }
+
   }
 }
 

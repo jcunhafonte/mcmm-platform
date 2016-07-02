@@ -5,7 +5,6 @@ $(document).ready(function () {
 
     controlNavbar();
     checkTransparent();
-    channel();
 
     $(window).resize(function () {
         controlNavbar();

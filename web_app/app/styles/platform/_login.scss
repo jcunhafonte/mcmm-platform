@@ -79,6 +79,9 @@
 }
 
 .login {
+  a {
+    transition: .2s all !important;
+  }
   .box {
     border: 0 !important;
     border-top: 0 !important;
@@ -87,7 +90,9 @@
     margin-bottom: 0 !important;
   }
   h4 {
+    margin: 0 !important;
     margin-bottom: 0 !important;
+    margin-top: 15px !important;
   }
   .form-control {
     padding: 13px 12px !important;
@@ -136,7 +141,6 @@
   text-align: center;
   width: 100%;
   height: 20px;
-
 }
 
 .login .division .line {
@@ -180,6 +184,7 @@
   display: inline-block;
   margin: 0 17px;
   padding: 15px;
+  transition: .2s all !important;
 }
 
 .login .social .circle .fa {
@@ -189,29 +194,29 @@
 .login .social .facebook {
   background-color: #455CA8;
   color: $white;
-  opacity: 0.9;
+  opacity: 0.9 !important;
 }
 
 .login .social .google {
   background-color: #F74933;
-  opacity: 0.9;
+  opacity: 0.9 !important;
 }
 
 .login .social .twitter {
   background-color: #55acee;
-  opacity: 0.9;
+  opacity: 0.9 !important;
 }
 
 .login .facebook:hover {
-  opacity: 1;
+  opacity: 1 !important;
 }
 
 .login .google:hover {
-  opacity: 1;
+  opacity: 1 !important;
 }
 
 .login .twitter:hover {
-  opacity: 1;
+  opacity: 1 !important;
 }
 
 .login .forgot {
@@ -230,51 +235,54 @@
 .login .btn-login,
 .registerBox .btn-register,
 .registerBox-2 .btn-register {
-  background-color: $theme;
-  border-color: $theme;
-  border-width: 0;
-  color: $white;
-  display: block;
-  margin: 0 0 auto;
-  padding: 15px 50px;
-  text-transform: uppercase;
-  width: 100%;
-  border-radius: 3px;
+  background-color: $theme !important;
+  border-color: $theme !important;
+  border-width: 0 !important;
+  color: $white !important;
+  display: block !important;
+  margin: 0 0 auto !important;
+  padding: 15px 50px !important;
+  text-transform: uppercase !important;
+  width: 100% !important;
+  border-radius: 3px !important;
+  font-family: Montserrat !important;
+  letter-spacing: 1px !important;
+  transition: .2s all !important;
+  opacity: 1 !important;
+  font-weight: bold !important;
 }
 
 .login .btn-login:hover,
 .registerBox .btn-register:hover,
 .registerBox-2 .btn-register:hover {
-  background-color: $theme_hover;
-  color: $white;
+  background-color: $theme_hover !important;
+  color: $white !important;
 }
 
 .login .form-control {
-  border-radius: 3px;
-  background-color: white;
+  border-radius: 3px !important;
+  background-color: $white !important;
   box-shadow: none !important;
-  color: $white;
+  color: $white !important;
   border: 1px solid $light_gray !important;
 }
 
 .login .form-control:focus {
-  color: $white;
-  background-color: $white;
+  color: $white !important;
+  background-color: $white !important;
   border: 1px solid $light_black !important;
-  -webkit-box-shadow: none;
-  box-shadow: none;
+  box-shadow: none !important;
   outline: 0 !important;
 }
 
 .login .box .form input[type="text"], .login .box .form input[type="password"] {
-  border-radius: 3px;
-  border: none;
-  color: #333333;
-  font-size: 16px;
-  height: 46px;
-  margin-bottom: 5px;
-  padding: 13px 12px;
-  width: 100%;
+  border-radius: 3px !important;
+  color: #333333 !important;
+  font-size: 16px !important;
+  height: 46px !important;
+  margin-bottom: 5px !important;
+  padding: 13px 12px !important;
+  width: 100% !important;
 }
 
 @media (max-width: 400px) {
@@ -290,10 +298,9 @@
   box-shadow: none !important;
 }
 
-/*      Checkbox and radio         */
 .checkbox {
-  margin-bottom: 12px;
-  padding-left: 32px;
+  margin-bottom: 12px !important;
+  padding-left: 32px !important;
   position: relative;
   -webkit-transition: color 0.25s linear;
   transition: color 0.25s linear;
@@ -413,6 +420,20 @@
     padding-left: 0 !important;
     padding-right: 0 !important;
   }
+
+  .fa {
+    text-align: left !important;
+  }
+
+  .circle { //TODO MAYBE IT WILL CAUSE MANY PROBLEMS :(
+    opacity: 1;
+    fill: none;
+    stroke: $white;
+    stroke-linecap: round;
+    stroke-width: 4;
+    stroke-dasharray: 121;
+    stroke-dashoffset: 121;
+  }
 }
 
 .recover-password {
@@ -443,6 +464,7 @@ label {
   }
   label {
     margin-bottom: 0 !important;
+    font-weight: 400 !important;
   }
   #utilizador_signupEnd {
     margin-bottom: 0 !important;
@@ -454,6 +476,7 @@ label {
     margin-top: 25px;
   }
   .agree-box {
+    margin-bottom: 10px !important;
     .form-control-feedback {
       line-height: 24px !important;
     }

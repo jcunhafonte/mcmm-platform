@@ -40,3 +40,8 @@
 .i-am-new .list-group{
   z-index: 10000000000 !important;
 }
+
+.list-group-item-danger{
+  color: $white !important;
+  background: $theme_red !important;
+}

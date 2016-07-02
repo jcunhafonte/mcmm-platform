@@ -1,0 +1,52 @@
+.publications {
+
+  h2 {
+    font-family: Hind !important;
+    font-size: 42px !important;
+    font-weight: 300 !important;
+    letter-spacing: -0.5px !important;
+    margin: 30px 0 !important;
+  }
+
+  .news {
+    h2 {
+      color: $theme_green
+    }
+  }
+  .projects {
+    h2 {
+      color: $theme_yellow
+    }
+  }
+  .videos {
+    h2 {
+      color: $theme_red
+    }
+  }
+
+  .btn-simple{
+    padding: 8px 8px !important;
+  }
+
+  .btn-danger{
+    color: $theme_red !important;
+  }
+
+  .btn-success{
+    color: $theme_green !important;
+  }
+
+  .btn-info{
+    color: $theme !important;
+  }
+
+  .table{
+    th{
+      color: $black !important;
+      font-weight: 600 !important;
+    }
+    td{
+      font-size: 16px !important;
+    }
+  }
+}

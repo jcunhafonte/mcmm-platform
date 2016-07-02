@@ -17,6 +17,7 @@
       display: inline-block;
       margin-top: 20px;
       padding-bottom: 60px !important;
+      width: 100%;
 
       p {
         color: $gray_footer !important;
@@ -30,7 +31,7 @@
       }
     }
 
-    .btn-edit-profile{
+    .btn-edit-profile {
 
       font-family: Montserrat !important;
       font-size: 12px !important;
@@ -43,7 +44,7 @@
       transition: all .4s;
       margin: 10px 0;
 
-      &:hover{
+      &:hover {
         background: $theme !important;
       }
     }
@@ -53,11 +54,11 @@
       padding-bottom: 20px !important;
       text-align: right !important;
 
-      @media screen and (max-width: $screen-md-min){
+      @media screen and (max-width: $screen-md-min) {
         text-align: left !important;
       }
 
-      .nopadding{
+      .nopadding {
         padding-left: 0 !important;
         padding-right: 0 !important;
       }

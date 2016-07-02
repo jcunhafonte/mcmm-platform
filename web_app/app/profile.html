@@ -120,28 +120,39 @@
             <div class="mcmm-nav-block mcmm-nav-block--right float-right">
                 <div class="buttons-area buttons-area-logged">
 
-                    <div class="button button--circle">
+                    <div class="button button--circle" data-placement="bottom" rel="tooltip" title="Canal">
                         <i class="pe-7s-video"></i>
                     </div>
                     <div class="button button--circle">
                         <i class="pe-7s-bell"></i>
                     </div>
-                    <div class="button button--circle">
+                    <div class="button button--circle" data-placement="bottom" rel="tooltip" title="Publicar">
                         <i class="pe-7s-upload"></i>
                     </div>
 
                     <div class="button button--circle no-border">
                         <li class="dropdown" style="list-style-type: none">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                <img class="avatar-image"
-                                     src="https://cdn-images-1.medium.com/fit/c/40/40/0*TKqRznc7Uj1DN2D-.jpg">
+                                <img width="40px" height="40px" class="avatar-image avatar"
+                                     src="http://178.62.86.141/api/utilizadores/perfis/21.png">
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a href="#">Perfil</a></li>
-                                <li><a href="#">Definições</a></li>
-                                <li><a href="#">Publicar</a></li>
+                                <li>
+                                    <a href="#">Perfil</a>
+                                </li>
+                                <li>
+                                    <a href="#">Publicar</a>
+                                </li>
+                                <li>
+                                    <a href="#">Publicações</a>
+                                </li>
+                                <li>
+                                    <a data-toggle="modal" data-target=".modal-settings">Definições</a>
+                                </li>
                                 <li class="divider"></li>
-                                <li><a href="#">Sair</a></li>
+                                <li>
+                                    <a href="#">Sair</a>
+                                </li>
                             </ul>
                         </li>
                     </div>
@@ -160,8 +171,8 @@
                     <div class="informations">
                         <div class="texts">
                             <div class="principal">
-                                <img class="img-circle" src="https://s3.amazonaws.com/creativetim_bucket/new_logo.png">
-                                <h2>Daniela Bessa</h2>
+                                <img class="img-circle avatar" src="https://s3.amazonaws.com/creativetim_bucket/new_logo.png">
+                                <h2 class="username">Daniela Bessa</h2>
                             </div>
                             <div class="col-md-12">
                                 <a class="mcmm-button large see-through-2" target="_blank">
@@ -179,45 +190,50 @@
         <div class="users-profile">
             <div class="container">
                 <div class="row">
-                    <div class="header col-xs-10">
-                        <h2>Sobre</h2>
-                    </div>
-                    <div class="col-xs-2">
-                        <a href="#" class="btn btn-info btn-edit-profile pull-right" data-toggle="modal"
-                           data-target=".modal-profile">Editar</a>
-                    </div>
-                    <div class="wrapper">
-                        <div class="text">
-                            <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
-                                <p>
-                                    DeCA_WebEx é uma webrádio, promovida pelo Departamento
-                                    de Comunicação e Arte (DeCA), que
-                                    tem
-                                    como objetivo geral servir de suporte a atividades de ensino/aprendizagem e de
-                                    investigação,
-                                    em
-                                    temáticas relacionadas com a produção, realização e emissão de rádio em ambiente
-                                    Web.
-                                </p>
-                            </div>
-                            <div class="col-md-8 col-lg-8 col-sm-12 col-xs-12 topics">
-                                <div>
-                                    <div class="col-sm-4 col-md-4 nopadding">
-                                        <h4>Publicações</h4>
-                                        <p>Night Sky Desktop</p>
-                                    </div>
+                    <div class="col-xs-12 no-padding">
+                        <div class="header col-xs-4">
+                            <h2>Sobre</h2>
+                        </div>
 
-                                    <div class="col-sm-4 col-md-4 nopadding">
-                                        <h4>Seguidores</h4>
-                                        <p>Desktop II</p>
-                                    </div>
-                                    <div class="col-xs-4 col-md-4 nopadding">
-                                        <h4>Seguindo</h4>
-                                        <p>Desktop II</p>
+                        <div class="col-xs-8">
+                            <a href="#" class="btn btn-info btn-edit-profile pull-right" data-toggle="modal"
+                               data-target=".modal-settings">Definições</a>
+                            <a style="margin-right: 10px" href="#" class="btn btn-info btn-edit-profile pull-right"
+                               data-toggle="modal"
+                               data-target=".modal-profile">Editar</a>
+                        </div>
+
+                    </div>
+
+                    <div class="col-xs-12 no-padding">
+
+                        <div class="wrapper">
+                            <div class="text">
+                                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                                    <p class="about">
+                                        DeCA_WebEx é uma webrádio.
+                                    </p>
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 topics">
+                                    <div>
+                                        <div class="col-sm-4 col-md-4 nopadding">
+                                            <h4>Publicações</h4>
+                                            <p>Night Sky Desktop</p>
+                                        </div>
+
+                                        <div class="col-sm-4 col-md-4 nopadding">
+                                            <h4>Seguidores</h4>
+                                            <p>Desktop II</p>
+                                        </div>
+                                        <div class="col-xs-4 col-md-4 nopadding">
+                                            <h4>Seguindo</h4>
+                                            <p>Desktop II</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+
                     </div>
                 </div>
             </div>
@@ -394,7 +410,8 @@
                                             <img class="img-circle"
                                                  src="https://s3.amazonaws.com/creativetim_bucket/new_logo.png"
                                                  id="img-user"/>
-                                            <input type="file" id="my_file" style="display:none;"/>
+                                            <input accept="image/jpg, image/jpeg, image/png" name="image" type="file"
+                                                   id="my_file" style="display:none;"/>
                                             <div class="control-img">
                                                 <img src="images/icons/photo-camera.png">
                                             </div>
@@ -430,6 +447,66 @@
                 </div>
             </div>
         </div>
+
+        <div class="modal fade modal-settings" id="edit-settings">
+            <button type="button" class="out-close close hidden-xs" data-dismiss="modal"
+                    aria-hidden="true">&times;</button>
+            <div class="modal-dialog vertical-align-center animated">
+                <div class="modal-content">
+
+                    <form method="post" accept-charset="UTF-8" id="edit_settings" enctype="multipart/form-data">
+                        <div class="modal-header">
+                            <button type="button" class="close hidden-sm hidden-md hidden-lg" data-dismiss="modal"
+                                    aria-hidden="true">&times;</button>
+                            <h4 class="modal-title text-center">Definições</h4>
+                        </div>
+
+                        <div class="modal-body">
+                            <div class="content">
+                                <div class="form">
+
+                                    <div class="form-group">
+                                        <div class="col-xs-12">
+                                            <input id="atual_password" class="form-control"
+                                                   type="password" placeholder="Palavra-passe atual"
+                                                   name="atual_password">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <div class="col-xs-12">
+                                            <input id="new_password" class="form-control" type="password"
+                                                   placeholder="Nova palavra-passe" name="new_password">
+                                            <div class="progress password-progress">
+                                                <div id="strengthBar" class="progress-bar" role="progressbar"
+                                                     style="width: 0;"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <div class="col-xs-12">
+                                            <input id="confirm_new_password" class="form-control"
+                                                   type="password" placeholder="Confirmação da nova palavra-passe"
+                                                   name="confirm_new_password">
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default btn-simple btn-cancel" data-dismiss="modal">
+                                Cancelar
+                            </button>
+                            <button type="submit" class="btn btn-info btn-simple btn-save">Guardar</button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 
@@ -439,31 +516,23 @@
 <script type="text/javascript" src="/bower_components/jquery-ui/jquery-ui.min.js"></script>
 <script type="text/javascript" src="/bower_components/sass-bootstrap/dist/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="/bower_components/scroll-up-bar/dist/scroll-up-bar.min.js"></script>
-<script type="text/javascript" src="/bower_components/owl.carousel/dist/owl.carousel.min.js"></script>
-<script type="text/javascript" src="/bower_components/masonry/dist/masonry.pkgd.min.js"></script>
-<script type="text/javascript" src="/bower_components/imagesloaded/imagesloaded.pkgd.min.js"></script>
 <script type="text/javascript" src="/bower_components/nprogress/nprogress.js"></script>
-<script type="text/javascript" src="/bower_components/jquery-parallax/scripts/jquery.parallax-1.1.3.js"></script>
-<script type="text/javascript" src="/bower_components/wow/dist/wow.min.js"></script>
-<script type="text/javascript" src="/bower_components/scrollprogress/dist/scrollProgress.min.js"></script>
+<script type="text/javascript" src="/bower_components/noty/js/noty/packaged/jquery.noty.packaged.js"></script>
 <!-- endbower -->
 <!-- endbuild -->
 
 <!-- build:js scripts/plugins.js -->
-
+<script type="text/javascript" src="scripts/vendor/zxcvbn.js"></script>
+<script type="text/javascript" src="scripts/vendor/form_validator.js"></script>
+<script type="text/javascript" src="scripts/vendor/form_validator_bootstrap.js"></script>
 <!-- endbuild -->
 
 <!-- build:js scripts/news.js -->
 <script type="text/javascript" src="scripts/profile.js"></script>
 <script type="text/javascript" src="scripts/platform.js"></script>
-<script type="text/javascript" src="scripts/vendor/form_validator.js"></script>
-<script type="text/javascript" src="scripts/vendor/form_validator_bootstrap.js"></script>
 <script type="text/javascript" src="scripts/modal-profile.js"></script>
+<script type="text/javascript" src="scripts/modal_settings.js"></script>
 <!-- endbuild -->
-
-<script>
-    new WOW().init();
-</script>
 
 </body>
 </html>
