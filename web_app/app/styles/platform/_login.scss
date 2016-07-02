@@ -81,6 +81,7 @@
 .login {
   a {
     transition: .2s all !important;
+    text-decoration: none !important;
   }
   .box {
     border: 0 !important;
@@ -252,6 +253,42 @@
   font-weight: bold !important;
 }
 
+#news {
+  .login .btn-login,
+  .registerBox .btn-register,
+  .registerBox-2 .btn-register {
+    background-color: $theme_green !important;
+    border-color: $theme_green !important;
+    &:hover {
+      background-color: $theme_green_hover !important;
+    }
+  }
+}
+
+#projects {
+  .login .btn-login,
+  .registerBox .btn-register,
+  .registerBox-2 .btn-register {
+    background-color: $theme_yellow !important;
+    border-color: $theme_yellow !important;
+    &:hover {
+      background-color: $theme_yellow_hover !important;
+    }
+  }
+}
+
+#video {
+  .login .btn-login,
+  .registerBox .btn-register,
+  .registerBox-2 .btn-register {
+    background-color: $theme_yellow !important;
+    border-color: $theme_yellow !important;
+    &:hover {
+      background-color: $theme_yellow_hover !important;
+    }
+  }
+}
+
 .login .btn-login:hover,
 .registerBox .btn-register:hover,
 .registerBox-2 .btn-register:hover {
@@ -366,6 +403,33 @@
 
 .checkbox.checked {
   color: $theme;
+}
+
+#news{
+  .checkbox.checked {
+    color: $theme_green;
+  }
+  .checkbox.checked .second-icon {
+    color: $theme_green;
+  }
+}
+
+#projects{
+  .checkbox.checked {
+    color: $theme_yellow;
+  }
+  .checkbox.checked .second-icon {
+    color: $theme_yellow;
+  }
+}
+
+#video{
+  .checkbox.checked {
+    color: $theme_red;
+  }
+  .checkbox.checked .second-icon {
+    color: $theme_red;
+  }
 }
 
 .checkbox.checked .first-icon {

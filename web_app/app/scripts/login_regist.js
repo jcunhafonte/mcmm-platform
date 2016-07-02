@@ -431,10 +431,8 @@ function submitLogin() {
         data: informacao,
 
         success: function (html) {
-
-            console.log(html.startsWith("entrar"));
             
-            if (html.startsWith("entrar") === false) {
+            if ((html.startsWith("entrar") === false) && (html.startsWith("bloqueado") === false && (html.startsWith("validado") === false))) {
                 $('#loginModal').modal('toggle');
                 window.location = "/@" + html;
                 return true;

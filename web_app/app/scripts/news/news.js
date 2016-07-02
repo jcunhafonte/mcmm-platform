@@ -2,33 +2,49 @@
 
 $(document).ready(function () {
 
-    $('#card-many-carousel-1').carousel({interval: 5000});
-    $('#card-many-carousel-2').carousel({interval: 5000});
-    $('#card-many-carousel-3').carousel({interval: 5000});
+    var card_slider = $('.card-many').length;
 
-    var totalItems1 = $("#card-many-carousel-1 .item").length;
-    var currentIndex1 = $("#card-many-carousel-1 div.active").index() + 1;
-    $("#slide-number-1").html('' + currentIndex1 + '/' + totalItems1 + '');
-    $("#card-many-carousel-1").bind('slid', function () {
-        currentIndex1 = $("#card-many-carousel-1 div.active").index() + 1;
-        $("#slide-number-1").html('' + currentIndex1 + '/' + totalItems1 + '');
-    });
+    var totalItems = [];
+    var currentIndex = [];
 
-    var totalItems2 = $("#card-many-carousel-2 .item").length;
-    var currentIndex2 = $("#card-many-carousel-2 div.active").index() + 1;
-    $("#slide-number-2").html('' + currentIndex2 + '/' + totalItems2 + '');
-    $("#card-many-carousel-2").bind('slid', function () {
-        currentIndex2 = $("#card-many-carousel-2 div.active").index() + 1;
-        $("#slide-number-2").html('' + currentIndex2 + '/' + totalItems2 + '');
-    });
+    for (var i = 1; i <= card_slider; i++) {
 
-    var totalItems3 = $("#card-many-carousel-3 .item").length;
-    var currentIndex3 = $("#card-many-carousel-3 div.active").index() + 1;
-    $("#slide-number-3").html('' + currentIndex3 + '/' + totalItems3 + '');
-    $("#card-many-carousel-3").bind('slid', function () {
-        currentIndex3 = $("#card-many-carousel-3 div.active").index() + 1;
-        $("#slide-number-3").html('' + currentIndex3 + '/' + totalItems3 + '');
-    });
+        $('#card-many-carousel-' + i)
+            .carousel({interval: 5000})
+            .on('slid.bs.carousel', {id: i}, function (e) {
+                currentIndex[e.data.id] = $("#card-many-carousel-" + e.data.id + " div.active").index() + 1;
+                $('#slide-number-' + e.data.id).html('' + currentIndex[e.data.id] + '/' + totalItems[e.data.id] + '');
+            });
+
+        totalItems[i] = $("#card-many-carousel-" + i + " .item").length;
+        currentIndex[i] = $("#card-many-carousel-" + i + " div.active").index() + 1;
+        $('#slide-number-' + i).html('' + currentIndex[i] + '/' + totalItems[i] + '');
+
+    }
+
+    // var totalItems1 = $("#card-many-carousel-1 .item").length;
+    // var currentIndex1 = $("#card-many-carousel-1 div.active").index() + 1;
+    // $("#slide-number-1").html('' + currentIndex1 + '/' + totalItems1 + '');
+    // $("#card-many-carousel-1").bind('slid', function () {
+    //     currentIndex1 = $("#card-many-carousel-1 div.active").index() + 1;
+    //     $("#slide-number-1").html('' + currentIndex1 + '/' + totalItems1 + '');
+    // });
+    //
+    // var totalItems2 = $("#card-many-carousel-2 .item").length;
+    // var currentIndex2 = $("#card-many-carousel-2 div.active").index() + 1;
+    // $("#slide-number-2").html('' + currentIndex2 + '/' + totalItems2 + '');
+    // $("#card-many-carousel-2").bind('slid', function () {
+    //     currentIndex2 = $("#card-many-carousel-2 div.active").index() + 1;
+    //     $("#slide-number-2").html('' + currentIndex2 + '/' + totalItems2 + '');
+    // });
+    //
+    // var totalItems3 = $("#card-many-carousel-3 .item").length;
+    // var currentIndex3 = $("#card-many-carousel-3 div.active").index() + 1;
+    // $("#slide-number-3").html('' + currentIndex3 + '/' + totalItems3 + '');
+    // $("#card-many-carousel-3").bind('slid', function () {
+    //     currentIndex3 = $("#card-many-carousel-3 div.active").index() + 1;
+    //     $("#slide-number-3").html('' + currentIndex3 + '/' + totalItems3 + '');
+    // });
 
     var elem = document.querySelector('.masonry-container');
     var msnry = new Masonry(elem, {

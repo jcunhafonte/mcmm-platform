@@ -26,8 +26,8 @@ $(document).ready(function () {
         }
     }
 
-    if (!Modernizr.touch) {
-         $('.parallax-background').parallax("50%", 0.5);
+    if ($(".parallax-background").length){
+        $('.parallax-background').parallax("50%", 0.5);
     }
 
     $('.next-page').mousemove(function(e){

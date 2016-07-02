@@ -156,13 +156,6 @@ $(document).ready(function () {
                         }
                     }
                 },
-                cabecalho: {
-                    validators: {
-                        notEmpty: {
-                            message: 'Necessitas de inserir um lead (cabeçalho)'
-                        }
-                    }
-                },
                 video: {
                     validators: {
                         notEmpty: {
@@ -177,13 +170,6 @@ $(document).ready(function () {
                     }
                 },
                 para_1: {
-                    validators: {
-                        notEmpty: {
-                            message: 'Necessitas de introduzir um parágrafo'
-                        }
-                    }
-                },
-                para_2: {
                     validators: {
                         notEmpty: {
                             message: 'Necessitas de introduzir um parágrafo'
@@ -253,34 +239,11 @@ function editor() {
                 targetCheckboxText: 'Open in new window'
             }
         });
-        var editor2 = new MediumEditor('.editable-2', {
-            placeholder: {
-                text: 'Segundo parágrafo (Experimenta sublinhar o texto escrito)',
-                hideOnClick: false
-            },
-            toolbar: {
-                buttons: ['bold', 'italic', 'underline', 'anchor', 'quote']
-            },
-            anchor: {
-                customClassOption: null,
-                customClassOptionText: 'Button',
-                linkValidation: false,
-                placeholderText: 'Introduz um link',
-                targetCheckbox: false,
-                targetCheckboxText: 'Open in new window'
-            }
-        });
 
         editor1.subscribe('editableInput', function (event, editable) {
             $('#para_1_hidden').val(event.srcElement.innerText);
             $('#para_1_submit').val(event.srcElement.innerHTML);
             $('#publish-news-video').formValidation('revalidateField', 'para_1');
-        });
-
-        editor2.subscribe('editableInput', function (event, editable) {
-            $('#para_2_hidden').val(event.srcElement.innerText);
-            $('#para_2_submit').val(event.srcElement.innerHTML);
-            $('#publish-news-video').formValidation('revalidateField', 'para_2');
         });
 
     }, 1);

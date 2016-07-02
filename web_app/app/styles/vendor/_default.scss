@@ -698,10 +698,10 @@ input.ct-red + span + label + span.switch-right {
 .form-control + .form-control-feedback {
   border-radius: 6px;
   font-size: 14px;
-  //margin-top: -7px;
+  margin-top: -7px;
   position: absolute;
-  right: 0;
-  top: 0;
+  right: 10px;
+  top: 50%;
   vertical-align: middle;
 }
 
