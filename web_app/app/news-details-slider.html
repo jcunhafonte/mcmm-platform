@@ -864,16 +864,36 @@
 <script type="text/javascript" src="scripts/vendor/form_validator_bootstrap.js"></script>
 <!-- endbuild -->
 
-<!-- build:js scripts/news.js -->
+<!-- build:js scripts/news-details.js -->
 <script type="text/javascript" src="scripts/news/news-details.js"></script>
 <script type="text/javascript" src="scripts/platform.js"></script>
 <script type="text/javascript" src="scripts/fixed-title.js"></script>
-<script type="text/javascript" src="scripts/slider_detail.js"></script>
 <script type="text/javascript" src="scripts/login_regist.js"></script>
 <!-- endbuild -->
 
 <script>
     new WOW().init();
+
+    var owl = $('#news .images .owl-carousel');
+    owl.owlCarousel({
+        center: true,
+        autoPlay: true,
+        singleItem: false,
+        items: 3,
+        loop: true,
+        margin: 10,
+        addClassActive: true,
+        centerClass: 'center',
+        dots: true,
+        responsive: {
+            0: {
+                items: 1
+            },
+            1000: {
+                items: 2
+            }
+        }
+    });
 </script>
 
 </body>
