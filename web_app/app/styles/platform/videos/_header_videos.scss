@@ -59,8 +59,8 @@
   }
 }
 
-@media screen and (max-width: $screen-md-min) {
-  .projects-header {
+@media screen and (max-width: 992px) {
+  .video-header {
     .contents {
       .description {
         .title {
@@ -74,8 +74,8 @@
   }
 }
 
-@media screen and (max-width: $screen-sm-min) {
-  .projects-header {
+@media screen and (max-width: 768px) {
+  .video-header {
     .contents {
       .description {
         .title {

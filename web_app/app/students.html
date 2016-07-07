@@ -288,28 +288,150 @@
 
 </div>
 
+<!--MODALS-->
+<div class="container">
+    <div id="modal-socials">
+        <div class="modal fade modal-profile" id="edit-profile">
+            <button type="button" class="out-close close hidden-xs" data-dismiss="modal"
+                    aria-hidden="true">&times;</button>
+            <div class="modal-dialog vertical-align-center animated">
+                <div class="modal-content">
+
+                    <form method="post" accept-charset="UTF-8" id="edit_profile" enctype="multipart/form-data">
+                        <div class="modal-header">
+                            <button type="button" class="close hidden-sm hidden-md hidden-lg" data-dismiss="modal"
+                                    aria-hidden="true">&times;</button>
+                            <h4 class="modal-title text-center">Editar</h4>
+                        </div>
+
+                        <div class="modal-body">
+                            <div class="content">
+                                <div class="form">
+
+                                    <div class="form-group">
+                                        <div class="col-xs-12 text-center">
+                                            <img class="img-circle"
+                                                 src="https://s3.amazonaws.com/creativetim_bucket/new_logo.png"
+                                                 id="img-user"/>
+                                            <input accept="image/jpg, image/jpeg, image/png" name="image" type="file"
+                                                   id="my_file" style="display:none;"/>
+                                            <div class="control-img">
+                                                <img src="images/icons/photo-camera.png">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <div class="col-xs-12">
+                                            <input id="nome" class="form-control"
+                                                   type="text" placeholder="Nome" name="nome">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <div class="col-xs-12">
+                                            <textarea id="sobre" class="form-control" placeholder="Sobre"
+                                                      rows="5" name="sobre"></textarea>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default btn-simple btn-cancel" data-dismiss="modal">
+                                Cancelar
+                            </button>
+                            <button type="submit" class="btn btn-info btn-simple btn-save">Guardar</button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade modal-settings" id="edit-settings">
+            <button type="button" class="out-close close hidden-xs" data-dismiss="modal"
+                    aria-hidden="true">&times;</button>
+            <div class="modal-dialog vertical-align-center animated">
+                <div class="modal-content">
+
+                    <form method="post" accept-charset="UTF-8" id="edit_settings" enctype="multipart/form-data">
+                        <div class="modal-header">
+                            <button type="button" class="close hidden-sm hidden-md hidden-lg" data-dismiss="modal"
+                                    aria-hidden="true">&times;</button>
+                            <h4 class="modal-title text-center">Definições</h4>
+                        </div>
+
+                        <div class="modal-body">
+                            <div class="content">
+                                <div class="form">
+
+                                    <div class="form-group">
+                                        <div class="col-xs-12">
+                                            <input id="atual_password" class="form-control"
+                                                   type="password" placeholder="Palavra-passe atual"
+                                                   name="atual_password">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <div class="col-xs-12">
+                                            <input id="new_password" class="form-control" type="password"
+                                                   placeholder="Nova palavra-passe" name="new_password">
+                                            <div class="progress password-progress">
+                                                <div id="strengthBar" class="progress-bar" role="progressbar"
+                                                     style="width: 0;"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <div class="col-xs-12">
+                                            <input id="confirm_new_password" class="form-control"
+                                                   type="password" placeholder="Confirmação da nova palavra-passe"
+                                                   name="confirm_new_password">
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default btn-simple btn-cancel" data-dismiss="modal">
+                                Cancelar
+                            </button>
+                            <button type="submit" class="btn btn-info btn-simple btn-save">Guardar</button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 <!-- build:js scripts/vendor.js -->
 <!-- bower:js -->
-<script type="text/javascript" src="/bower_components/jquery/dist/jquery.min.js"></script>
-<script type="text/javascript" src="/bower_components/jquery-ui/jquery-ui.min.js"></script>
-<script type="text/javascript" src="/bower_components/sass-bootstrap/dist/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="/bower_components/scroll-up-bar/dist/scroll-up-bar.min.js"></script>
-<script type="text/javascript" src="/bower_components/owl.carousel/dist/owl.carousel.min.js"></script>
-<script type="text/javascript" src="/bower_components/masonry/dist/masonry.pkgd.min.js"></script>
-<script type="text/javascript" src="/bower_components/imagesloaded/imagesloaded.pkgd.min.js"></script>
-<script type="text/javascript" src="/bower_components/nprogress/nprogress.js"></script>
+
 <!-- endbower -->
 <!-- endbuild -->
 
 <!-- build:js scripts/plugins.js -->
-<script type="text/javascript" src="scripts/students/infoBox.js"></script>
-<script type="text/javascript" src="scripts/students/markercluster.js"></script>
+<script type="text/javascript" src="scripts/vendor/zxcvbn.js"></script>
+<script type="text/javascript" src="scripts/vendor/form_validator.js"></script>
+<script type="text/javascript" src="scripts/vendor/form_validator_bootstrap.js"></script>
 <!-- endbuild -->
 
 <!-- build:js scripts/students.js -->
+<script type="text/javascript" src="scripts/students/infoBox.js"></script>
+<script type="text/javascript" src="scripts/students/markercluster.js"></script>
 <script type="text/javascript" src="scripts/platform.js"></script>
 <script type="text/javascript" src="scripts/students/students.js"></script>
 <script type="text/javascript" src="scripts/students/map_students.js"></script>
+<script type="text/javascript" src="scripts/login_regist.js"></script>
 <!-- endbuild -->
 
 </body>

@@ -135,7 +135,6 @@
 </nav>
 
 <div id="platform">
-
     <div class="author-card hidden-sm hidden-xs">
         <div class="wrapper">
             <div class="contents col-xs-12">
@@ -171,7 +170,6 @@
             </div>
         </div>
     </div>
-
     <div class="news-details-header">
         <div class="contents">
             <div class="container">
@@ -244,7 +242,7 @@
                 </div>
             </div>
         </div>
-        <div class="news-normal">
+        <div class="news-slider-detail">
             <div class="container">
                 <div class="row">
                     <div class="first-text col-xs-12">
@@ -267,19 +265,22 @@
                             país ou de outros locais considerados relevantes.
                         </p>
                     </div>
-                    <div class="sub-header col-xs-12 wow fadeInUp" data-wow-duration="1.5s">
-                        <h2 class="col-xs-12">
-                            A DeCA_WebEx é uma webrádio, promovida pelo Departamento de Comunicação e Arte (DeCA), que
-                            tem como objetivo geral servir de suporte a atividades de ensino/aprendizagem e de
-                            investigação, em temáticas relacionadas com a produção, realização e emissão de rádio em
-                            ambiente Web.
-                        </h2>
-                    </div>
                 </div>
             </div>
-            <div class="background">
-                <div class="wrapper-image">
-                    <div class="image parallax-background"></div>
+            <div class="images">
+                <div class="owl-carousel owl-theme wow fadeInUp" data-wow-duration="2s">
+                    <div class="item">
+                       <img src="http://themenectar.com/demo/salient-corporate/wp-content/uploads/2015/12/blog1.jpg"/>
+                    </div>
+                    <div class="item">
+                        <img src="http://themenectar.com/demo/salient-corporate/wp-content/uploads/2015/12/blog-2.jpg"/>
+                    </div>
+                    <div class="item">
+                        <img src="http://themenectar.com/demo/salient-corporate/wp-content/uploads/2015/12/blog1.jpg"/>
+                    </div>
+                    <div class="item">
+                        <img src="http://themenectar.com/demo/salient-corporate/wp-content/uploads/2015/12/blog1.jpg"/>
+                    </div>
                 </div>
             </div>
             <div class="container">
@@ -849,10 +850,12 @@
 <script type="text/javascript" src="/bower_components/jquery-ui/jquery-ui.min.js"></script>
 <script type="text/javascript" src="/bower_components/sass-bootstrap/dist/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="/bower_components/scroll-up-bar/dist/scroll-up-bar.min.js"></script>
+<script type="text/javascript" src="/bower_components/owl.carousel/dist/owl.carousel.min.js"></script>
 <script type="text/javascript" src="/bower_components/nprogress/nprogress.js"></script>
 <script type="text/javascript" src="/bower_components/jquery-parallax/scripts/jquery.parallax-1.1.3.js"></script>
 <script type="text/javascript" src="/bower_components/wow/dist/wow.min.js"></script>
 <script type="text/javascript" src="/bower_components/scrollprogress/dist/scrollProgress.min.js"></script>
+<script type="text/javascript" src="/bower_components/noty/js/noty/packaged/jquery.noty.packaged.js"></script>
 <!-- endbower -->
 <!-- endbuild -->
 
@@ -871,6 +874,27 @@
 
 <script>
     new WOW().init();
+
+    var owl = $('#news .images .owl-carousel');
+    owl.owlCarousel({
+        center: true,
+        autoPlay: true,
+        singleItem: false,
+        items: 3,
+        loop: true,
+        margin: 10,
+        addClassActive: true,
+        centerClass: 'center',
+        dots: true,
+        responsive: {
+            0: {
+                items: 1
+            },
+            1000: {
+                items: 2
+            }
+        }
+    });
 </script>
 
 </body>

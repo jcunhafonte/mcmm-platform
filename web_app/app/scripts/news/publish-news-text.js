@@ -20,11 +20,11 @@ $(document).ready(function () {
         if ($(window).width() < 992) {
             $('#topbar').addClass('navbar-white');
             $('#topbar').removeClass('navbar-transparent');
-            $(".brand-img").attr("src", "images/logo_green.svg");
+            $(".brand-img").attr("src", "../../images/logo_green.svg");
         } else {
             $('#topbar').removeClass('navbar-white');
             $('#topbar').addClass('navbar-transparent');
-            $(".brand-img").attr("src", "images/logo-w.svg");
+            $(".brand-img").attr("src", "../../images/logo-w.svg");
         }
     }
 
@@ -49,14 +49,14 @@ function checkTransparent() {
                         transparent = false;
                         $('nav[role="navigation"]').removeClass('navbar-transparent');
                         $('nav[role="navigation"]').addClass('navbar-white');
-                        $(".brand-img").attr("src", "images/logo_green.svg")
+                        $(".brand-img").attr("src", "../../images/logo_green.svg")
                     }
                 } else {
                     if (!transparent) {
                         transparent = true;
                         $('nav[role="navigation"]').removeClass('navbar-white');
                         $('nav[role="navigation"]').addClass('navbar-transparent');
-                        $(".brand-img").attr("src", "images/logo-w.svg")
+                        $(".brand-img").attr("src", "../../images/logo-w.svg")
                     }
                 }
             }
@@ -179,32 +179,8 @@ $(document).ready(function () {
                 }
             }
         })
-        .on('success.field.fv', function (e, data) {
-
-            if (data.field === 'image') {
-
-                firstTime = false;
-                var file = $('#my_image')[0].files[0];
-                var type = file.type;
-                var name = file.name;
-                var url = URL.createObjectURL(file);
-
-                $('#label_my_image').html("Imagem<br>" + name);
-                $('#upload_img').attr('src', url);
-            }
-
-        })
-        .on('err.field.fv', function (e, data) {
-            if (!firstTime) {
-                if (data.field === 'image') {
-
-                    $('#label_my_image').html("Imagem<br>(JPEG, JPG ou PNG)");
-                    $('#upload_img').attr('src', '../images/backgrounds/default_background.png');
-
-                    firstTime = true;
-                }
-            }
-        })
+        .on('success.field.fv', function (e, data) { })
+        .on('err.field.fv', function (e, data) { })
 });
 
 function editor() {
@@ -269,7 +245,7 @@ function submitNewstext() {
     var formData = new FormData($("#publish-news-text")[0]);
 
     $.ajax({
-        url: 'http://178.62.86.141/api/publicar/news_text.php',
+        url: '../../api/publicar/news_text.php',
         type: 'POST',
         data: formData,
         xhr: function () {

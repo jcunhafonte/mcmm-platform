@@ -2,17 +2,8 @@
 
 $(document).ready(function () {
 
-    // js_height_init();
     controlNavbar();
     checkTransparent();
-
-    // Preloader
-    $(window).on('load', function () {
-        var $preloader = $('#page-preloader'),
-            $spinner = $preloader.find('.spinner');
-        $spinner.fadeOut();
-        $preloader.delay(350).fadeOut(800);
-    });
 
     $(window).resize(function () {
         // js_height_init();
@@ -33,92 +24,7 @@ $(document).ready(function () {
 
     //TOPBAR
     $('#topbar').scrollupbar();
-
-    /* ---------------------------------------------
-     Height 100%
-     --------------------------------------------- */
-    function js_height_init() {
-        (function ($) {
-            $(".js-height-full").height($(window).height());
-            $(".js-height-parent").each(function () {
-                $(this).height($(this).parent().first().height());
-            });
-        })(jQuery);
-    }
-
-    // Hovers in dream team for touch screen
-    if (Modernizr.touch) {
-        $(document).on('touchend', '.wrap-dream-team .list-dream-team .team-item', function () {
-            $('.wrap-dream-team .list-dream-team .team-item').removeClass('active');
-            $(this).addClass('active');
-        });
-    } else {
-        $('.wrap-dream-team .list-dream-team .team-item').hover(function () {
-            $(this).find('.mask').css('opacity', 1);
-        }, function () {
-            $(this).find('.mask').css('opacity', 0);
-        });
-    }
-
-    // Fancybox
-    // $(".fancybox").fancybox();
-
-    // Datepiecker
-    $('#my-calendar').datepicker({
-        format: 'mm/dd/yyyy',
-        startDate: '-3d'
-    });
-    /* =============================================== */
-    /* ======= Accordion panel button collapse ======= */
-    /* =============================================== */
-    function toggleIcon(e) {
-        $(e.target)
-            .prev('.panel-heading')
-            .toggleClass('active')
-            .find('.fa')
-            .toggleClass('fa-plus-circle fa-minus-circle');
-    }
-
-    $('#accordion-two').on('hidden.bs.collapse shown.bs.collapse', toggleIcon);
-
-    function toggleActive(e) {
-        $(e.target)
-            .prev('.panel-heading')
-            .toggleClass('active')
-    }
-
-    $('#accordion-one').on('hidden.bs.collapse shown.bs.collapse', toggleActive);
-
-    /* <!-- =============================================== */
-    /* <!-- ======= Isotope ======= -->*/
-    /* <!-- =============================================== --> */
-    var $container = $('#gallery-items');
-
-    $(window).load(function () {
-        $container.isotope({
-//		    resizable: false, // disable normal resizing
-            transitionDuration: '0.65s',
-            masonry: {
-                columnWidth: $container.find('.gallery-item:not(.wide)')[0]
-            }
-        });
-
-        $(window).resize(function () {
-            $container.isotope('layout');
-        });
-    });
-
-    // filter items on button click
-    $('#filters').on('click', 'button', function (e) {
-        $(e.target).toggleClass('active').siblings().removeClass("active");
-        var filterValue = $(this).attr('data-filter');
-        $container.isotope({filter: filterValue});
-    });
-
-    /* <!-- =============================================== --> */
-    /* <!-- =============== Carousels ==================== --> */
-    /* <!-- =============================================== -->  */
-
+    
     var owl = $('.alunos_section .owl-carousel');
     owl.owlCarousel({
         center: true,
@@ -158,10 +64,7 @@ $(document).ready(function () {
             }
         }
     });
-
-    /* <!-- =============================================== --> */
-    /* <!-- ========== Menu Links Scroll ===+============== --> */
-    /* <!-- =============================================== -->  */
+    
     $('.scroll').click(function (e) {
         var off = 0;
         var target = this.hash;
@@ -173,12 +76,8 @@ $(document).ready(function () {
             easing: 'easeInOutExpo'
         });
         e.preventDefault();
-        //   ---- dissapearing menu on click
     });
-
-    /* <!-- =============================================== --> */
-    /* <!-- ===============  Scrollspy fix ================ --> */
-    /* <!-- =============================================== --> */
+    
     $(window).on('load', function () {
         var $body = $('body'),
             $navtop = $('#nav'),
@@ -212,38 +111,15 @@ $(document).ready(function () {
             resizeTimer = setTimeout(fixSpy, 200);
         });
     });
-
-    /* <!-- =============================================== --> */
-    /* <!-- ============ Init GMap on hidden tab =========== --> */
-    /* <!-- =============================================== -->  */
-    function waitForVisibleMapElement() {
-        setTimeout(function () {
-            if ($('#on-map').is(":visible")) {
-                initialize();
-            } else {
-                waitForVisibleMapElement();
-            }
-        }, 10);
-    };
-    waitForVisibleMapElement();
-
-    /* <!-- =============================================== --> */
-    /* <!-- ============ Parallax =========== --> */
-    /* <!-- =============================================== -->  */
+    
+    
     if (!Modernizr.touch) {
         $('.parallax-section-2').parallax("50%", 0.5);
         $('.parallax-section-3').parallax("50%", 0.5);
-        $('.wrap-features').parallax("50%", 0.5);
-        $('.wrap-counters').parallax("50%", 0.5);
-        $('.wrap-rates').parallax("50%", 0.5);
-        $('.wrap-programs').parallax("50%", 0.5);
         $('#programs').parallax("50%", 0.5);
         $('.parallax-section-1').parallax("50%", 0.1);
     }
-
-    /* <!-- =============================================== --> */
-    /* <!-- ============ Progress Bar Animation =========== --> */
-    /* <!-- =============================================== -->  */
+    
     $('.skills').waypoint(function (direction) {
         setTimeout(function () {
             $('.skills-animated').each(function () {
@@ -257,10 +133,7 @@ $(document).ready(function () {
         offset: '100%',
         triggerOnce: true
     });
-
-    /* <!-- =============================================== --> */
-    /* <!-- ============ Herader Animation =========== --> */
-    /* <!-- =============================================== -->  */
+    
     function controlNavbar() {
         if ($(window).width() < 992) {
             $('#topbar').addClass('navbar-white');
@@ -272,27 +145,7 @@ $(document).ready(function () {
             $(".brand-img").attr("src", "/images/logo-w.svg")
         }
     }
-
-    /* <!-- =============================================== --> */
-    /* <!-- ============ Tooltip  =========== --> */
-    /* <!-- =============================================== -->  */
-    $("[data-toggle='tooltip']").tooltip();
-    $('[data-toggle="popover"]').popover({
-        container: "body",
-        placement: "top",
-        trigger: "hover",
-        delay: {show: 0, hide: 500},
-        html: true,
-        content: function () {
-            var content = $(this).attr("data-popover-content");
-            return $(content).children(".popover-body").html();
-        },
-    });
-
-    /* <!-- =============================================== --> */
-    /* <!-- === Switch monthly/annual programa tables  ===== --> */
-    /* <!-- =============================================== -->  */
-    //switch from monthly to annual programa tables
+    
     bouncy_filter($('.cd-programa-container'));
     var old_selected = 'first';
 
@@ -350,61 +203,8 @@ $(document).ready(function () {
             }
         });
     }
-
-    /* <!-- =============================================== --> */
-    /* <!-- === Switch monthly/annual programa tables  ===== --> */
-    /* <!-- =============================================== --> */
-    // Variable to hold scroll type
-    var slideDrag,
-    // Width of .scroll-content ul
-        slideWidth = $(".scroll-slider").width(),
-    // Speed of animation in ms
-        slideSpeed = 400;
-
-    // Initialize sliders
-    $(".scroll-slider").slider({
-        animate: slideSpeed,
-        start: checkType,
-        slide: doSlide,
-        max: slideWidth
-    });
-
-
-    function checkType(e) {
-        slideDrag = $(e.originalEvent.target).hasClass("ui-slider-handle");
-    }
-
-    function doSlide(e, ui) {
-//	    var target = $(e.target).prev(".scroll-content"),
-        var target = $(".scroll-content"),
-            maxScroll = target.prop("scrollWidth") - target.width();
-
-        // Was it a click or drag?
-        if (slideDrag === true) {
-            // User dragged slider head, match position
-            target.prop({scrollLeft: ui.value * (maxScroll / slideWidth)});
-        }
-        else {
-            // User clicked on slider itself, animate to position
-            target.stop().animate({
-                scrollLeft: ui.value * (maxScroll / slideWidth)
-            }, slideSpeed);
-        }
-    }
-
-    // Popovers for map
-    $('.wrap-map-item .map-marker').popover({
-        container: ".wrap-map-item",
-        placement: "top",
-        trigger: "hover",
-        delay: {"hide": 2000},
-        html: true,
-        content: function () {
-            var content = $(this).attr("data-popover-content");
-            return $(content).children(".popover-body").html();
-        }
-    });
-}); // Document ready
+    
+});
 
 function checkTransparent() {
 

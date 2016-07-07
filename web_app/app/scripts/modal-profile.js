@@ -77,14 +77,15 @@ function submitProfile() {
         success: function (data) {
 
             var response = $.parseJSON(data);
-            $('.about').html(response.sobre);
-            $('.username').html(response.nome);
-            var atual_image = $(".avatar").attr('src');
-            $(".avatar").attr('src', atual_image + "?" + new Date().getTime());
 
             if (response.response === "yes") {
+
+                $('.about').html(response.sobre);
+                $('.username').html(response.nome);
+                var atual_image = $(".avatar").attr('src');
+                $(".avatar").attr('src', atual_image + "?" + new Date().getTime());
+
                 $('#edit-profile').modal('hide');
-                $('.about').html(data['sobre']);
 
                 noty({
                     text: 'O teu perfil foi atualizado com <b>sucesso</b>!',
