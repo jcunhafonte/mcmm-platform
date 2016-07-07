@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="8543ece1-e744-4550-8de3-80d4b43b0dd6" name="mcmm-platform-prod" url="http://mcmm.tech">
+        <fileTransfer host="mcmm.tech" port="22" privateKey="C:\Users\JoséPaulo\Dropbox\Projecto\Utilitários\phpstorm" rootFolder="/usr/share/nginx/www" accessType="SFTP" passphrase="dff9dfcbdfd9dfc1dfcbdfdedfc5dfc5dfc4df9adf9ddf9adf92dffadfe7" username="mcmm" keyPair="true">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
