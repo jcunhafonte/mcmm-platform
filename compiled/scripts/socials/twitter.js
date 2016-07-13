@@ -106,7 +106,7 @@ $(window).load(function () {
 
 function submitSignupTwitter() {
 
-    var formData = "email=" + $('#email').val() + "&id_user=" + $('.user_id').val()
+    var formData = "email=" + $('#email_twitter').val() + "&id_user=" + $('.user_id').val()
         + "&id_twitter=" + $('#id_twitter').val() + "&url_imagem=" + $('#image').val()
         + "&nome=" + $('#nome').val();
 

@@ -83,11 +83,12 @@ checkSession();
         </div>
     </div>
 
-    <div class="section section-gray">
+    <div class="section section-gray" style="padding-bottom: 0px !important;">
         <div class="container">
             <div class="row">
-                <div onclick="window.open('https://www.google.pt/maps/place/Universidade+de+Aveiro/@40.6303065,-8.6597,17z/data=!3m1!4b1!4m5!3m4!1s0xd23a2aa4e1bda2b:0xd70b976749475485!8m2!3d40.6303024!4d-8.657506', '_blank')"
-                     class="splash col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                <div
+                    onclick="window.open('https://www.google.pt/maps/place/Universidade+de+Aveiro/@40.6303065,-8.6597,17z/data=!3m1!4b1!4m5!3m4!1s0xd23a2aa4e1bda2b:0xd70b976749475485!8m2!3d40.6303024!4d-8.657506', '_blank')"
+                    class="splash col-xs-12 col-sm-6 col-md-6 col-lg-6">
                     <div class="card card-splash card-splash-contacts">
                         <div class="link">Obter direções
                             <span class="arrow"></span>
@@ -106,8 +107,9 @@ checkSession();
                             <div class="carousel slide">
                                 <div class="carousel-inner">
                                     <div class="item active">
-                                        <img src="http://seminariocts2016.web.ua.pt/wp-content/themes/nirvana/images/columns/ua.jpg"
-                                             alt="">
+                                        <img
+                                            src="http://seminariocts2016.web.ua.pt/wp-content/themes/nirvana/images/columns/ua.jpg"
+                                            alt="">
                                     </div>
                                 </div>
                             </div>
@@ -116,8 +118,9 @@ checkSession();
 
                 </div>
 
-                <div onclick="window.open('https://www.google.pt/maps/place/DECA+-+Departamento+de+Comunica%C3%A7%C3%A3o+e+Arte/@40.6288431,-8.65882,17z/data=!3m1!4b1!4m5!3m4!1s0xd23a2ac782797cd:0x829e10aa3e1ff33a!8m2!3d40.628839!4d-8.656626', '_blank')"
-                     class="splash col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                <div
+                    onclick="window.open('https://www.google.pt/maps/place/DECA+-+Departamento+de+Comunica%C3%A7%C3%A3o+e+Arte/@40.6288431,-8.65882,17z/data=!3m1!4b1!4m5!3m4!1s0xd23a2ac782797cd:0x829e10aa3e1ff33a!8m2!3d40.628839!4d-8.656626', '_blank')"
+                    class="splash col-xs-12 col-sm-6 col-md-6 col-lg-6">
                     <div class="card card-splash card-splash-contacts">
                         <div class="link">Obter direções
                             <span class="arrow"></span>
@@ -152,13 +155,12 @@ checkSession();
     <div class="section">
         <div class="container">
             <div class="row">
-
                 <form id="contact-us" class="contact-us">
                     <div class="col-lg-12">
-                        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 form-style">
 
+                        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 form-style">
                             <span class="input input--isao">
-                                <input class="input__field input__field--isao" type="text" id="1"/>
+                                <input class="input__field input__field--isao" type="text" id="1" name="nome" required/>
                                     <label class="input__label input__label--isao" for="1" data-content="Nome">
                                          <span class="input__label-content input__label-content--isao">Nome
                                         </span>
@@ -167,11 +169,11 @@ checkSession();
 
                         </div>
                         <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 form-style">
-
                             <span class="input input--isao">
-                                <input class="input__field input__field--isao" type="text" id="2"/>
-                                    <label class="input__label input__label--isao" for="2" data-content="Apelido">
-                                         <span class="input__label-content input__label-content--isao">Apelido
+                                <input class="input__field input__field--isao" type="email" id="2" name="email"
+                                       required/>
+                                    <label class="input__label input__label--isao" for="2" data-content="Email">
+                                         <span class="input__label-content input__label-content--isao">Email
                                         </span>
                                     </label>
                             </span>
@@ -180,7 +182,8 @@ checkSession();
                         <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 form-style">
 
                           <span class="input input--isao">
-                                <input class="input__field input__field--isao" type="text" id="3"/>
+                                <input class="input__field input__field--isao" type="text" id="3" name="assunto"
+                                       required/>
                                     <label class="input__label input__label--isao" for="3" data-content="Assunto">
                                          <span class="input__label-content input__label-content--isao">Assunto
                                         </span>
@@ -189,12 +192,11 @@ checkSession();
 
                         </div>
                     </div>
-
-
                     <div class="col-lg-12">
                         <div class="col-lg-12 form-style">
                          <span class="input input--isao">
-                                <textarea class="input__field input__field--isao" id="4" rows="4"></textarea>
+                                <textarea required class="input__field input__field--isao" id="4" rows="4"
+                                          name="mensagem"></textarea>
                                     <label class="input__label input__label--isao" for="4" data-content="Mensagem">
                                          <span class="input__label-content input__label-content--isao">Mensagem
                                         </span>
@@ -204,10 +206,9 @@ checkSession();
                     </div>
 
                     <div class="col-lg-12">
-                        <a class="btn btn-info pull-left">
+                        <button class="btn btn-info pull-left">
                             Enviar mensagem
-                        </a>
-
+                        </button>
                     </div>
 
                 </form>
@@ -216,6 +217,7 @@ checkSession();
     </div>
 
     <?php footer() ?>
+    <?php channel() ?>
 
 </div>
 
@@ -232,6 +234,41 @@ require_once 'api/funcoes/modals.php';
 <script src="scripts/plugins-aaf19e1ea7.js"></script>
 
 <script src="scripts/contacts-718447bc58.js"></script>
+
+<script src="scripts/main.js"></script>
+
+<script>
+    $("#contact-us").submit(function (event) {
+
+        var formData = "nome=" + $('#1').val() + "&email=" + $('#2').val() + "&assunto=" + $('#3').val() + "&mensagem=" + $('#4').val();
+
+        $.ajax({
+            url: '/api/verificacoes/mensagem.php',
+            type: 'POST',
+            data: formData,
+            success: function (data) {
+                $('#1').val('')
+                $('#2').val('')
+                $('#3').val('')
+                $('#4').val('')
+                noty({
+                    text: 'A tua mensagem foi submetida com <b>sucesso</b>!',
+                    type: 'success',
+                    layout: 'topRight',
+                    theme: 'bootstrapTheme',
+                    animation: {
+                        open: 'animated bounceInLeft',
+                        close: 'animated bounceOutRight',
+                        easing: 'swing',
+                        speed: 250
+                    },
+                    timeout: 12000
+                });
+            }
+        });
+        event.preventDefault();
+    });
+</script>
 
 </body>
 </html>

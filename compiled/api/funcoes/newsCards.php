@@ -48,7 +48,7 @@ function cardText($id, $nomeUtilizador, $excerto)
                 <div class=\"quote\">
                 </div>
                 <div class=\"content\">
-                    <h4 class=\"title\">" . h($excerto) . "</h4>
+                    <h4 class=\"title\" style='word-break: break-all'>" . h($excerto) . "</h4>
                     <span class=\"author\">" . h($nomeUtilizador) . "</span>
                 </div>
             </div>

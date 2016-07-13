@@ -64,6 +64,16 @@ checkSession();
 
     <script src="scripts/vendor/modernizr-9d550bd14f.js"></script>
 
+    <style>
+        @media screen and (max-width: 772px) {
+            .cd-programa-wrapper {
+                max-width: 300px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+    </style>
+
 </head>
 
 <body data-offset="80" data-target=".navbar" data-spy="scroll" id="splash">
@@ -126,7 +136,8 @@ checkSession();
                     </h2>
                     <div class="row wow fadeInUp" data-wow-delay="0.8s" data-wow-duration="1.5s">
                         <div class="col-md-12 control-cand">
-                            <a class="mcmm-button large see-through-2 has-icon" target="_blank">
+                            <a href="https://paco.ua.pt/CandidaturasPG/main.aspx" style=""
+                               class="mcmm-button large see-through-2 has-icon" target="_blank">
                                 <span>Candidaturas</span>
                                 <i class="pe-7s-angle-right"></i>
                             </a>
@@ -153,14 +164,15 @@ checkSession();
             <div class="col-sm-6 col-sm-push-6 wow fadeInUp animated" data-wow-duration="2s">
                 <div class="whatwedo-description no-padding">
                     <h3>Sobre o Mestrado</h3>
-                    <p>O Mestrado em Comunicação Multimédia tem como objetivo fundamental o reforço da formação de
-                        profissionais na área da comunicação multimédia, nomeadamente na produção de artefactos
-                        comunicacionais multimédia e/ou na criação de
-                        conteúdos audiovisuais digitais. </p>
+                    <p>O Mestrado em Comunicação Multimédia (MCMM) tem como objetivo fundamental o reforço da formação
+                        de profissionais na área da comunicação multimédia, nomeadamente na produção de artefactos
+                        comunicacionais multimédia (ramo Multimédia Interativo) ou na criação de conteúdos audiovisuais
+                        digitais (ramo Audiovisual Digital).</p>
                     <p class="bottom">O MCMM organiza-se em dois percursos de
                         formação: o percurso de Multimédia Interativo e o percurso de Audiovisual Digital.</p>
                     <div class="whatwedo">
-                        <a class="mcmm-button large see-through-2 has-icon" target="_blank">
+                        <a class="mcmm-button large see-through-2 has-icon" target="_blank"
+                        href="https://paco.ua.pt/CandidaturasPG/main.aspx">
                             <span>Candidaturas</span>
                             <i class="pe-7s-angle-right"></i>
                         </a>
@@ -169,28 +181,28 @@ checkSession();
             </div>
             <div class="col-sm-6 col-sm-pull-6 wow fadeInUp" data-wow-duration="2s">
                 <ul class="skills">
-                    <li data-percent="90" class="skills-animated">
+                    <li data-percent="25" class="skills-animated">
                         <span>Comunicação</span>
                         <div class="progress">
                         </div>
                     </li>
-                    <li data-percent="90" class="skills-animated">
+                    <li data-percent="75" class="skills-animated">
                         <span>Multimédia</span>
                         <div class="progress">
                         </div>
                     </li>
-                    <li data-percent="70" class="skills-animated">
+                    <li data-percent="75" class="skills-animated">
                         <span>Audiovisual</span>
                         <div class="progress">
                         </div>
                     </li>
-                    <li data-percent="60" class="skills-animated">
+                    <li data-percent="50" class="skills-animated">
                         <span>Design</span>
                         <div class="progress">
                         </div>
                     </li>
-                    <li data-percent="95" class="skills-animated">
-                        <span>Experiência</span>
+                    <li data-percent="75" class="skills-animated">
+                        <span>UX/UI</span>
                         <div class="progress">
                         </div>
                     </li>
@@ -304,8 +316,8 @@ checkSession();
                     <h5 class="text-center">Design</h5>
                 </article>
             </div>
-        </div><!--row-->
-    </div><!--container-->
+        </div>
+    </div>
 </section>
 
 <section class="candidaturas" id="candidaturas">
@@ -314,8 +326,8 @@ checkSession();
             <div class="col-md-8 col-md-offset-2">
                 <header class="section-header wow fadeInUp" data-wow-duration="1s">
                     <h2 class="text-center">Candidaturas</h2>
-                    <p class="large">Se te encontras interessado em ingressar no Mestrado em Comunicação Multimédia,
-                        basta seguires três simples passos para te candidatares</p>
+                    <p class="large">Se estás interessado em ingressar no Mestrado em Comunicação Multimédia, basta
+                        seguires três passos para te candidatares.</p>
                 </header>
             </div>
         </div><!--row-->
@@ -345,13 +357,14 @@ checkSession();
                 </article>
             </div>
             <div class="col-md-12 text-center whatwedo wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.4s">
-                <a class="mcmm-button large see-through-2 has-icon" target="_blank">
+                <a class="mcmm-button large see-through-2 has-icon" target="_blank"
+                href="https://paco.ua.pt/CandidaturasPG/main.aspx">
                     <span>Candidaturas</span>
                     <i class="pe-7s-angle-right"></i>
                 </a>
             </div>
-        </div><!--row-->
-    </div><!--container-->
+        </div>
+    </div>
 </section>
 
 <section class="curricular" id="programa-curricular">
@@ -381,16 +394,15 @@ checkSession();
                             </label>
                         </div>
 
-                    </div> <!-- .-programa-switcher -->
-                </div><!--col-->
-            </div><!--row-->
+                    </div>
+                </div>
+            </div>
 
-            <!-- Tab panes -->
             <div class="cd-programa-list cd-bounce-invert">
                 <div class="row no-gutter">
                     <div class="col-sm-6 col-md-3">
                         <ul class="cd-programa-wrapper">
-                            <!-- curricular Item -->
+
                             <li class="panel panel-curricular panel-default is-visible" data-type="first">
                                 <div class="panel-heading text-center">
                                     <p class="subhead">1º SEMESTRE</p>
@@ -398,16 +410,35 @@ checkSession();
                                 </div>
                                 <div class="panel-body text-center">
                                     <ul class="list-styled list-style-ok">
-                                        <li class="principal">Conteúdos AV para Novos Media</li>
-                                        <li class="principal">Produção e Realização AV</li>
-                                        <li>Met. de Projecto e Investigação</li>
-                                        <li>Teoria dos Media</li>
-                                        <li>Design de Comunicação MM</li>
+                                        <li class="principal">
+                                            <span style="color: #2979ff">6 ects </span>
+                                            <a style="color: #2b2e33" href="http://www.ua.pt/ensino/uc/4280"
+                                               target="_blank">Conteúdos AV para Novos Media</a>
+                                        </li>
+                                        <li class="principal">
+                                            <span style="color: #2979ff">8 ects </span>
+                                            <a style="color: #2b2e33" href="http://www.ua.pt/ensino/uc/4507"
+                                               target="_blank">Produção e Realização Audiovisual 1</a>
+                                        </li>
+                                        <li>
+                                            <span style="color: #2979ff">6 ects </span>
+                                            <a href="http://www.ua.pt/ensino/uc/4451" target="_blank">Metodologias de
+                                                Projecto e Investigação</a>
+                                        </li>
+                                        <li>
+                                            <span style="color: #2979ff">4 ects </span>
+                                            <a href="http://www.ua.pt/ensino/uc/4568" target="_blank">Teoria dos
+                                                Media</a>
+                                        </li>
+                                        <li>
+                                            <span style="color: #2979ff">6 ects </span>
+                                            <a href="http://www.ua.pt/ensino/uc/4301" target="_blank">Design de
+                                                Comunicação Multimédia</a>
+                                        </li>
                                     </ul>
                                 </div>
-                            </li><!--panel-->
+                            </li>
 
-                            <!-- curricular Item -->
                             <li class="panel panel-curricular panel-default is-hidden" data-type="second">
                                 <div class="panel-heading  text-center ">
                                     <p class="subhead">1º SEMESTRE</p>
@@ -415,23 +446,42 @@ checkSession();
                                 </div>
                                 <div class="panel-body text-center">
                                     <ul class="list-styled list-style-ok">
-                                        <li class="principal">Serviços e Tecnologias Instituições</li>
-                                        <li class="principal">Tecnologias Dinâmicas Para a Internet</li>
-                                        <li>Met. de Projecto e Investigação</li>
-                                        <li>Teoria dos Media</li>
-                                        <li>Design de Comunicação MM</li>
+                                        <li class="principal">
+                                            <span style="color: #2979ff">6 ects </span>
+                                            <a style="color: #2b2e33" href="http://www.ua.pt/ensino/uc/4763"
+                                               target="_blank">Serviços e Tecnologias Nas Instituições</a>
+                                        </li>
+                                        <li class="principal">
+                                            <span style="color: #2979ff">8 ects </span>
+                                            <a style="color: #2b2e33" href="http://www.ua.pt/ensino/uc/7464"
+                                               target="_blank">Tecnologias Dinâmicas Para a Internet</a>
+                                        </li>
+                                        <li>
+                                            <span style="color: #2979ff">6 ects </span>
+                                            <a href="http://www.ua.pt/ensino/uc/4451" target="_blank">Metodologias de
+                                                Projecto e Investigação</a>
+                                        </li>
+                                        <li>
+                                            <span style="color: #2979ff">4 ects </span>
+                                            <a href="http://www.ua.pt/ensino/uc/4568" target="_blank">Teoria dos
+                                                Media</a>
+                                        </li>
+                                        <li>
+                                            <span style="color: #2979ff">6 ects </span>
+                                            <a href="http://www.ua.pt/ensino/uc/4301" target="_blank">Design de
+                                                Comunicação Multimédia</a>
+                                        </li>
                                     </ul>
                                 </div>
-                            </li><!--panel-->
+                            </li>
 
-                        </ul><!--programa-wrapper-->
+                        </ul>
 
-                    </div><!--col-->
+                    </div>
 
                     <div class="col-sm-6 col-md-3">
                         <ul class="cd-programa-wrapper">
 
-                            <!-- curricular Item -->
                             <li class="panel panel-curricular panel-default is-visible" data-type="first">
                                 <div class="panel-heading  text-center">
                                     <p class="subhead">2º SEMESTRE</p>
@@ -439,16 +489,35 @@ checkSession();
                                 </div>
                                 <div class="panel-body text-center">
                                     <ul class="list-styled list-style-ok">
-                                        <li class="principal">Produção e Realização AV 2</li>
-                                        <li class="principal">Publicação em Plataformas Digitais</li>
-                                        <li class="principal">Pós-Produção e Efeitos Especiais</li>
-                                        <li>Redes e Ecologia dos Media</li>
-                                        <li>Criatividade na Comunicação MM</li>
+                                        <li class="principal">
+                                            <span style="color: #2979ff">8 ects </span>
+                                            <a style="color: #2b2e33" href="http://www.ua.pt/ensino/uc/4508"
+                                               target="_blank">Produção e Realização Audiovisual 2</a>
+                                        </li>
+                                        <li class="principal">
+                                            <span style="color: #2979ff">6 ects </span>
+                                            <a style="color: #2b2e33" href="http://www.ua.pt/ensino/uc/4520"
+                                               target="_blank">Publicação e Divulgação em Plataformas Digitais</a>
+                                        </li>
+                                        <li class="principal">
+                                            <span style="color: #2979ff">6 ects </span>
+                                            <a style="color: #2b2e33" href="http://www.ua.pt/ensino/uc/4502"
+                                               target="_blank">Pós-produção e Efeitos Especiais</a>
+                                        </li>
+                                        <li>
+                                            <span style="color: #2979ff">4 ects </span>
+                                            <a href="http://www.ua.pt/ensino/uc/4527" target="_blank">Redes e Ecologia
+                                                dos Media</a>
+                                        </li>
+                                        <li>
+                                            <span style="color: #2979ff">6 ects </span>
+                                            <a href="http://www.ua.pt/ensino/uc/4287" target="_blank">Criatividade na
+                                                Comunicação Multimédia</a>
+                                        </li>
                                     </ul>
                                 </div>
-                            </li><!--panel-->
+                            </li>
 
-                            <!-- curricular Item -->
                             <li class="panel panel-curricular panel-default is-hidden" data-type="second">
                                 <div class="panel-heading text-center">
                                     <p class="subhead">2º SEMESTRE</p>
@@ -456,23 +525,41 @@ checkSession();
                                 </div>
                                 <div class="panel-body text-center">
                                     <ul class="list-styled list-style-ok">
-                                        <li class="principal">Multimédia e Gestão Conhecimento</li>
-                                        <li class="principal">Multimédia em Ambientes Artísticos</li>
-                                        <li class="principal">Narrativas e Jogos Interactivos</li>
-                                        <li>Redes e Ecologia dos Media</li>
-                                        <li>Criatividade na Comunicação MM</li>
+                                        <li class="principal">
+                                            <span style="color: #2979ff">6 ects </span>
+                                            <a style="color: #2b2e33" href="http://www.ua.pt/ensino/uc/4765"
+                                               target="_blank">Multimédia e Gestão de Conhecimento</a>
+                                        </li>
+                                        <li class="principal">
+                                            <span style="color: #2979ff">7 ects </span>
+                                            <a style="color: #2b2e33" href="http://www.ua.pt/ensino/uc/4766"
+                                               target="_blank">Multimédia em Ambientes Artísticos</a>
+                                        </li>
+                                        <li class="principal">
+                                            <span style="color: #2979ff">7 ects </span>
+                                            <a style="color: #2b2e33" href="http://www.ua.pt/ensino/uc/4767"
+                                               target="_blank">Narrativas e Jogos Interactivos</a>
+                                        </li>
+                                        <li>
+                                            <span style="color: #2979ff">4 ects </span>
+                                            <a href="http://www.ua.pt/ensino/uc/4527" target="_blank">Redes e Ecologia
+                                                dos Media</a>
+                                        </li>
+                                        <li>
+                                            <span style="color: #2979ff">6 ects </span>
+                                            <a href="http://www.ua.pt/ensino/uc/4287" target="_blank">Criatividade na
+                                                Comunicação Multimédia</a>
+                                        </li>
                                     </ul>
                                 </div>
-                            </li><!--panel-->
+                            </li>
 
-                        </ul><!--programa-wrapper-->
-
-                    </div><!--col-->
+                        </ul>
+                    </div>
 
                     <div class="col-sm-6 col-md-3">
                         <ul class="cd-programa-wrapper">
 
-                            <!-- curricular Item -->
                             <li class="panel panel-curricular panel-default is-visible" data-type="first">
                                 <div class="panel-heading  text-center">
                                     <p class="subhead">1º SEMESTRE</p>
@@ -480,14 +567,24 @@ checkSession();
                                 </div>
                                 <div class="panel-body text-center">
                                     <ul class="list-styled list-style-ok">
-                                        <li>Estatística e Análise Dados para C.S.</li>
-                                        <li>Seminário</li>
-                                        <li>Projecto de Dissertação</li>
+                                        <li>
+                                            <span style="color: #2979ff">10 ects </span>
+                                            <a href="http://www.ua.pt/ensino/uc/4338" target="_blank">Estatística e
+                                                Análise de Dados para Ciências Sociais 1</a>
+                                        </li>
+                                        <li>
+                                            <span style="color: #2979ff">8 ects </span>
+                                            <a href="http://www.ua.pt/ensino/uc/4768" target="_blank">Seminário</a>
+                                        </li>
+                                        <li>
+                                            <span style="color: #2979ff">12 ects </span>
+                                            <a href="http://www.ua.pt/ensino/uc/4769" target="_blank">Projecto de
+                                                Dissertação</a>
+                                        </li>
                                     </ul>
                                 </div>
-                            </li><!--panel-->
+                            </li>
 
-                            <!-- curricular Item -->
                             <li class="panel panel-curricular panel-default is-hidden" data-type="second">
                                 <div class="panel-heading  text-center">
                                     <p class="subhead">1º SEMESTRE</p>
@@ -495,21 +592,30 @@ checkSession();
                                 </div>
                                 <div class="panel-body text-center">
                                     <ul class="list-styled list-style-ok">
-                                        <li>Estatística e Análise Dados para C.S.</li>
-                                        <li>Seminário</li>
-                                        <li>Projecto de Dissertação</li>
+                                        <li>
+                                            <span style="color: #2979ff">10 ects </span>
+                                            <a href="http://www.ua.pt/ensino/uc/4338" target="_blank">Estatística e
+                                                Análise de Dados para Ciências Sociais 1</a>
+                                        </li>
+                                        <li>
+                                            <span style="color: #2979ff">8 ects </span>
+                                            <a href="http://www.ua.pt/ensino/uc/4768" target="_blank">Seminário</a>
+                                        </li>
+                                        <li>
+                                            <span style="color: #2979ff">12 ects </span>
+                                            <a href="http://www.ua.pt/ensino/uc/4769" target="_blank">Projecto de
+                                                Dissertação</a>
+                                        </li>
                                     </ul>
                                 </div>
-                            </li><!--panel-->
+                            </li>
+                        </ul>
 
-                        </ul><!--programa-wrapper-->
-
-                    </div><!--col-->
+                    </div>
 
                     <div class="col-sm-6 col-md-3">
                         <ul class="cd-programa-wrapper">
 
-                            <!-- curricular Item -->
                             <li class="panel panel-curricular panel-default is-visible" data-type="first">
                                 <div class="panel-heading text-center">
                                     <p class="subhead">2º SEMESTRE</p>
@@ -517,12 +623,15 @@ checkSession();
                                 </div>
                                 <div class="panel-body text-center">
                                     <ul class="list-styled list-style-ok">
-                                        <li>Dissertação de Projecto ou Estágio</li>
+                                        <li>
+                                            <span style="color: #2979ff">30 ects </span>
+                                            <a href="http://www.ua.pt/ensino/uc/4770" target="_blank">Dissertação ou
+                                                Projeto ou Estágio</a>
+                                        </li>
                                     </ul>
                                 </div>
-                            </li><!--panel-->
+                            </li>
 
-                            <!-- curricular Item -->
                             <li class="panel panel-curricular panel-default is-hidden" data-type="second">
                                 <div class="panel-heading text-center">
                                     <p class="subhead">2º SEMESTRE</p>
@@ -530,24 +639,31 @@ checkSession();
                                 </div>
                                 <div class="panel-body text-center">
                                     <ul class="list-styled list-style-ok">
-                                        <li>Dissertação de Projecto ou Estágio</li>
+                                        <li>
+                                            <span style="color: #2979ff">30 ects </span>
+                                            <a href="http://www.ua.pt/ensino/uc/4770" target="_blank">Dissertação ou
+                                                Projeto ou Estágio</a>
+                                        </li>
                                     </ul>
                                 </div>
-                            </li><!--panel-->
+                            </li>
 
-                        </ul><!--programa-wrapper-->
+                        </ul>
 
-                    </div><!--col-->
+                    </div>
 
-                </div><!--row-->
-            </div><!--tab-content-->
+                </div>
+            </div>
 
-        </div> <!-- .cd-programa-container -->
+        </div>
 
-    </div><!--container-->
+    </div>
 </section>
 
 <section class="video dark" id="canal">
+
+    <?php channel() ?>
+
     <div class="video-bg"></div>
     <article>
         <div class="container">
@@ -580,8 +696,8 @@ checkSession();
             <div class="col-md-8 col-md-offset-2">
                 <header class="section-header  wow fadeInUp" data-wow-duration="2s">
                     <h2>Notícias</h2>
-                    <p class="large">Consulta algumas notícias interessantes acerca do MCMM para que possas manter-te
-                        atualizado acerca dos mais recentes acontecimentos.</p>
+                    <p class="large">Consulta notícias acerca do MCMM para te manteres atualizado acerca dos mais
+                        recentes acontecimentos.</p>
                 </header>
             </div>
         </div>
@@ -650,7 +766,11 @@ checkSession();
                         echo "<img src='/images/backgrounds/default.jpg' />";
                         break;
                     case "video":
-                        echo "<img src='/images/backgrounds/default.jpg' />";
+                        if(file_exists("api/utilizadores/noticias/$idNoticias.jpg")){
+                            echo "<img src='/api/utilizadores/noticias/$idNoticias.jpg' />";
+                        }else{
+                            echo "<img src='/images/backgrounds/default.jpg' />";
+                        }
                         break;
                 }
 
@@ -685,8 +805,8 @@ checkSession();
             <div class="col-md-8 col-md-offset-2">
                 <header class="section-header wow fadeInUp" data-wow-duration="2s">
                     <h2 class="title-projects">Projetos</h2>
-                    <p class="large">Explora alguns projetos realizados no âmbito do Mestrado em Comunicação Multimédia,
-                        para que possas manter-te atualizado.</p>
+                    <p class="large">Explora alguns projetos, realizados no âmbito do MCMM, para que estejas atualizado
+                        quanto ao que por cá se faz.</p>
                 </header>
             </div>
         </div>
@@ -778,7 +898,8 @@ checkSession();
 
             </div>
 
-            <div class="col-md-12 text-center whatwedo wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.4s">
+            <div class="col-md-12 text-center whatwedo wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.4s"
+                 style="position:initial">
                 <a href="/projects" class="mcmm-button large see-through-2 has-icon">
                     <span>Projetos</span>
                     <i class="pe-7s-angle-right"></i>
@@ -869,10 +990,9 @@ checkSession();
                         O sucesso profissional dos nossos mestres é o nosso sucesso.
                     </h2>
                     <p class="large">
-                        Desde a sua fundação, o MCMM contou com 500 estudantes,
-                        sendo dos quais 200 já se encontram com o grau académico que
-                        tanto ambicionaram, o de mestrado. Explora a atual atividades de alguns deles.
+                        Desde 2007/2008 o MCMM diplomou cerca de 200 estudantes.
                     </p>
+                    <p>Explora a atual atividade de alguns deles.</p>
                 </header>
             </div>
             <div class="col-xs-2 col-md-3 col-lg-4"></div>
@@ -890,77 +1010,52 @@ checkSession();
 <section class="corpo-docente is-divider" id="docentes">
     <div class="container">
         <div class="row list-dream-team">
-            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 wow fadeInUp" data-wow-duration="2s">
-                <div class="team-item">
-                    <div class="image">
-                        <img src="images/team/equipa_1.jpeg" class="img-responsive"/>
-                    </div>
-                    <div class="info">
-                        <div class="name">Daniela Bessa</div>
-                    </div>
-                </div>
-            </div>
 
-            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 wow fadeInUp" data-wow-duration="2s">
-                <div class="team-item">
-                    <div class="image">
-                        <img src="images/team/equipa_1.jpeg" class="img-responsive"/>
-                    </div>
-                    <div class="info">
-                        <div class="name">Daniela Bessa</div>
-                    </div>
-                </div>
-            </div>
+            <?php
 
-            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 wow fadeInUp" data-wow-duration="2s">
-                <div class="team-item">
-                    <div class="image">
-                        <img src="images/team/equipa_1.jpeg" class="img-responsive"/>
-                    </div>
-                    <div class="info">
-                        <div class="name">Daniela Bessa</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row list-dream-team">
-            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 wow fadeInUp" data-wow-duration="2s">
-                <div class="team-item">
-                    <div class="image">
-                        <img src="images/team/equipa_1.jpeg" class="img-responsive"/>
-                    </div>
-                    <div class="info">
-                        <div class="name">Daniela Bessa</div>
-                    </div>
-                </div>
-            </div>
+            $result = $conn->prepare("
+                        SELECT id_docentes, nome
+                        FROM docentes
+                        ORDER BY nome");
 
-            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 wow fadeInUp" data-wow-duration="2s">
-                <div class="team-item">
-                    <div class="image">
-                        <img src="images/team/equipa_1.jpeg" class="img-responsive"/>
-                    </div>
-                    <div class="info">
-                        <div class="name">Daniela Bessa</div>
-                    </div>
-                </div>
-            </div>
+            $result->execute();
+            $result->bind_result($idDocentes, $nome);
 
-            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 wow fadeInUp" data-wow-duration="2s">
-                <div class="team-item">
-                    <div class="image">
-                        <img src="images/team/equipa_1.jpeg" class="img-responsive"/>
-                    </div>
-                    <div class="info">
-                        <div class="name">Daniela Bessa</div>
+            while ($result->fetch()) {
+                echo "
+                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-12 wow fadeInUp\" data-wow-duration=\"2s\">
+                    <div class=\"team-item\">
+                        <div class=\"image\">
+                            <img src=\"api/utilizadores/docentes/$idDocentes.jpg\" class=\"img-responsive\"/>
+                        </div>
+                        <div class=\"info\">
+                            <div class=\"name\">" . h($nome) . "</div>
+                        </div>
                     </div>
                 </div>
-            </div>
+                ";
+            }
+
+            $result->close();
+
+            ?>
+
         </div>
     </div>
 </section>
 
 <section class="sponsors" id="sponsors">
+
+    <div class="row">
+        <div class="container">
+            <div class="col-md-8 col-md-offset-2">
+                <header class="text-center wow fadeInUp" data-wow-duration="2s">
+                    <h2 style="color: #FFF; margin-bottom:0; margin-top:20px">Parceiros</h2>
+                </header>
+            </div>
+        </div>
+    </div>
+
     <div class="row">
         <div class="col-xs-1"></div>
         <div class="col-xs-10">
@@ -968,85 +1063,31 @@ checkSession();
                 <div class="row no-gutter">
                     <div class="owl-carousel owl-theme">
 
-                        <div class="item wow fadeInUp" data-wow-duration="2s">
-                            <div class="brand-logo">
-                                <a class="brand-logo-wrap" href="#fakelink">
-                                    <img src="images/sponsors/patrocinio_1.png" alt="brand"/>
-                                </a>
-                            </div>
-                        </div>
+                        <?php
 
-                        <div class="item wow fadeInUp" data-wow-duration="2s">
-                            <div class="brand-logo">
-                                <a class="brand-logo-wrap" href="#fakelink">
-                                    <img src="images/sponsors/patrocinio_1.png" alt="brand"/>
-                                </a>
-                            </div>
-                        </div>
+                        $result = $conn->prepare("
+                        SELECT id_parceiros, url
+                        FROM parceiros
+                        ORDER BY nome");
 
-                        <div class="item wow fadeInUp" data-wow-duration="2s">
-                            <div class="brand-logo">
-                                <a class="brand-logo-wrap" href="#fakelink">
-                                    <img src="images/sponsors/patrocinio_1.png" alt="brand"/>
-                                </a>
-                            </div>
-                        </div>
+                        $result->execute();
+                        $result->bind_result($idParceiros, $url);
 
-                        <div class="item wow fadeInUp" data-wow-duration="2s">
-                            <div class="brand-logo">
-                                <a class="brand-logo-wrap" href="#fakelink">
-                                    <img src="images/sponsors/patrocinio_1.png" alt="brand"/>
-                                </a>
+                        while ($result->fetch()) {
+                            echo "
+                            <div class=\"item wow fadeInUp\" data-wow-duration=\"2s\">
+                                <div class=\"brand-logo\">
+                                    <a class=\"brand-logo-wrap\" href=\"$url\" target='_blank'>
+                                        <img src=\"api/utilizadores/parceiros/$idParceiros.png\" alt=\"brand\"/>
+                                    </a>
+                                </div>
                             </div>
-                        </div>
+                            ";
+                        }
 
-                        <div class="item wow fadeInUp" data-wow-duration="2s">
-                            <div class="brand-logo">
-                                <a class="brand-logo-wrap" href="#fakelink">
-                                    <img src="images/sponsors/patrocinio_1.png" alt="brand"/>
-                                </a>
-                            </div>
-                        </div>
+                        $result->close();
 
-                        <div class="item wow fadeInUp" data-wow-duration="2s">
-                            <div class="brand-logo">
-                                <a class="brand-logo-wrap" href="#fakelink">
-                                    <img src="images/sponsors/patrocinio_1.png" alt="brand"/>
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="item wow fadeInUp" data-wow-duration="2s">
-                            <div class="brand-logo">
-                                <a class="brand-logo-wrap" href="#fakelink">
-                                    <img src="images/sponsors/patrocinio_1.png" alt="brand"/>
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="item wow fadeInUp" data-wow-duration="2s">
-                            <div class="brand-logo">
-                                <a class="brand-logo-wrap" href="#fakelink">
-                                    <img src="images/sponsors/patrocinio_1.png" alt="brand"/>
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="item wow fadeInUp" data-wow-duration="2s">
-                            <div class="brand-logo">
-                                <a class="brand-logo-wrap" href="#fakelink">
-                                    <img src="images/sponsors/patrocinio_1.png" alt="brand"/>
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="item wow fadeInUp" data-wow-duration="2s">
-                            <div class="brand-logo">
-                                <a class="brand-logo-wrap" href="#fakelink">
-                                    <img src="images/sponsors/patrocinio_1.png" alt="brand"/>
-                                </a>
-                            </div>
-                        </div>
+                        ?>
 
                     </div>
                 </div>
@@ -1109,12 +1150,8 @@ checkSession();
                     </div>
                 </div>
             </div>
+        </div>
 
-
-        </div><!--tab-content-->
-
-        <!-- Copyright -->
-        <!-- ++++++++++++++++++++++++++++++++++++++++ -->
         <div class="copyright-alt">
             <ul class="copyright-links list-inline">
                 <li>
@@ -1216,8 +1253,18 @@ checkSession();
                 </li>
             </ul>
             <p>&copy; 2016 Mestrado em Comunicação Multimédia</p>
+            <p>&nbsp;</p>
+            <p style="line-height: 20px">Plataforma desenvolvida pelos alunos
+                <a href="mailto:danielabessa@ua.pt"><b>Daniela Bessa</b></a> e
+                <a href="mailto:cunha.jose@ua.pt"><b>José Fonte</b></a>.
+            </p>
+            <p style="line-height: 20px">A orientação dos projeto foi realizada pelos professores Hélder Caixinha,
+                Maria João Antunes e Pedro Amado, durante o ano letivo 2015/16, no âmbito da
+                Unidade Curricular de Projeto (perfil Tecnologia e Organizações),
+                da Licenciatura em Novas Tecnologias da Comunicação.</p>
+            <!--            <p>O desenvolvimento da plataforma foi proposto por Maria João Antunes e Telmo Eduardo Silva.</p>-->
         </div>
-    </div><!--container-->
+    </div>
 </footer>
 
 <!--TO TOP-->
@@ -1293,8 +1340,9 @@ require_once 'api/funcoes/socials.php';
 
 <?php
 
-
 if (!isset($_SESSION['idUtilizador'])) {
+
+    //TWITTER
     if ((isset($_GET['connected'])) AND ($_GET['connected'] == "twitter")) {
 
         $objTwitterApi = new TwitterLoginAPI;
@@ -1314,7 +1362,6 @@ if (!isset($_SESSION['idUtilizador'])) {
         if ($row_number > 0) {
             $result->close();
             getCredentialsTwitter($id);
-
         } else {
             $result->close();
             conclusionTwitter($id, $image, $name, $id_user);
@@ -1322,8 +1369,8 @@ if (!isset($_SESSION['idUtilizador'])) {
         echo "<script src='scripts/socials/twitter.js'></script>";
     }
 
+    //FACEBOOK
     if (isset($_GET['code'])) {
-
         if ($fbuser) {
             try {
                 $user_profile = $facebook->api('/me?fields=id,first_name,last_name,email,picture');
@@ -1332,7 +1379,7 @@ if (!isset($_SESSION['idUtilizador'])) {
                 $fbuser = null;
             }
 
-            if (isset($user_profile['id'])) {
+            if (isset($user_profile['id']) AND isset($user_profile['email'])) {
 
                 $id = $user_profile['id'];
                 $image = "http://graph.facebook.com/$id/picture";
@@ -1366,26 +1413,96 @@ if (!isset($_SESSION['idUtilizador'])) {
                             $('.error').addClass('alert alert-danger').html('O email deste serviço já se encontra registado na nossa plataforma.');
                         </script>";
 
-                    }else{
+                    } else {
                         conclusionFacebook($id, $image, $first_name, $last_name, $email);
                     }
                 }
                 echo "<script src='scripts/socials/facebook.js'></script>";
             }
-        }
-
-        if ($fbuser) {
-            $logoutUrl = $facebook->getLogoutUrl();
+            $facebook = true;
         } else {
-            $loginUrl = $facebook->getLoginUrl(array('scope' => 'offline_access'));
+            $facebook = false;
         }
 
-    } else {
-        $facebook->destroySession();
+        //GOOGLE
+        if (!$facebook) {
+            if (isset($_REQUEST['code'])) {
+                $gClient->authenticate();
+                $_SESSION['token'] = $gClient->getAccessToken();
+                header('location:/');
+            }
+        }
+    }
+
+    //GOOGLE
+    if (isset($_SESSION['token'])) {
+        $gClient->setAccessToken($_SESSION['token']);
+    }
+
+    if ($gClient->getAccessToken()) {
+        $userProfile = $google_oauthV2->userinfo->get();
+        $_SESSION['token'] = $gClient->getAccessToken();
+
+        if (isset($userProfile['id'])) {
+
+            $id = $userProfile['id'];
+            $image = $userProfile['picture'];
+            $name = $userProfile['name'];
+            $email = $userProfile['email'];
+
+            $result = $conn->prepare("SELECT email FROM utilizadores WHERE id_google = ?");
+            $result->bind_param('s', $id);
+            $result->execute();
+            $result->store_result();
+            $row_number = $result->num_rows;
+
+            if ($row_number > 0) {
+                $result->close();
+                getCredentialsGoogle($id);
+            } else {
+                $result->close();
+
+                $result = $conn->prepare("SELECT email FROM utilizadores WHERE email = ?");
+                $result->bind_param('s', $email);
+                $result->execute();
+                $result->store_result();
+                $row_number = $result->num_rows;
+
+                if ($row_number > 0) {
+                    echo "<script>
+                            $('#loginModal').modal('show');
+                            shakeModal();
+                            $('.error').addClass('alert alert-danger').html('O email deste serviço já se encontra registado na nossa plataforma.');
+                        </script>";
+
+                } else {
+                    conclusionGoogle($id, $image, $name, $email);
+                }
+            }
+
+            echo "<script src='scripts/socials/google.js'></script>";
+        }
+    }
+
+    //Recuperar Senha
+    if (isset($_GET['recover'])) {
+        $_SESSION['account_recover'] = $_GET['recover'];
+        header('location:/');
+    }
+
+    if (isset($_SESSION['account_recover'])) {
+
+        $result = $conn->prepare("SELECT email, hash_email FROM utilizadores WHERE hash_email = ?");
+        $result->bind_param('s', $_SESSION['account_recover']);
+        $result->execute();
+        $result->bind_result($email, $hashEmail);
+        $result->fetch();
+
+        conclusionRecover($email, $hashEmail);
+        echo "<script src='scripts/socials/recover.js'></script>";
     }
 
 }
-
 
 ?>
 

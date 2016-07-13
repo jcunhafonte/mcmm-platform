@@ -1,17 +1,5 @@
 <?php
 
-include_once("api/facebook/inc/facebook.php");
-include_once("api/facebook/config.php");
-
-global $logoutUrl;
-
-if ($fbuser) {
-    $logoutUrl = $facebook->getLogoutUrl();
-} else {
-    $loginUrl = $facebook->getLoginUrl(array('scope' => 'offline_access'));
-    $logoutUrl = '/exit';
-}
-
 function menu($platform = '', $path = null)
 {
 
@@ -44,8 +32,8 @@ function menu($platform = '', $path = null)
             <div class=\"mcmm-nav-block mcmm-nav-block--left float-left\">
                 <a href=\"/\" class=\"brand\">
                     <img class=\"brand-img\" src=\"";
-    echo $path;
-    echo "images/logo-w.svg\"/>
+                    echo $path;
+                    echo "images/logo-w.svg\"/>
                 </a>
             </div>
             <div class=\"mcmm-nav-block mcmm-nav-block--center\">
@@ -91,6 +79,7 @@ function menu($platform = '', $path = null)
                     <div class=\"button button--circle\" data-placement=\"bottom\" rel=\"tooltip\" title=\"Canal\"
                     onclick=\"window.location='/channel'\">
                         <i class=\"pe-7s-video\"></i>
+                        <span style='display: none' class='button-badge'></span>
                     </div>
                                    
                     <div class=\"button button--circle\" data-placement=\"bottom\" rel=\"tooltip\" title=\"Publicar\"
@@ -121,7 +110,7 @@ function menu($platform = '', $path = null)
                                 </li>
                                 <li class=\"divider\"></li>
                                 <li>
-                                    <a href=\"$logoutUrl\">Sair</a>
+                                    <a href=\"/exit\">Sair</a>
                                 </li>
                             </ul>
                         </li>

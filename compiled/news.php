@@ -75,6 +75,9 @@ checkSession();
             transition: all .4s;
             transform: scale(1);
         }
+        #news .title{
+            word-break: break-word !important;
+        }
     </style>
 
 </head>
@@ -119,7 +122,11 @@ checkSession();
                                    echo "<img src='/images/backgrounds/default.jpg' />";
                                    break;
                                case "video":
-                                   echo "<img src='/images/backgrounds/default.jpg' />";
+                                   if(file_exists("api/utilizadores/noticias/$idNoticias.jpg")){
+                                       echo "<img src='/api/utilizadores/noticias/$idNoticias.jpg' />";
+                                   }else{
+                                       echo "<img src='/images/backgrounds/default.jpg' />";
+                                   }
                                    break;
                            }
                         
@@ -166,7 +173,7 @@ checkSession();
                 ON utilizadores.id_utilizador = noticias.ref_id_utilizador
                 WHERE noticias.ativo = 1
                 ORDER BY noticias.data_publicacao DESC
-                LIMIT 20");
+                LIMIT 30");
 
                 $result->execute();
                 $result->bind_result($idNoticias, $titulo, $refIdUT,
@@ -210,7 +217,7 @@ checkSession();
                             break;
                         case "slider":
                             $numberSlider++;
-                            $excerto = substr($preview, 0, 200) . '...';
+                            $excerto = substr($preview, 0, 150) . '...';
                             cardSlider($numberSlider, $idNoticias, $tema, $data, $titulo, $excerto, $nomeUtilizador,
                                 $idUtilizador, $idUser, $totalComentarios, $totalGostos);
                             break;
@@ -234,6 +241,7 @@ checkSession();
     </div>
 
     <?php footer(); ?>
+    <?php channel() ?>
 
 </div>
 

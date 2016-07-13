@@ -162,6 +162,7 @@ if (!isset($_SESSION['idUtilizador'])) {
     </div>
 
     <?php footer(); ?>
+    <?php channel() ?>
 
 </div>
 

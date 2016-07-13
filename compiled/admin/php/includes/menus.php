@@ -268,6 +268,23 @@ function Menus($menuPai = '', $menuFilho = '', $menuNeto = '')
                     <i class='fa fa-comments'></i><span>Testemunhos</span></a>
                     </li>
                     
+                     <li><a ";
+
+    if ($menuPai == 'parceiros') echo "class='active'";
+
+    echo " href='parceiros.php'>
+                    <i class='fa fa-building'></i><span>Parceiros</span></a>
+                    </li>
+                    
+                    <li><a ";
+
+                    if ($menuPai == 'docentes') echo "class='active'";
+
+                    echo " href='docentes.php'>
+                    <i class='fa fa-university'></i><span>Docentes</span></a>
+                    </li>
+                    
+                    
                     <li><a ";
 
     if ($menuPai == 'exportdata') echo "class='active'";
@@ -289,14 +306,24 @@ function Menus($menuPai = '', $menuFilho = '', $menuNeto = '')
 
                     <li><a ";
 
-    if ($menuPai == 'contactos') {
+    if ($menuPai == 'mensagens') {
         echo "class='active'";
     }
 
-    echo " href='contactos.php'>
-                    <i class='fa fa-envelope'></i><span>Contactos</span></a>
+    echo " href='mensagens.php'>
+                    <i class='fa fa-envelope'></i><span>Mensagens</span></a>
                     </li>
+                    
+                    <li>
+                    <a ";
 
+                    if ($menuPai == 'newsletter') {
+                    echo "class='active'";
+                    }
+
+                    echo " href='newsletter.php'>
+                    <i class='fa fa-share'></i><span>Newsletter</span></a>
+                    </li>
 
                 </ul>
                 <div class='clearfix'></div>

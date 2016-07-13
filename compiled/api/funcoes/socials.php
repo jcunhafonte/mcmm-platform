@@ -23,7 +23,7 @@ function conclusionTwitter($id, $image, $name, $id_user)
 
                                     <div class=\"form-group\">
                                         <div class=\"col-xs-12\">
-                                            <input id=\"email\" class=\"form-control\"
+                                            <input id=\"email_twitter\" class=\"form-control\"
                                                    type=\"text\" placeholder=\"Email\" name=\"email_signup\">
                                         </div>
                                     </div>
@@ -35,7 +35,7 @@ function conclusionTwitter($id, $image, $name, $id_user)
                                     <div class=\"form-group\">
                                         <div class=\"col-xs-12 nome_signupEnd\">
                                             <input id=\"nome\" class=\"form-control\" value='$name'
-                                                   type=\"text\" placeholder=\"Nome completo\" name=\"nome\">
+                                                   type=\"text\" placeholder=\"Nome (Primeiro e Último)\" name=\"nome\">
                                         </div>
                                     </div>
 
@@ -107,8 +107,8 @@ function conclusionFacebook($id, $image, $first_name, $last_name, $email)
 
                                     <div class=\"form-group\">
                                         <div class=\"col-xs-12\">
-                                            <input id=\"email\" class=\"form-control\" disabled value='$email'
-                                                   type=\"text\" placeholder=\"Email\" name=\"email_signup email_fb\">
+                                            <input id=\"email_facebook\" class=\"form-control\" value='$email' disabled 
+                                             type=\"text\" placeholder=\"Email\" name=\"email_signup email_fb\">
                                         </div>
                                     </div>
                                   
@@ -119,7 +119,7 @@ function conclusionFacebook($id, $image, $first_name, $last_name, $email)
                                     <div class=\"form-group\">
                                         <div class=\"col-xs-12 nome_signupEnd\">
                                             <input id=\"nome\" class=\"form-control\" value='$first_name $last_name'
-                                                   type=\"text\" placeholder=\"Nome completo\" name=\"nome\">
+                                                   type=\"text\" placeholder=\"Nome (Primeiro e Último)\" name=\"nome\">
                                         </div>
                                     </div>
 
@@ -153,6 +153,147 @@ function conclusionFacebook($id, $image, $first_name, $last_name, $email)
                                         <div class=\"col-xs-12\">
                                             <input class=\"btn btn-default btn-register\" type=\"submit\"
                                                    value=\"Registar\" name=\"commit\">
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class=\"modal-footer\">
+                   
+                </div>
+            </div>
+        </div>
+</div>";
+}
+
+function conclusionGoogle($id, $image, $name, $email)
+{
+    echo "
+<div class=\"modal fade login\" id=\"conclusion-google\" tabindex=\"-1\"
+     role=\"dialog\" aria-hidden=\"true\" data-backdrop=\"static\">
+           <div class=\"modal-dialog vertical-align-center login animated\">
+            <div class=\"modal-content\">
+                <div class=\"modal-header\">
+                    <button type=\"button\" class=\"close hidden-sm hidden-md hidden-lg\" data-dismiss=\"modal\"
+                            aria-hidden=\"true\">&times;</button>
+                    <h4 class=\"modal-title text-center\">ENTRAR</h4>
+                </div>
+                <div class=\"modal-body\">
+                    <div class=\"box\">
+                        <div class=\"content registerBox-2\" style=\"display:block;\">
+                            <div class=\"form\">
+                                <form method=\"post\" accept-charset=\"UTF-8\" id=\"signup_google\">
+                                
+                                    <input type='hidden' value='$id' id='id_google' name='id_google'>
+                                    <input type='hidden' value='$image' id='image' name='image'>                                    
+
+                                    <div class=\"form-group\">
+                                        <div class=\"col-xs-12\">
+                                            <input id=\"email_google\" class=\"form-control\" disabled value='$email'
+                                                   type=\"text\" placeholder=\"Email\" name=\"email_signup email_fb\">
+                                        </div>
+                                    </div>
+                                  
+                                    <div class=\"divisionEnd\">
+                                        <div class=\"lineEnd\"></div>
+                                    </div>
+
+                                    <div class=\"form-group\">
+                                        <div class=\"col-xs-12 nome_signupEnd\">
+                                            <input id=\"nome\" class=\"form-control\" value='$name'
+                                                   type=\"text\" placeholder=\"Nome (Primeiro e Último)\" name=\"nome\">
+                                        </div>
+                                    </div>
+
+                                    <label>Nome de utilizador</label>
+                                    <div class=\"form-group\">
+                                        <div class=\"col-xs-12\">
+
+                                            <div class=\"input-group input-append date\" id=\"endDatePicker\">
+                                                <span class=\"input-group-addon add-on\">
+                                                    <span>
+                                                        http://mcmm.tech/@
+                                                    </span>
+                                                </span>
+                                                <input id=\"utilizador_signupEnd\" class=\"form-control user_id\"
+                                                       type=\"text\" name=\"utilizador_signupEnd\">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class=\"form-group\">
+                                        <div class=\"col-xs-12 agree-box\">
+                                            <label class=\"checkbox\" for=\"agree\" id=\"click-agree-1\">
+                                                <input type=\"checkbox\" value=\"no\" id=\"agree-1\"
+                                                       name=\"agree\" class=\"agree\" data-toggle=\"checkbox\"/>
+                                                Concordo com os termos e condições
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <div class=\"form-group\">
+                                        <div class=\"col-xs-12\">
+                                            <input class=\"btn btn-default btn-register\" type=\"submit\"
+                                                   value=\"Registar\" name=\"commit\">
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class=\"modal-footer\">
+                   
+                </div>
+            </div>
+        </div>
+</div>";
+}
+
+function conclusionRecover($email, $hash)
+{
+    echo "
+<div class=\"modal fade login\" id=\"conclusion-recover\" tabindex=\"-1\"
+     role=\"dialog\" aria-hidden=\"true\" data-backdrop=\"static\">
+           <div class=\"modal-dialog vertical-align-center login animated\">
+            <div class=\"modal-content\">
+                <div class=\"modal-header\">
+                    <button type=\"button\" class=\"close hidden-sm hidden-md hidden-lg\" data-dismiss=\"modal\"
+                            aria-hidden=\"true\">&times;</button>
+                    <h4 class=\"modal-title text-center\">Palavra-Passe</h4>
+                </div>
+                <div class=\"modal-body\">
+                    <div class=\"box\">
+                        <div class=\"content registerBox-2\" style=\"display:block;\">
+                            <div class=\"form\">
+                                <form method=\"post\" accept-charset=\"UTF-8\" id=\"conclusion_recover\">
+                                
+                                    <input type='hidden' value='$hash' id='hash' name='hash'>                                 
+
+                                    <div class=\"form-group\">
+                                        <div class=\"col-xs-12\">
+                                            <input id=\"password_recover\" class=\"form-control\" type=\"password\"
+                                                   placeholder=\"Palavra-passe\" name=\"password\">
+                                            <div class=\"progress password-progress\">
+                                                <div id=\"strengthBar_recover\" class=\"progress-bar\" role=\"progressbar\"
+                                                     style=\"width: 0;\"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+            
+                                    <div class=\"form-group\">
+                                        <div class=\"col-xs-12\">
+                                            <input id=\"confirmPassword_recover\" class=\"form-control\" type=\"password\"
+                                                   placeholder=\"Confirmar palavra-passe\" name=\"confirmPassword\">
+                                        </div>
+                                    </div>
+
+                                    <div class=\"form-group\">
+                                        <div class=\"col-xs-12\">
+                                            <input class=\"btn btn-default btn-register\" type=\"submit\"
+                                                   value=\"Recuperar\" name=\"commit\">
                                         </div>
                                     </div>
                                 </form>

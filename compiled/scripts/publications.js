@@ -15,11 +15,11 @@ $('#remove_video').on('submit', function (e) {
         success: function (data) {
 
             if (data == 0) {
-                $('.videos .table-responsive').fadeOut(1000);
+                $('.videos .table-responsive').fadeOut(500);
                 $('<p style="color: #2b2e33">Ainda não publicaste vídeos</p>').hide().appendTo('.videos').fadeIn(1000);
 
             } else {
-                $('#video-list-' + videoRemoved).fadeOut(1000);
+                $('#video-list-' + videoRemoved).fadeOut(500);
             }
 
             noty({
@@ -56,11 +56,11 @@ $('#remove_project').on('submit', function (e) {
         success: function (data) {
 
             if (data == 0) {
-                $('.projects .table-responsive').fadeOut(1000);
-                $('<p style="color: #2b2e33">Ainda não publicaste projetos</p>').hide().appendTo('.projects').fadeIn(1000);
+                $('.projects .table-responsive').fadeOut(500);
+                $('<p style="color: #2b2e33">Ainda não publicaste projetos</p>').hide().appendTo('.projects').fadeIn(500);
 
             } else {
-                $('#project-list-' + projectRemoved).fadeOut(1000);
+                $('#project-list-' + projectRemoved).fadeOut(500);
             }
 
             noty({
@@ -97,11 +97,11 @@ $('#remove_new').on('submit', function (e) {
         success: function (data) {
 
             if (data == 0) {
-                $('.news .table-responsive').fadeOut(1000);
-                $('<p style="color: #2b2e33">Ainda não publicaste notícias</p>').hide().appendTo('.news').fadeIn(1000);
+                $('.news .table-responsive').fadeOut(500);
+                $('<p style="color: #2b2e33">Ainda não publicaste notícias</p>').hide().appendTo('.news').fadeIn(500);
 
             } else {
-                $('#new-list-' + newRemoved).fadeOut(1000);
+                $('#new-list-' + newRemoved).fadeOut(500);
             }
 
             noty({

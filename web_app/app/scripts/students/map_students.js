@@ -292,7 +292,7 @@ function closeInfoBox() {
 
 function getInfoBox(item) {
     return new InfoBox({
-        content: '<div class="marker_info none" id="marker_info">' +
+        content: '<div class="marker_info none" id="marker_info"><span class="close">&times;</span>' +
         '<div class="info" id="info">' +
         '<img src="' + item.map_image_url + '" class="logotype" alt=""/>' +
         '<h2>' + item.name_point + '<span></span></h2>' +

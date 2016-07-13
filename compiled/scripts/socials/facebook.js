@@ -83,7 +83,7 @@ $(window).load(function () {
 
 function submitSignupFacebook() {
 
-    var formData = "email=" + $('#email').val() + "&id_user=" + $('.user_id').val()
+    var formData = "email=" + $('#email_facebook').val() + "&id_user=" + $('.user_id').val()
         + "&id_facebook=" + $('#id_facebook').val() + "&url_imagem=" + $('#image').val()
         + "&nome=" + $('#nome').val();
 

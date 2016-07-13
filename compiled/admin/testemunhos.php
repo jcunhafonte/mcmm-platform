@@ -276,7 +276,14 @@ require_once('php/connection/dbconnection.php');
                                         while (mysqli_stmt_fetch($stmt)) {
 
                                             echo "<tr>
-                                            <td class='text-center'><img height='50px' class='img-circle' src='/api/utilizadores/testemunhos/$idTestemunhos.jpg' /></td>
+                                            <td class='text-center'>";
+                                            if(file_exists("../api/utilizadores/testemunhos/$idTestemunhos.jpg")){
+                                                  echo "<img height='50px' class='img-circle' src='/api/utilizadores/testemunhos/$idTestemunhos.jpg' />";
+                                            }else{
+                                                echo "<img height='50px' class='img-circle' src='/images/avatar/avatar.jpg'/>";
+                                            }
+
+                                           echo "</td>
                                             <td>
                                                 <a href='/'>
                                                 <span id='titulo$idTestemunhos'>" . htmlentities($autor) . "</span>

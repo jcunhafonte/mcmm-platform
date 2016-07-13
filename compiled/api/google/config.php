@@ -1,16 +1,12 @@
 <?php
 
-session_start();
-
 include_once("src/Google_Client.php");
 include_once("src/contrib/Google_Oauth2Service.php");
-######### edit details ##########
-$clientId = '744585591883-jpps4niou9cvaulphl7a4bmjif2spi7f.apps.googleusercontent.com'; //Google CLIENT ID
-$clientSecret = 'kysTigoctSL0_Ug_jR3XfwOT'; //Google CLIENT SECRET
-$redirectUrl = 'http://mcmm.tech';  //return url (url to script)
-$homeUrl = 'http://mcmm.tech';  //return to home
 
-##################################
+$clientId = '744585591883-jpps4niou9cvaulphl7a4bmjif2spi7f.apps.googleusercontent.com';
+$clientSecret = 'kysTigoctSL0_Ug_jR3XfwOT';
+$redirectUrl = 'http://mcmm.tech';
+$homeUrl = 'http://mcmm.tech';
 
 $gClient = new Google_Client();
 $gClient->setClientId($clientId);

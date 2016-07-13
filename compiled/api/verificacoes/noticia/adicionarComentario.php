@@ -72,7 +72,7 @@ if(isset($_POST)) {
             
             <div  class=\"media-body\" style='display: inline-block; width: 100%; padding-left: 89px'>
               <div class=\"pull-left\">
-                    <p>"; echo $comentario; echo "</p>
+                    <p class='comment-text'>"; echo $comentario; echo "</p>
                 </div>
             </div>
             

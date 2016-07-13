@@ -1,6 +1,10 @@
 $(document).ready(function () {
     comments();
     likes();
+
+    if($('.total-likes').html() == "0"){
+        $('.like-modal').tooltip('disable');
+    }
 });
 
 function comments() {
@@ -123,7 +127,7 @@ function submitComment() {
             $("#submit_comment").formValidation('resetForm', true);
             $(data).hide().appendTo('#box-comments').fadeIn(1000);
 
-            var atualComments = (parseInt($('.total-comments').html()) +1);
+            var atualComments = (parseInt($('.total-comments').html()) + 1);
 
             if (atualComments == 1) {
                 var textoComentario = "1 Comentário";
@@ -133,6 +137,14 @@ function submitComment() {
 
             $('.total-comments').html(textoComentario);
             $('.number-comments').html(atualComments);
+
+            if ($(".comment-text")[0]) {
+                var users = document.getElementsByClassName('comment-text');
+                for (var i = 0; i < users.length; ++i) {
+                    var user = users[i];
+                    user.innerHTML = wdtEmojiBundle.render(user.innerHTML);
+                }
+            }
 
             noty({
                 text: 'O teu comentário foi submetido com <b>sucesso</b>!',
@@ -160,14 +172,17 @@ function likes() {
         if ($('button .heart').hasClass("fa-heart-o")) {
 
             $('button .heart').switchClass("fa-heart-o", "fa-heart");
-
+            $('.like-modal').switchClass('open-modal-likes-not', 'open-modal-likes');
+            
             $.ajax({
                 url: '/api/verificacoes/noticia/adicionarGosto.php',
                 type: 'POST',
                 data: 'like=' + $('#id_noticia').val(),
-
                 success: function (data) {
                     $('.total-likes').html(data);
+                    $('.like-modal').tooltip('enable');
+                    listLikes();
+
                     noty({
                         text: 'O teu gosto foi submetido com <b>sucesso</b>!',
                         type: 'success',
@@ -195,6 +210,12 @@ function likes() {
 
                 success: function (data) {
                     $('.total-likes').html(data);
+                    if(data == "0"){
+                        $('.like-modal').switchClass('open-modal-likes', 'open-modal-likes-not');
+                        $('.like-modal').tooltip('disable');
+                    }
+                    listLikes();
+
                     noty({
                         text: 'O teu gosto foi removido com <b>sucesso</b>!',
                         type: 'success',
@@ -211,6 +232,25 @@ function likes() {
                 }
             });
         }
+    });
 
+    $('.like-modal').click(function (e) {
+        e.stopImmediatePropagation();
+        e.preventDefault();
+
+        if ($('.like-modal').hasClass("open-modal-likes")) {
+            $('#list-likes').modal('show');
+        }
+    });
+}
+
+function listLikes() {
+    $.ajax({
+        url: '/api/verificacoes/noticia/listagemGostos.php',
+        type: 'POST',
+        data: 'noticia=' + $('#id_noticia').val(),
+        success: function (data) {
+            $('.likes-container').html(data);
+        }
     });
 }

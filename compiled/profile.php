@@ -128,6 +128,7 @@ FROM utilizadores WHERE id_user = ?");
     <? metas() ?>
 
     <!--FAVICON-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="apple-touch-icon-precomposed" sizes="57x57" href="images/favicon/normal/apple-touch-icon-57x57.png"/>
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/favicon/normal/apple-touch-icon-114x114.png"/>
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/favicon/normal/apple-touch-icon-72x72.png"/>
@@ -200,23 +201,6 @@ FROM utilizadores WHERE id_user = ?");
                                 ?>
 
                             </div>
-
-                            <?php
-
-                            if (isset($name)) {
-
-                                if ($_SESSION['idUser'] !== $name) {
-                                    echo "
-                                    <div class=\"col-md-12\">
-                                        <a class=\"mcmm-button large see-through-2\" target=\"_blank\">
-                                            <span>Seguir</span>
-                                        </a>
-                                    </div>
-                                    ";
-                                }
-                            }
-                            ?>
-
                         </div>
                     </div>
                 </div>
@@ -320,20 +304,7 @@ FROM utilizadores WHERE id_user = ?");
 
                                             echo "
                                              <div>
-                                        <div class=\"col-sm-4 col-md-4 nopadding\">
-                                            <h4>Publicações</h4>
-                                            <p>Night Sky Desktop</p>
                                         </div>
-
-                                        <div class=\"col-sm-4 col-md-4 nopadding\">
-                                            <h4>Seguidores</h4>
-                                            <p>Desktop II</p>
-                                        </div>
-                                        <div class=\"col-sm-4 col-md-4 nopadding\">
-                                            <h4>Seguindo</h4>
-                                            <p>Desktop II</p>
-                                        </div>
-                                    </div>
                                     <div>
                                         <div class=\"col-sm-4 col-md-4 nopadding\">
                                             <h4>Registo</h4>
@@ -431,6 +402,7 @@ FROM utilizadores WHERE id_user = ?");
     </div>
 
     <?php footer() ?>
+    <?php channel() ?>
 </div>
 
 <!--MODALS-->
@@ -462,8 +434,8 @@ echo "<div class=\"container\">
                                         <div class=\"col-xs-12 text-center\">
                                             <img class=\"img-circle\"
                                                  src=\"/api/utilizadores/perfis/";
-                                echo $_SESSION['idUtilizador'];
-                                echo ".jpg\"
+echo $_SESSION['idUtilizador'];
+echo ".jpg\"
                                                  id=\"img-user\"/>
                                             <input accept=\"image/jpg, image/jpeg, image/png\" name=\"image\" type=\"file\"
                                                    id=\"my_file\" style=\"display:none;\"/>
@@ -477,8 +449,8 @@ echo "<div class=\"container\">
                                         <div class=\"col-xs-12\">
                                             <input id=\"nome\" class=\"form-control\"
                                                    type=\"text\" placeholder=\"Nome\" name=\"nome\" value='";
-                            echo h($_SESSION['nomeUtilizador']);
-                            echo "'>
+echo h($_SESSION['nomeUtilizador']);
+echo "'>
                                         </div>
                                     </div>
 
@@ -506,8 +478,27 @@ echo "</textarea>
                 </div>
             </div>
         </div>";
-
 ?>
+
+<div class="modal fade" id="myPleaseWait" tabindex="-1"
+     role="dialog" aria-hidden="true" data-backdrop="static">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title text-center">
+                    A Guardar...
+                </h4>
+            </div>
+            <div class="modal-body">
+                <div class="progress" style="margin-right: 15px;margin-left: 15px">
+                    <div id="progress_bar" class="progress-bar progress-bar-green progress-bar-striped active"
+                         style="width: 0%">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 <script src="scripts/vendor-c259ccb7d9.js"></script>
 

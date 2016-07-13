@@ -20,7 +20,7 @@ if ((isset($_SESSION['ativoAdmin'])) AND (isset($_GET['testemunho']))) {
     } else {
 
         mysqli_stmt_close($stmt);
-        header("location:../../testemunhos.php?testemunhoRemovido");
+        header("location:../../testemunhos.php?testemunhoRemovidoErro");
 
     }
 

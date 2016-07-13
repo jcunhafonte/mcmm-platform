@@ -1,5 +1,7 @@
 <?php
 
+include_once("api/facebook/config.php");
+
 setcookie("keep_logged", "", time() - 3600);
 session_destroy();
 

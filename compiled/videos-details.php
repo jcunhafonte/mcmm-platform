@@ -2,7 +2,7 @@
 
 session_start();
 
-if($name == NULL){
+if ($name == NULL) {
     header('location:/videos');
 }
 
@@ -214,7 +214,8 @@ WHERE ativo = 1 ORDER BY id_videos DESC LIMIT 1");
     <meta name="msapplication-square310x310logo" content="/images/favicon/red/mstile-310x310.png"/>
 
     <link rel="stylesheet" href="/styles/main-5071e0f3e9.css">
-
+    <link rel="stylesheet" href="/styles/wdt-emoji-bundle.css"/>
+    
     <script src="/scripts/vendor/modernizr-9d550bd14f.js"></script>
 
     <script type="text/javascript" src="http://content.jwplatform.com/libraries/uZA4sjXA.js"></script>
@@ -223,15 +224,18 @@ WHERE ativo = 1 ORDER BY id_videos DESC LIMIT 1");
         .text-comments .has-error i {
             margin-top: -104px !important;
         }
+
         #submit_comment > div.form-group.text-comments.has-feedback.has-success > i {
             right: 0 !important;
             margin-top: -90px !important;
         }
+
         #submit_comment > div.form-group.text-comments.has-feedback.has-error > i {
             right: 0 !important;
             margin-top: -104px !important;
         }
-        #submit_comment textarea{
+
+        #submit_comment textarea {
             padding-right: 38px !important;
         }
     </style>
@@ -245,7 +249,7 @@ WHERE ativo = 1 ORDER BY id_videos DESC LIMIT 1");
 
     <?php author_card('red', $idUtilizador, $idUser, $nomeUtilizador) ?>
 
-    <?php arrows_area('video','red', $tituloPrevious, $idVideosPrevious, $tituloNext, $idVideosNext) ?>
+    <?php arrows_area('video', 'red', $tituloPrevious, $idVideosPrevious, $tituloNext, $idVideosNext) ?>
 
     <div class="news-projects-header">
         <div class="contents" style="background-image: url(/images/backgrounds/video_detalhe.gif)">
@@ -440,14 +444,15 @@ WHERE ativo = 1 ORDER BY id_videos DESC LIMIT 1");
     </div>
 
     <?php footer() ?>
+    <?php channel() ?>
 
 </div>
 
 <!--MODALS-->
 <?php
 
+require_once 'api/funcoes/emojis.php';
 require_once 'api/funcoes/modals.php';
-//modals();
 
 ?>
 <div class="container">
@@ -515,6 +520,95 @@ require_once 'api/funcoes/modals.php';
                 </div>
             </div>
         </div>
+
+        <div class="modal fade modal-likes" id="list-likes">
+            <style>
+                .table > tbody > tr > td {
+                    border-top: none;
+                }
+                .btn-likes {
+                    float: right !important;
+                    color: #ff1744 !important;
+                    padding: 2px 10px;
+                    border: 1px solid #ff1744;
+                    border-radius: 50px;
+                    cursor: pointer;
+                    -webkit-transition: all .2s;
+                    transition: all .2s;
+                    background: white;
+                }
+                .btn-likes:hover{
+                    color: #ca0027 !important;
+                    border: 1px solid #ca0027 !important;
+                }
+                .anchor-likes:hover{
+                    text-decoration: none !important;
+                }
+            </style>
+
+            <button type="button" class="out-close close hidden-xs" data-dismiss="modal"
+                    aria-hidden="true">&times;</button>
+            <div class="modal-dialog vertical-align-center animated">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close hidden-sm hidden-md hidden-lg" data-dismiss="modal"
+                                aria-hidden="true">&times;</button>
+                        <h4 class="modal-title text-center">Gostos</h4>
+                    </div>
+
+                    <div class="modal-body text-left" style="padding: 15px; display: block">
+
+                        <table class="table" style="table-layout: fixed">
+                            <tbody class="likes-container">
+
+                            <?php
+
+                            $result = $conn->prepare("
+                                SELECT gostos_videos.id_gostos_videos, gostos_videos.ref_id_utilizador, 
+                                gostos_videos.ref_id_videos, utilizadores.nome_utilizador, utilizadores.id_user
+                                FROM gostos_videos
+                                INNER JOIN utilizadores 
+                                ON gostos_videos.ref_id_utilizador = utilizadores.id_utilizador
+                                WHERE gostos_videos.ref_id_videos = ?
+                                ORDER BY utilizadores.nome_utilizador");
+
+                            $result->bind_param('s', $idVideos);
+                            $result->execute();
+                            $result->bind_result($idGostosVideos, $refIdUtilizador, $refIdVideos, $nomeUtilizador, $idUser);
+
+                            while($result->fetch()){
+
+                                echo "
+                                    <tr>
+                                        <td width=\"80%\">
+                                            <a class='anchor-likes' href='/@$idUser' style='display: inherit'>
+                                                <img style=\"border-radius: 50%; float: left\" width=\"60px\" height=\"60px\"
+                                                     src='/api/utilizadores/perfis/$refIdUtilizador.jpg'>
+                                                <h5 class='title-likes' style=\"line-height: 60px; padding-left: 80px; margin:0\">
+                                                    $nomeUtilizador
+                                                </h5>
+                                            </a>
+                                        </td>
+                                        <td class=\"text-right\" style=\"vertical-align: middle;width: 70px !important;
+                                        display: block; float: right; margin-top: 12px\">
+                                            <button class=\"btn-likes\" onclick=\"window.location='/@$idUser'\"
+                                            >Perfil</button>
+                                        </td>
+                                    </tr>
+                                    ";
+
+                            }
+
+                            $result->close();
+
+                            ?>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 
@@ -528,8 +622,12 @@ require_once 'api/funcoes/modals.php';
 
 <script src="/scripts/videos-8f88fasf89.js"></script>
 
+<script type="text/javascript" src="/scripts/emojis/emoji.min.js"></script>
+
+<script type="text/javascript" src="/scripts/emojis/wdt-emoji-bundle.js"></script>
+
 <script>
-    window.onload=function () {
+    window.onload = function () {
         var url = "/api/utilizadores/videos/<?php echo $idVideos ?>.<?php echo $extensao ?>";
         jwplayer("video-player").setup({file: url, autostart: true});
     }

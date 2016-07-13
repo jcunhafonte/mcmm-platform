@@ -1,7 +1,16 @@
 <?php
 
-function footer(){
-    echo  "
+function footer()
+{
+    echo "
+        <style>
+            footer nav ul li a{
+                transition: .2s all !important;
+            }
+            .copyright a {
+                transition: .2s all !important;
+            }
+        </style>
         <footer class=\"footer footer-big footer-default\">
         <div class=\"container\">
             <div class=\"row\">
@@ -10,22 +19,22 @@ function footer(){
                     <nav>
                         <ul>
                             <li>
-                                <a href=\"#\">
+                                <a href=\"/news\">
                                     Notícias
                                 </a>
                             </li>
                             <li>
-                                <a href=\"#\">
+                                <a href=\"/projects\">
                                     Projetos
                                 </a>
                             </li>
                             <li>
-                                <a href=\"#\">
+                                <a href=\"/videos\">
                                     Vídeos
                                 </a>
                             </li>
                             <li>
-                                <a href=\"#\">
+                                <a href=\"/contacts\">
                                     Contactos
                                 </a>
                             </li>
@@ -37,21 +46,14 @@ function footer(){
                     <nav class=\"numbers\">
                         <ul>
                             <li>
-                                <h4>200
-                                    <small>Mestres</small>
-                                </h4>
+                                <a href='/students' style='padding: 0'><h4>Alunos</h4></a>
+                            </li>
+                              <li>
+                                <a href='/channel' style='padding: 0'><h4>Canal</h4></a>
                             </li>
                             <li>
-                                <h4>500
-                                    <small>Alunos</small>
-                                </h4>
+                                <a href='https://paco.ua.pt/CandidaturasPG/main.aspx' target='_blank' style='padding: 0'><h4>Candidaturas</h4></a>
                             </li>
-                            <li>
-                                <h4>101
-                                    <small>Projetos</small>
-                                </h4>
-                            </li>
-
                         </ul>
                     </nav>
                 </div>
@@ -60,12 +62,12 @@ function footer(){
                     <nav>
                         <ul>
                             <li>
-                                <a href=\"#\">
+                                <a class='no-link'>
                                     Universidade de Aveiro
                                 </a>
                             </li>
                             <li>
-                                <a href=\"#\">
+                                <a class='no-link'>
                                     Dep. Comunicação e Arte
                                 </a>
                             </li>
@@ -102,8 +104,8 @@ function footer(){
                                 </a>
                             </li>
                             <li>
-                                <a href=\"www.mcmm.pt\" target=\"_blank\" a>
-                                    www.mcmm.pt
+                                <a href=\"mcmm.web.ua.pt\" target=\"_blank\" a>
+                                    mcmm.web.ua.pt
                                 </a>
                             </li>
                         </ul>
@@ -112,7 +114,8 @@ function footer(){
             </div>
             <hr/>
             <div class=\"social-area text-center\">
-                <a href=\"#\" class=\"btn btn-social btn-round\">
+                <a href=\"https://www.facebook.com/Mestrado-em-Comunica%C3%A7%C3%A3o-e-Multim%C3%A9dia-1059325880803221/?fref=ts\" 
+                class=\"btn btn-social btn-round\" target='_blank'>
                     <svg class=\"facebook\" x=\"0px\" y=\"0px\" viewBox=\"0 0 288.861 288.861\" xml:space=\"preserve\"
                          width=\"26px\" height=\"26px\">
                         <g>
@@ -136,7 +139,7 @@ function footer(){
                         <g></g>
                     </svg>
                 </a>
-                <a href=\"#\" class=\"btn btn-social btn-round\">
+                <a href=\"https://www.youtube.com/channel/UChsNWHtMrRw9Ze0QItJKxOg\" target='_blank' class=\"btn btn-social btn-round\">
                     <svg class=\"youtube\" x=\"0px\" y=\"0px\" width=\"26px\" height=\"26px\" viewBox=\"0 0 511.627 511.627\"
                          xml:space=\"preserve\">
                         <g>
@@ -172,7 +175,7 @@ function footer(){
                         <g></g>
                     </svg>
                 </a>
-                <a href=\"#\" class=\"btn btn-social btn-round\">
+                <a href=\"mailto:deca-mcmm@ua.pt\" class=\"btn btn-social btn-round\">
                     <svg class=\"email\" x=\"0px\" y=\"0px\" viewBox=\"0 0 31.012 31.012\" xml:space=\"preserve\" width=\"30\"
                          height=\"30\">
                         <g>
@@ -200,7 +203,8 @@ function footer(){
                 </a>
             </div>
             <div class=\"copyright\">
-                &copy; 2016 Mestrado em Comunicação Multimédia
+                &copy; 2016 Mestrado em Comunicação Multimédia<br>
+                <a href='mailto:daniela.bessa@ua.pt'>Daniela Bessa</a> - <a href='mailto:cunha.jose@ua.pt'>José Fonte</a>
             </div>
         </div>
     </footer>

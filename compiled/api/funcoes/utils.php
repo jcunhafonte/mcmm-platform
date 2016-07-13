@@ -84,6 +84,7 @@ function metas()
 {
     echo "
     
+    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">
     <meta http-equiv=\"content-type\" content=\"text/html;charset=utf-8\"/>
     <meta charset=\"UTF-8\">
     <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">
@@ -135,15 +136,15 @@ function author_card($color = '', $idUtilizador, $idUser, $nomeUtilizador)
         if ($_SESSION['idUtilizador'] == $idUtilizador) {
             echo "
              <div class=\"col-xs-4\">
-                <div class=\"btn-card-author btn-card-author-$color\">
+                <div onclick=\"window.location='/@$idUser'\" class=\"btn-card-author btn-card-author-$color\">
                     Perfil
                 </div>
             </div>";
         } else {
             echo "
              <div class=\"col-xs-4\">
-                <div class=\"btn-card-author btn-card-author-$color\">
-                    Seguir
+                <div onclick=\"window.location='/@$idUser'\" class=\"btn-card-author btn-card-author-$color\">
+                    Perfil
                 </div>
             </div>";
         }
@@ -189,9 +190,19 @@ function arrows_area($platform, $color = '', $tituloAnterior, $idAnterior, $titu
 function next_page_video($tituloNext, $idVideosNext)
 {
     echo "<div class=\"next-page\" onclick=\"window.location='/video/$idVideosNext'\">
-            <div class=\"overlay\"></div>
-            <div class=\"image\" style=\"background: no-repeat url('/images/backgrounds/default.jpg'); background-size:100%;\"></div>
-            <div class=\"contents\">
+            <div class=\"overlay\"></div>";
+
+            if(file_exists("api/utilizadores/videos/$idVideosNext.jpg")){
+                echo "
+                    <div class=\"image\" style=\"background: no-repeat url('/api/utilizadores/videos/$idVideosNext" . ".jpg'); background-size:100%;\"></div>
+                ";
+            }else{
+                echo "
+                    <div class=\"image\" style=\"background: no-repeat url('/images/backgrounds/default.jpg'); background-size:100%;\"></div>
+                ";
+            }
+
+            echo "<div class=\"contents\">
                 <div class=\"text\">
                     <span><i>Próximo Vídeo</i></span>
                     <h2>";
@@ -346,7 +357,7 @@ ORDER BY comentarios_videos.data_comentario");
                                     
                                     <div  class=\"media-body\" style='display: inline-block; width: 100%; padding-left: 89px'>
                                       <div class=\"pull-left\">
-                                            <p>";
+                                            <p class='comment-text'>";
         echo h($comentario);
         echo "</p>
                                         </div>
@@ -386,7 +397,7 @@ ORDER BY comentarios_videos.data_comentario");
                             <div class=\"media-body\">
                                 <form method='post' accept-charset='utf-8' id='submit_comment'>
                                     <div class='form-group text-comments'>
-                                         <textarea id='comment' name='comment' class=\"form-control\" 
+                                         <textarea id='comment' name='comment' class=\"form-control wdt-emoji-bundle-enabled\" 
                                          placeholder=\"O meu comentário...\" rows=\"6\"";
 
     if (!isset($_SESSION['idUtilizador'])) {
@@ -440,9 +451,27 @@ function user_actions($totalComentarios, $classHeart, $totalGostos, $classes, $c
     }
     echo ">
                                 <i class=\"heart heart-$color fa fa-heart$classHeart\"></i>
-                                <span class='total-likes'>$totalGostos</span>
-                            </button>
-                            <button class=\"btn btn-comments\">
+                            </button>";
+
+                            if ($totalGostos > 0) {
+                                echo "
+                                <button class='btn like-modal open-modal-likes' style='padding-left: 0 !important;'
+                                data-placement=\"bottom\" rel=\"tooltip\" title=\"Gostos\">
+                                    <span class='total-likes'>$totalGostos</span>
+                                </button>
+                                ";
+                            } else {
+                                echo "
+                                <button class='btn like-modal open-modal-likes-not' style='padding-left: 0 !important;'
+                                data-placement=\"bottom\" rel=\"tooltip\" title=\"Gostos\">
+                                    <span class='total-likes'>$totalGostos</span>
+                                </button>
+                                ";
+                            }
+
+
+
+                            echo "<button class=\"btn btn-comments\">
                                 <i class=\"fa fa-comment-o\"></i>
                                 <span class='number-comments'>$totalComentarios</span>
                             </button>
@@ -643,7 +672,7 @@ ORDER BY comentarios_projetos.data_comentario");
                                     
                                     <div  class=\"media-body\" style='display: inline-block; width: 100%; padding-left: 89px'>
                                       <div class=\"pull-left\">
-                                            <p>";
+                                            <p class='comment-text'>";
         echo h($comentario);
         echo "</p>
                                         </div>
@@ -683,7 +712,7 @@ ORDER BY comentarios_projetos.data_comentario");
                             <div class=\"media-body\">
                                 <form method='post' accept-charset='utf-8' id='submit_comment'>
                                     <div class='form-group text-comments'>
-                                         <textarea id='comment' name='comment' class=\"form-control\" 
+                                         <textarea id='comment' name='comment' class=\"form-control wdt-emoji-bundle-enabled\" 
                                          placeholder=\"O meu comentário...\" rows=\"6\"";
 
     if (!isset($_SESSION['idUtilizador'])) {
@@ -827,7 +856,7 @@ ORDER BY comentarios_noticias.data_comentario");
                                     
                                     <div  class=\"media-body\" style='display: inline-block; width: 100%; padding-left: 89px'>
                                       <div class=\"pull-left\">
-                                            <p>";
+                                            <p class='comment-text'>";
         echo h($comentario);
         echo "</p>
                                         </div>
@@ -867,7 +896,7 @@ ORDER BY comentarios_noticias.data_comentario");
                             <div class=\"media-body\">
                                 <form method='post' accept-charset='utf-8' id='submit_comment'>
                                     <div class='form-group text-comments'>
-                                         <textarea id='comment' name='comment' class=\"form-control\" 
+                                         <textarea id='comment' name='comment' class=\"form-control wdt-emoji-bundle-enabled\" 
                                          placeholder=\"O meu comentário...\" rows=\"6\"";
 
     if (!isset($_SESSION['idUtilizador'])) {
@@ -1026,8 +1055,186 @@ function getCredentialsFacebook($id)
         $_SESSION['visualizacoesPerfil'] = $numVisitasPerfil;
         $_SESSION['sobreUtilizador'] = $sobreUtilizador;
         $_SESSION['idUser'] = $idUser;
-        
+
         header('location:/@' . $idUser);
     }
 
+}
+
+function getCredentialsGoogle($id)
+{
+
+    $hostname = "localhost";
+    $username = "root";
+    $password = "Saskatoon0708PM";
+    $bd = "mcmm_platform";
+
+    $conn = mysqli_connect($hostname, $username, $password, $bd);
+
+    $ultimaVisitaUt = date("Y-m-d H:i:s");
+    $result = $conn->prepare("UPDATE utilizadores SET ultima_visita = ? WHERE id_google = ?");
+    $result->bind_param('ss', $ultimaVisitaUt, $id);
+    $result->execute();
+    $result->close();
+
+    $result = $conn->prepare("SELECT id_utilizador, nome_utilizador, email, data_registo, ultima_visita,
+                    num_visitas, sobre, id_user, ativo
+                    FROM utilizadores WHERE id_google = ?");
+    $result->bind_param('s', $id);
+    $result->execute();
+    $result->bind_result($idUtilizador, $nomeUtilizador, $emailUtilizador, $dataRegisto,
+        $ultimaVisitaUtilizador, $numVisitasPerfil, $sobreUtilizador, $idUser, $ativo);
+    $result->fetch();
+    $result->close();
+
+    if ($ativo == 0) {
+        header('location:/blocked');
+    } else {
+
+        $_SESSION['idUtilizador'] = $idUtilizador;
+        $_SESSION['emailUtilizador'] = $emailUtilizador;
+        $_SESSION['nomeUtilizador'] = $nomeUtilizador;
+        $dataRegistoUtilizador = DateTime::createFromFormat('Y-m-d H:i:s', $dataRegisto);
+        $dataRegistoUtilizador = $dataRegistoUtilizador->format('Y-m-d');
+        $_SESSION['dataRegistoUtilizador'] = $dataRegistoUtilizador;
+        $_SESSION['diasUltimaVisitaUtilizador'] = $ultimaVisitaUtilizador;
+        $ultimaVisitaUtilizador = new DateTime($ultimaVisitaUtilizador);
+        $dataAtual = new DateTime(date('Y-m-d H:i:s'));
+        $diferenca = $dataAtual->diff($ultimaVisitaUtilizador);
+        $ultimaVisitaHoras = $diferenca->h;
+        $ultimaVisitaHoras = $ultimaVisitaHoras + ($diferenca->days * 24);
+        $_SESSION['horaUltimaVisitaUtilizador'] = $ultimaVisitaHoras;
+        $_SESSION['visualizacoesPerfil'] = $numVisitasPerfil;
+        $_SESSION['sobreUtilizador'] = $sobreUtilizador;
+        $_SESSION['idUser'] = $idUser;
+        header('location:/@' . $idUser);
+    }
+}
+
+function channel($path = '')
+{
+    if (isset($_SESSION['idUtilizador'])) {
+        echo "
+        <iframe width=\"100%\" height=\"100%\" id=\"UstreamIframe\"
+                src=\"http://www.ustream.tv/embed/22354809\"
+                frameborder=\"0\"
+                style=\"display: none\">
+        </iframe>
+        <style>
+            .button-badge {
+                background: #ff1744;
+                border-radius: 50%;
+                color: white;
+                padding: 8px 8px;
+                font-size: 10px;
+                position: absolute;
+                top: -2px;
+                right: -8px;
+                animation-duration: 1200ms;
+                animation-name: blink;
+                animation-iteration-count: infinite;
+                animation-direction: alternate;
+                -webkit-animation:blink 1200ms infinite; /* Safari and Chrome */
+            }
+            @keyframes blink {
+                0% {
+                    background:#ff1744;
+                }
+                80% {
+                    background:transparent;
+                }
+            }
+            @-webkit-keyframes blink {
+                0% {
+                    background:#ff1744;
+                }
+                80% {
+                    background:transparent;
+                }
+            }
+        </style>
+        <script src=\"$path/scripts/channel_state.js\"></script>
+        ";
+    } else {
+        echo "
+        <iframe width=\"100%\" height=\"100%\" id=\"UstreamIframe\"
+                src=\"http://www.ustream.tv/embed/22354809\"
+                frameborder=\"0\"
+                style=\"display: none\">
+        </iframe>
+        <div class='wrapper-channel-notification' onclick=\"window.location='/channel'\" style='display: none'>
+            <div class='circle-channel'>
+                <i class=\"pe-7s-video\"></i>
+                <span class='button-badge'></span>
+            </div>
+        </div>
+        <style>
+            .button-badge {
+                background: #ff1744;
+                border-radius: 50%;
+                color: white;
+                padding: 8px 8px;
+                font-size: 10px;
+                position: absolute;
+                top: -2px;
+                right: -8px;
+                animation-duration: 1200ms;
+                animation-name: blink;
+                animation-iteration-count: infinite;
+                animation-direction: alternate;
+                -webkit-animation:blink 1200ms infinite; 
+            }
+            .wrapper-channel-notification{
+                position: fixed;
+                bottom: 20px;
+                left: 20px;
+                cursor: pointer;
+                z-index: 10000000000000 !important;
+
+            }
+            .circle-channel{    
+                position: relative;
+                border-radius: 50%;
+                width: 60px;
+                height: 60px;       
+                background: rgba(41, 121, 255, .9);
+                box-shadow: 0 0 4px rgba(0,0,0,.11)!important;
+                z-index: 10000000000000 !important;
+                text-align: center;
+                font-size: 28px;
+                color: #fff;
+                vertical-align: middle;
+                transition: .4s all;
+            }
+            .circle-channel:hover{
+                margin-bottom: 5px;
+            }
+            
+            .circle-channel i{
+                line-height: 60px;
+            }
+            .circle-channel .button-badge{
+                top:0px;
+                right:0px;
+            }
+            @keyframes blink {
+                0% {
+                    background:#ff1744;
+                }
+                80% {
+                    background:transparent;
+                }
+            }
+            @-webkit-keyframes blink {
+                0% {
+                    background:#ff1744;
+                }
+                80% {
+                    background:transparent;
+                }
+            }
+        </style>
+        <script src=\"$path/scripts/channel_state.js\"></script>
+    ";
+    }
 }

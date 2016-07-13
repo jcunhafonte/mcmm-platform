@@ -288,9 +288,13 @@ require_once('php/connection/dbconnection.php');
                                         while (mysqli_stmt_fetch($stmt)) {
 
                                             echo "<tr>
-                                            <td class='text-center'>
-                                                <img height='50px' class='img-circle' src='/api/utilizadores/alunos/$idAlunos.jpg' />
-                                            </td>
+                                            <td class='text-center'>";
+                                            if(file_exists("../api/utilizadores/alunos/$idAlunos.jpg")){
+                                                echo "<img height='50px' class='img-circle' src='/api/utilizadores/alunos/$idAlunos.jpg' />";
+                                            }else{
+                                                echo "<img height='50px' class='img-circle' src='/images/avatar/avatar.jpg' />";
+                                            }
+                                            echo "</td>
                                             <td>
                                                 <a href='/students'>
                                                 <span id='titulo$idAlunos'>" . htmlentities($nome) . "</span>

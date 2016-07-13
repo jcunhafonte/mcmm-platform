@@ -226,6 +226,7 @@ checkSession();
     </div>
 
     <?php footer(); ?>
+    <?php channel() ?>
 
 </div>
 

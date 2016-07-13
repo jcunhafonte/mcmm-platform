@@ -99,6 +99,17 @@ $app->get('/publish/new/video', function ($request, $response, $args) {
     return $this->renderer->render($response, 'publish-news-video.php', $args);
 });
 
+$app->get('/edit/video/[{name}]', function ($request, $response, $args) {
+    return $this->renderer->render($response, 'edit-videos.php', $args);
+});
+
+$app->get('/edit/project/[{name}]', function ($request, $response, $args) {
+    return $this->renderer->render($response, 'edit-projects.php', $args);
+});
+
+$app->get('/edit/new/[{name}]', function ($request, $response, $args) {
+    return $this->renderer->render($response, 'edit-news.php', $args);
+});
 
 //SAIR
 $app->get('/exit', function ($request, $response, $args) {

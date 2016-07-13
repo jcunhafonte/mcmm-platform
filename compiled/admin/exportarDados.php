@@ -20,15 +20,7 @@ require_once('php/connection/dbconnection.php');
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no'/>
     <meta name='apple-mobile-web-app-capable' content='yes'/>
 
-    <link rel='shortcut icon' href='assets/img/favicon.png'>
-    <link rel='apple-touch-icon' href='assets/img/favicon.png'/>
-    <link rel='apple-touch-icon' sizes='57x57' href='assets/img/apple-touch-icon-57x57.png'/>
-    <link rel='apple-touch-icon' sizes='72x72' href='assets/img/apple-touch-icon-72x72.png'/>
-    <link rel='apple-touch-icon' sizes='76x76' href='assets/img/apple-touch-icon-76x76.png'/>
-    <link rel='apple-touch-icon' sizes='114x114' href='assets/img/apple-touch-icon-114x114.png'/>
-    <link rel='apple-touch-icon' sizes='120x120' href='assets/img/apple-touch-icon-114x114.png'/>
-    <link rel='apple-touch-icon' sizes='144x144' href='assets/img/apple-touch-icon-144x144.png'/>
-    <link rel='apple-touch-icon' sizes='152x152' href='assets/img/apple-touch-icon-152x152.png'/>
+    <?php require_once('php/pages/favicon.php'); ?>
 
     <!-- Base Css Files -->
     <link href="assets/libs/jqueryui/ui-lightness/jquery-ui-1.10.4.custom.min.css" rel="stylesheet"/>
@@ -135,50 +127,6 @@ require_once('php/connection/dbconnection.php');
 
                 <div class="col-md-12">
 
-                    <?php
-
-                    if (isset($_GET['contratoRemovido'])) {
-
-                        $colaboradorRemovido = $_GET['contratoRemovido'];
-
-                        $query = "SELECT id_colaborador, nome_completo FROM colaborador
-                        WHERE id_colaborador = ?";
-
-                        $stmt = mysqli_prepare($link, $query);
-                        mysqli_stmt_bind_param($stmt, 'i', $colaboradorRemovido);
-                        mysqli_stmt_bind_result($stmt, $idColaboradorRemovido, $nomeCompletoRemovido);
-                        mysqli_stmt_execute($stmt);
-                        mysqli_stmt_fetch($stmt);
-                        mysqli_stmt_close($stmt);
-
-                        echo "<div class='alert alert-success alert-dismissable'>
-                <button type='button' class='close' data-dismiss='alert' aria-hidden='true'>×</button>
-               O utilizador <b>$nomeCompletoRemovido</b> foi desativado com sucesso.<br>
-               <a class='alert-link'>Votos de uma excelente experiência!</a></div>";
-                    }
-
-                    if (isset($_GET['contratoRemovidoErro'])) {
-
-                        $colaboradorRemovido = $_GET['contratoRemovidoErro'];
-
-                        $query = "SELECT id_colaborador, nome_completo FROM colaborador
-                        WHERE id_colaborador = ?";
-
-                        $stmt = mysqli_prepare($link, $query);
-                        mysqli_stmt_bind_param($stmt, 'i', $colaboradorRemovido);
-                        mysqli_stmt_bind_result($stmt, $idColaboradorRemovido, $nomeCompletoRemovido);
-                        mysqli_stmt_execute($stmt);
-                        mysqli_stmt_fetch($stmt);
-                        mysqli_stmt_close($stmt);
-
-                        echo "<div class='alert alert-danger alert-dismissable'>
-                <button type='button' class='close' data-dismiss='alert' aria-hidden='true'>×</button>
-               Ocorreu um erro ao desativar o utilizador <b>$nomeCompletoRemovido</b>.<br>
-               <a class='alert-link'>Votos de uma excelente experiência!</a></div>";
-                    }
-
-                    ?>
-
                     <div class="widget">
                         <div class="widget-header">
                             <h2><strong>Exportar</strong> Dados</h2>
@@ -199,12 +147,11 @@ require_once('php/connection/dbconnection.php');
                                         <thead>
                                         <tr>
                                             <th>Nome</th>
-                                            <th>Idade</th>
                                             <th>Email</th>
                                             <th>Data de registo</th>
                                             <th>Última visita</th>
-                                            <th>Função</th>
-                                            <th>Estado</th>
+                                            <th>Ativo</th>
+                                            <th>Validado</th>
                                         </tr>
                                         </thead>
 
@@ -213,40 +160,37 @@ require_once('php/connection/dbconnection.php');
                                         <?php
 
                                         $query = "SELECT id_utilizador, nome_utilizador, email,
-                                      data_registo, ultima_visita, num_visitas, idade, funcao, ativo FROM utilizadores 
+                                      data_registo, ultima_visita, num_visitas, id_user, ativo, validado FROM utilizadores 
                                       ORDER BY nome_utilizador ASC";
                                         $stmt = mysqli_prepare($link, $query);
-                                        mysqli_stmt_bind_result($stmt, $idUtilizador, $nomeUtilizador, $email, $dataRegisto, $dataUltimaVisita, $numVisitas, $idade, $funcao, $estado);
+                                        mysqli_stmt_bind_result($stmt, $idUtilizador, $nomeUtilizador, $email, $dataRegisto,
+                                            $dataUltimaVisita, $numVisitas, $idUser, $ativo, $validado);
                                         mysqli_stmt_execute($stmt);
 
                                         while (mysqli_stmt_fetch($stmt)) {
-
                                             
                                             //Eliminar Horas de Datas
                                             $conversaoDataRegisto = new DateTime($dataRegisto);
                                             $textoDataRegisto = $conversaoDataRegisto->format('d-m-Y');
 
-                                            /*
-                                            $from = new DateTime($idade);
-                                            $to = new DateTime('today');
-                                            */
+                                            if($email==1){ echo "Sim"; }else{ echo "Não"; }
 
                                             echo "<tr>
                                             <td>
-                                            <a href='../perfil.php?utilizador=$idUtilizador'>
-                                            <span id='titulo$idUtilizador'>"  .  htmlentities($nomeUtilizador)  . "</a></a>
+                                                <a href='/@$idUser'>
+                                                <span id='titulo$idUtilizador'>"  .  htmlentities($nomeUtilizador)  . "</a></a>
                                             </td>
-                                            <td>";
-                                            if(isset($idade)){ echo $idade;}else{ echo "Sem idade"; }
-                                            echo "</td>
                                             <td>" . htmlentities($email) . "</td>
                                             <td>$textoDataRegisto</td>
                                             <td>$dataUltimaVisita</td>
                                             <td>";
-                                            if(isset($funcao)){ echo $funcao;}else{ echo "Sem função"; }
-                                            echo "</td><td>";
-                                            if($estado==1){ echo "Ativo"; }else{ echo "Desativo"; }            
-                                            echo "</td>
+                                                if($ativo==1){ echo "Sim"; }else{ echo "Não"; }
+                                                echo "
+                                            </td>
+                                            <td>";
+                                                if($validado==1){ echo "Sim"; }else{ echo "Não"; }
+                                                echo "
+                                            </td>
                                         </tr>";
                                         }
                                         mysqli_stmt_close($stmt);

@@ -2,6 +2,8 @@ $(document).ready(function () {
     hideModals();
     settings();
     cardSlider();
+    modalRecover();
+    emojis();
 });
 
 function hideModals() {
@@ -197,4 +199,111 @@ function cardSlider() {
 
         return true;
     });
+}
+
+function modalRecover() {
+
+    $('.recover-password').on('click', function () {
+        $('#loginModal').modal('hide');
+        $('.registerBox-2').css('display', 'block');
+        $('#recover-password').modal('show');
+        $('.modal-title').html('Palavra-passe');
+    });
+
+    $('#recover_password')
+        .formValidation({
+            framework: 'bootstrap',
+            icon: {
+                valid: 'glyphicon glyphicon-ok',
+                invalid: 'glyphicon glyphicon-remove',
+                validating: 'glyphicon glyphicon-refresh'
+            },
+            fields: {
+                email_recover: {
+                    validators: {
+                        notEmpty: {
+                            message: 'Necessitas de introduzir um email'
+                        },
+                        regexp: {
+                            regexp: /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$/,
+                            message: 'O email introduzido não é válido'
+                        },
+                        remote: {
+                            headers: {
+                                'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
+                            },
+                            url: "api/verificacoes/verificaRecuperacaoEmail.php",
+                            data: {
+                                type: 'username'
+                            },
+                            message: 'Este email não se encontra registado na nossa plataforma',
+                            type: 'POST'
+                        }
+                    }
+                }
+            }
+        })
+        .on('success.form.fv', function (e) {
+            e.preventDefault();
+            submitRecover();
+        });
+}
+
+function submitRecover() {
+    var formData = "email=" + $('.email_recover').val();
+
+    $.ajax({
+        url: '/api/verificacoes/recuperaEmail.php',
+        type: 'POST',
+        data: formData,
+        success: function (data) {
+            if (data === "yes") {
+                $('#recover-password').modal('hide');
+
+                noty({
+                    text: 'Acede ao teu email para completares a <b>recuperação</b> da tua palavra-passe',
+                    type: 'success',
+                    layout: 'topRight',
+                    theme: 'bootstrapTheme',
+                    animation: {
+                        open: 'animated bounceInLeft',
+                        close: 'animated bounceOutRight',
+                        easing: 'swing',
+                        speed: 250
+                    },
+                    timeout: 7000
+                });
+            } else {
+            }
+        }
+    });
+}
+
+function emojis() {
+    
+    if ($(".wdt-emoji-bundle-enabled")[0]) {
+        wdtEmojiBundle.defaults.emojiSheets = {'twitter': '/images/sheets/sheet_twitter_64.png'};
+        wdtEmojiBundle.changeType('twitter');
+        wdtEmojiBundle.init('.wdt-emoji-bundle-enabled');
+        var ev = new Event('input');
+    }
+
+    if ($(".comment-text")[0]) {
+        var users = document.getElementsByClassName('comment-text');
+        for (var i = 0; i < users.length; ++i) {
+            var user = users[i];
+            user.innerHTML = wdtEmojiBundle.render(user.innerHTML);
+        }
+    }
+
+    setTimeout(function () {
+        $("h3[data-emoji-group='People']").html('Pessoas');
+        $("h3[data-emoji-group='Nature']").html('Natureza');
+        $("h3[data-emoji-group='Foods']").html('Comida');
+        $("h3[data-emoji-group='Activity']").html('Atividades');
+        $("h3[data-emoji-group='Places']").html('Espaços');
+        $("h3[data-emoji-group='Objects']").html('Objetos');
+        $("h3[data-emoji-group='Symbols']").html('Símbolos');
+        $("h3[data-emoji-group='Flags']").html('Bandeiras');
+    }, 500);
 }

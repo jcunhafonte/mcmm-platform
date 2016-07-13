@@ -24,12 +24,21 @@ if (!$fbuser) {
     $fbuser = null;
     $loginUrl = $facebook->getLoginUrl(array('redirect_uri' => $homeurl, 'scope' => $fbPermissions));
 } else {
-    $loginUrl = '';
+    $loginUrl =  $facebook->getLoginUrl(array('redirect_uri' => $homeurl, 'scope' => $fbPermissions));
 }
 
+//GOOGLE
+include_once("api/google/config.php");
 
-    if (!isset($_SESSION['idUtilizador'])) {
-        echo "
+if ($gClient->getAccessToken()) {
+    $_SESSION['token'] = $gClient->getAccessToken();
+    $authUrl = '';
+} else {
+    $authUrl = $gClient->createAuthUrl();
+}
+
+if (!isset($_SESSION['idUtilizador'])) {
+    echo "
 <div class=\"container\">
     <div class=\"modal fade login\" id=\"loginModal\">
         <button type=\"button\" class=\"out-close close hidden-xs\" data-dismiss=\"modal\" aria-hidden=\"true\">&times;</button>
@@ -59,8 +68,8 @@ if (!$fbuser) {
                                         </g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g>
                                     </svg>
                                 </a>
-                                <a id=\"google_login\" class=\"circle google\" target='_blank'
-                                   href=\"http://www.mcmm.tech/api/google/account.php\">
+                                <a id=\"google_login\" class=\"circle google\"
+                                   href=\"" . $authUrl . "\">
                                     <svg width=\"22\" height=\"22\" viewBox=\"0 0 511.18 376.89\">
                                         <defs>
                                             <style>.cls-1 {
@@ -112,7 +121,7 @@ if (!$fbuser) {
                                         </div>
 
                                         <div class=\"col-xs-6\">
-                                            <a class=\"recover-password\" href=\"/recover\">
+                                            <a class=\"recover-password\" style='cursor:pointer'>
                                                 Recuperar palavra-passe
                                             </a>
                                         </div>
@@ -184,7 +193,7 @@ if (!$fbuser) {
                                     <div class=\"form-group\">
                                         <div class=\"col-xs-12 nome_signupEnd\">
                                             <input id=\"nome_signupEnd\" class=\"form-control\"
-                                                   type=\"text\" placeholder=\"Nome completo\" name=\"nome_signupEnd\">
+                                                   type=\"text\" placeholder=\"Nome (Primeiro e Último)\" name=\"nome_signupEnd\">
                                         </div>
                                     </div>
 
@@ -239,11 +248,52 @@ if (!$fbuser) {
             </div>
         </div>
     </div>
+    
+    <div class=\"modal fade login\" id=\"recover-password\">
+        <button type=\"button\" class=\"out-close close hidden-xs\" data-dismiss=\"modal\" aria-hidden=\"true\">&times;</button>
+            <div class=\"modal-dialog vertical-align-center login animated\">
+                <div class=\"modal-content\">
+                    <div class=\"modal-header\">
+                        <button type=\"button\" class=\"close hidden-sm hidden-md hidden-lg\" data-dismiss=\"modal\"
+                                aria-hidden=\"true\">&times;</button>
+                        <h4 class=\"modal-title text-center\"></h4>
+                </div>
+                <div class=\"modal-body\">
+                    <div class=\"box\">
+                        <div class=\"content registerBox-2\" style=\"display:block;\">
+                            <div class=\"form\">
+                                <form method=\"post\" accept-charset=\"UTF-8\" id=\"recover_password\">
+                            
+                                    <div class=\"form-group\">
+                                        <div class=\"col-xs-12\">
+                                            <input id=\"email\" class=\"form-control email_recover\"
+                                                   type=\"text\" placeholder=\"Email\" name=\"email_recover\">
+                                        </div>
+                                    </div>
+                                 
+                                    <div class=\"form-group\">
+                                        <div class=\"col-xs-12\">
+                                            <input class=\"btn btn-default btn-register\" type=\"submit\"
+                                                   value=\"Recuperar\" name=\"commit\">
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class=\"modal-footer\">
+                   
+                </div>
+            </div>
+        </div>
+</div>
+    
 </div>
 ";
-    } else {
+} else {
 
-        echo "
+    echo "
   <div id=\"modal-socials\">
         <div class=\"modal fade modal-settings\" id=\"edit-settings\">
             <button type=\"button\" class=\"out-close close hidden-xs\" data-dismiss=\"modal\"

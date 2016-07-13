@@ -33,5 +33,4 @@ if(isset($_POST['like'])){
 
     echo $totalGostos;
     
-    
 }

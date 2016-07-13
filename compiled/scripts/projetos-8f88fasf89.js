@@ -1,6 +1,10 @@
 $(document).ready(function () {
     comments();
     likes();
+
+    if($('.total-likes').html() == "0"){
+        $('.like-modal').tooltip('disable');
+    }
 });
 
 function comments() {
@@ -134,6 +138,14 @@ function submitComment() {
             $('.total-comments').html(textoComentario);
             $('.number-comments').html(atualComments);
 
+            if ($(".comment-text")[0]) {
+                var users = document.getElementsByClassName('comment-text');
+                for (var i = 0; i < users.length; ++i) {
+                    var user = users[i];
+                    user.innerHTML = wdtEmojiBundle.render(user.innerHTML);
+                }
+            }
+
             noty({
                 text: 'O teu comentário foi submetido com <b>sucesso</b>!',
                 type: 'success',
@@ -160,7 +172,7 @@ function likes() {
         if ($('button .heart').hasClass("fa-heart-o")) {
 
             $('button .heart').switchClass("fa-heart-o", "fa-heart");
-
+            $('.like-modal').switchClass('open-modal-likes-not', 'open-modal-likes');
             $.ajax({
                 url: '/api/verificacoes/projeto/adicionarGosto.php',
                 type: 'POST',
@@ -168,6 +180,9 @@ function likes() {
 
                 success: function (data) {
                     $('.total-likes').html(data);
+                    $('.like-modal').tooltip('enable');
+                    listLikes();
+
                     noty({
                         text: 'O teu gosto foi submetido com <b>sucesso</b>!',
                         type: 'success',
@@ -192,9 +207,14 @@ function likes() {
                 url: '/api/verificacoes/projeto/removerGosto.php',
                 type: 'POST',
                 data: 'like=' + $('#id_projeto').val(),
-
                 success: function (data) {
                     $('.total-likes').html(data);
+                    if(data == "0"){
+                        $('.like-modal').switchClass('open-modal-likes', 'open-modal-likes-not');
+                        $('.like-modal').tooltip('disable');
+                    }
+                    listLikes();
+
                     noty({
                         text: 'O teu gosto foi removido com <b>sucesso</b>!',
                         type: 'success',
@@ -212,5 +232,25 @@ function likes() {
             });
         }
 
+    });
+
+    $('.like-modal').click(function (e) {
+        e.stopImmediatePropagation();
+        e.preventDefault();
+
+        if ($('.like-modal').hasClass("open-modal-likes")) {
+            $('#list-likes').modal('show');
+        }
+    });
+}
+
+function listLikes() {
+    $.ajax({
+        url: '/api/verificacoes/projeto/listagemGostos.php',
+        type: 'POST',
+        data: 'projeto=' + $('#id_projeto').val(),
+        success: function (data) {
+            $('.likes-container').html(data);
+        }
     });
 }

@@ -98,6 +98,7 @@ checkSession();
     </div>
 
     <?php footer() ?>
+    <?php channel() ?>
 
 </div>
 
@@ -125,7 +126,7 @@ require_once 'api/funcoes/modals.php';
 
                 $image = file_exists("api/utilizadores/alunos/$idAlunos.jpg") ? "api/utilizadores/alunos/$idAlunos.jpg" : "images/avatar/avatar.jpg";
 
-                echo  "
+                echo "
                 {
                     name: \"$nome\",
                     location_latitude: $latitude,
@@ -151,6 +152,8 @@ require_once 'api/funcoes/modals.php';
 <script src="scripts/plugins-aaf19e1ea7.js"></script>
 
 <script src="scripts/students-f7a7498e1c.js"></script>
+
+<script src="scripts/main.js"></script>
 
 </body>
 </html>

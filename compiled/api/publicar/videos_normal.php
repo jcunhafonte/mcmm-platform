@@ -3,6 +3,7 @@
 session_start();
 
 require("../connection/mysql.php");
+require_once '../ffmpeg/ffmpeg.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
@@ -30,8 +31,10 @@ VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
     ) {
         if ($_FILES["video"]["error"] > 0) {
         } else {
-            move_uploaded_file($_FILES["video"]["tmp_name"],
-                "../utilizadores/videos/" . $id ."." . $extension);
+            if(move_uploaded_file($_FILES["video"]["tmp_name"],
+                "../utilizadores/videos/" . $id ."." . $extension)){
+                getImageVideo($id.".".$extension, $id);
+            }
         }
 
         echo $id;

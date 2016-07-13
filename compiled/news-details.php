@@ -213,10 +213,11 @@ ORDER BY id_noticias DESC LIMIT 1");
     <meta name="msapplication-square310x310logo" content="/images/favicon/green/mstile-310x310.png"/>
 
     <link rel="stylesheet" href="/styles/main-5071e0f3e9.css">
+    <link rel="stylesheet" href="/styles/wdt-emoji-bundle.css"/>
 
     <script src="/scripts/vendor/modernizr-9d550bd14f.js"></script>
 
-    <?php if($tipo == "video") echo "<script type=\"text/javascript\" src=\"http://content.jwplatform.com/libraries/G1vj4svv.js\"></script>"?>
+    <?php if ($tipo == "video") echo "<script type=\"text/javascript\" src=\"http://content.jwplatform.com/libraries/G1vj4svv.js\"></script>" ?>
 
     <style>
         .text-comments .has-error i {
@@ -254,7 +255,8 @@ ORDER BY id_noticias DESC LIMIT 1");
             padding-right: 10px;
             padding-top: 5px;
         }
-        .jw-skin-seven .jw-controlbar-right-group .jw-icon-inline:before, .jw-skin-seven .jw-controlbar-right-group .jw-icon-tooltip:before{
+
+        .jw-skin-seven .jw-controlbar-right-group .jw-icon-inline:before, .jw-skin-seven .jw-controlbar-right-group .jw-icon-tooltip:before {
             border-left: none !important;
         }
     </style>
@@ -304,9 +306,7 @@ ORDER BY id_noticias DESC LIMIT 1");
                 <div class="row">
                     <div class="col-xs-2 hidden-sm hidden-xs">
                         <div class="pull-left">
-
                             <?php
-
                             echo "
                             <button class=\"btn ";
                             if (isset($_SESSION['idUtilizador'])) {
@@ -320,10 +320,24 @@ ORDER BY id_noticias DESC LIMIT 1");
                             }
                             echo ">
                                 <i class=\"heart heart-green fa fa-heart$heart\"></i>
-                                <span class='total-likes'>$totalGostos</span>
-                            </button>
-                            ";
+                            </button>";
 
+
+                            if ($totalGostos > 0) {
+                                echo "
+                                <button class='btn like-modal open-modal-likes' style='padding-left: 0 !important;'
+                                data-placement=\"bottom\" rel=\"tooltip\" title=\"Gostos\">
+                                    <span class='total-likes'>$totalGostos</span>
+                                </button>
+                                ";
+                            } else {
+                                echo "
+                                <button class='btn like-modal open-modal-likes-not' style='padding-left: 0 !important;'
+                                data-placement=\"bottom\" rel=\"tooltip\" title=\"Gostos\">
+                                    <span class='total-likes'>$totalGostos</span>
+                                </button>
+                                ";
+                            }
                             ?>
 
                             <button class="btn btn-comments">
@@ -339,8 +353,7 @@ ORDER BY id_noticias DESC LIMIT 1");
                         <div class="pull-right">
 
                             <button class="btn"
-                                    onclick="window.open('http://twitter.com/share?url=http://<?php echo "$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"; ?>&hashtags=MCMM', '_blank')"
-                            >
+                                    onclick="window.open('http://twitter.com/share?url=http://<?php echo "$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"; ?>&hashtags=MCMM', '_blank')">
                                 <svg class="twitter" x="0px" y="0px" viewBox="0 0 52.851 52.851" xml:space="preserve"
                                      width="26px" height="26px">
                                     <g>
@@ -366,8 +379,7 @@ ORDER BY id_noticias DESC LIMIT 1");
                             </button>
 
                             <button class="btn"
-                                    onclick="window.open('http://www.facebook.com/sharer/sharer.php?u=<?php echo "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"; ?>', '_blank')"
-                            >
+                                    onclick="window.open('http://www.facebook.com/sharer/sharer.php?u=<?php echo "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"; ?>', '_blank')">
                                 <svg class="facebook" x="0px" y="0px" viewBox="0 0 288.861 288.861" xml:space="preserve"
                                      width="26px" height="26px">
                                     <g>
@@ -393,8 +405,7 @@ ORDER BY id_noticias DESC LIMIT 1");
                             </button>
 
                             <button class="btn"
-                                    onclick="window.open('https://plus.google.com/share?url=<?php echo "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"; ?>', '_blank')"
-                            >
+                                    onclick="window.open('https://plus.google.com/share?url=<?php echo "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"; ?>', '_blank')">
                                 <svg class='google-plus' width="34px" height="34px" xml:space="preserve"
                                      viewBox="0 0 518.18 383.89">
                                     <defs>
@@ -448,13 +459,23 @@ ORDER BY id_noticias DESC LIMIT 1");
 
         <?php
 
-       switch ($tipoNext){
-           case "video":
-               echo "        
+        switch ($tipoNext) {
+            case "video":
+                echo "        
                 <div class=\"next-page\"  onclick=\"window.location='/new/$idNoticiasNext'\">
-                    <div class=\"overlay\"></div>
-                    <div class=\"image\" style=\"background: no-repeat url('/images/backgrounds/default.jpg'); background-size:100%;\"></div>
-                    <div class=\"contents\">
+                    <div class=\"overlay\"></div>";
+
+                    if(file_exists("api/utilizadores/noticias/$idNoticiasNext.jpg")){
+                        echo "
+                        <div class=\"image\" style=\"background: no-repeat url('/api/utilizadores/noticias/$idNoticiasNext" . ".jpg'); background-size:100%;\"></div>
+                        ";
+                    }else{
+                        echo "
+                        <div class=\"image\" style=\"background: no-repeat url('/images/backgrounds/default.jpg'); background-size:100%;\"></div>
+                        ";
+                    }
+
+                    echo "<div class=\"contents\">
                         <div class=\"text\">
                             <span><i>Próxima Notícia</i></span>
                             <h2>$tituloNext</h2>
@@ -462,9 +483,9 @@ ORDER BY id_noticias DESC LIMIT 1");
                     </div>
                 </div>
                 ";
-               break;
-           case "text":
-               echo "
+                break;
+            case "text":
+                echo "
                <div class=\"next-page\"  onclick=\"window.location='/new/$idNoticiasNext'\">
                     <div class=\"overlay\"></div>
                     <div class=\"image\" style=\"background: no-repeat url('/images/backgrounds/default.jpg'); background-size:100%;\"></div>
@@ -475,9 +496,9 @@ ORDER BY id_noticias DESC LIMIT 1");
                         </div>
                     </div>
                 </div>";
-               break;
-           case "normal":
-               echo "
+                break;
+            case "normal":
+                echo "
                <div class=\"next-page\"  onclick=\"window.location='/new/$idNoticiasNext'\">
                     <div class=\"overlay\"></div>
                     <div class=\"image\" style=\"background: no-repeat url('/api/utilizadores/noticias/$idNoticiasNext.jpg'); background-size:100%;\" ></div>
@@ -488,9 +509,9 @@ ORDER BY id_noticias DESC LIMIT 1");
                         </div>
                     </div>
                 </div>";
-               break;
-           case "slider":
-               echo "
+                break;
+            case "slider":
+                echo "
                <div class=\"next-page\"  onclick=\"window.location='/new/$idNoticiasNext'\">
                     <div class=\"overlay\"></div>
                     <div class=\"image\" style=\"background: no-repeat url('/api/utilizadores/noticias/" . $idNoticiasNext . "_1.jpg'); background-size:100%;\" ></div>
@@ -501,8 +522,8 @@ ORDER BY id_noticias DESC LIMIT 1");
                         </div>
                     </div>
                 </div>";
-               break;
-       }
+                break;
+        }
 
         ?>
 
@@ -513,14 +534,15 @@ ORDER BY id_noticias DESC LIMIT 1");
     </div>
 
     <?php footer(); ?>
+    <?php channel() ?>
 
 </div>
 
 <!--MODALS-->
 <?php
 
+require_once 'api/funcoes/emojis.php';
 require_once 'api/funcoes/modals.php';
-//modals();
 
 ?>
 <div class="container">
@@ -588,6 +610,95 @@ require_once 'api/funcoes/modals.php';
                 </div>
             </div>
         </div>
+
+        <div class="modal fade modal-likes" id="list-likes">
+            <style>
+                .table > tbody > tr > td {
+                    border-top: none;
+                }
+                .btn-likes {
+                    float: right !important;
+                    color: #00e676 !important;
+                    padding: 2px 10px;
+                    border: 1px solid #00e676;
+                    border-radius: 50px;
+                    cursor: pointer;
+                    -webkit-transition: all .2s;
+                    transition: all .2s;
+                    background: white;
+                }
+                .btn-likes:hover{
+                    color: #009a4f !important;
+                    border: 1px solid #009a4f !important;
+                }
+                .anchor-likes:hover{
+                    text-decoration: none !important;
+                }
+            </style>
+
+            <button type="button" class="out-close close hidden-xs" data-dismiss="modal"
+                    aria-hidden="true">&times;</button>
+            <div class="modal-dialog vertical-align-center animated">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close hidden-sm hidden-md hidden-lg" data-dismiss="modal"
+                                aria-hidden="true">&times;</button>
+                        <h4 class="modal-title text-center">Gostos</h4>
+                    </div>
+
+                    <div class="modal-body text-left" style="padding: 15px; display: block">
+
+                        <table class="table" style="table-layout: fixed">
+                            <tbody class="likes-container">
+
+                                <?php
+
+                                $result = $conn->prepare("
+                                SELECT gostos_noticias.id_gostos_noticias, gostos_noticias.ref_id_utilizador, 
+                                gostos_noticias.ref_id_noticias, utilizadores.nome_utilizador, utilizadores.id_user
+                                FROM gostos_noticias
+                                INNER JOIN utilizadores 
+                                ON gostos_noticias.ref_id_utilizador = utilizadores.id_utilizador
+                                WHERE gostos_noticias.ref_id_noticias = ?
+                                ORDER BY utilizadores.nome_utilizador");
+
+                                $result->bind_param('s', $idNoticias);
+                                $result->execute();
+                                $result->bind_result($idGostosNoticias, $refIdUtilizador, $refIdNoticias, $nomeUtilizador, $idUser);
+
+                                while($result->fetch()){
+
+                                    echo "
+                                    <tr>
+                                        <td width=\"80%\">
+                                            <a class='anchor-likes' href='/@$idUser' style='display: inherit'>
+                                                <img style=\"border-radius: 50%; float: left\" width=\"60px\" height=\"60px\"
+                                                     src='/api/utilizadores/perfis/$refIdUtilizador.jpg'>
+                                                <h5 class='title-likes' style=\"line-height: 60px; padding-left: 80px; margin:0\">
+                                                    $nomeUtilizador
+                                                </h5>
+                                            </a>
+                                        </td>
+                                        <td class=\"text-right\" style=\"vertical-align: middle;width: 70px !important;
+                                        display: block; float: right; margin-top: 12px\">
+                                            <button class=\"btn-likes\" onclick=\"window.location='/@$idUser'\"
+                                            >Perfil</button>
+                                        </td>
+                                    </tr>
+                                    ";
+
+                                }
+
+                                $result->close();
+
+                                ?>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 
@@ -600,6 +711,10 @@ require_once 'api/funcoes/modals.php';
 <script src="/scripts/main.js"></script>
 
 <script src="/scripts/noticias-8f88fasf89.js"></script>
+
+<script type="text/javascript" src="/scripts/emojis/emoji.min.js"></script>
+
+<script type="text/javascript" src="/scripts/emojis/wdt-emoji-bundle.js"></script>
 
 <script>
     window.onload = function () {
@@ -638,7 +753,7 @@ if ($tipo == "slider") {
     ";
 }
 
-if($tipo=="video"){
+if ($tipo == "video") {
     echo "
     <script>
         window.onload = function () {

@@ -35,8 +35,9 @@ if ($row_number > 0) {
     $result->execute();
     $result->close();
 
+    $linkUser = "http://mcmm.tech/@" . $userID;
     include_once("../emails/SendGrid/funcoes.php");
-//    emailValidarConta($nomeUt, $emailUt, $validaHashEmail);
+    welcomeSocial($nomeUt, $emailUt, $linkUser, 'Twiiter');
 
     $email = $_POST['email'];
     $result = $conn->prepare("SELECT id_utilizador, id_user FROM utilizadores WHERE email = ?");
