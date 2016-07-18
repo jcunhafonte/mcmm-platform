@@ -38,15 +38,15 @@ $(document).ready(function () {
         singleItem: false,
         center: true,
         loop: true,
-        margin: 10,
+        margin: 30,
         dots: false,
         autoplay: true,
         autoplayTimeout: 5000,
         responsive: {
             0: {
-                items: 3
+                items: 2
             },
-            1000: {
+            992: {
                 items: 6
             }
         }

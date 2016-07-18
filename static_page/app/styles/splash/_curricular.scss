@@ -1,9 +1,9 @@
 .curricular {
-  border-top: 1px solid #e8e9ed;
   padding-bottom: 130px;
   background: $white;
   position: relative;
   z-index: 1;
+  border-bottom: 1px solid #e8e9ed;
 }
 
 .curricular::before {
@@ -34,16 +34,22 @@
 }
 
 .curricular .cd-programa-wrapper {
-  /* this is the item that rotates */
   position: relative;
+
   &:hover {
     margin-top: -15px;
     box-shadow: 0 1px 5px rgba(0,0,0,.1);
   }
+
+  &-no-hover{
+    &:hover{
+      margin-top: -15px;
+      box-shadow: none;
+    }
+  }
 }
 
 .curricular .cd-programa-wrapper .is-visible {
-  /* the front item, visible by default */
   position: relative;
   z-index: 5;
 }
@@ -497,7 +503,8 @@ ul.list-styled li:before {
   }
 }
 
-/* Large devices (large desktops, 1200px and up) */
-@media (min-width: $screen-lg-min) {
-
+.curricular .profile-description{
+  line-height: 31px;
+  color: #2b2e33;
+  text-align: left;
 }
