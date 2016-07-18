@@ -1,0 +1,21 @@
+body {
+  font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif !important;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -moz-font-feature-settings: "liga" on;
+  overflow-x: hidden !important;
+}
+
+menu {
+  margin: 0 !important;
+}
+
+@media (min-width: $screen-sm-min) {
+}
+
+@media (min-width: $screen-md-min) {
+}
+
+@media (min-width: $screen-lg-min) {
+}

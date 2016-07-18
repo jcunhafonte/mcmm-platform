@@ -1,0 +1,35 @@
+//GRID
+$screen-sm-min: 768px;
+$screen-md-min: 992px;
+$screen-lg-min: 1200px;
+
+//COLORS
+$theme: #2979ff;
+$theme_hover: darken($theme, 15%);
+$theme_lighten: rgba(41, 121, 255, 0.81);
+
+$theme_green: #00e676;
+$theme_green_hover: darken($theme_green, 15%);
+
+$theme_red: #FF1744;
+$theme_red_hover: darken($theme_red, 15%);
+
+$theme_yellow: #FFC400;
+$theme_yellow_hover: darken($theme_yellow, 15%);
+
+$gray: #bbbbbb;
+$gray_icons: #C0C0C0;
+$dark_gray: #A8A8A8;
+$light_gray: #DDDDDD;
+$background_gray: #e8e9ed;
+$background_light_gray: #F9F9F9;
+$gray_border: #e8e9ed;
+$gray_cards: #888;
+$gray_card: #333;
+$gray_footer: #898989;
+$gray_placeholder: #c6c8cc;
+
+$black: #2b2e33;
+$light_black: #9A9A9A;
+
+$white: #FFFFFF;

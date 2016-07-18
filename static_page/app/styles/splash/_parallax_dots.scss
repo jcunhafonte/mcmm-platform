@@ -1,0 +1,75 @@
+#menu-dots {
+  z-index: 90000000000;
+  position: relative;
+
+  nav#primary {
+    z-index: 5;
+    position: fixed;
+    top: 50%;
+    right: 10px;
+    margin-top: -124px;
+    display: none;
+  }
+  nav#primary li {
+    position: relative;
+    height: 16px;
+    width: 16px;
+  }
+  nav#primary a {
+    display: block;
+    width: 12px;
+    height: 12px;
+    text-indent: -9999px;
+    background: $theme;
+    border-radius: 50%;
+    margin: 10px 0;
+    text-align: right;
+  }
+  nav#primary a:hover, nav#primary a.active {
+    background-color: rgba(0, 0, 0, 0.25);
+    //box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.16) !important;
+  }
+  nav#primary h1 {
+    position: absolute;
+    right: 22px;
+    top: -10px;
+    display: none;
+    padding: 5px 5px;
+    color: $white;
+    white-space: nowrap;
+    font-size: 20px;
+    font-weight: bold;
+    animation: dots_shake 0.40s cubic-bezier(.36, .07, .19, .97) both;
+    transform: translate3d(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    //box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.15);
+  }
+
+  @keyframes dots_shake {
+    10% {
+      transform: translate3d(-4px, 0, 0);
+    }
+
+    50% {
+      transform: translate3d(2px, 0, 0);
+    }
+
+    75% {
+      transform: translate3d(-2px, 0, 0);
+    }
+
+    100% {
+      transform: translate3d(0, 0, 0);
+    }
+  }
+}
+
+/* Small devices (tablets, 768px and up) */
+@media screen and (max-width: $screen-sm-min) {
+  #menu-dots {
+    nav#primary {
+      right: 6px;
+    }
+  }
+}

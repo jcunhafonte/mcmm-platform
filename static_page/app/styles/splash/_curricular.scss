@@ -1,0 +1,503 @@
+.curricular {
+  border-top: 1px solid #e8e9ed;
+  padding-bottom: 130px;
+  background: $white;
+  position: relative;
+  z-index: 1;
+}
+
+.curricular::before {
+  background: $white;
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+}
+
+.curricular .programa-switcher {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.curricular .programa-switcher .btn.active {
+  background-color: $theme;
+  color: white;
+}
+
+.curricular .touch .cd-programa-wrapper {
+  /* fix a bug on IOS8 - rotating elements dissapear*/
+  -webkit-perspective: 2000px;
+  -moz-perspective: 2000px;
+  perspective: 2000px;
+}
+
+.curricular .cd-programa-wrapper {
+  /* this is the item that rotates */
+  position: relative;
+  &:hover {
+    margin-top: -15px;
+    box-shadow: 0 1px 5px rgba(0,0,0,.1);
+  }
+}
+
+.curricular .cd-programa-wrapper .is-visible {
+  /* the front item, visible by default */
+  position: relative;
+  z-index: 5;
+}
+
+.curricular .cd-programa-wrapper .is-hidden {
+  /* the hidden items, right behind the front one */
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  -webkit-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+.curricular .cd-programa-wrapper .is-selected {
+  /* the next item that will be visible */
+  z-index: 3 !important;
+}
+
+.curricular .cd-programa-wrapper.is-switched .is-visible {
+  -webkit-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+  -webkit-animation: cd-rotate 0.5s;
+  -o-animation: cd-rotate 0.5s;
+  animation: cd-rotate 0.5s;
+}
+
+.curricular .cd-programa-wrapper.is-switched .is-hidden {
+  /* rotate the tables - anticlockwise rotation */
+  -webkit-transform: rotateY(0);
+  -ms-transform: rotateY(0);
+  -o-transform: rotateY(0);
+  transform: rotateY(0);
+  -webkit-animation: cd-rotate-inverse 0.5s;
+  -o-animation: cd-rotate-inverse 0.5s;
+  animation: cd-rotate-inverse 0.5s;
+  opacity: 0;
+}
+
+.curricular .cd-programa-wrapper.is-switched .is-selected {
+  opacity: 1;
+}
+
+.curricular .cd-programa-wrapper.is-switched.reverse-animation .is-visible {
+  /* invert rotation direction - clockwise rotation */
+  -webkit-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+  -webkit-animation: cd-rotate-back 0.5s;
+  -o-animation: cd-rotate-back 0.5s;
+  animation: cd-rotate-back 0.5s;
+}
+
+.curricular .cd-programa-wrapper.is-switched.reverse-animation .is-hidden {
+  /* invert rotation direction - clockwise rotation */
+  -webkit-transform: rotateY(0);
+  -ms-transform: rotateY(0);
+  -o-transform: rotateY(0);
+  transform: rotateY(0);
+  -webkit-animation: cd-rotate-inverse-back 0.5s;
+  -o-animation: cd-rotate-inverse-back 0.5s;
+  animation: cd-rotate-inverse-back 0.5s;
+  opacity: 0;
+}
+
+.curricular .cd-programa-wrapper.is-switched.reverse-animation .is-selected {
+  opacity: 1;
+}
+
+.curricular .cd-programa-wrapper > li {
+  background-color: white;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
+  /* Firefox bug - 3D CSS transform, jagged edges */
+  outline: 1px solid transparent;
+}
+
+.curricular .cd-programa-wrapper > li .is-ended::after {
+  /* class added in jQuery - remove the gradient layer when it's no longer possible to scroll */
+  display: none;
+}
+
+.curricular .cd-programa-wrapper.panel-highlited {
+  margin: -10px;
+}
+
+.curricular .cd-programa-wrapper.panel-highlited .panel {
+  -webkit-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
+}
+
+.curricular .cd-programa-wrapper.panel-highlited .panel .gap {
+  width: 100%;
+  height: 10px;
+  background-color: $theme;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  margin: 0;
+}
+
+.curricular .cd-programa-wrapper.panel-highlited .panel .panel-footer {
+  padding-bottom: 50px;
+}
+
+.curricular .no-js .cd-programa-wrapper .is-hidden {
+  position: relative;
+  -webkit-transform: rotateY(0);
+  -ms-transform: rotateY(0);
+  -o-transform: rotateY(0);
+  transform: rotateY(0);
+  margin-top: 1em;
+}
+
+@-webkit-keyframes cd-rotate {
+  0% {
+    -webkit-transform: perspective(2000px) rotateY(0);
+  }
+  70% {
+    /* this creates the bounce effect */
+    -webkit-transform: perspective(2000px) rotateY(200deg);
+  }
+  100% {
+    -webkit-transform: perspective(2000px) rotateY(180deg);
+  }
+}
+
+@-moz-keyframes cd-rotate {
+  0% {
+    -moz-transform: perspective(2000px) rotateY(0);
+  }
+  70% {
+    /* this creates the bounce effect */
+    -moz-transform: perspective(2000px) rotateY(200deg);
+  }
+  100% {
+    -moz-transform: perspective(2000px) rotateY(180deg);
+  }
+}
+
+@keyframes cd-rotate {
+  0% {
+    -webkit-transform: perspective(2000px) rotateY(0);
+    -moz-transform: perspective(2000px) rotateY(0);
+    -ms-transform: perspective(2000px) rotateY(0);
+    -o-transform: perspective(2000px) rotateY(0);
+    transform: perspective(2000px) rotateY(0);
+  }
+  70% {
+    /* this creates the bounce effect */
+    -webkit-transform: perspective(2000px) rotateY(200deg);
+    -moz-transform: perspective(2000px) rotateY(200deg);
+    -ms-transform: perspective(2000px) rotateY(200deg);
+    -o-transform: perspective(2000px) rotateY(200deg);
+    transform: perspective(2000px) rotateY(200deg);
+  }
+  100% {
+    -webkit-transform: perspective(2000px) rotateY(180deg);
+    -moz-transform: perspective(2000px) rotateY(180deg);
+    -ms-transform: perspective(2000px) rotateY(180deg);
+    -o-transform: perspective(2000px) rotateY(180deg);
+    transform: perspective(2000px) rotateY(180deg);
+  }
+}
+
+@-webkit-keyframes cd-rotate-inverse {
+  0% {
+    -webkit-transform: perspective(2000px) rotateY(-180deg);
+  }
+  70% {
+    /* this creates the bounce effect */
+    -webkit-transform: perspective(2000px) rotateY(20deg);
+  }
+  100% {
+    -webkit-transform: perspective(2000px) rotateY(0);
+  }
+}
+
+@-moz-keyframes cd-rotate-inverse {
+  0% {
+    -moz-transform: perspective(2000px) rotateY(-180deg);
+  }
+  70% {
+    /* this creates the bounce effect */
+    -moz-transform: perspective(2000px) rotateY(20deg);
+  }
+  100% {
+    -moz-transform: perspective(2000px) rotateY(0);
+  }
+}
+
+@keyframes cd-rotate-inverse {
+  0% {
+    -webkit-transform: perspective(2000px) rotateY(-180deg);
+    -moz-transform: perspective(2000px) rotateY(-180deg);
+    -ms-transform: perspective(2000px) rotateY(-180deg);
+    -o-transform: perspective(2000px) rotateY(-180deg);
+    transform: perspective(2000px) rotateY(-180deg);
+  }
+  70% {
+    /* this creates the bounce effect */
+    -webkit-transform: perspective(2000px) rotateY(20deg);
+    -moz-transform: perspective(2000px) rotateY(20deg);
+    -ms-transform: perspective(2000px) rotateY(20deg);
+    -o-transform: perspective(2000px) rotateY(20deg);
+    transform: perspective(2000px) rotateY(20deg);
+  }
+  100% {
+    -webkit-transform: perspective(2000px) rotateY(0);
+    -moz-transform: perspective(2000px) rotateY(0);
+    -ms-transform: perspective(2000px) rotateY(0);
+    -o-transform: perspective(2000px) rotateY(0);
+    transform: perspective(2000px) rotateY(0);
+  }
+}
+
+@-webkit-keyframes cd-rotate-back {
+  0% {
+    -webkit-transform: perspective(2000px) rotateY(0);
+  }
+  70% {
+    /* this creates the bounce effect */
+    -webkit-transform: perspective(2000px) rotateY(-200deg);
+  }
+  100% {
+    -webkit-transform: perspective(2000px) rotateY(-180deg);
+  }
+}
+
+@-moz-keyframes cd-rotate-back {
+  0% {
+    -moz-transform: perspective(2000px) rotateY(0);
+  }
+  70% {
+    /* this creates the bounce effect */
+    -moz-transform: perspective(2000px) rotateY(-200deg);
+  }
+  100% {
+    -moz-transform: perspective(2000px) rotateY(-180deg);
+  }
+}
+
+@keyframes cd-rotate-back {
+  0% {
+    -webkit-transform: perspective(2000px) rotateY(0);
+    -moz-transform: perspective(2000px) rotateY(0);
+    -ms-transform: perspective(2000px) rotateY(0);
+    -o-transform: perspective(2000px) rotateY(0);
+    transform: perspective(2000px) rotateY(0);
+  }
+  70% {
+    /* this creates the bounce effect */
+    -webkit-transform: perspective(2000px) rotateY(-200deg);
+    -moz-transform: perspective(2000px) rotateY(-200deg);
+    -ms-transform: perspective(2000px) rotateY(-200deg);
+    -o-transform: perspective(2000px) rotateY(-200deg);
+    transform: perspective(2000px) rotateY(-200deg);
+  }
+  100% {
+    -webkit-transform: perspective(2000px) rotateY(-180deg);
+    -moz-transform: perspective(2000px) rotateY(-180deg);
+    -ms-transform: perspective(2000px) rotateY(-180deg);
+    -o-transform: perspective(2000px) rotateY(-180deg);
+    transform: perspective(2000px) rotateY(-180deg);
+  }
+}
+
+@-webkit-keyframes cd-rotate-inverse-back {
+  0% {
+    -webkit-transform: perspective(2000px) rotateY(180deg);
+  }
+  70% {
+    /* this creates the bounce effect */
+    -webkit-transform: perspective(2000px) rotateY(-20deg);
+  }
+  100% {
+    -webkit-transform: perspective(2000px) rotateY(0);
+  }
+}
+
+@-moz-keyframes cd-rotate-inverse-back {
+  0% {
+    -moz-transform: perspective(2000px) rotateY(180deg);
+  }
+  70% {
+    /* this creates the bounce effect */
+    -moz-transform: perspective(2000px) rotateY(-20deg);
+  }
+  100% {
+    -moz-transform: perspective(2000px) rotateY(0);
+  }
+}
+
+@keyframes cd-rotate-inverse-back {
+  0% {
+    -webkit-transform: perspective(2000px) rotateY(180deg);
+    -moz-transform: perspective(2000px) rotateY(180deg);
+    -ms-transform: perspective(2000px) rotateY(180deg);
+    -o-transform: perspective(2000px) rotateY(180deg);
+    transform: perspective(2000px) rotateY(180deg);
+  }
+  70% {
+    /* this creates the bounce effect */
+    -webkit-transform: perspective(2000px) rotateY(-20deg);
+    -moz-transform: perspective(2000px) rotateY(-20deg);
+    -ms-transform: perspective(2000px) rotateY(-20deg);
+    -o-transform: perspective(2000px) rotateY(-20deg);
+    transform: perspective(2000px) rotateY(-20deg);
+  }
+  100% {
+    -webkit-transform: perspective(2000px) rotateY(0);
+    -moz-transform: perspective(2000px) rotateY(0);
+    -ms-transform: perspective(2000px) rotateY(0);
+    -o-transform: perspective(2000px) rotateY(0);
+    transform: perspective(2000px) rotateY(0);
+  }
+}
+
+.curricular .curricular-select {
+  margin-bottom: 60px;
+  display: inline-block;
+}
+
+.curricular .panel-curricular {
+  /*margin-top: 10px;*/
+}
+
+.curricular .panel-curricular .panel-heading {
+  padding: 35px 0 20px;
+}
+
+.curricular .panel-curricular .panel-heading .subhead {
+  margin-bottom: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: $theme;
+}
+
+.curricular .panel-curricular .panel-heading h2 {
+  font-size: 60px;
+  margin: 0;
+  line-height: 60px;
+}
+
+.curricular .panel-curricular .panel-heading .currency,
+.curricular .panel-curricular .panel-heading .period {
+  color: #c8c9cc;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.curricular .panel-curricular .panel-heading .currency {
+  vertical-align: text-top;
+  font-size: 18px;
+}
+
+.curricular .panel-curricular .panel-heading .period {
+  vertical-align: sub;
+}
+
+.curricular .panel-curricular .panel-body {
+  padding: 20px 20px;
+  height: 324px;
+}
+
+.curricular .panel-curricular .panel-body .list-style-ok li::before {
+  margin-right: .5em;
+}
+
+.curricular .panel-curricular .panel-footer {
+  border-top: 0;
+  padding: 0 0 40px;
+}
+
+.cd-programa-wrapper {
+  transition: .4s;
+}
+
+.curricular {
+  .button-curricular {
+    background: $white;
+    font-weight: 500;
+    font-size: 16px;
+    padding: 9px 0 !important;
+    width: 220px;
+
+    &:nth-child(1) {
+      border-bottom-left-radius: 3px;
+      border-top-left-radius: 3px;
+    }
+    &:nth-child(2) {
+      border-bottom-right-radius: 3px;
+      border-top-right-radius: 3px;
+    }
+  }
+}
+
+.curricular h2 {
+  font-family: Hind;
+  font-size: 42px !important;
+  line-height: 48px;
+  font-weight: 300;
+  text-transform: none !important;
+}
+
+ul.list-styled li {
+  line-height: 1.8;
+  &.principal{
+    color: $black;
+  }
+}
+
+ul.list-styled.list-style-ok li:before {
+  content: '\f00c';
+  color: $theme;
+}
+ul.list-styled li:before {
+  font: normal normal normal 14px/1 FontAwesome;
+  display: inline-block;
+  margin-right: 30px;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 12px;
+}
+
+@media screen and (max-width: $screen-sm-min) {
+  .curricular .panel-curricular .panel-body {
+    height: 260px;
+  }
+  .button-curricular {
+    font-size: 14px !important;
+    width: 155px !important;
+  }
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: $screen-md-min) {
+  .curricular .panel-curricular .panel-body {
+    height: 350px;
+  }
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: $screen-lg-min) {
+
+}
