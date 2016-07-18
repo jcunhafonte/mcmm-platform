@@ -2,7 +2,14 @@
 
 $(document).ready(function () {
 
-    //TYPED
+    $('a.sobre').click(function () {
+        $('html, body').animate({
+            scrollTop: $('#programa-curricular').offset().top
+        }, 1000, function () {
+        });
+        return false;
+    });
+    
     $("#typed").typed({
         strings: ["research", "develop", "learn", "improve", "living", "happiness"],
         typeSpeed: 100,

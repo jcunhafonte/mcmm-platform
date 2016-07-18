@@ -488,7 +488,7 @@ ul.list-styled li:before {
 
 @media screen and (max-width: $screen-sm-min) {
   .curricular .panel-curricular .panel-body {
-    height: 260px;
+    height: 320px;
   }
   .button-curricular {
     font-size: 14px !important;
@@ -499,7 +499,7 @@ ul.list-styled li:before {
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: $screen-md-min) {
   .curricular .panel-curricular .panel-body {
-    height: 350px;
+    height: 430px;
   }
 }
 
@@ -507,4 +507,12 @@ ul.list-styled li:before {
   line-height: 31px;
   color: #2b2e33;
   text-align: left;
+}
+
+.curricular a{
+  color: #8f8f8f;
+
+  &:hover{
+    color: #2b2e33;
+  }
 }

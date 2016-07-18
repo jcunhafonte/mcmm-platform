@@ -22,7 +22,6 @@
 
 //ANIMATE
 @import '../../bower_components/animate.css/animate.min';
-@import '../../bower_components/flickity/dist/flickity.min';
 
 //HOVER
 @import "../../bower_components/hover/scss/hover";
@@ -30,19 +29,10 @@
 //NPROGRES
 @import "../../bower_components/nprogress/nprogress";
 
-//JQUERY STEPS
-@import "../../bower_components/jquery.steps/demo/css/jquery.steps";
-
-//MEDIUM EDITOR
-@import "../../bower_components/medium-editor/dist/css/medium-editor";
-@import "../../bower_components/medium-editor/dist/css/themes/bootstrap";
-
 //VENDORS
 #platform {
   @import 'vendor/default';
 }
-@import "vendor/form_validator";
-@import 'vendor/jquery.fancybox';
 @import 'vendor/owl.transitions';
 @import '../../bower_components/owl.carousel/dist/assets/owl.carousel.min';
 @import 'vendor/typed';
